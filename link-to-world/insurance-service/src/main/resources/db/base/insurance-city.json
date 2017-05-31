@@ -1,0 +1,3080 @@
+[
+    {
+        "id": "584e5b91223fe90820b8f1ac",
+        "provinceId": "584e5b91223fe90820b8f1ab",
+        "name": "北京市",
+        "cityCode": "110100",
+        "zipCode": "110100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f1be",
+        "provinceId": "584e5b91223fe90820b8f1bd",
+        "name": "天津市",
+        "cityCode": "120100",
+        "zipCode": "120100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f1d0",
+        "provinceId": "584e5b91223fe90820b8f1cf",
+        "name": "石家庄市",
+        "cityCode": "130100",
+        "zipCode": "130100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f1e7",
+        "provinceId": "584e5b91223fe90820b8f1cf",
+        "name": "唐山市",
+        "cityCode": "130200",
+        "zipCode": "130200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f1f7",
+        "provinceId": "584e5b91223fe90820b8f1cf",
+        "name": "秦皇岛市",
+        "cityCode": "130300",
+        "zipCode": "130300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f200",
+        "provinceId": "584e5b91223fe90820b8f1cf",
+        "name": "邯郸市",
+        "cityCode": "130400",
+        "zipCode": "130400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f215",
+        "provinceId": "584e5b91223fe90820b8f1cf",
+        "name": "邢台市",
+        "cityCode": "130500",
+        "zipCode": "130500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f22a",
+        "provinceId": "584e5b91223fe90820b8f1cf",
+        "name": "保定市",
+        "cityCode": "130600",
+        "zipCode": "130600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f243",
+        "provinceId": "584e5b91223fe90820b8f1cf",
+        "name": "张家口市",
+        "cityCode": "130700",
+        "zipCode": "130700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f256",
+        "provinceId": "584e5b91223fe90820b8f1cf",
+        "name": "承德市",
+        "cityCode": "130800",
+        "zipCode": "130800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f263",
+        "provinceId": "584e5b91223fe90820b8f1cf",
+        "name": "沧州市",
+        "cityCode": "130900",
+        "zipCode": "130900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f275",
+        "provinceId": "584e5b91223fe90820b8f1cf",
+        "name": "廊坊市",
+        "cityCode": "131000",
+        "zipCode": "131000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f281",
+        "provinceId": "584e5b91223fe90820b8f1cf",
+        "name": "衡水市",
+        "cityCode": "131100",
+        "zipCode": "131100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f28e",
+        "provinceId": "584e5b91223fe90820b8f1cf",
+        "name": "省直辖县级行政区划",
+        "cityCode": "139000",
+        "zipCode": "139000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f292",
+        "provinceId": "584e5b91223fe90820b8f291",
+        "name": "太原市",
+        "cityCode": "140100",
+        "zipCode": "140100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f29e",
+        "provinceId": "584e5b91223fe90820b8f291",
+        "name": "大同市",
+        "cityCode": "140200",
+        "zipCode": "140200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f2ab",
+        "provinceId": "584e5b91223fe90820b8f291",
+        "name": "阳泉市",
+        "cityCode": "140300",
+        "zipCode": "140300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f2b2",
+        "provinceId": "584e5b91223fe90820b8f291",
+        "name": "长治市",
+        "cityCode": "140400",
+        "zipCode": "140400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f2c1",
+        "provinceId": "584e5b91223fe90820b8f291",
+        "name": "晋城市",
+        "cityCode": "140500",
+        "zipCode": "140500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f2c9",
+        "provinceId": "584e5b91223fe90820b8f291",
+        "name": "朔州市",
+        "cityCode": "140600",
+        "zipCode": "140600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f2d1",
+        "provinceId": "584e5b91223fe90820b8f291",
+        "name": "晋中市",
+        "cityCode": "140700",
+        "zipCode": "140700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f2de",
+        "provinceId": "584e5b91223fe90820b8f291",
+        "name": "运城市",
+        "cityCode": "140800",
+        "zipCode": "140800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f2ed",
+        "provinceId": "584e5b91223fe90820b8f291",
+        "name": "忻州市",
+        "cityCode": "140900",
+        "zipCode": "140900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f2fd",
+        "provinceId": "584e5b91223fe90820b8f291",
+        "name": "临汾市",
+        "cityCode": "141000",
+        "zipCode": "141000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f310",
+        "provinceId": "584e5b91223fe90820b8f291",
+        "name": "吕梁市",
+        "cityCode": "141100",
+        "zipCode": "141100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f320",
+        "provinceId": "584e5b91223fe90820b8f31f",
+        "name": "呼和浩特市",
+        "cityCode": "150100",
+        "zipCode": "150100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f32b",
+        "provinceId": "584e5b91223fe90820b8f31f",
+        "name": "包头市",
+        "cityCode": "150200",
+        "zipCode": "150200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f336",
+        "provinceId": "584e5b91223fe90820b8f31f",
+        "name": "乌海市",
+        "cityCode": "150300",
+        "zipCode": "150300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f33b",
+        "provinceId": "584e5b91223fe90820b8f31f",
+        "name": "赤峰市",
+        "cityCode": "150400",
+        "zipCode": "150400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f349",
+        "provinceId": "584e5b91223fe90820b8f31f",
+        "name": "通辽市",
+        "cityCode": "150500",
+        "zipCode": "150500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f353",
+        "provinceId": "584e5b91223fe90820b8f31f",
+        "name": "鄂尔多斯市",
+        "cityCode": "150600",
+        "zipCode": "150600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f35d",
+        "provinceId": "584e5b91223fe90820b8f31f",
+        "name": "呼伦贝尔市",
+        "cityCode": "150700",
+        "zipCode": "150700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f36d",
+        "provinceId": "584e5b91223fe90820b8f31f",
+        "name": "巴彦淖尔市",
+        "cityCode": "150800",
+        "zipCode": "150800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f376",
+        "provinceId": "584e5b91223fe90820b8f31f",
+        "name": "乌兰察布市",
+        "cityCode": "150900",
+        "zipCode": "150900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f383",
+        "provinceId": "584e5b91223fe90820b8f31f",
+        "name": "兴安盟",
+        "cityCode": "152200",
+        "zipCode": "152200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f38a",
+        "provinceId": "584e5b91223fe90820b8f31f",
+        "name": "锡林郭勒盟",
+        "cityCode": "152500",
+        "zipCode": "152500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f397",
+        "provinceId": "584e5b91223fe90820b8f31f",
+        "name": "阿拉善盟",
+        "cityCode": "152900",
+        "zipCode": "152900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f39c",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "沈阳市",
+        "cityCode": "210100",
+        "zipCode": "210100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f3ab",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "大连市",
+        "cityCode": "210200",
+        "zipCode": "210200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f3b7",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "鞍山市",
+        "cityCode": "210300",
+        "zipCode": "210300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f3c0",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "抚顺市",
+        "cityCode": "210400",
+        "zipCode": "210400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f3c9",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "本溪市",
+        "cityCode": "210500",
+        "zipCode": "210500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f3d1",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "丹东市",
+        "cityCode": "210600",
+        "zipCode": "210600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f3d9",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "锦州市",
+        "cityCode": "210700",
+        "zipCode": "210700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f3e2",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "营口市",
+        "cityCode": "210800",
+        "zipCode": "210800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f3ea",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "阜新市",
+        "cityCode": "210900",
+        "zipCode": "210900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f3f3",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "辽阳市",
+        "cityCode": "211000",
+        "zipCode": "211000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f3fc",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "盘锦市",
+        "cityCode": "211100",
+        "zipCode": "211100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f402",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "铁岭市",
+        "cityCode": "211200",
+        "zipCode": "211200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f40b",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "朝阳市",
+        "cityCode": "211300",
+        "zipCode": "211300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f414",
+        "provinceId": "584e5b91223fe90820b8f39b",
+        "name": "葫芦岛市",
+        "cityCode": "211400",
+        "zipCode": "211400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f41d",
+        "provinceId": "584e5b91223fe90820b8f41c",
+        "name": "长春市",
+        "cityCode": "220100",
+        "zipCode": "220100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f429",
+        "provinceId": "584e5b91223fe90820b8f41c",
+        "name": "吉林市",
+        "cityCode": "220200",
+        "zipCode": "220200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f434",
+        "provinceId": "584e5b91223fe90820b8f41c",
+        "name": "四平市",
+        "cityCode": "220300",
+        "zipCode": "220300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f43c",
+        "provinceId": "584e5b91223fe90820b8f41c",
+        "name": "辽源市",
+        "cityCode": "220400",
+        "zipCode": "220400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f442",
+        "provinceId": "584e5b91223fe90820b8f41c",
+        "name": "通化市",
+        "cityCode": "220500",
+        "zipCode": "220500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f44b",
+        "provinceId": "584e5b91223fe90820b8f41c",
+        "name": "白山市",
+        "cityCode": "220600",
+        "zipCode": "220600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f453",
+        "provinceId": "584e5b91223fe90820b8f41c",
+        "name": "松原市",
+        "cityCode": "220700",
+        "zipCode": "220700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f45a",
+        "provinceId": "584e5b91223fe90820b8f41c",
+        "name": "白城市",
+        "cityCode": "220800",
+        "zipCode": "220800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f461",
+        "provinceId": "584e5b91223fe90820b8f41c",
+        "name": "延边朝鲜族自治州",
+        "cityCode": "222400",
+        "zipCode": "222400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f46b",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "哈尔滨市",
+        "cityCode": "230100",
+        "zipCode": "230100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f47f",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "齐齐哈尔市",
+        "cityCode": "230200",
+        "zipCode": "230200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f491",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "鸡西市",
+        "cityCode": "230300",
+        "zipCode": "230300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f49c",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "鹤岗市",
+        "cityCode": "230400",
+        "zipCode": "230400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f4a6",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "双鸭山市",
+        "cityCode": "230500",
+        "zipCode": "230500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f4b0",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "大庆市",
+        "cityCode": "230600",
+        "zipCode": "230600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f4bb",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "伊春市",
+        "cityCode": "230700",
+        "zipCode": "230700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f4ce",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "佳木斯市",
+        "cityCode": "230800",
+        "zipCode": "230800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f4da",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "七台河市",
+        "cityCode": "230900",
+        "zipCode": "230900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f4e0",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "牡丹江市",
+        "cityCode": "231000",
+        "zipCode": "231000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f4ec",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "黑河市",
+        "cityCode": "231100",
+        "zipCode": "231100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f4f4",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "绥化市",
+        "cityCode": "231200",
+        "zipCode": "231200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f500",
+        "provinceId": "584e5b91223fe90820b8f46a",
+        "name": "大兴安岭地区",
+        "cityCode": "232700",
+        "zipCode": "232700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f505",
+        "provinceId": "584e5b91223fe90820b8f504",
+        "name": "上海市",
+        "cityCode": "310100",
+        "zipCode": "310100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f518",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "南京市",
+        "cityCode": "320100",
+        "zipCode": "320100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f525",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "无锡市",
+        "cityCode": "320200",
+        "zipCode": "320200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f52f",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "徐州市",
+        "cityCode": "320300",
+        "zipCode": "320300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f53b",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "常州市",
+        "cityCode": "320400",
+        "zipCode": "320400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f543",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "苏州市",
+        "cityCode": "320500",
+        "zipCode": "320500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f54e",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "南通市",
+        "cityCode": "320600",
+        "zipCode": "320600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f558",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "连云港市",
+        "cityCode": "320700",
+        "zipCode": "320700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f560",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "淮安市",
+        "cityCode": "320800",
+        "zipCode": "320800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f56a",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "盐城市",
+        "cityCode": "320900",
+        "zipCode": "320900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f575",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "扬州市",
+        "cityCode": "321000",
+        "zipCode": "321000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f57d",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "镇江市",
+        "cityCode": "321100",
+        "zipCode": "321100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f585",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "泰州市",
+        "cityCode": "321200",
+        "zipCode": "321200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f58d",
+        "provinceId": "584e5b91223fe90820b8f517",
+        "name": "宿迁市",
+        "cityCode": "321300",
+        "zipCode": "321300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f595",
+        "provinceId": "584e5b91223fe90820b8f594",
+        "name": "杭州市",
+        "cityCode": "330100",
+        "zipCode": "330100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f5a4",
+        "provinceId": "584e5b91223fe90820b8f594",
+        "name": "宁波市",
+        "cityCode": "330200",
+        "zipCode": "330200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f5b1",
+        "provinceId": "584e5b91223fe90820b8f594",
+        "name": "温州市",
+        "cityCode": "330300",
+        "zipCode": "330300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f5be",
+        "provinceId": "584e5b91223fe90820b8f594",
+        "name": "嘉兴市",
+        "cityCode": "330400",
+        "zipCode": "330400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f5c7",
+        "provinceId": "584e5b91223fe90820b8f594",
+        "name": "湖州市",
+        "cityCode": "330500",
+        "zipCode": "330500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f5ce",
+        "provinceId": "584e5b91223fe90820b8f594",
+        "name": "绍兴市",
+        "cityCode": "330600",
+        "zipCode": "330600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f5d6",
+        "provinceId": "584e5b91223fe90820b8f594",
+        "name": "金华市",
+        "cityCode": "330700",
+        "zipCode": "330700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f5e1",
+        "provinceId": "584e5b91223fe90820b8f594",
+        "name": "衢州市",
+        "cityCode": "330800",
+        "zipCode": "330800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f5e9",
+        "provinceId": "584e5b91223fe90820b8f594",
+        "name": "舟山市",
+        "cityCode": "330900",
+        "zipCode": "330900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f5ef",
+        "provinceId": "584e5b91223fe90820b8f594",
+        "name": "台州市",
+        "cityCode": "331000",
+        "zipCode": "331000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f5fa",
+        "provinceId": "584e5b91223fe90820b8f594",
+        "name": "丽水市",
+        "cityCode": "331100",
+        "zipCode": "331100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f606",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "合肥市",
+        "cityCode": "340100",
+        "zipCode": "340100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f611",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "芜湖市",
+        "cityCode": "340200",
+        "zipCode": "340200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f61b",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "蚌埠市",
+        "cityCode": "340300",
+        "zipCode": "340300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f624",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "淮南市",
+        "cityCode": "340400",
+        "zipCode": "340400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f62c",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "马鞍山市",
+        "cityCode": "340500",
+        "zipCode": "340500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f634",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "淮北市",
+        "cityCode": "340600",
+        "zipCode": "340600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f63a",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "铜陵市",
+        "cityCode": "340700",
+        "zipCode": "340700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f640",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "安庆市",
+        "cityCode": "340800",
+        "zipCode": "340800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f64d",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "黄山市",
+        "cityCode": "341000",
+        "zipCode": "341000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f656",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "滁州市",
+        "cityCode": "341100",
+        "zipCode": "341100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f660",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "阜阳市",
+        "cityCode": "341200",
+        "zipCode": "341200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f66a",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "宿州市",
+        "cityCode": "341300",
+        "zipCode": "341300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f671",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "六安市",
+        "cityCode": "341500",
+        "zipCode": "341500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f67a",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "亳州市",
+        "cityCode": "341600",
+        "zipCode": "341600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f680",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "池州市",
+        "cityCode": "341700",
+        "zipCode": "341700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f686",
+        "provinceId": "584e5b91223fe90820b8f605",
+        "name": "宣城市",
+        "cityCode": "341800",
+        "zipCode": "341800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f690",
+        "provinceId": "584e5b91223fe90820b8f68f",
+        "name": "福州市",
+        "cityCode": "350100",
+        "zipCode": "350100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f69f",
+        "provinceId": "584e5b91223fe90820b8f68f",
+        "name": "厦门市",
+        "cityCode": "350200",
+        "zipCode": "350200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f6a7",
+        "provinceId": "584e5b91223fe90820b8f68f",
+        "name": "莆田市",
+        "cityCode": "350300",
+        "zipCode": "350300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f6ae",
+        "provinceId": "584e5b91223fe90820b8f68f",
+        "name": "三明市",
+        "cityCode": "350400",
+        "zipCode": "350400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f6bc",
+        "provinceId": "584e5b91223fe90820b8f68f",
+        "name": "泉州市",
+        "cityCode": "350500",
+        "zipCode": "350500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f6ca",
+        "provinceId": "584e5b91223fe90820b8f68f",
+        "name": "漳州市",
+        "cityCode": "350600",
+        "zipCode": "350600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f6d7",
+        "provinceId": "584e5b91223fe90820b8f68f",
+        "name": "南平市",
+        "cityCode": "350700",
+        "zipCode": "350700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f6e3",
+        "provinceId": "584e5b91223fe90820b8f68f",
+        "name": "龙岩市",
+        "cityCode": "350800",
+        "zipCode": "350800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f6ec",
+        "provinceId": "584e5b91223fe90820b8f68f",
+        "name": "宁德市",
+        "cityCode": "350900",
+        "zipCode": "350900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f6f8",
+        "provinceId": "584e5b91223fe90820b8f6f7",
+        "name": "南昌市",
+        "cityCode": "360100",
+        "zipCode": "360100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f703",
+        "provinceId": "584e5b91223fe90820b8f6f7",
+        "name": "景德镇市",
+        "cityCode": "360200",
+        "zipCode": "360200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f709",
+        "provinceId": "584e5b91223fe90820b8f6f7",
+        "name": "萍乡市",
+        "cityCode": "360300",
+        "zipCode": "360300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f710",
+        "provinceId": "584e5b91223fe90820b8f6f7",
+        "name": "九江市",
+        "cityCode": "360400",
+        "zipCode": "360400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f71f",
+        "provinceId": "584e5b91223fe90820b8f6f7",
+        "name": "新余市",
+        "cityCode": "360500",
+        "zipCode": "360500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f723",
+        "provinceId": "584e5b91223fe90820b8f6f7",
+        "name": "鹰潭市",
+        "cityCode": "360600",
+        "zipCode": "360600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f728",
+        "provinceId": "584e5b91223fe90820b8f6f7",
+        "name": "赣州市",
+        "cityCode": "360700",
+        "zipCode": "360700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f73c",
+        "provinceId": "584e5b91223fe90820b8f6f7",
+        "name": "吉安市",
+        "cityCode": "360800",
+        "zipCode": "360800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f74b",
+        "provinceId": "584e5b91223fe90820b8f6f7",
+        "name": "宜春市",
+        "cityCode": "360900",
+        "zipCode": "360900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f757",
+        "provinceId": "584e5b91223fe90820b8f6f7",
+        "name": "抚州市",
+        "cityCode": "361000",
+        "zipCode": "361000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f764",
+        "provinceId": "584e5b91223fe90820b8f6f7",
+        "name": "上饶市",
+        "cityCode": "361100",
+        "zipCode": "361100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f773",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "济南市",
+        "cityCode": "370100",
+        "zipCode": "370100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f77f",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "青岛市",
+        "cityCode": "370200",
+        "zipCode": "370200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f78b",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "淄博市",
+        "cityCode": "370300",
+        "zipCode": "370300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f795",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "枣庄市",
+        "cityCode": "370400",
+        "zipCode": "370400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f79d",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "东营市",
+        "cityCode": "370500",
+        "zipCode": "370500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f7a4",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "烟台市",
+        "cityCode": "370600",
+        "zipCode": "370600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f7b2",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "潍坊市",
+        "cityCode": "370700",
+        "zipCode": "370700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f7c0",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "济宁市",
+        "cityCode": "370800",
+        "zipCode": "370800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f7cd",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "泰安市",
+        "cityCode": "370900",
+        "zipCode": "370900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f7d5",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "威海市",
+        "cityCode": "371000",
+        "zipCode": "371000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f7db",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "日照市",
+        "cityCode": "371100",
+        "zipCode": "371100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f7e1",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "莱芜市",
+        "cityCode": "371200",
+        "zipCode": "371200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f7e5",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "临沂市",
+        "cityCode": "371300",
+        "zipCode": "371300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f7f3",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "德州市",
+        "cityCode": "371400",
+        "zipCode": "371400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f800",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "聊城市",
+        "cityCode": "371500",
+        "zipCode": "371500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f80a",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "滨州市",
+        "cityCode": "371600",
+        "zipCode": "371600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f813",
+        "provinceId": "584e5b91223fe90820b8f772",
+        "name": "菏泽市",
+        "cityCode": "371700",
+        "zipCode": "371700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f81f",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "郑州市",
+        "cityCode": "410100",
+        "zipCode": "410100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f82d",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "开封市",
+        "cityCode": "410200",
+        "zipCode": "410200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f839",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "洛阳市",
+        "cityCode": "410300",
+        "zipCode": "410300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f84a",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "平顶山市",
+        "cityCode": "410400",
+        "zipCode": "410400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f856",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "安阳市",
+        "cityCode": "410500",
+        "zipCode": "410500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f861",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "鹤壁市",
+        "cityCode": "410600",
+        "zipCode": "410600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f868",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "新乡市",
+        "cityCode": "410700",
+        "zipCode": "410700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f876",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "焦作市",
+        "cityCode": "410800",
+        "zipCode": "410800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f882",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "濮阳市",
+        "cityCode": "410900",
+        "zipCode": "410900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f88a",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "许昌市",
+        "cityCode": "411000",
+        "zipCode": "411000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f892",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "漯河市",
+        "cityCode": "411100",
+        "zipCode": "411100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f899",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "三门峡市",
+        "cityCode": "411200",
+        "zipCode": "411200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f8a1",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "南阳市",
+        "cityCode": "411300",
+        "zipCode": "411300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f8b0",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "商丘市",
+        "cityCode": "411400",
+        "zipCode": "411400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f8bb",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "信阳市",
+        "cityCode": "411500",
+        "zipCode": "411500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f8c7",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "周口市",
+        "cityCode": "411600",
+        "zipCode": "411600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f8d3",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "驻马店市",
+        "cityCode": "411700",
+        "zipCode": "411700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f8df",
+        "provinceId": "584e5b91223fe90820b8f81e",
+        "name": "省直辖县级行政区划",
+        "cityCode": "419000",
+        "zipCode": "419000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f8e2",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "武汉市",
+        "cityCode": "420100",
+        "zipCode": "420100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f8f1",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "黄石市",
+        "cityCode": "420200",
+        "zipCode": "420200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f8f9",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "十堰市",
+        "cityCode": "420300",
+        "zipCode": "420300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f903",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "宜昌市",
+        "cityCode": "420500",
+        "zipCode": "420500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f912",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "襄阳市",
+        "cityCode": "420600",
+        "zipCode": "420600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f91d",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "鄂州市",
+        "cityCode": "420700",
+        "zipCode": "420700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f922",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "荆门市",
+        "cityCode": "420800",
+        "zipCode": "420800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f929",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "孝感市",
+        "cityCode": "420900",
+        "zipCode": "420900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f932",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "荆州市",
+        "cityCode": "421000",
+        "zipCode": "421000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f93c",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "黄冈市",
+        "cityCode": "421100",
+        "zipCode": "421100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f948",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "咸宁市",
+        "cityCode": "421200",
+        "zipCode": "421200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f950",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "随州市",
+        "cityCode": "421300",
+        "zipCode": "421300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f955",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "恩施土家族苗族自治州",
+        "cityCode": "422800",
+        "zipCode": "422800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f95e",
+        "provinceId": "584e5b91223fe90820b8f8e1",
+        "name": "省直辖县级行政区划",
+        "cityCode": "429000",
+        "zipCode": "429000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f964",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "长沙市",
+        "cityCode": "430100",
+        "zipCode": "430100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f96f",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "株洲市",
+        "cityCode": "430200",
+        "zipCode": "430200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f97a",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "湘潭市",
+        "cityCode": "430300",
+        "zipCode": "430300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f981",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "衡阳市",
+        "cityCode": "430400",
+        "zipCode": "430400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f98f",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "邵阳市",
+        "cityCode": "430500",
+        "zipCode": "430500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f99d",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "岳阳市",
+        "cityCode": "430600",
+        "zipCode": "430600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f9a8",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "常德市",
+        "cityCode": "430700",
+        "zipCode": "430700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f9b3",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "张家界市",
+        "cityCode": "430800",
+        "zipCode": "430800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f9b9",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "益阳市",
+        "cityCode": "430900",
+        "zipCode": "430900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f9c1",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "郴州市",
+        "cityCode": "431000",
+        "zipCode": "431000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f9ce",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "永州市",
+        "cityCode": "431100",
+        "zipCode": "431100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f9db",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "怀化市",
+        "cityCode": "431200",
+        "zipCode": "431200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f9e9",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "娄底市",
+        "cityCode": "431300",
+        "zipCode": "431300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f9f0",
+        "provinceId": "584e5b91223fe90820b8f963",
+        "name": "湘西土家族苗族自治州",
+        "cityCode": "433100",
+        "zipCode": "433100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f9fa",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "广州市",
+        "cityCode": "440100",
+        "zipCode": "440100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa07",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "韶关市",
+        "cityCode": "440200",
+        "zipCode": "440200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa13",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "深圳市",
+        "cityCode": "440300",
+        "zipCode": "440300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa1b",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "珠海市",
+        "cityCode": "440400",
+        "zipCode": "440400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa20",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "汕头市",
+        "cityCode": "440500",
+        "zipCode": "440500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa29",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "佛山市",
+        "cityCode": "440600",
+        "zipCode": "440600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa30",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "江门市",
+        "cityCode": "440700",
+        "zipCode": "440700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa39",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "湛江市",
+        "cityCode": "440800",
+        "zipCode": "440800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa44",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "茂名市",
+        "cityCode": "440900",
+        "zipCode": "440900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa4b",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "肇庆市",
+        "cityCode": "441200",
+        "zipCode": "441200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa55",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "惠州市",
+        "cityCode": "441300",
+        "zipCode": "441300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa5c",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "梅州市",
+        "cityCode": "441400",
+        "zipCode": "441400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa66",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "汕尾市",
+        "cityCode": "441500",
+        "zipCode": "441500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa6c",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "河源市",
+        "cityCode": "441600",
+        "zipCode": "441600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa74",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "阳江市",
+        "cityCode": "441700",
+        "zipCode": "441700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa7a",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "清远市",
+        "cityCode": "441800",
+        "zipCode": "441800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa84",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "东莞市",
+        "cityCode": "441900",
+        "zipCode": "441900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa85",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "中山市",
+        "cityCode": "442000",
+        "zipCode": "442000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa86",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "潮州市",
+        "cityCode": "445100",
+        "zipCode": "445100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa8b",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "揭阳市",
+        "cityCode": "445200",
+        "zipCode": "445200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa92",
+        "provinceId": "584e5b91223fe90820b8f9f9",
+        "name": "云浮市",
+        "cityCode": "445300",
+        "zipCode": "445300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa9a",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "南宁市",
+        "cityCode": "450100",
+        "zipCode": "450100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8faa8",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "柳州市",
+        "cityCode": "450200",
+        "zipCode": "450200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fab4",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "桂林市",
+        "cityCode": "450300",
+        "zipCode": "450300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fac7",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "梧州市",
+        "cityCode": "450400",
+        "zipCode": "450400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fad0",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "北海市",
+        "cityCode": "450500",
+        "zipCode": "450500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fad6",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "防城港市",
+        "cityCode": "450600",
+        "zipCode": "450600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fadc",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "钦州市",
+        "cityCode": "450700",
+        "zipCode": "450700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fae2",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "贵港市",
+        "cityCode": "450800",
+        "zipCode": "450800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fae9",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "玉林市",
+        "cityCode": "450900",
+        "zipCode": "450900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8faf2",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "百色市",
+        "cityCode": "451000",
+        "zipCode": "451000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb00",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "贺州市",
+        "cityCode": "451100",
+        "zipCode": "451100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb06",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "河池市",
+        "cityCode": "451200",
+        "zipCode": "451200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb13",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "来宾市",
+        "cityCode": "451300",
+        "zipCode": "451300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb1b",
+        "provinceId": "584e5b91223fe90820b8fa99",
+        "name": "崇左市",
+        "cityCode": "451400",
+        "zipCode": "451400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb25",
+        "provinceId": "584e5b91223fe90820b8fb24",
+        "name": "海口市",
+        "cityCode": "460100",
+        "zipCode": "460100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb2b",
+        "provinceId": "584e5b91223fe90820b8fb24",
+        "name": "三亚市",
+        "cityCode": "460200",
+        "zipCode": "460200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb31",
+        "provinceId": "584e5b91223fe90820b8fb24",
+        "name": "三沙市",
+        "cityCode": "460300",
+        "zipCode": "460300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb35",
+        "provinceId": "584e5b91223fe90820b8fb24",
+        "name": "省直辖县级行政区划",
+        "cityCode": "469000",
+        "zipCode": "469000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb47",
+        "provinceId": "584e5b91223fe90820b8fb46",
+        "name": "重庆市",
+        "cityCode": "500100",
+        "zipCode": "500100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb6f",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "成都市",
+        "cityCode": "510100",
+        "zipCode": "510100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb84",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "自贡市",
+        "cityCode": "510300",
+        "zipCode": "510300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb8c",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "攀枝花市",
+        "cityCode": "510400",
+        "zipCode": "510400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb93",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "泸州市",
+        "cityCode": "510500",
+        "zipCode": "510500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb9c",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "德阳市",
+        "cityCode": "510600",
+        "zipCode": "510600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fba4",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "绵阳市",
+        "cityCode": "510700",
+        "zipCode": "510700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fbaf",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "广元市",
+        "cityCode": "510800",
+        "zipCode": "510800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fbb8",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "遂宁市",
+        "cityCode": "510900",
+        "zipCode": "510900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fbbf",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "内江市",
+        "cityCode": "511000",
+        "zipCode": "511000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fbc6",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "乐山市",
+        "cityCode": "511100",
+        "zipCode": "511100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fbd3",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "南充市",
+        "cityCode": "511300",
+        "zipCode": "511300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fbde",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "眉山市",
+        "cityCode": "511400",
+        "zipCode": "511400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fbe6",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "宜宾市",
+        "cityCode": "511500",
+        "zipCode": "511500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fbf2",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "广安市",
+        "cityCode": "511600",
+        "zipCode": "511600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fbfa",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "达州市",
+        "cityCode": "511700",
+        "zipCode": "511700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc03",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "雅安市",
+        "cityCode": "511800",
+        "zipCode": "511800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc0d",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "巴中市",
+        "cityCode": "511900",
+        "zipCode": "511900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc14",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "资阳市",
+        "cityCode": "512000",
+        "zipCode": "512000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc1a",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "阿坝藏族羌族自治州",
+        "cityCode": "513200",
+        "zipCode": "513200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc28",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "甘孜藏族自治州",
+        "cityCode": "513300",
+        "zipCode": "513300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc3b",
+        "provinceId": "584e5b91223fe90820b8fb6e",
+        "name": "凉山彝族自治州",
+        "cityCode": "513400",
+        "zipCode": "513400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc4e",
+        "provinceId": "584e5b91223fe90820b8fc4d",
+        "name": "贵阳市",
+        "cityCode": "520100",
+        "zipCode": "520100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc5a",
+        "provinceId": "584e5b91223fe90820b8fc4d",
+        "name": "六盘水市",
+        "cityCode": "520200",
+        "zipCode": "520200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc5f",
+        "provinceId": "584e5b91223fe90820b8fc4d",
+        "name": "遵义市",
+        "cityCode": "520300",
+        "zipCode": "520300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc6f",
+        "provinceId": "584e5b91223fe90820b8fc4d",
+        "name": "安顺市",
+        "cityCode": "520400",
+        "zipCode": "520400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc77",
+        "provinceId": "584e5b91223fe90820b8fc4d",
+        "name": "毕节市",
+        "cityCode": "520500",
+        "zipCode": "520500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc81",
+        "provinceId": "584e5b91223fe90820b8fc4d",
+        "name": "铜仁市",
+        "cityCode": "520600",
+        "zipCode": "520600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc8d",
+        "provinceId": "584e5b91223fe90820b8fc4d",
+        "name": "黔西南布依族苗族自治州",
+        "cityCode": "522300",
+        "zipCode": "522300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc96",
+        "provinceId": "584e5b91223fe90820b8fc4d",
+        "name": "黔东南苗族侗族自治州",
+        "cityCode": "522600",
+        "zipCode": "522600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fca7",
+        "provinceId": "584e5b91223fe90820b8fc4d",
+        "name": "黔南布依族苗族自治州",
+        "cityCode": "522700",
+        "zipCode": "522700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fcb5",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "昆明市",
+        "cityCode": "530100",
+        "zipCode": "530100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fcc5",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "曲靖市",
+        "cityCode": "530300",
+        "zipCode": "530300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fcd0",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "玉溪市",
+        "cityCode": "530400",
+        "zipCode": "530400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fcdb",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "保山市",
+        "cityCode": "530500",
+        "zipCode": "530500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fce2",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "昭通市",
+        "cityCode": "530600",
+        "zipCode": "530600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fcef",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "丽江市",
+        "cityCode": "530700",
+        "zipCode": "530700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fcf6",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "普洱市",
+        "cityCode": "530800",
+        "zipCode": "530800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd02",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "临沧市",
+        "cityCode": "530900",
+        "zipCode": "530900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd0c",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "楚雄彝族自治州",
+        "cityCode": "532300",
+        "zipCode": "532300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd17",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "红河哈尼族彝族自治州",
+        "cityCode": "532500",
+        "zipCode": "532500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd25",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "文山壮族苗族自治州",
+        "cityCode": "532600",
+        "zipCode": "532600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd2e",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "西双版纳傣族自治州",
+        "cityCode": "532800",
+        "zipCode": "532800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd32",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "大理白族自治州",
+        "cityCode": "532900",
+        "zipCode": "532900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd3f",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "德宏傣族景颇族自治州",
+        "cityCode": "533100",
+        "zipCode": "533100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd45",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "怒江傈僳族自治州",
+        "cityCode": "533300",
+        "zipCode": "533300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd4a",
+        "provinceId": "584e5b91223fe90820b8fcb4",
+        "name": "迪庆藏族自治州",
+        "cityCode": "533400",
+        "zipCode": "533400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd4f",
+        "provinceId": "584e5b91223fe90820b8fd4e",
+        "name": "拉萨市",
+        "cityCode": "540100",
+        "zipCode": "540100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd59",
+        "provinceId": "584e5b91223fe90820b8fd4e",
+        "name": "日喀则市",
+        "cityCode": "540200",
+        "zipCode": "540200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd6c",
+        "provinceId": "584e5b91223fe90820b8fd4e",
+        "name": "昌都市",
+        "cityCode": "540300",
+        "zipCode": "540300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd78",
+        "provinceId": "584e5b91223fe90820b8fd4e",
+        "name": "林芝市",
+        "cityCode": "540400",
+        "zipCode": "540400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd80",
+        "provinceId": "584e5b91223fe90820b8fd4e",
+        "name": "山南地区",
+        "cityCode": "542200",
+        "zipCode": "542200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd8d",
+        "provinceId": "584e5b91223fe90820b8fd4e",
+        "name": "那曲地区",
+        "cityCode": "542400",
+        "zipCode": "542400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd99",
+        "provinceId": "584e5b91223fe90820b8fd4e",
+        "name": "阿里地区",
+        "cityCode": "542500",
+        "zipCode": "542500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fda2",
+        "provinceId": "584e5b91223fe90820b8fda1",
+        "name": "西安市",
+        "cityCode": "610100",
+        "zipCode": "610100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fdb1",
+        "provinceId": "584e5b91223fe90820b8fda1",
+        "name": "铜川市",
+        "cityCode": "610200",
+        "zipCode": "610200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fdb7",
+        "provinceId": "584e5b91223fe90820b8fda1",
+        "name": "宝鸡市",
+        "cityCode": "610300",
+        "zipCode": "610300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fdc5",
+        "provinceId": "584e5b91223fe90820b8fda1",
+        "name": "咸阳市",
+        "cityCode": "610400",
+        "zipCode": "610400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fdd5",
+        "provinceId": "584e5b91223fe90820b8fda1",
+        "name": "渭南市",
+        "cityCode": "610500",
+        "zipCode": "610500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fde2",
+        "provinceId": "584e5b91223fe90820b8fda1",
+        "name": "延安市",
+        "cityCode": "610600",
+        "zipCode": "610600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fdf1",
+        "provinceId": "584e5b91223fe90820b8fda1",
+        "name": "汉中市",
+        "cityCode": "610700",
+        "zipCode": "610700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fdfe",
+        "provinceId": "584e5b91223fe90820b8fda1",
+        "name": "榆林市",
+        "cityCode": "610800",
+        "zipCode": "610800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe0c",
+        "provinceId": "584e5b91223fe90820b8fda1",
+        "name": "安康市",
+        "cityCode": "610900",
+        "zipCode": "610900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe18",
+        "provinceId": "584e5b91223fe90820b8fda1",
+        "name": "商洛市",
+        "cityCode": "611000",
+        "zipCode": "611000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe22",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "兰州市",
+        "cityCode": "620100",
+        "zipCode": "620100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe2c",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "嘉峪关市",
+        "cityCode": "620200",
+        "zipCode": "620200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe2e",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "金昌市",
+        "cityCode": "620300",
+        "zipCode": "620300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe32",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "白银市",
+        "cityCode": "620400",
+        "zipCode": "620400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe39",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "天水市",
+        "cityCode": "620500",
+        "zipCode": "620500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe42",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "武威市",
+        "cityCode": "620600",
+        "zipCode": "620600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe48",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "张掖市",
+        "cityCode": "620700",
+        "zipCode": "620700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe50",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "平凉市",
+        "cityCode": "620800",
+        "zipCode": "620800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe59",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "酒泉市",
+        "cityCode": "620900",
+        "zipCode": "620900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe62",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "庆阳市",
+        "cityCode": "621000",
+        "zipCode": "621000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe6c",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "定西市",
+        "cityCode": "621100",
+        "zipCode": "621100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe75",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "陇南市",
+        "cityCode": "621200",
+        "zipCode": "621200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe80",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "临夏回族自治州",
+        "cityCode": "622900",
+        "zipCode": "622900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe89",
+        "provinceId": "584e5b91223fe90820b8fe21",
+        "name": "甘南藏族自治州",
+        "cityCode": "623000",
+        "zipCode": "623000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe93",
+        "provinceId": "584e5b91223fe90820b8fe92",
+        "name": "西宁市",
+        "cityCode": "630100",
+        "zipCode": "630100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe9c",
+        "provinceId": "584e5b91223fe90820b8fe92",
+        "name": "海东市",
+        "cityCode": "630200",
+        "zipCode": "630200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fea3",
+        "provinceId": "584e5b91223fe90820b8fe92",
+        "name": "海北藏族自治州",
+        "cityCode": "632200",
+        "zipCode": "632200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fea8",
+        "provinceId": "584e5b91223fe90820b8fe92",
+        "name": "黄南藏族自治州",
+        "cityCode": "632300",
+        "zipCode": "632300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fead",
+        "provinceId": "584e5b91223fe90820b8fe92",
+        "name": "海南藏族自治州",
+        "cityCode": "632500",
+        "zipCode": "632500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8feb3",
+        "provinceId": "584e5b91223fe90820b8fe92",
+        "name": "果洛藏族自治州",
+        "cityCode": "632600",
+        "zipCode": "632600",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8feba",
+        "provinceId": "584e5b91223fe90820b8fe92",
+        "name": "玉树藏族自治州",
+        "cityCode": "632700",
+        "zipCode": "632700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fec1",
+        "provinceId": "584e5b91223fe90820b8fe92",
+        "name": "海西蒙古族藏族自治州",
+        "cityCode": "632800",
+        "zipCode": "632800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fec8",
+        "provinceId": "584e5b91223fe90820b8fec7",
+        "name": "银川市",
+        "cityCode": "640100",
+        "zipCode": "640100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fed0",
+        "provinceId": "584e5b91223fe90820b8fec7",
+        "name": "石嘴山市",
+        "cityCode": "640200",
+        "zipCode": "640200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fed5",
+        "provinceId": "584e5b91223fe90820b8fec7",
+        "name": "吴忠市",
+        "cityCode": "640300",
+        "zipCode": "640300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fedc",
+        "provinceId": "584e5b91223fe90820b8fec7",
+        "name": "固原市",
+        "cityCode": "640400",
+        "zipCode": "640400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fee3",
+        "provinceId": "584e5b91223fe90820b8fec7",
+        "name": "中卫市",
+        "cityCode": "640500",
+        "zipCode": "640500",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fee9",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "乌鲁木齐市",
+        "cityCode": "650100",
+        "zipCode": "650100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fef3",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "克拉玛依市",
+        "cityCode": "650200",
+        "zipCode": "650200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fef9",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "吐鲁番市",
+        "cityCode": "650400",
+        "zipCode": "650400",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fefd",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "哈密地区",
+        "cityCode": "652200",
+        "zipCode": "652200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff01",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "昌吉回族自治州",
+        "cityCode": "652300",
+        "zipCode": "652300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff09",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "博尔塔拉蒙古自治州",
+        "cityCode": "652700",
+        "zipCode": "652700",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff0e",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "巴音郭楞蒙古自治州",
+        "cityCode": "652800",
+        "zipCode": "652800",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff18",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "阿克苏地区",
+        "cityCode": "652900",
+        "zipCode": "652900",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff22",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "克孜勒苏柯尔克孜自治州",
+        "cityCode": "653000",
+        "zipCode": "653000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff27",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "喀什地区",
+        "cityCode": "653100",
+        "zipCode": "653100",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff34",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "和田地区",
+        "cityCode": "653200",
+        "zipCode": "653200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff3d",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "伊犁哈萨克自治州",
+        "cityCode": "654000",
+        "zipCode": "654000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff49",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "塔城地区",
+        "cityCode": "654200",
+        "zipCode": "654200",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff51",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "阿勒泰地区",
+        "cityCode": "654300",
+        "zipCode": "654300",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff59",
+        "provinceId": "584e5b91223fe90820b8fee8",
+        "name": "自治区直辖县级行政区划",
+        "cityCode": "659000",
+        "zipCode": "659000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    }
+]

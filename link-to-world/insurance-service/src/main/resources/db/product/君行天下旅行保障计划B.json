@@ -1,0 +1,931 @@
+{
+    "name": "57c24ce40879226abbb3600f",
+    "description": "小实惠，大旅行梦，超高性价比，任君天下行！世界那么大，现在立即出发！",
+    "keywords": [
+        "君行天下"
+    ],
+    "displayName": "君行天下旅行保障计划B",
+    "tags": [],
+    "publicVisible": "ALL",
+    "insuranceCategoryIds": [
+        "5789a68b28708a938f9b8ffa",
+        "5789a68b28708a938f9b8ffb",
+        "5789a68b28708a938f9b9006"
+    ],
+    "insuranceClaimId": "578b525f7214b5300823adf4",
+    "insuranceVendorId": "5789a68b28708a938f9b901c",
+    "insuranceJobTreeId": "584e06fa75c46e1f30cb7c0c",
+    "jobRestricted": false,
+    "jobLevels": [],
+    "jobIds": null,
+    "jobExclude": true,
+    "minUnits": 1,
+    "maxUnits": 1,
+    "policyTypes": [
+        "BD02"
+    ],
+    "highlightContent": "2元起的境内外（除部分地区）旅行保险！意外/急性病均保障，个人/团队均可投！",
+    "featureContent": "<p>1、超低价格，全球除部分地区外均可覆盖！涵盖意外伤害、意外医疗费用，急性病等全面基本保障！</p><p>2、出生满28天至80周岁人士、外籍人士均可投保（但回国籍所在地不在保障范围），跟团出游、自助旅游均适合！</p><p>3、网络投保，足不出户即可乐享优质产品；365天在线购买，咨询服务就在身边。</p>",
+    "tipsContent": "<p>1、本产品由君龙人寿保险有限公司承保，目前该公司在福建和浙江设有分支机构。客户购买后，保单生效前可办理退保及变更，后续变更与理赔事务请联系网站客服专员。</p><p>2、18周岁以下的未成年人身故保险金额以保险事故发生时中国保监会规定的未成年人身故保险金额限额为准。</p><p>3、71周岁及以上的被保险人身故保险金额减半；医疗费用保险金额不变，赔偿标准按扣减100元免赔后按50%赔付。</p><p>4、本计划中境外游下列国家和地区不在保障范围：阿尔巴尼亚、阿尔及利亚、阿富汗、埃及、埃塞俄比亚、安哥拉、巴布亚新几内亚、巴基斯坦、巴勒斯坦、巴林、波黑、布基纳法索、布隆迪、赤道几内亚、东帝汶、多哥、厄瓜多尔、厄立特里亚、菲律宾、冈比亚、刚果共和国（布）、刚果民主共和国（金）、哥伦比亚、格鲁吉亚、圭亚那、海地共和国、黑山、洪都拉斯、吉布提、吉尔吉斯斯坦、几内亚、几内亚比绍、加纳、加蓬、柬埔寨、泰国（特指缅甸与柬埔寨边境,极南部省北大年（extreme southern provinces Pattani）,也拉（Yala）,那拉提瓦（Narathiwat）和宋卡（Songkhla））津巴布韦、喀麦隆、科特迪瓦、肯尼亚、莱索托、黎巴嫩、利比里亚、利比亚、卢旺达、马达加斯加、马拉维、马里、马其顿、毛里塔尼亚、孟加拉国、秘鲁、缅甸、莫桑比克、南非、南极洲、尼泊尔、尼加拉瓜、尼日尔、尼日利亚、塞尔维亚、塞拉利昂、斯里兰卡、斯威士兰、苏丹、苏里南、索马里、塔吉克斯坦、汤加、突尼斯、危地马拉、委内瑞拉、乌干达、乌克兰、叙利亚、亚美尼亚、也门、伊拉克、伊朗、以色列、印度（除克什米尔地区）、印度尼西亚（除亚齐、马鲁古、伊里安、加里曼丹省）、赞比亚、乍得、中非、南苏丹、科摩罗、萨尔瓦多、所罗门群岛、西撒哈拉。</p><p>5、同一保险期间内，本产品各计划间仅限购买一份，可承保游览性质的本市出行。</p><p>6、被保险人境外就医，在意外伤害医疗、急性病医疗保险责任范围内的合理医疗费用按国内保单签发地相同治疗的平均水平确定。</p><p>7、本产品支持个人和团体投保，外籍人士也可以投保，但不承保回其国籍所在地的出行。</p><p>8、本产品中境内医疗相关保障限定为中华人民共和国境内合法经营的二级以上（含二级）医院或保险公司认可的其他医疗机构，除了北京平谷区所有医院。请注意：北京平谷区所有医院的就医均不给予理赔，建议您去往其他区域二级（包含）以上公立医院就医。</p><p>9、本产品为网络销售产品，网上投保、网上支付、网上即时核保并出具电子保单，您可拨打君龙人寿保险公司电话400-666-0123或登录君龙人寿保险公司官网http://www.kdlins.com.cn/cavLogon.action?queryType=singleCust 查询、验真。</p>",
+    "cases": [
+        "<p>案例一：<br/>2016年5月1日王先生从南京出发去泰国旅游，出行前，王先生购买了一份君行天下旅行保障计划，保险期限为10天。2016年5月5日，王先生在酒店不慎从楼梯摔下，被酒店工作人员送到医院。经诊断王先生为右脚踝裂纹骨折，需要住院治疗。办理完住院手续后，王先生想起曾购买过保险，于是致电君龙人寿申请理赔。在理赔专员的指导下，王先生保留了所需的理赔资料。2016年5月10日王先生返回南京后，递交了理赔资料，此次共花费的26386元中，属于保险保障范围的的医疗费用为18760元，按照合同规定扣除100元免赔后，最终赔付王先生18660元，极大地减轻了他的负担。</p>",
+        "<p>案例二：<br/>2016年5月8日刘女士去北京旅游，出行前购买了一份君行天下旅行保障计划，保障期限为3天，5月9日，刘女士突发急性病，经诊断为气肿性急性胆囊炎，住院治疗7天。刘女士随即联系君龙人寿报案。出院后，君龙人寿理赔人员协助刘女士向保险公司提交材料并申请理赔。本次治疗共计花费6511元，刘女士有社保，报销了3121元，自付部分为3390元。扣除医保外用药627元和免赔额100元后，最终保险公司赔付刘女士6511-3121-627-100=2663元。</p>"
+    ],
+    "questions": [
+        {
+            "question": "该产品可保的区域有哪些？",
+            "answer": "本计划境内外均可保障，境外游下列国家和地区不在保障范围：阿尔巴尼亚、阿尔及利亚、阿富汗、埃及、埃塞俄比亚、安哥拉、巴布亚新几内亚、巴基斯坦、巴勒斯坦、巴林、波黑、布基纳法索、布隆迪、赤道几内亚、东帝汶、多哥、厄瓜多尔、厄立特里亚、菲律宾、冈比亚、刚果共和国（布）、刚果民主共和国（金）、哥伦比亚、格鲁吉亚、圭亚那、海地共和国、黑山、洪都拉斯、吉布提、吉尔吉斯斯坦、几内亚、几内亚比绍、加纳、加蓬、柬埔寨、泰国（特指缅甸与柬埔寨边境,极南部省北大年（extreme southern provinces Pattani）,也拉（Yala）,那拉提瓦（Narathiwat）和宋卡（Songkhla））津巴布韦、喀麦隆、科特迪瓦、肯尼亚、莱索托、黎巴嫩、利比里亚、利比亚、卢旺达、马达加斯加、马拉维、马里、马其顿、毛里塔尼亚、孟加拉国、秘鲁、缅甸、莫桑比克、南非、南极洲、尼泊尔、尼加拉瓜、尼日尔、尼日利亚、塞尔维亚、塞拉利昂、斯里兰卡、斯威士兰、苏丹、苏里南、索马里、塔吉克斯坦、汤加、突尼斯、危地马拉、委内瑞拉、乌干达、乌克兰、叙利亚、亚美尼亚、也门、伊拉克、伊朗、以色列、印度（除克什米尔地区）、印度尼西亚（除亚齐、马鲁古、伊里安、加里曼丹省）、赞比亚、乍得、中非、南苏丹、科摩罗、萨尔瓦多、所罗门群岛、西撒哈拉。"
+        },
+        {
+            "question": "这款产品对投保份数和保额是否有限制呢？",
+            "answer": "同一保障期间内，每人限购一份，可投保意外身故/残疾的限额最高不超过30万元。同时根据保监会的规定，未满10岁的未成年人身故保险金额最高不能超过人民币20万元。"
+        },
+        {
+            "question": "这个产品非常的便宜，如果发生了事故，医疗费用怎么理赔呢？",
+            "answer": "境内就医须选择二级以上（含二级）医院，对必要及合理的医疗费用在扣除100元免赔后，按100%比例赔付；被保险人如在境外就医的，本合同保险责任范围内的合理医疗费用按国内保单签发地相同治疗的平均水平确定。"
+        },
+        {
+            "question": "保单生效后是否还能退保呢？",
+            "answer": "不能。<br/>但在保单生效前，都可以联系君龙人寿客服协助您办理退保或其它变更事项。"
+        }
+    ],
+    "plp": [
+        {
+            "group": "plan",
+            "field": "period",
+            "editable": false
+        }
+    ],
+    "pdp": [
+        {
+            "group": "product",
+            "field": "serial",
+            "editable": false
+        },
+        {
+            "group": "insured",
+            "field": "age",
+            "editable": false
+        },
+        {
+            "group": "liability",
+            "field": "57c24ce40879226abbb35fb8"
+        },
+        {
+            "group": "liability",
+            "field": "57c24ce40879226abbb35fd6"
+        },
+        {
+            "group": "liability",
+            "field": "58364dba99a6bc1744d17711"
+        },
+        {
+            "group": "liability",
+            "field": "58364ef499a6bc29d4ec74f9"
+        }
+    ],
+    "formGroups": [
+        {
+            "name": "plan",
+            "optional": false,
+            "fields": [
+                {
+                    "name": "startTime",
+                    "optional": {},
+                    "editable": true
+                },
+                {
+                    "name": "period",
+                    "options": {},
+                    "editable": true,
+                    "hidden": true,
+                    "defaultValue": {
+                        "displayName": "1天",
+                        "unit": "DAY",
+                        "value": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "policy-holder",
+            "optional": false,
+            "fields": [
+                {
+                    "name": "name",
+                    "editable": true
+                },
+                {
+                    "name": "id",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "身份证",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "护照",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "军人证",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "台胞证",
+                                "value": "14"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "9"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "birthDate",
+                    "editable": true
+                },
+                {
+                    "name": "gender",
+                    "editable": true
+                },
+                {
+                    "name": "phone",
+                    "editable": true
+                },
+                {
+                    "name": "email",
+                    "editable": true
+                },
+                {
+                    "name": "age",
+                    "editable": false,
+                    "options": {
+                        "min": 18
+                    }
+                }
+            ]
+        },
+        {
+            "name": "insured",
+            "fields": [
+                {
+                    "name": "relation",
+                    "editable": true,
+                    "displayAs": "selection",
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "本人",
+                                "value": "5"
+                            },
+                            {
+                                "displayName": "父母",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "子女",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "配偶",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "6"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "name",
+                    "editable": true
+                },
+                {
+                    "name": "id",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "身份证",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "护照",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "军人证",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "台胞证",
+                                "value": "14"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "9"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "age",
+                    "options": {
+                        "min": 0,
+                        "max": 80
+                    },
+                    "editable": false,
+                    "hidden": true
+                },
+                {
+                    "name": "birthDate",
+                    "editable": true
+                },
+                {
+                    "name": "gender",
+                    "editable": true
+                }
+            ]
+        },
+        {
+            "name": "beneficiary",
+            "fields": [
+                {
+                    "name": "type",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "身故受益人",
+                                "value": "2"
+                            }
+                        ]
+                    },
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "legalBeneficiary",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "是",
+                                "value": "Y"
+                            }
+                        ]
+                    },
+                    "displayAs": "radio",
+                    "defaultValue": "Y"
+                }
+            ]
+        },
+        {
+            "name": "liability",
+            "fields": [
+                {
+                    "name": "57c24ce40879226abbb35fb8",
+                    "options": {},
+                    "message": {},
+                    "defaultValue": 100000,
+                    "editable": true
+                },
+                {
+                    "name": "57c24ce40879226abbb35fd6",
+                    "options": {},
+                    "message": {},
+                    "defaultValue": 100000,
+                    "editable": true
+                },
+                {
+                    "name": "58364dba99a6bc1744d17711",
+                    "options": {},
+                    "message": {},
+                    "defaultValue": 30000,
+                    "editable": true
+                },
+                {
+                    "name": "58364ef499a6bc29d4ec74f9",
+                    "options": {},
+                    "message": {},
+                    "defaultValue": 8000,
+                    "editable": true
+                }
+            ]
+        },
+        {
+            "name": "policy",
+            "fields": [
+                {
+                    "name": "deliverType",
+                    "editable": true,
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "travelDest",
+                    "editable": true
+                }
+            ]
+        },
+        {
+            "name": "others",
+            "optional": true,
+            "fields": [
+                {
+                    "name": "invoiceName",
+                    "editable": true
+                },
+                {
+                    "name": "invoiceDate",
+                    "editable": true
+                },
+                {
+                    "name": "invoiceDeliverType",
+                    "editable": true,
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "firstName",
+                    "editable": true
+                },
+                {
+                    "name": "mobile",
+                    "editable": true
+                },
+                {
+                    "name": "address",
+                    "editable": true
+                },
+                {
+                    "name": "postalCode",
+                    "editable": true
+                }
+            ]
+        }
+    ],
+    "period": {
+        "type": "USER_SELECTION",
+        "selections": [
+            {
+                "displayName": "1天",
+                "unit": "DAY",
+                "value": 1
+            },
+            {
+                "displayName": "2天",
+                "unit": "DAY",
+                "value": 2
+            },
+            {
+                "displayName": "3天",
+                "unit": "DAY",
+                "value": 3
+            },
+            {
+                "displayName": "4天",
+                "unit": "DAY",
+                "value": 4
+            },
+            {
+                "displayName": "5天",
+                "unit": "DAY",
+                "value": 5
+            },
+            {
+                "displayName": "6天",
+                "unit": "DAY",
+                "value": 6
+            },
+            {
+                "displayName": "7天",
+                "unit": "DAY",
+                "value": 7
+            },
+            {
+                "displayName": "8天",
+                "unit": "DAY",
+                "value": 8
+            },
+            {
+                "displayName": "9天",
+                "unit": "DAY",
+                "value": 9
+            },
+            {
+                "displayName": "10天",
+                "unit": "DAY",
+                "value": 10
+            },
+            {
+                "displayName": "11天",
+                "unit": "DAY",
+                "value": 11
+            },
+            {
+                "displayName": "12天",
+                "unit": "DAY",
+                "value": 12
+            },
+            {
+                "displayName": "13天",
+                "unit": "DAY",
+                "value": 13
+            },
+            {
+                "displayName": "14天",
+                "unit": "DAY",
+                "value": 14
+            },
+            {
+                "displayName": "15天",
+                "unit": "DAY",
+                "value": 15
+            },
+            {
+                "displayName": "16天",
+                "unit": "DAY",
+                "value": 16
+            },
+            {
+                "displayName": "17天",
+                "unit": "DAY",
+                "value": 17
+            },
+            {
+                "displayName": "18天",
+                "unit": "DAY",
+                "value": 18
+            },
+            {
+                "displayName": "19天",
+                "unit": "DAY",
+                "value": 19
+            },
+            {
+                "displayName": "20天",
+                "unit": "DAY",
+                "value": 20
+            },
+            {
+                "displayName": "21天",
+                "unit": "DAY",
+                "value": 21
+            },
+            {
+                "displayName": "22天",
+                "unit": "DAY",
+                "value": 22
+            },
+            {
+                "displayName": "23天",
+                "unit": "DAY",
+                "value": 23
+            },
+            {
+                "displayName": "24天",
+                "unit": "DAY",
+                "value": 24
+            },
+            {
+                "displayName": "25天",
+                "unit": "DAY",
+                "value": 25
+            },
+            {
+                "displayName": "26天",
+                "unit": "DAY",
+                "value": 26
+            },
+            {
+                "displayName": "27天",
+                "unit": "DAY",
+                "value": 27
+            },
+            {
+                "displayName": "28天",
+                "unit": "DAY",
+                "value": 28
+            },
+            {
+                "displayName": "29天",
+                "unit": "DAY",
+                "value": 29
+            },
+            {
+                "displayName": "30天",
+                "unit": "DAY",
+                "value": 30
+            }
+        ],
+        "startTimeType": "USER_INPUT"
+    },
+    "payment": {
+        "methods": [
+            "FIXED"
+        ]
+    },
+    "insurances": [
+        {
+            "insuranceId": "57c24ce40879226abbb3600e",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 100000
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fd6",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 100000
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "58364dba99a6bc1744d17711",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 30000
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "58364ef499a6bc29d4ec74f9",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 8000
+                    }
+                }
+            ]
+        }
+    ],
+    "status": "ACTIVE",
+    "type": "MAIN",
+    "discount": 1,
+    "planCode": "0102002",
+    "insuranceClauseIds": [
+        "578b57967214b52d84eb4f56",
+        "57c24ce40879226abbb36087",
+        "57c24ce40879226abbb36088"
+    ],
+    "priceTableUrl": "http://baodan.zhongmin.cn/clause/Accid/Accid_1304_5.pdf",
+    "customerNotificationUrl": "http://baodan.zhongmin.cn/clause/ClientNotification.pdf",
+    "insuranceCityIds": [
+        "584e5b91223fe90820b8f1ac",
+        "584e5b91223fe90820b8f1be",
+        "584e5b91223fe90820b8f1d0",
+        "584e5b91223fe90820b8f1e7",
+        "584e5b91223fe90820b8f1f7",
+        "584e5b91223fe90820b8f200",
+        "584e5b91223fe90820b8f215",
+        "584e5b91223fe90820b8f22a",
+        "584e5b91223fe90820b8f243",
+        "584e5b91223fe90820b8f256",
+        "584e5b91223fe90820b8f263",
+        "584e5b91223fe90820b8f275",
+        "584e5b91223fe90820b8f281",
+        "584e5b91223fe90820b8f28e",
+        "584e5b91223fe90820b8f292",
+        "584e5b91223fe90820b8f29e",
+        "584e5b91223fe90820b8f2ab",
+        "584e5b91223fe90820b8f2b2",
+        "584e5b91223fe90820b8f2c1",
+        "584e5b91223fe90820b8f2c9",
+        "584e5b91223fe90820b8f2d1",
+        "584e5b91223fe90820b8f2de",
+        "584e5b91223fe90820b8f2ed",
+        "584e5b91223fe90820b8f2fd",
+        "584e5b91223fe90820b8f310",
+        "584e5b91223fe90820b8f320",
+        "584e5b91223fe90820b8f32b",
+        "584e5b91223fe90820b8f336",
+        "584e5b91223fe90820b8f33b",
+        "584e5b91223fe90820b8f349",
+        "584e5b91223fe90820b8f353",
+        "584e5b91223fe90820b8f35d",
+        "584e5b91223fe90820b8f36d",
+        "584e5b91223fe90820b8f376",
+        "584e5b91223fe90820b8f383",
+        "584e5b91223fe90820b8f38a",
+        "584e5b91223fe90820b8f397",
+        "584e5b91223fe90820b8f39c",
+        "584e5b91223fe90820b8f3ab",
+        "584e5b91223fe90820b8f3b7",
+        "584e5b91223fe90820b8f3c0",
+        "584e5b91223fe90820b8f3c9",
+        "584e5b91223fe90820b8f3d1",
+        "584e5b91223fe90820b8f3d9",
+        "584e5b91223fe90820b8f3e2",
+        "584e5b91223fe90820b8f3ea",
+        "584e5b91223fe90820b8f3f3",
+        "584e5b91223fe90820b8f3fc",
+        "584e5b91223fe90820b8f402",
+        "584e5b91223fe90820b8f40b",
+        "584e5b91223fe90820b8f414",
+        "584e5b91223fe90820b8f41d",
+        "584e5b91223fe90820b8f429",
+        "584e5b91223fe90820b8f434",
+        "584e5b91223fe90820b8f43c",
+        "584e5b91223fe90820b8f442",
+        "584e5b91223fe90820b8f44b",
+        "584e5b91223fe90820b8f453",
+        "584e5b91223fe90820b8f45a",
+        "584e5b91223fe90820b8f461",
+        "584e5b91223fe90820b8f46b",
+        "584e5b91223fe90820b8f47f",
+        "584e5b91223fe90820b8f491",
+        "584e5b91223fe90820b8f49c",
+        "584e5b91223fe90820b8f4a6",
+        "584e5b91223fe90820b8f4b0",
+        "584e5b91223fe90820b8f4bb",
+        "584e5b91223fe90820b8f4ce",
+        "584e5b91223fe90820b8f4da",
+        "584e5b91223fe90820b8f4e0",
+        "584e5b91223fe90820b8f4ec",
+        "584e5b91223fe90820b8f4f4",
+        "584e5b91223fe90820b8f500",
+        "584e5b91223fe90820b8f505",
+        "584e5b91223fe90820b8f518",
+        "584e5b91223fe90820b8f525",
+        "584e5b91223fe90820b8f52f",
+        "584e5b91223fe90820b8f53b",
+        "584e5b91223fe90820b8f543",
+        "584e5b91223fe90820b8f54e",
+        "584e5b91223fe90820b8f558",
+        "584e5b91223fe90820b8f560",
+        "584e5b91223fe90820b8f56a",
+        "584e5b91223fe90820b8f575",
+        "584e5b91223fe90820b8f57d",
+        "584e5b91223fe90820b8f585",
+        "584e5b91223fe90820b8f58d",
+        "584e5b91223fe90820b8f595",
+        "584e5b91223fe90820b8f5a4",
+        "584e5b91223fe90820b8f5b1",
+        "584e5b91223fe90820b8f5be",
+        "584e5b91223fe90820b8f5c7",
+        "584e5b91223fe90820b8f5ce",
+        "584e5b91223fe90820b8f5d6",
+        "584e5b91223fe90820b8f5e1",
+        "584e5b91223fe90820b8f5e9",
+        "584e5b91223fe90820b8f5ef",
+        "584e5b91223fe90820b8f5fa",
+        "584e5b91223fe90820b8f606",
+        "584e5b91223fe90820b8f611",
+        "584e5b91223fe90820b8f61b",
+        "584e5b91223fe90820b8f624",
+        "584e5b91223fe90820b8f62c",
+        "584e5b91223fe90820b8f634",
+        "584e5b91223fe90820b8f63a",
+        "584e5b91223fe90820b8f640",
+        "584e5b91223fe90820b8f64d",
+        "584e5b91223fe90820b8f656",
+        "584e5b91223fe90820b8f660",
+        "584e5b91223fe90820b8f66a",
+        "584e5b91223fe90820b8f671",
+        "584e5b91223fe90820b8f67a",
+        "584e5b91223fe90820b8f680",
+        "584e5b91223fe90820b8f686",
+        "584e5b91223fe90820b8f690",
+        "584e5b91223fe90820b8f69f",
+        "584e5b91223fe90820b8f6a7",
+        "584e5b91223fe90820b8f6ae",
+        "584e5b91223fe90820b8f6bc",
+        "584e5b91223fe90820b8f6ca",
+        "584e5b91223fe90820b8f6d7",
+        "584e5b91223fe90820b8f6e3",
+        "584e5b91223fe90820b8f6ec",
+        "584e5b91223fe90820b8f6f8",
+        "584e5b91223fe90820b8f703",
+        "584e5b91223fe90820b8f709",
+        "584e5b91223fe90820b8f710",
+        "584e5b91223fe90820b8f71f",
+        "584e5b91223fe90820b8f723",
+        "584e5b91223fe90820b8f728",
+        "584e5b91223fe90820b8f73c",
+        "584e5b91223fe90820b8f74b",
+        "584e5b91223fe90820b8f757",
+        "584e5b91223fe90820b8f764",
+        "584e5b91223fe90820b8f773",
+        "584e5b91223fe90820b8f77f",
+        "584e5b91223fe90820b8f78b",
+        "584e5b91223fe90820b8f795",
+        "584e5b91223fe90820b8f79d",
+        "584e5b91223fe90820b8f7a4",
+        "584e5b91223fe90820b8f7b2",
+        "584e5b91223fe90820b8f7c0",
+        "584e5b91223fe90820b8f7cd",
+        "584e5b91223fe90820b8f7d5",
+        "584e5b91223fe90820b8f7db",
+        "584e5b91223fe90820b8f7e1",
+        "584e5b91223fe90820b8f7e5",
+        "584e5b91223fe90820b8f7f3",
+        "584e5b91223fe90820b8f800",
+        "584e5b91223fe90820b8f80a",
+        "584e5b91223fe90820b8f813",
+        "584e5b91223fe90820b8f81f",
+        "584e5b91223fe90820b8f82d",
+        "584e5b91223fe90820b8f839",
+        "584e5b91223fe90820b8f84a",
+        "584e5b91223fe90820b8f856",
+        "584e5b91223fe90820b8f861",
+        "584e5b91223fe90820b8f868",
+        "584e5b91223fe90820b8f876",
+        "584e5b91223fe90820b8f882",
+        "584e5b91223fe90820b8f88a",
+        "584e5b91223fe90820b8f892",
+        "584e5b91223fe90820b8f899",
+        "584e5b91223fe90820b8f8a1",
+        "584e5b91223fe90820b8f8b0",
+        "584e5b91223fe90820b8f8bb",
+        "584e5b91223fe90820b8f8c7",
+        "584e5b91223fe90820b8f8d3",
+        "584e5b91223fe90820b8f8df",
+        "584e5b91223fe90820b8f8e2",
+        "584e5b91223fe90820b8f8f1",
+        "584e5b91223fe90820b8f8f9",
+        "584e5b91223fe90820b8f903",
+        "584e5b91223fe90820b8f912",
+        "584e5b91223fe90820b8f91d",
+        "584e5b91223fe90820b8f922",
+        "584e5b91223fe90820b8f929",
+        "584e5b91223fe90820b8f932",
+        "584e5b91223fe90820b8f93c",
+        "584e5b91223fe90820b8f948",
+        "584e5b91223fe90820b8f950",
+        "584e5b91223fe90820b8f955",
+        "584e5b91223fe90820b8f95e",
+        "584e5b91223fe90820b8f964",
+        "584e5b91223fe90820b8f96f",
+        "584e5b91223fe90820b8f97a",
+        "584e5b91223fe90820b8f981",
+        "584e5b91223fe90820b8f98f",
+        "584e5b91223fe90820b8f99d",
+        "584e5b91223fe90820b8f9a8",
+        "584e5b91223fe90820b8f9b3",
+        "584e5b91223fe90820b8f9b9",
+        "584e5b91223fe90820b8f9c1",
+        "584e5b91223fe90820b8f9ce",
+        "584e5b91223fe90820b8f9db",
+        "584e5b91223fe90820b8f9e9",
+        "584e5b91223fe90820b8f9f0",
+        "584e5b91223fe90820b8f9fa",
+        "584e5b91223fe90820b8fa07",
+        "584e5b91223fe90820b8fa13",
+        "584e5b91223fe90820b8fa1b",
+        "584e5b91223fe90820b8fa20",
+        "584e5b91223fe90820b8fa29",
+        "584e5b91223fe90820b8fa30",
+        "584e5b91223fe90820b8fa39",
+        "584e5b91223fe90820b8fa44",
+        "584e5b91223fe90820b8fa4b",
+        "584e5b91223fe90820b8fa55",
+        "584e5b91223fe90820b8fa5c",
+        "584e5b91223fe90820b8fa66",
+        "584e5b91223fe90820b8fa6c",
+        "584e5b91223fe90820b8fa74",
+        "584e5b91223fe90820b8fa7a",
+        "584e5b91223fe90820b8fa84",
+        "584e5b91223fe90820b8fa85",
+        "584e5b91223fe90820b8fa86",
+        "584e5b91223fe90820b8fa8b",
+        "584e5b91223fe90820b8fa92",
+        "584e5b91223fe90820b8fa9a",
+        "584e5b91223fe90820b8faa8",
+        "584e5b91223fe90820b8fab4",
+        "584e5b91223fe90820b8fac7",
+        "584e5b91223fe90820b8fad0",
+        "584e5b91223fe90820b8fad6",
+        "584e5b91223fe90820b8fadc",
+        "584e5b91223fe90820b8fae2",
+        "584e5b91223fe90820b8fae9",
+        "584e5b91223fe90820b8faf2",
+        "584e5b91223fe90820b8fb00",
+        "584e5b91223fe90820b8fb06",
+        "584e5b91223fe90820b8fb13",
+        "584e5b91223fe90820b8fb1b",
+        "584e5b91223fe90820b8fb25",
+        "584e5b91223fe90820b8fb2b",
+        "584e5b91223fe90820b8fb31",
+        "584e5b91223fe90820b8fb35",
+        "584e5b91223fe90820b8fb47",
+        "584e5b91223fe90820b8fb6f",
+        "584e5b91223fe90820b8fb84",
+        "584e5b91223fe90820b8fb8c",
+        "584e5b91223fe90820b8fb93",
+        "584e5b91223fe90820b8fb9c",
+        "584e5b91223fe90820b8fba4",
+        "584e5b91223fe90820b8fbaf",
+        "584e5b91223fe90820b8fbb8",
+        "584e5b91223fe90820b8fbbf",
+        "584e5b91223fe90820b8fbc6",
+        "584e5b91223fe90820b8fbd3",
+        "584e5b91223fe90820b8fbde",
+        "584e5b91223fe90820b8fbe6",
+        "584e5b91223fe90820b8fbf2",
+        "584e5b91223fe90820b8fbfa",
+        "584e5b91223fe90820b8fc03",
+        "584e5b91223fe90820b8fc0d",
+        "584e5b91223fe90820b8fc14",
+        "584e5b91223fe90820b8fc1a",
+        "584e5b91223fe90820b8fc28",
+        "584e5b91223fe90820b8fc3b",
+        "584e5b91223fe90820b8fc4e",
+        "584e5b91223fe90820b8fc5a",
+        "584e5b91223fe90820b8fc5f",
+        "584e5b91223fe90820b8fc6f",
+        "584e5b91223fe90820b8fc77",
+        "584e5b91223fe90820b8fc81",
+        "584e5b91223fe90820b8fc8d",
+        "584e5b91223fe90820b8fc96",
+        "584e5b91223fe90820b8fca7",
+        "584e5b91223fe90820b8fcb5",
+        "584e5b91223fe90820b8fcc5",
+        "584e5b91223fe90820b8fcd0",
+        "584e5b91223fe90820b8fcdb",
+        "584e5b91223fe90820b8fce2",
+        "584e5b91223fe90820b8fcef",
+        "584e5b91223fe90820b8fcf6",
+        "584e5b91223fe90820b8fd02",
+        "584e5b91223fe90820b8fd0c",
+        "584e5b91223fe90820b8fd17",
+        "584e5b91223fe90820b8fd25",
+        "584e5b91223fe90820b8fd2e",
+        "584e5b91223fe90820b8fd32",
+        "584e5b91223fe90820b8fd3f",
+        "584e5b91223fe90820b8fd45",
+        "584e5b91223fe90820b8fd4a",
+        "584e5b91223fe90820b8fd4f",
+        "584e5b91223fe90820b8fd59",
+        "584e5b91223fe90820b8fd6c",
+        "584e5b91223fe90820b8fd78",
+        "584e5b91223fe90820b8fd80",
+        "584e5b91223fe90820b8fd8d",
+        "584e5b91223fe90820b8fd99",
+        "584e5b91223fe90820b8fda2",
+        "584e5b91223fe90820b8fdb1",
+        "584e5b91223fe90820b8fdb7",
+        "584e5b91223fe90820b8fdc5",
+        "584e5b91223fe90820b8fdd5",
+        "584e5b91223fe90820b8fde2",
+        "584e5b91223fe90820b8fdf1",
+        "584e5b91223fe90820b8fdfe",
+        "584e5b91223fe90820b8fe0c",
+        "584e5b91223fe90820b8fe18",
+        "584e5b91223fe90820b8fe22",
+        "584e5b91223fe90820b8fe2c",
+        "584e5b91223fe90820b8fe2e",
+        "584e5b91223fe90820b8fe32",
+        "584e5b91223fe90820b8fe39",
+        "584e5b91223fe90820b8fe42",
+        "584e5b91223fe90820b8fe48",
+        "584e5b91223fe90820b8fe50",
+        "584e5b91223fe90820b8fe59",
+        "584e5b91223fe90820b8fe62",
+        "584e5b91223fe90820b8fe6c",
+        "584e5b91223fe90820b8fe75",
+        "584e5b91223fe90820b8fe80",
+        "584e5b91223fe90820b8fe89",
+        "584e5b91223fe90820b8fe93",
+        "584e5b91223fe90820b8fe9c",
+        "584e5b91223fe90820b8fea3",
+        "584e5b91223fe90820b8fea8",
+        "584e5b91223fe90820b8fead",
+        "584e5b91223fe90820b8feb3",
+        "584e5b91223fe90820b8feba",
+        "584e5b91223fe90820b8fec1",
+        "584e5b91223fe90820b8fec8",
+        "584e5b91223fe90820b8fed0",
+        "584e5b91223fe90820b8fed5",
+        "584e5b91223fe90820b8fedc",
+        "584e5b91223fe90820b8fee3",
+        "584e5b91223fe90820b8fee9",
+        "584e5b91223fe90820b8fef3",
+        "584e5b91223fe90820b8fef9",
+        "584e5b91223fe90820b8fefd",
+        "584e5b91223fe90820b8ff01",
+        "584e5b91223fe90820b8ff09",
+        "584e5b91223fe90820b8ff0e",
+        "584e5b91223fe90820b8ff18",
+        "584e5b91223fe90820b8ff22",
+        "584e5b91223fe90820b8ff27",
+        "584e5b91223fe90820b8ff34",
+        "584e5b91223fe90820b8ff3d",
+        "584e5b91223fe90820b8ff49",
+        "584e5b91223fe90820b8ff51",
+        "584e5b91223fe90820b8ff59"
+    ],
+    "insuranceAreaIds": [
+        "57b94f5ba71fac11c4112a4c",
+        "57b94f5ba71fac11c4112a4d",
+        "57b94f5ba71fac11c4112a4e",
+        "57b94f5ba71fac11c4112a4f",
+        "57b94f5ba71fac11c4112a50",
+        "57b94f5ba71fac11c4112a51",
+        "57b94f5ba71fac11c4112a52",
+        "57b94f5ba71fac11c4112a53"
+    ]
+}

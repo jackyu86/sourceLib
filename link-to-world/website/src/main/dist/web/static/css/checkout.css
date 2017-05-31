@@ -1,0 +1,708 @@
+.text-linethrough {
+    text-decoration: line-through;
+}
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto 140px;
+}
+
+.no-border {
+    border: 0 !important;
+}
+
+.step-bar {
+    background: #fff;
+    margin: 30px 0 20px;
+    height: 80px;
+}
+
+.step-bar .step {
+    margin: 0;
+}
+
+.step-bar .step h4 {
+    font-weight: normal;
+}
+
+.step-bar .step.active {
+    color: #0d9da0
+}
+
+.step-bar .index {
+    font-size: 48px;
+    font-style: italic;
+    line-height: 48px;
+    padding-right: 20px;
+}
+
+.step-bar .media-body, .step-bar .media-left {
+    vertical-align: middle;
+    height: 80px;
+}
+
+.step-bar .media-body > span {
+    color: #bbb;
+}
+
+.step-bar .step.active .media-body > span {
+    color: #0d9da0;
+}
+
+.statement-main {
+    padding: 40px;
+    background: #fff;
+}
+
+.section:first-child {
+    margin-top: 0;
+    border-top: 0;
+}
+
+.section {
+    margin-top: 10px;
+    padding-top: 25px;
+}
+
+.section .list {
+    list-style-type: decimal;
+}
+
+.section-footer .btn {
+    font-size: 16px;
+    height: 52px;
+    line-height: 38px;
+    min-width: 170px;
+    margin-left: 20px;
+}
+
+.sub-title {
+    font-size: 18px;
+    padding: 0 10px;
+    color: #0d9da0;
+    border-left: 4px solid #0d9da0;
+    margin-bottom: 30px;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.question-list {
+    list-style-type: decimal;
+    padding-left: 15px;
+    line-height: 36px;
+    margin-bottom: 50px;
+}
+
+.question-list .form-group {
+    min-height: 0;
+}
+
+.question-list .question-wrap {
+    margin-bottom: 10px;
+}
+
+.question-list .question-wrap p {
+    display: inline-block;
+}
+
+.question-list .question-wrap input {
+    margin: 0 10px;
+}
+
+.question-list .question-wrap .radio {
+    display: inline-block;
+    margin: 0 0 0 50px;
+}
+
+.question-list .question-wrap .answer .radio:first-child {
+    margin-left: 0;
+}
+
+.question-list .question-wrap table {
+    margin: auto;
+}
+
+.question-list .question-wrap th {
+    text-align: center;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+
+.question-list .question-wrap td {
+    border: 1px solid #ccc;
+}
+
+.question-list .question-wrap td > input {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0 10px;
+}
+
+.self-statement .media-body {
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.policy-links-wrap {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+#agree-policy-tip {
+    display: none;
+    color: #cf0014;
+}
+
+.policy-links-wrap label a {
+    padding: 0 10px;
+}
+
+.main-button-wrap {
+    margin: 60px auto 80px;
+}
+
+.main-button-wrap.review-main-button-wrap {
+    margin-top: 40px;
+    text-align: right;
+    margin-right: -20px;
+}
+
+.main-button-wrap.review-main-button-wrap > a.pull-left {
+    line-height: 52px;
+    margin-right: -100%;
+}
+
+.main-button-wrap .btn {
+    width: 170px;
+    height: 52px;
+    line-height: 30px;
+    font-size: 16px;
+    margin: 0 20px;
+    transition: all 0.2s ease;
+}
+
+.main-button-wrap .btn-cart:hover,
+.main-button-wrap .btn-cart:active,
+.main-button-wrap .btn-cart:focus {
+    background: #0d9da0;
+    color: #fff;;
+}
+
+.main-button-wrap.review-main-button-wrap .btn {
+    margin: 0 20px;
+}
+
+.order-main {
+    display: none;
+    padding: 30px;
+    background: #fff;
+}
+
+.order-main .section {
+    position: relative;
+    background: #fff;
+}
+
+.order-main .section.optional .Dynamic_Group_Container {
+    display: none;
+}
+
+.order-main .section.optional.require .Dynamic_Group_Container {
+    display: block;
+}
+
+.order-main .section .recommend-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/hot.png);
+    width: 44px;
+    height: 44px;
+    background-size: 44px;
+}
+
+.order-main .section .header {
+    padding-bottom: 16px;
+    display: table;
+    border-bottom: 1px solid #0d9da0;
+    width: 100%;
+}
+
+.order-main .section .header .image-wrap {
+    width: 100px;
+    height: 42px;
+    display: table-cell;
+    padding-right: 20px;
+}
+
+.order-main .section .header .header-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.order-main .section .header .header-content > a {
+    margin-left: 25px;
+}
+
+.order-main .section .header .header-content h4 {
+    margin: 0;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+.order-main .section .header .header-content h4 .checkbox {
+    display: inline-block;
+}
+
+.order-main .section .header .header-content p {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 12px;
+}
+
+.order-main .section .content {
+    padding: 35px 0;
+}
+
+.order-main .section .content .attribute-list {
+    font-size: 14px;
+    line-height: 34px;
+}
+
+.order-main .section .content .attribute-list:before,
+.order-main .section .content .attribute-list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.order-main .section .content .attribute {
+    float: left;
+    color: #333;
+}
+
+.order-main .section .content .attribute-name {
+    float: left;
+    min-width: 60px;
+    text-align: justify;
+    text-align-last: justify;
+}
+
+.order-main .section .content .attribute-value-list {
+    margin-left: 5px;
+    color: #000;
+}
+
+.order-main .section .content .attribute-value {
+    margin-left: 15px;
+}
+
+.order-main .section .attribute .attribute-value-list label {
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.order-main .section .attribute .attribute-value-list label:active,
+.order-main .section .attribute .attribute-value-list label.active {
+    box-shadow: none;
+    border: 2px solid #cf0014;
+}
+
+.order-main .section .attribute .attribute-value-list label > input[type=radio] {
+    display: none;
+}
+
+.order-main .section .read-me {
+    line-height: 60px;
+    background: #f4f4f4;
+    padding: 0 20px;
+}
+
+.order-main .section .read-me > a {
+    padding: 0 18px;
+}
+
+.table .media {
+    border: 1px solid #eee;
+    margin: -1px 0 0;
+}
+
+.table .media:first-child {
+    margin-top: 0;
+}
+
+.table .media-left {
+    text-align: center;
+    vertical-align: middle;
+    border-right: 1px solid #eee;
+}
+
+.insurance-content {
+    margin-top: 25px;
+}
+
+.insurance-content .type {
+    width: 227px;
+}
+
+.insurance-content .amount {
+    width: 180px;
+}
+
+.insurance-content .description {
+    padding: 35px 70px;
+}
+
+.btn-delete {
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+}
+
+.field-list {
+    padding: 30px 0 10px;
+    overflow: hidden;
+}
+
+.field-list:nth-child(odd) {
+    background-color: #fcfcfc;
+}
+
+.field-list:first-child {
+    background-color: #fff;
+}
+
+.static-field-list {
+    padding-top: 36px;
+}
+
+.field-list .form-group {
+    display: table;
+    min-height: 58px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.static-field-list .form-group {
+    padding: 15px 0;
+    min-height: 78px;
+}
+
+.form-group .form-control-static {
+    padding: 0 15px 0 0;
+    line-height: 38px;
+    height: auto;
+    border: 0;
+    box-shadow: none;
+    background: none;
+}
+
+.form-group > .form-control-static {
+    padding: 0;
+}
+
+.field-list .form-group > label {
+    width: 200px;
+    text-align: right;
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 20px;
+    line-height: 38px;
+    font-weight: normal;
+}
+
+.field-list .form-group > label.btn-link {
+    line-height: 38px;
+    margin-left: 20px;
+    width: auto;
+    padding: 0;
+    height: 38px;
+    border: 0;
+}
+
+.static-field-list .form-group > label {
+    line-height: 30px;
+    margin: 9px 20px 9px 0;
+}
+
+.static-field-list .form-group > label.bg-primary {
+    text-align: center;
+}
+
+.form-group select {
+    float: left;
+    width: auto;
+    min-width: 90px;
+    padding: 0 20px 0 16px;
+    -webkit-appearance: none;
+    background: #fff url(/static/img/icon_change.png) no-repeat right 10px center;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.form-group select.extended {
+    width: 170px;
+    background-position-x: 155px;
+}
+
+.form-group > .pull-left {
+    position: relative;
+    white-space: nowrap;
+    display: table-cell;
+}
+
+.form-wrap input {
+    min-width: 180px;
+    margin-right: 10px;
+    height: 38px;
+    display: inline-block;
+}
+
+.form-wrap input.input-extend,
+.form-wrap select.input-extend {
+    width: auto;
+    min-width: 192px;
+}
+
+.form-group.address-group input {
+    width: 530px;
+}
+
+.form-wrap .input-unit {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    line-height: 44px;
+    background: #fff;
+    padding-right: 10px;
+    z-index: 1;
+}
+
+.form-wrap .radio, .form-wrap .checkbox {
+    margin-right: 40px;
+    padding: 0;
+}
+
+.form-group.textarea-wrap {
+    display: table;
+    width: 100%;
+}
+
+.form-group.textarea-wrap label {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+    padding-right: 20px;
+}
+
+.form-group.textarea-wrap textarea {
+    display: table-cell;
+    width: 100%;
+}
+
+.summary-table {
+    margin-top: 30px;
+    line-height: 46px;
+    text-align: center;
+    border: 1px solid #e3e3e3;
+}
+
+.summary-table:first-child {
+    margin-top: 40px;
+}
+
+.summary-table .summary-title {
+    display: table;
+    width: 100%;
+}
+
+.summary-table .summary-item {
+    border-top: 1px solid #e3e3e3;
+    min-height: 46px;
+    display: table;
+    width: 100%;
+}
+
+.summary-table .summary-title:after, .summary-table .summary-item:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.summary-table .summary-cell {
+    width: 20%;
+    display: table-cell;
+    vertical-align: middle;
+    border-left: 1px solid #e3e3e3;
+    color: #000;
+}
+
+.summary-table .summary-cell .summary-sub-cell {
+    border-top: 1px solid #e3e3e3;
+}
+
+.summary-table .summary-cell .summary-sub-cell:first-child {
+    border-top: 0;
+}
+
+.summary-table .summary-cell-lg {
+    width: 40%;
+    padding: 0 15px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.summary-table .cost {
+    font-size: 20px;
+}
+
+.summary-table .summary-footer {
+    border-top: 1px solid #e3e3e3;
+    text-align: right;
+    line-height: 66px;
+    padding: 0 10px;
+}
+
+.summary-table .summary-footer .info {
+    margin-right: 20px;
+}
+
+.btn-pay {
+    position: relative;
+    background: #f4f4f4;
+    margin-left: 15px;
+}
+
+.btn-pay:before {
+    content: "";
+    position: absolute;
+    display: block;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transition: opacity 0.5s ease;
+}
+
+.btn-pay.disabled:before {
+    opacity: 1;
+}
+
+.btn-pay-ali,
+.btn-pay-ali:active {
+    padding: 10px 65px;
+    width: 170px;
+    height: 60px;
+    background: url(/static/img/pay_ali.png) no-repeat;
+    background-size: 100%;
+}
+
+.btn-pay-wechat,
+.btn-pay-wechat:active {
+    padding: 10px 65px;
+    width: 170px;
+    height: 60px;
+    background: url(/static/img/pay_chat.png) no-repeat;
+    background-size: 100%;
+}
+
+.btn-pay .pay-loading {
+    display: block;
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #0d9da0;
+    border-left: 3px solid transparent;
+    transition: opacity 0.5s ease;
+    animation: circle 1s infinite linear;
+}
+
+.btn-pay.disabled .pay-loading {
+    opacity: 1;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.barcode-wrap {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    margin: 30px auto;
+    border: 2px solid #f7f7f7;
+}
+
+.barcode-wrap img {
+    width: 100%;
+    height: 100%;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.attribute-message {
+    display: none;
+    line-height: 38px;
+    padding: 0 6px;
+}
+
+.attribute-message.show {
+    display: inline-block !important;
+}
+
+.liability-value select {
+    float: none;
+    display: inline-block;
+}
+
+.btn-repay {
+    display: none;
+}
+
+.table {
+    display: table;
+    margin-top: 20px;
+    border: 1px solid #eee;
+}
+
+.table .table-row {
+    display: table-row;
+}
+
+.table .table-row .table-cell {
+    display: table-cell;
+    width: auto;
+    text-align: left;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.table .table-row .table-cell .static-value {
+    white-space: nowrap;
+}
+
+.table .table-row label.table-cell {
+    border-right: 1px solid #eee;
+}
+
+.btn-return {
+
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "id": "57c24ce40879226abbb3602b",
+        "name": "已婚",
+        "value": "1",
+        "displayOrder": 1
+    },
+    {
+        "id": "57c24ce40879226abbb3602c",
+        "name": "未婚",
+        "value": "2",
+        "displayOrder": 2
+    },
+    {
+        "id": "57c24ce40879226abbb3602d",
+        "name": "离婚",
+        "value": "3",
+        "displayOrder": 3
+    },
+    {
+        "id": "57c24ce40879226abbb3602e",
+        "name": "丧偶",
+        "value": "4",
+        "displayOrder": 4
+    },
+    {
+        "id": "57c24ce40879226abbb3602f",
+        "name": "其他",
+        "value": "5",
+        "displayOrder": 5
+    }
+]

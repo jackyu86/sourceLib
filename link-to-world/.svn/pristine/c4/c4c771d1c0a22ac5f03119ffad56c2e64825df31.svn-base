@@ -1,0 +1,25 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>保险分类管理</h2>
+
+        <span flex></span>
+        <md-button ng-click="create($event)" class="md-icon-button">
+            <md-tooltip md-direction="down">
+                新建一级分类
+            </md-tooltip>
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+<div layout="row" flex>
+    <md-card class="md-padding">
+        <div data-angular-treeview="true"
+             data-tree-id="tree"
+             data-tree-model="treeData"
+             data-node-id="category.id"
+             data-node-label="category.name"
+             data-node-children="children">
+        </div>
+    </md-card>
+    <div flex ui-view></div>
+</div>

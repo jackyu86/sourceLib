@@ -1,0 +1,154 @@
+[
+    {
+        "id": "57c24ce40879226abbb36013",
+        "name": "君行天下系列",
+        "products": [
+            {
+                "productName": "57c24ce40879226abbb36014",
+                "displayName": "计划A"
+            },
+            {
+                "productName": "57c24ce40879226abbb3600f",
+                "displayName": "计划B"
+            },
+            {
+                "productName": "57c24ce40879226abbb36010",
+                "displayName": "计划C"
+            },
+            {
+                "productName": "57c24ce40879226abbb36015",
+                "displayName": "计划D"
+            }
+        ],
+        "createdTime": "2016-07-17T09:24:48Z",
+        "updatedTime": "2016-07-17T09:24:48Z",
+        "createdBy": "init",
+        "updatedBy": "init"
+    },
+    {
+        "id": "57c24ce40879226abbb3607a",
+        "name": "境内旅行救援系列",
+        "products": [
+            {
+                "productName": "7f8d286df9c846eea367b4ac08a060ee",
+                "displayName": "计划一"
+            },
+            {
+                "productName": "57c24ce40879226abbb36053",
+                "displayName": "计划二"
+            },
+            {
+                "productName": "57c24ce40879226abbb36057",
+                "displayName": "计划三"
+            },
+            {
+                "productName": "57c24ce40879226abbb36056",
+                "displayName": "计划四"
+            },
+            {
+                "productName": "57c24ce40879226abbb36059",
+                "displayName": "计划五"
+            },
+            {
+                "productName": "57c24ce40879226abbb3605a",
+                "displayName": "计划六"
+            }
+        ],
+        "createdTime": "2016-07-17T09:24:48Z",
+        "updatedTime": "2016-07-17T09:24:48Z",
+        "createdBy": "init",
+        "updatedBy": "init"
+    },
+    {
+        "id": "57c24ce40879226abbb3607b",
+        "name": "普通意外系列",
+        "products": [
+            {
+                "productName": "57c24ce40879226abbb3605c",
+                "displayName": "基础计划"
+            },
+            {
+                "productName": "57c24ce40879226abbb36060",
+                "displayName": "优选计划"
+            },
+            {
+                "productName": "57c24ce40879226abbb36064",
+                "displayName": "尊享计划"
+            }
+        ],
+        "createdTime": "2016-07-17T09:24:48Z",
+        "updatedTime": "2016-07-17T09:24:48Z",
+        "createdBy": "init",
+        "updatedBy": "init"
+    },
+    {
+        "id": "57c24ce40879226abbb3607c",
+        "name": "高额意外系列",
+        "products": [
+            {
+                "productName": "57c24ce40879226abbb36063",
+                "displayName": "精英计划"
+            },
+            {
+                "productName": "57c24ce40879226abbb36066",
+                "displayName": "白领计划"
+            },
+            {
+                "productName": "57c24ce40879226abbb36068",
+                "displayName": "金领计划"
+            },
+            {
+                "productName": "57c24ce40879226abbb36069",
+                "displayName": "至尊计划"
+            }
+        ],
+        "createdTime": "2016-07-17T09:24:48Z",
+        "updatedTime": "2016-07-17T09:24:48Z",
+        "createdBy": "init",
+        "updatedBy": "init"
+    },
+    {
+        "id": "57c24ce40879226abbb3607d",
+        "name": "单日航意系列",
+        "products": [
+            {
+                "productName": "57c24ce40879226abbb36070",
+                "displayName": "计划一"
+            },
+            {
+                "productName": "57c24ce40879226abbb36071",
+                "displayName": "计划二"
+            },
+            {
+                "productName": "57c24ce40879226abbb36074",
+                "displayName": "计划三"
+            }
+        ],
+        "createdTime": "2016-07-17T09:24:48Z",
+        "updatedTime": "2016-07-17T09:24:48Z",
+        "createdBy": "init",
+        "updatedBy": "init"
+    },
+    {
+        "id": "57c24ce40879226abbb3608d",
+        "name": "7日航意系列",
+        "products": [
+            {
+                "productName": "57c24ce40879226abbb36076",
+                "displayName": "计划一"
+            },
+            {
+                "productName": "57c24ce40879226abbb3608f",
+                "displayName": "计划二"
+            },
+            {
+                "productName": "57c24ce40879226abbb36090",
+                "displayName": "计划三"
+            }
+        ],
+        "createdTime": "2016-07-17T09:24:48Z",
+        "updatedTime": "2016-07-17T09:24:48Z",
+        "createdBy": "init",
+        "updatedBy": "init"
+    }
+]

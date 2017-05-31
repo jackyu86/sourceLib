@@ -1,0 +1,70 @@
+<html xmlns:j="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+<div class="side-nav">
+    <div class="list-group" j:class="category=='center'?'active':''">
+        <div class="list-group-item title">
+            <a href="/account/info">基本信息</a>
+        </div>
+        <div class="list-group-item" j:class="selected=='info'?'active':''">
+            <a href="/account/info">基本资料</a>
+        </div>
+        <div class="list-group-item" j:class="selected=='policy-holder'?'active':''" j:role="dealerUser,dealerAdmin">
+            <a href="/account/policy-holder">常用投保人</a>
+        </div>
+        <div class="list-group-item" j:class="selected=='invite'?'active':''">
+            <a href="/account/invite">邀请注册</a>
+        </div>
+    </div>
+    <div class="list-group" j:class="category=='order'?'active':''">
+        <div class="list-group-item title">
+            <a href="#" j:href="category=='order'?'#':'/account/order'">订单管理</a>
+        </div>
+        <div class="list-group-item" j:class="selected==null?'active':''">
+            <a href="/account/order">全部订单</a>
+        </div>
+        <div class="list-group-item" j:class="selected=='PAYMENT_PENDING'?'active':''">
+            <a href="/account/order?status=PAYMENT_PENDING">待支付</a>
+        </div>
+        <div class="list-group-item" j:class="selected=='PAYMENT_COMPLETED'?'active':''">
+            <a href="/account/order?status=PAYMENT_COMPLETED">已支付</a>
+        </div>
+        <div class="list-group-item" j:class="selected=='DOCUMENTED'?'active':''">
+            <a href="/account/order?status=VENDOR_INSURED">已承保</a>
+        </div>
+        <div class="list-group-item" j:class="selected=='SURRENDERED'?'active':''">
+            <a href="/account/order?status=SURRENDERED">已退保</a>
+        </div>
+
+    </div>
+    <div class="list-group">
+        <div class="list-group-item title" j:class="selected=='cart'?'active':''">
+            <a href="#" j:href="selected=='cart'?'#':'/account/cart'">购物车</a>
+        </div>
+    </div>
+    <div class="list-group" j:class="category=='dealer'?'active':''" j:role="dealerAdmin">
+        <div class="list-group-item title">
+            <a href="/account/dealer" j:dealer="level:LEVEL1,LEVEL2,LEVEL3" j:href="category=='dealer'?'javascript:void(0)':'/account/dealer'">分销商管理</a>
+            <a href="/account/dealer" j:dealer="level:LEVEL4" j:href="category=='dealer'?'javascript:void(0)':'/account/dealer/user'">分销商管理</a>
+        </div>
+        <div class="list-group-item" j:dealer="level:LEVEL1,LEVEL2,LEVEL3" j:class="selected=='list'?'active':''">
+            <a href="/account/dealer">分销商列表</a>
+        </div>
+        <div class="list-group-item" j:class="selected=='dealerUser'?'active':''">
+            <a href="/account/dealer/user">出单员列表</a>
+        </div>
+        <div class="list-group-item" j:class="selected=='statistic'?'active':''">
+            <a href="/account/dealer/statistic">业绩汇总统计</a>
+        </div>
+        <div class="list-group-item" j:class="selected=='settlement'?'active':''">
+            <a href="/account/dealer/settlement">结算明细查询</a>
+        </div>
+        <div class="list-group-item" j:dealer="level:LEVEL1,LEVEL2,LEVEL3" j:class="selected=='invite'?'active':''">
+            <a href="/account/dealer/invite">邀请注册</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>订单列表</h2>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="Create dealer" ui-sref="console.dealer.create">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-card>
+    <md-card-content class="order-search-wrap" ng-class="{open:isSearchOpen}">
+        <div layout="row">
+            <md-input-container flex="20">
+                <label>投保单号</label>
+                <input ng-model="orderTable.query.applyCode">
+            </md-input-container>
+            <md-input-container flex="20">
+                <label>保单号</label>
+                <input ng-model="orderTable.query.policyCode">
+            </md-input-container>
+            <md-input-container flex="20">
+                <label>支付流水号</label>
+                <input ng-model="orderTable.query.paymentId">
+            </md-input-container>
+            <md-input-container flex="20">
+                <label>支付方式</label>
+                <md-select ng-model="orderTable.query.paymentMethod">
+                    <md-option ng-value="null">全部</md-option>
+                    <md-option value="NOTSELECTED">未选择</md-option>
+                    <md-option value="ALI_WEB">支付宝</md-option>
+                    <md-option value="WX_NATIVE">微信</md-option>
+                    <md-option value="CREDIT">信用额度</md-option>
+                    <md-option value="OFFLINE">线下支付</md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container flex="20">
+                <label>保单状态</label>
+                <md-select ng-model="orderTable.query.status">
+                    <md-option ng-value="null">全部</md-option>
+                    <md-option value="DRAFT">拟定</md-option>
+                    <md-option value="PAYMENT_PENDING">待支付</md-option>
+                    <md-option value="PAYMENT_FAILED">支付失败</md-option>
+                    <md-option value="PAYMENT_COMPLETED">支付成功</md-option>
+                    <md-option value="AUDITING">核保</md-option>
+                    <md-option value="VENDOR_INSURED">已承保</md-option>
+                    <md-option value="VENDOR_REJECT">拒保</md-option>
+                    <md-option value="DOCUMENTED">已出单</md-option>
+                    <md-option value="SURRENDERING">请求退保</md-option>
+                    <md-option value="SURRENDERED">已退保</md-option>
+                    <md-option value="REFUND">已退款</md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div layout="row">
+            <!--<md-input-container flex="25">-->
+            <!--<label>开始日期</label>-->
+            <!--<md-datepicker ng-model="orderTable.query.startDate"></md-datepicker>-->
+
+            <!--<div ng-messages="myOtherForm.dateField.$error">-->
+            <!--<div ng-message="valid">The entered value is not a date!</div>-->
+            <!--<div ng-message="required">This date is required!</div>-->
+            <!--<div ng-message="mindate">Date is too early!</div>-->
+            <!--<div ng-message="maxdate">Date is too late!</div>-->
+            <!--</div>-->
+            <!--</md-input-container>-->
+            <!--<md-input-container flex="25">-->
+            <!--<label>结束日期</label>-->
+            <!--<md-datepicker ng-model="orderTable.query.endDate"></md-datepicker>-->
+
+            <!--<div ng-messages="myOtherForm.dateField.$error">-->
+            <!--<div ng-message="valid">The entered value is not a date!</div>-->
+            <!--<div ng-message="required">This date is required!</div>-->
+            <!--<div ng-message="mindate">Date is too early!</div>-->
+            <!--<div ng-message="maxdate">Date is too late!</div>-->
+            <!--</div>-->
+            <!--</md-input-container>-->
+        </div>
+
+        <div layout="row">
+            <md-input-container flex="25">
+                <label>分销商级别</label>
+                <md-select ng-model="data.dealerLevel">
+                    <md-option value="-1">全部</md-option>
+                    <md-option value="LEVEL1">一级</md-option>
+                    <md-option value="LEVEL2">二级</md-option>
+                    <md-option value="LEVEL3">三级</md-option>
+                    <md-option value="LEVEL4">四级</md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container flex="25">
+                <label>分销商</label>
+                <md-select ng-model="orderTable.query.dealerId" ng-disabled="data.dealerLevel === '-1'">
+                    <md-option ng-repeat="dealer in data.listingDealer" ng-value="dealer.id">
+                        {{dealer.name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container flex="25">
+                <label>产品分类</label>
+                <md-select ng-model="filter.categoryId">
+                    <md-option value="-1">全部</md-option>
+                    <md-option ng-repeat="category in filter.categories" ng-value="category.id">
+                        {{category.name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container flex="25">
+                <label>产品名称</label>
+                <md-select ng-model="orderTable.query.productName" ng-disabled="filter.categoryId === '-1'">
+                    <md-option ng-repeat="product in filter.products" ng-value="product.name">
+                        {{product.displayName}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+
+        <div layout="column">
+            <md-radio-group ng-model="filter.role" class="md-primary" layout="row">
+                <md-radio-button value="policy-holder" flex="25">投保人</md-radio-button>
+                <md-radio-button value="insured" flex="25">被保人</md-radio-button>
+            </md-radio-group>
+            <div layout="row">
+                <md-input-container flex="20">
+                    <label>姓名</label>
+                    <input ng-model="filter.userInfo.name">
+                </md-input-container>
+                <md-input-container flex="20">
+                    <label>证件类型</label>
+                    <md-select ng-model="filter.userInfo.idType">
+                        <md-option ng-value="null">身份证</md-option>
+                        <md-option value="1">身份证</md-option>
+                        <md-option value="2">军人证</md-option>
+                        <md-option value="3">护照</md-option>
+                        <md-option value="4">出生证明</md-option>
+                        <md-option value="5">异常身份证</md-option>
+                        <md-option value="9">其他</md-option>
+                        <md-option value="11">户口簿</md-option>
+                        <md-option value="12">武警证</md-option>
+                        <md-option value="14">台胞证</md-option>
+                        <md-option value="15">法人营业执照</md-option>
+                        <md-option value="16">户名</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container flex="20">
+                    <label>证件号码</label>
+                    <input ng-model="filter.userInfo.idNumber">
+                </md-input-container>
+                <md-input-container flex="20">
+                    <label>手机号码</label>
+                    <input ng-model="filter.userInfo.phone">
+                </md-input-container>
+                <md-input-container flex="20">
+                    <label>Email</label>
+                    <input ng-model="filter.userInfo.email">
+                </md-input-container>
+            </div>
+        </div>
+
+
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="end center">
+        <md-button class="left" ng-click="isSearchOpen=!isSearchOpen">
+            <md-icon ng-class="{'fa-angle-double-down':!isSearchOpen,'fa-angle-double-up':isSearchOpen}" md-font-icon="fa"></md-icon>
+            高级搜索
+        </md-button>
+        <span flex></span>
+        <md-button ng-click="reloadOrders()">搜索</md-button>
+    </md-card-actions>
+</md-card>
+
+<md-card flex>
+    <md-subheader ng-if=" !orderTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>订单列表</span>
+            <span flex></span>
+        </div>
+    </md-subheader>
+
+    <md-subheader ng-if="orderTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>{{orderTable.selected.length}} Selected</span>
+            <span flex></span>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table md-row-select multiple ng-model="orderTable.selected">
+            <thead md-head md-order="orderTable.query.order" md-on-reorder="reloadDealers" class="md-accent">
+            <tr md-row>
+                <th md-column md-order-by="id"><span md-msg="order.id"></span></th>
+                <th md-column><span md-msg="order.dealer"></span></th>
+                <th md-column><span md-msg="order.name"></span></th>
+                <th md-column><span>投保单号</span></th>
+                <th md-column><span>保单号</span></th>
+                <th md-column><span md-msg="order.status"></span></th>
+                <th md-column><span md-msg="order.price"></span></th>
+                <th md-column>投保人姓名</th>
+                <th md-column>手机号</th>
+                <th md-column>email</th>
+                <th md-column><span md-msg="order.insured"></span></th>
+                <th md-column>证件号码</th>
+                <th md-column>航班/车次</th>
+                <th md-column>起飞/发车时间</th>
+                <th md-column md-order-by="createdTime">投保时间</th>
+                <th md-column>承保时间</th>
+                <th md-column>生效时间</th>
+                <th md-column>失效时间</th>
+                <th md-column>最后变更时间</th>
+                <th md-column>保额</th>
+                <th md-column>交费方式</th>
+                <th md-column><span md-msg="order.action">Action</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="order"
+                ng-repeat="order in orderTable.data.items" md-auto-select>
+                <td md-cell>{{order.id}}</td>
+                <td md-cell>{{order.dealerName}}</td>
+                <td md-cell>{{order.productDisplayName}}</td>
+                <td md-cell>{{order.applyCode}}</td>
+                <td md-cell ng-model="order.items" policy-code></td>
+                <td md-cell ng-model="order.orderStatus" order-status></td>
+                <td md-cell>{{order.price}}</td>
+                <td md-cell>{{order.policyHolderName}}</td>
+                <td md-cell>{{order.policyHolderPhone}}</td>
+                <td md-cell>{{order.policyHolderEmail}}</td>
+                <td md-cell>{{order.insuredName}}</td>
+                <td md-cell>{{order.insuredIdNumber}}</td>
+                <td md-cell></td>
+                <td md-cell></td>
+                <td md-cell>{{order.orderDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                <td md-cell></td>
+                <td md-cell>{{order.planStartTime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                <td md-cell ng-model="order" dead-time></td>
+                <td md-cell>{{order.updatedTime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                <td md-cell></td>
+                <td md-cell></td>
+                <td md-cell layout="row">
+                    <md-button class="md-link-button" ng-click="detail(order)">详情</md-button>
+                    <md-button class="md-link-button" ng-if="order.orderStatus == 'PAYMENT_COMPLETED'" ng-click="orderTable.unpay(order.id)">支付失败</md-button>
+                    <md-button class="md-link-button" ng-if="order.orderStatus == 'PAYMENT_PENDING'" ng-click="orderTable.pay(order.id)">支付</md-button>
+                    <md-button class="md-link-button" ng-if="order.orderStatus == 'PAYMENT_COMPLETED' || order.orderStatus == 'AUDITING'" ng-click="orderTable.insure(order.id)">承保</md-button>
+                    <md-button class="md-link-button" ng-if="order.orderStatus == 'PAYMENT_COMPLETED' || order.orderStatus == 'AUDITING'" ng-click="orderTable.uninsure(order.id)"> 拒保</md-button>
+                    <md-button class="md-link-button"
+                               ng-if="order.surrenderMark != null && order.surrenderMark && (order.orderStatus == 'VENDOR_INSURED' || order.orderStatus == 'DOCUMENTED' || order.orderStatus == 'SURRENDER_FAILED' || order.orderStatus == 'VENDOR_REJECT')"
+                               ng-click="orderTable.reject(order.id)">撤单
+                    </md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+    <md-table-pagination md-limit="orderTable.query.limit" md-page="orderTable.query.page" md-total="{{orderTable.data.total}}"
+                         md-page-select="orderTable.options.pageSelector" md-boundary-links="orderTable.options.boundaryLinks"
+                         md-on-paginate="reloadOrders"></md-table-pagination>
+
+</md-card>

@@ -1,0 +1,25 @@
+http:
+  host: localhost
+  port: 8080
+
+site:
+  host: localhost
+
+web:
+  baseURL: http://localhost:8080
+  baseCdnURLs:
+    - http://localhost:8080
+    - http://localhost:8080
+
+template:
+  dirs:
+    - /opt/template
+
+test:
+  pattern: (.*)some
+
+jdbc:
+  url: jdbc:hsqldb:mem:.;sql.syntax_mys=true
+
+mongo:
+  url: fongo://localhost:27017/mock

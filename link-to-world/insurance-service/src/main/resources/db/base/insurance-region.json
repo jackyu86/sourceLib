@@ -1,0 +1,98 @@
+[
+  {
+    "id": "57b94f5ba71fac11c4112a4c",
+    "areaCode": "79",
+    "displayName": "马尔代夫",
+    "displayOrder": "1",
+    "englishName": "MALDIVES",
+    "pinyin": "maerdaifu",
+    "createdTime": "2016-08-21T16:00:00Z",
+    "createdBy": "init",
+    "updatedTime": "2016-08-21T16:00:00Z",
+    "updatedBy": "init"
+  },
+  {
+    "id": "57b94f5ba71fac11c4112a4d",
+    "areaCode": "152",
+    "displayName": "泰国",
+    "displayOrder": "2",
+    "englishName": "THAILAND",
+    "pinyin": "taiguo",
+    "createdTime": "2016-08-21T16:00:00Z",
+    "createdBy": "init",
+    "updatedTime": "2016-08-21T16:00:00Z",
+    "updatedBy": "init"
+  },
+  {
+    "id": "57b94f5ba71fac11c4112a4e",
+    "areaCode": "128",
+    "displayName": "越南",
+    "displayOrder": "3",
+    "englishName": "VIETNAM",
+    "pinyin": "yuenan",
+    "createdTime": "2016-08-21T16:00:00Z",
+    "createdBy": "init",
+    "updatedTime": "2016-08-21T16:00:00Z",
+    "updatedBy": "init"
+  },
+  {
+    "id": "57b94f5ba71fac11c4112a4f",
+    "areaCode": "106",
+    "displayName": "中国台湾",
+    "displayOrder": "4",
+    "englishName": "TAIWAN，CHINA",
+    "pinyin": "zhongguotaiwan",
+    "createdTime": "2016-08-21T16:00:00Z",
+    "createdBy": "init",
+    "updatedTime": "2016-08-21T16:00:00Z",
+    "updatedBy": "init"
+  },
+  {
+    "id": "57b94f5ba71fac11c4112a50",
+    "areaCode": "230",
+    "displayName": "冲绳岛",
+    "displayOrder": "5",
+    "englishName": "OkinawaIsland",
+    "pinyin": "chongshengdao",
+    "createdTime": "2016-08-21T16:00:00Z",
+    "createdBy": "init",
+    "updatedTime": "2016-08-21T16:00:00Z",
+    "updatedBy": "init"
+  },
+  {
+    "id": "57b94f5ba71fac11c4112a51",
+    "areaCode": "228",
+    "displayName": "大溪地",
+    "displayOrder": "6",
+    "englishName": "Tahiti",
+    "pinyin": "daxidi",
+    "createdTime": "2016-08-21T16:00:00Z",
+    "createdBy": "init",
+    "updatedTime": "2016-08-21T16:00:00Z",
+    "updatedBy": "init"
+  },
+  {
+    "id": "57b94f5ba71fac11c4112a52",
+    "areaCode": "231",
+    "displayName": "济州岛",
+    "displayOrder": "7",
+    "englishName": "JejuIsland",
+    "pinyin": "jizhoudao",
+    "createdTime": "2016-08-21T16:00:00Z",
+    "createdBy": "init",
+    "updatedTime": "2016-08-21T16:00:00Z",
+    "updatedBy": "init"
+  },
+  {
+    "id": "57b94f5ba71fac11c4112a53",
+    "areaCode": "229",
+    "displayName": "塞班",
+    "displayOrder": "8",
+    "englishName": "Saipan",
+    "pinyin": "saiban",
+    "createdTime": "2016-08-21T16:00:00Z",
+    "createdBy": "init",
+    "updatedTime": "2016-08-21T16:00:00Z",
+    "updatedBy": "init"
+  }
+]

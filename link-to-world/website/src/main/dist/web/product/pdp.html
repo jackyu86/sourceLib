@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html xmlns:j="" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title j:text="product.displayName + ' - 君龙保险'">产品详情</title>
+    <meta name="keywords" j:content="product.keywords | join"/>
+    <link rel="stylesheet" j:css="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" j:css="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static/css/common.css">
+    <link rel="stylesheet" j:css="/static/css/header.css">
+    <link rel="stylesheet" j:css="/static/css/footer.css">
+    <link rel="stylesheet" j:css="/static/css/pdp.css">
+</head>
+<body>
+
+<j:header j:selected="product.insuranceCategoryIds"/>
+
+<div class="page">
+    <div class="product">
+        <input type="hidden" id="pdp-product-id" j:value="product.id">
+        <input type="hidden" id="pdp-product-name" j:value="product.name">
+        <script class="product-rule" type="text/json" j:data-funcname="product.specialFunction" j:html="product.specialRule"></script>
+        <div class="header">
+            <div class="image-wrap">
+                <img j:src="vendor.imageURL" src="/static/img/lg20121106111644.gif" alt="">
+            </div>
+            <div class="header-content">
+                <h4 j:text="product.displayName">保险名称</h4>
+                <p j:text="product.highlightContent">保险描述</p>
+            </div>
+        </div>
+        <div class="content">
+            <script type="text/json" j:html="form | json">
+            </script>
+            <form class="attribute-list form-horizontal">
+                <div class="attribute">
+                    <span class="attribute-name">保险因子名称</span>
+                    <span class="attribute-value">保险因子值</span>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <span class="price">
+                <span class="original">原价： ￥<span class="product-price-container">0</span></span>
+                <span class="sale">价格： ￥<span class="product-sale-price-container">0</span></span>
+            </span>
+
+            <a href="javascript:void(0)" class="buy btn btn-lg btn-info submit-button">立即投保</a>
+        </div>
+    </div>
+
+    <div class="detail-section">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#detail" aria-controls="Detail" role="tab" data-toggle="tab">产品详情</a>
+            </li>
+            <li role="presentation">
+                <a href="#example" aria-controls="Example" role="tab" data-toggle="tab">投保示例</a>
+            </li>
+            <li role="presentation">
+                <a href="#qna" aria-controls="Q&A" role="tab" data-toggle="tab">常见问题</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="detail">
+                <div class="section">
+                    <div class="sub-title">保障内容</div>
+
+                    <div class="table insurance-content">
+                        <div class="media" j:for="riskProtection:riskProtections" j:if="riskProtections != null">
+                            <div class="media-left">
+                                <div class="type" j:text="riskProtection.name">保障内容名称</div>
+                            </div>
+
+                            <div class="media-left">
+                                <div class="amount">
+                                    <span j:id="riskProtection.id+'-value'" j:data-id="riskProtection.id" j:text="riskProtection.defaultValue">保障内容值</span>
+                                    <span j:text="'元'">保障内容值单位</span>
+                                </div>
+
+                            </div>
+                            <div class="media-body" j:text="riskProtection.description">
+                            </div>
+                        </div>
+
+                        <div class="media" j:for="liveBenefit:liveBenefits" j:if="liveBenefits != null">
+                            <div class="media-left">
+                                <div class="type" j:text="liveBenefit.name">保障内容名称</div>
+                            </div>
+
+                            <div class="media-left">
+                                <div class="amount">
+                                    <span j:id="liveBenefit.id+'-value'" j:text="liveBenefit.defaultValue">保障内容值</span>
+                                    <span j:text="'元'">保障内容值单位</span>
+                                </div>
+                            </div>
+                            <div class="media-body" j:text="liveBenefit.description">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        投保前请仔细阅读: <a target="_blank" j:href="'/product/'+product.name+'/clause'" href="#">查看具体条款及除外责任</a>
+                        <a target="_blank" j:href="product.priceTableUrl" href="#">查看费率表</a>
+                        <a target="_blank" j:href="product.customerNotificationUrl" href="#">客户告知书</a>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="sub-title">产品特色</div>
+                    <div j:html="product.featureContent">
+                        产品特色
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="sub-title">温馨提示</div>
+                    <div j:html="product.tipsContent">
+                        产品特色
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="sub-title">理赔指引</div>
+                    <div class="guide-list">
+                        <div class="step col-xs-6" j:for="claim : claims">
+                            <div class="guide-label">
+                                <div class="index"></div>
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="guide-content media">
+                                <div class="media-left">
+                                    <img class="step-image" src="/static/img/guide-2.png" alt="">
+                                    <div class="step-name" j:text="claim.name">报案</div>
+                                </div>
+                                <div class="media-body">
+                                    <div class="step-description" j:html="claim.content">
+                                        保险事故发生后，建议您直接拨打中民保险网服务热线400-8822-300，我们将协助您进行报案（境外救援请拨打投保短信所通知的保险公司救援电话）。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tips">
+                    <h4>温馨提示</h4>
+                    <p>报案电话：400-8822-300</p>
+                    <p>若在旅行时发生紧急事故，可拨打Travel
+                        Guard24小时紧急支援热线（+86）400-888-3080（境内），(8621)5298-9068（境外），并根据提示将需要当地出具的理赔资料收集齐全，比如当地就医的就医报告；当地酒店遭遇盗窃的警方或酒店提供的事故证明等。
+                    </p>
+                </div>
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="example">
+                <div class="section">
+                    <div class="sub-title">投保示例</div>
+                    <div class="info" j:html="case" j:for="case : product.cases">
+                        年底公司奖励她前往新马泰五日旅，并同时为她购买了美亚“乐悠游”海外旅游保障计划（计划一），保费40元。
+                        不幸的是，周小姐在泰国旅游期间遇到了海啸，发生意外，不仅手臂发生骨折，而且行李和物品因海啸而无法寻回。
+                        由于伤势不重，周小姐便在旅行社安排下提前结束旅行，乘坐飞机回国治疗。
+                        但当周小姐向旅行社要求对医药费用2450元作出赔偿时，旅行社表示，根据法律和合同规定，由于天灾等不可抗力引起的意外，旅行社不负责赔偿。
+                        由于公司为周小姐投保了美亚“乐悠游”海外旅游保障计划，周小姐当即拨打保险公司理赔热线，保险公司根据她提供的相关证明给予了医疗费用2,450元的理赔，及行李遗失的补偿1,000元。
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="qna">
+                <div class="section">
+                    <div class="sub-title">常见问题</div>
+                    <div class="qna-list">
+                        <div class="qna" j:for="question:product.questions">
+                            <p class="question" j:html="question.question">这款产品的医疗补偿是否包括一般门诊？发烧也可以报销吗？</p>
+                            <div class="footer" j:html="question.answer">
+                                这款产品一般门诊也在保障范围内，包括发烧发生的医疗费用。主要给付范围有医生诊断、处方、手术费、救护车费、住院费、药费、X
+                                光检查、护理、医疗用品等费用。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qna-pagination">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<j:footer/>
+<j:template/>
+<j:product-fields/>
+
+<script id="tpl_pdp_form" type="text/x-handlebars-template">
+    <div class="Dynamic_Form_Container attribute-list"></div>
+</script>
+<script id="tpl_pdp_group" type="text/x-handlebars-template">
+    <span class="Dynamic_Group_Container">
+    </span>
+</script>
+
+<script id="tpl_product_serial" type="text/x-handlebars-template">
+    <div class="attribute col-xs-6 form-group">
+        <label class="attribute-name control-label">{{displayName}}</label>
+        <div class="attribute-value-list">
+            {{#each options.products}}
+            <label class="attribute-value control-label btn">
+                <input type="radio" class="serial-product-id" name="{{../name}}" value="{{productName}}">{{displayName}}
+            </label>
+            {{/each}}
+        </div>
+    </div>
+</script>
+
+<script id="tpl_product_attribute_age" type="text/x-handlebars-template">
+    <div class="attribute col-xs-6 form-group">
+        <span class="attribute-name">{{displayName}}</span>
+        <span class="attribute-value">
+            {{#editable}}
+            <input type="number" name="{{name}}" class="form-control input-extend" value="{{#defaultValue}}{{this}}{{else}}20{{/defaultValue}}" min="{{options.min}}" max="{{options.max}}">
+            {{else}}
+            <span>{{#AgeRange options}}{{/AgeRange}}</span>
+            <input type="hidden" name="{{name}}" value="{{#defaultValue}}{{this}}{{else}}20{{/defaultValue}}">
+            {{/editable}}
+        </span>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_product_attribute_number" type="text/x-handlebars-template">
+    <div class="attribute col-xs-6 form-group">
+        <span class="attribute-name">{{displayName}}</span>
+        <span class="attribute-value">
+            {{#editable}}
+            <input type="number" name="{{name}}" class="form-control input-extend" value="{{#defaultValue}}{{this}}{{else}}1{{/defaultValue}}" min="{{options.min}}" max="{{options.max}}">
+            {{else}}
+            <span>{{#Range options}}{{/Range}}</span>
+            <input type="hidden" name="{{name}}" value="{{#defaultValue}}{{this}}{{else}}1{{/defaultValue}}">
+            {{/editable}}
+        </span>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_product_plan_period_fixed" type="text/x-handlebars-template">
+    <div class="attribute col-xs-6 form-group">
+        <label class="attribute-name control-label">{{displayName}}</label>
+        <div class="attribute-value">
+            <span>{{options.fixedValue.displayName}}</span>
+            <input type="hidden" name="{{name}}" value='{{#JSON options.fixedValue}}{{/JSON}}'>
+        </div>
+    </div>
+</script>
+<script id="tpl_product_plan_period_selection" type="text/x-handlebars-template">
+    {{#editable}}
+    <div class="attribute col-xs-6 form-group">
+        <label class="attribute-name control-label">{{displayName}}</label>
+        <span class="attribute-value">
+            <select name="{{name}}" class="form-control">
+            {{#each options.selection}}
+            <option value='{{#JSON this}}{{/JSON}}'>{{displayName}}</option>
+            {{/each}}
+            </select>
+        </span>
+    </div>
+    {{else}}
+    <div class="attribute col-xs-6 form-group">
+        <label class="attribute-name control-label">{{displayName}}</label>
+        <span class="attribute-value">{{defaultValue}}</span>
+    </div>
+    {{/editable}}
+</script>
+<script id="tpl_product_plan_start_time" type="text/x-handlebars-template">
+    <div class="attribute col-xs-6 form-group">
+        <label class="attribute-name control-label">{{displayName}}</label>
+        <div class="attribute-value">
+            {{#editable}}
+            <input type="text" name="{{name}}" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-start-date="{{currentStartDate}}" class="form-control input-lg input-calendar"
+                   data-date-language="zh-CN">
+            {{else}}
+            <span class="form-control form-control-static static-value input-lg "></span>
+            <input type="hidden" name="{{name}}">
+            {{/editable}}
+            <div class="text-block text-danger attribute-message">{{message}}</div>
+        </div>
+    </div>
+</script>
+<script id="tpl_pdp_unit" type="text/x-handlebars-template">
+    <div class="attribute col-xs-6 form-group">
+        <label class="attribute-name control-label">{{displayName}}</label>
+        <div class="attribute-value">
+            {{#editable}}
+            <input type="number" name="{{name}}" class="form-control input-lg input-extend"
+                   value="{{#defaultValue}}{{this}}{{else}}1{{/defaultValue}}"
+                   min="{{#options.min}}{{this}}{{else}}1{{/options.min}}" max="{{options.max}}">
+            {{else}}
+            <span class="form-control form-control-static static-value input-lg input-extend">{{#Range options}}{{/Range}}</span>
+            <input type="hidden" name="{{name}}" value="{{#defaultValue}}{{this}}{{else}}1{{/defaultValue}}">
+            {{/editable}}
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_pdp_date" type="text/x-handlebars-template">
+    <div class="attribute col-xs-6 form-group">
+        <label class="attribute-name control-label">{{displayName}}</label>
+        {{#multiple}}
+        <div class="attribute-value">
+            <div class="pull-left">
+                <input type="text" name="{{name}}" data-provide="datepicker" data-date-format="yyyy-mm-dd" class="form-control input-lg input-calendar" data-date-language="zh-CN">
+            </div>
+            <div class="pull-left">
+                <div class="form-control-static input-lg">到</div>
+            </div>
+            <div class="pull-left">
+                <input type="text" name="{{name}}" data-provide="datepicker" data-date-format="yyyy-mm-dd" class="form-control input-lg input-calendar" data-date-language="zh-CN">
+            </div>
+        </div>
+        {{else}}
+        <div class="attribute-value">
+            {{#editable}}
+            <input type="text" name="{{name}}" data-provide="datepicker" data-date-format="yyyy-mm-dd" class="form-control input-lg input-calendar input-extend" data-date-language="zh-CN">
+            {{else}}
+            <span class="form-control form-control-static static-value input-lg "></span>
+            <input type="hidden" name="{{name}}">
+            {{/editable}}
+        </div>
+        {{/multiple}}
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_pdp_payment_select" type="text/x-handlebars-template">
+    <div class="attribute col-xs-6 form-group">
+        <label class="attribute-name">{{displayName}}</label>
+        <span class="attribute-value">
+        <select class="form-control input-lg input-extend" name="{{name}}">
+            {{#each options.periods}}
+            <option value='{{#JSON this}}{{/JSON}}'>{{this.displayName}}</option>
+            {{/each}}
+        </select>
+        </span>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datepicker.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datepicker.zh-CN.min.js"></script>
+<script j:js="/static/js/builder/ProductBuilder.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/product/pdp.js"></script>
+</body>
+</html>

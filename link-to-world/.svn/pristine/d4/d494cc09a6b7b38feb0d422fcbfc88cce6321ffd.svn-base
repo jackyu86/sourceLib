@@ -1,0 +1,50 @@
+<html>
+<head>
+</head>
+<body>
+<div class="page-footer">
+    <div class="container-fluid">
+        <div class="main-panel">
+            <div class="about-panel">
+                <a href="/about/about" class="about-link">关于君龙分销平台</a>
+                <a href="/about/contact" class="about-link">联系我们</a>
+                <a href="/about/law" class="about-link">法律声明</a>
+            </div>
+            <div class="contact-bar">
+                <div class="contact-item">
+                    <div class="contact-img">
+                        <img src="/static/img/icon_phone.png" alt="">
+                    </div>
+                    <div class="media-heading">400 1234 098</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-img">
+                        <img src="/static/img/icon_mail.png" alt="">
+                    </div>
+                    <div class="media-heading">contact@junlong.com</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-img">
+                        <img src="/static/img/icon_qq.png" alt="">
+                    </div>
+                    <a href="enterprise@junlong.com" class="btn-qq">企业QQ</a>
+                </div>
+            </div>
+
+            <div class="copyright-panel">
+                君龙人寿保险有限公司 Copyright 2015 www.kdlins.com.cn All Rights Reserved&nbsp;&nbsp;&nbsp;闽ICP备08114724号 - 14
+            </div>
+        </div>
+        <!--<div class="bar-code-wrap">-->
+        <!--<div class="bar-code">-->
+        <!--<img j:js="/static/img/code.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="bar-code">-->
+        <!--<img j:js="/static/img/code.png" alt="">-->
+        <!--</div>-->
+        <!--</div>-->
+
+    </div>
+</div>
+</body>
+</html>

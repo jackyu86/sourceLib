@@ -1,0 +1,1130 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ui-sref="console.product.list" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <span>新增产品</span>
+        <a class="md-button md-raised" ng-click="save()">保存</a>
+        <span flex></span>
+    </div>
+</md-toolbar>
+<md-content>
+    <md-tabs md-dynamic-height md-border-bottom id="productTop">
+        <md-tab label="基本信息">
+            <md-card class="md-padding">
+                <form name="productForm" class="md-padding">
+                    <md-input-container class="md-block" flex="100">
+                        <label>产品名称</label>
+                        <input required name="displayName" ng-model="data.product.displayName"/>
+                        <div ng-messages="productForm.displayName.$error">
+                            <div ng-message="required">请输入产品名称</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex="100">
+                        <label>保险公司</label>
+                        <md-select required ng-model="data.product.insuranceVendorId"
+                                   md-on-close="clearSearchVendor()">
+                            <md-select-header>
+                                <div layout="row">
+                                    <input ng-model="vendorQuery.name" type="text" placeholder="搜索供应商"/>
+                                    <a ng-click="getVendor()">搜索</a>
+                                </div>
+                            </md-select-header>
+                            <md-option ng-repeat="vendor in vendorList" ng-value="vendor.id">
+                                {{vendor.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <div layout="row">
+                        <md-input-container>
+                            <a class="md-button md-raised md-normal" ng-click="insuranceClauseQuery.name==null">清空条款名</a>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>搜索条款名</label>
+                            <input type="text" ng-model="insuranceClauseQuery.name"/>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <md-select ng-model="insuranceClause" ng-change="selectInsuranceClause(insuranceClause)"
+                                       md-on-open="loadInsuranceClause()" placeholder="选择保险条款">
+                                <md-option ng-repeat="clause in insuranceClauses" ng-value="clause">
+                                    {{clause.name}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container>
+                            <a class="md-button md-raised md-primary" ng-click="addInsuranceClause()">添加条款</a>
+                        </md-input-container>
+                    </div>
+                    <div layout="row" class="md-padding" ng-if="productClauses.length>0">
+                        当前产品条款：
+                    </div>
+                    <md-grid-list md-cols-xs="2" md-cols-sm="3" md-cols-md="6" md-cols-gt-md="8"
+                                  md-row-height="2:2"
+                                  md-gutter="12px" md-gutter-gt-sm="8px">
+                        <md-grid-tile ng-repeat="clause in productClauses track by $index"
+                                      style="background-color:rgba(0,0,0,.18);">
+                            <div layout="row">{{clause.name}}</div>
+                            <md-grid-tile-footer>
+                                <md-button class="md-raised md-normal" ng-click="deleteInsuranceClause($index)">删除</md-button>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                    </md-grid-list>
+                    <div layout="row">
+                        <md-input-container class="md-block">
+                            <a class="md-button md-raised md-normal" ng-click="data.product.serialId=null">取消选择</a>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <label>所属产品系列</label>
+                            <md-select ng-model="data.product.serialId"
+                                       md-on-close="clearSearchSerial()">
+                                <md-select-header>
+                                    <div layout="row">
+                                        <input ng-model="serialQuery.name" type="text" placeholder="搜索产品系列"/>
+                                        <a ng-click="getSerial()">搜索</a>
+                                    </div>
+                                </md-select-header>
+                                <md-option ng-repeat="serial in serialList" ng-value="serial.id">
+                                    {{serial.name}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
+                    <md-input-container ng-if="data.product.serialId!=null" class="md-block" flex="100">
+                        <label>在产品系列中的简称</label>
+                        <input type="text" required name="serialDisplayName" ng-model="data.product.serialDisplayName"/>
+                        <div ng-messages="productForm.serialDisplayName.$error">
+                            <div ng-message="required">请输入产品系列中的简称</div>
+                        </div>
+                    </md-input-container>
+                    <div layout="row">
+                        <md-input-container>
+                            <a class="md-button md-raised md-normal" ng-click="categoryQuery.name=null">清空分类名</a>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>搜索分类名</label>
+                            <input type="text" ng-model="categoryQuery.name"/>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <md-select ng-model="cate" ng-change="selectCategory(cate)"
+                                       md-on-open="loadCategory()" placeholder="选择分类">
+                                <md-option ng-repeat="category in categories" ng-value="category">
+                                    {{category.name}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container>
+                            <a class="md-button md-raised md-primary" ng-click="addProductCategory();">添加所属分类</a>
+                        </md-input-container>
+                    </div>
+                    <div layout="row" class="md-padding" ng-if="productCategories.length>0">
+                        产品所属分类：
+                    </div>
+                    <md-grid-list
+                            md-cols-xs="2" md-cols-sm="3" md-cols-md="6" md-cols-gt-md="8"
+                            md-row-height="2:2"
+                            md-gutter="12px" md-gutter-gt-sm="8px">
+                        <md-grid-tile ng-repeat="productCategory in productCategories track by $index"
+                                      style="background-color:rgba(0,0,0,.18);">
+                            <h3>{{productCategory.name}}</h3>
+                            <md-grid-tile-footer>
+                                <md-button class="md-raised md-normal" ng-click="deleteCategory($index)">删除</md-button>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                    </md-grid-list>
+                    <md-input-container class="md-block">
+                        <label>产品属性</label>
+                        <md-select required ng-model="data.product.type">
+                            <md-option ng-repeat="type in productType" ng-value="type.value">
+                                {{type.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <h5>销售城市</h5>
+                    <md-content class="md-padding" style="max-height: 600px;">
+                        <a class="md-button md-raised" ng-click="selectAllCity()">全选</a>
+                        <a class="md-button md-raised" ng-click="removeAllCity()">全不选</a>
+                        <div ng-repeat="province in provinces track by $index">
+                            <div layout="column">
+                                <div layout="row" style="align-items:center;">
+                                    <a class="md-button md-raised" style="width:30px;min-width:30px;min-height:30px;padding:0;"
+                                       ng-click="province.show=!province.show">{{province.show==true?"-":"+"}}</a>
+                                    <div style="cursor: pointer">{{province.name}}</div>
+                                    <md-checkbox style="margin-bottom:-2px;" ng-checked="cityAllSelect(province)" ng-click="toggleProvince(province)">
+                                    </md-checkbox>
+                                </div>
+                                <div layout="row" ng-if="province.show==true" style="margin-left:50px;" ng-repeat="city in province.cities track by $index">
+                                    <div style="cursor: pointer">{{city.name}}</div>
+                                    <md-checkbox ng-checked="existsCity(city)" ng-click="toggleCity(city)">
+                                    </md-checkbox>
+                                </div>
+                            </div>
+                        </div>
+                    </md-content>
+                    <h5>保障区域</h5>
+                    <md-content class="md-padding" style="max-height:600px;">
+                        <a class="md-button md-raised" ng-click="selectAllArea()">全选</a>
+                        <a class="md-button md-raised" ng-click="removeAllArea()">全不选</a>
+                        <div ng-repeat="area in areas track by $index">
+                            <div layout="column">
+                                <div layout="row" style="align-items:center;">
+                                    <div style="cursor: pointer">{{area.displayName}}</div>
+                                    <md-checkbox style="margin-bottom:-2px;" ng-checked="existsArea(area)" ng-click="toggleArea(area)">
+                                    </md-checkbox>
+                                </div>
+                            </div>
+                        </div>
+                    </md-content>
+                    <div layout="row">
+                        <md-select placeholder="选择红利领取方式" ng-model="dividendType" ng-change="selectDividendType(dividendType)" flex="100">
+                            <md-option ng-repeat="dividendType in dividendTypes track by $index" ng-value="dividendType.value">
+                                {{dividendType.name}}
+                            </md-option>
+                        </md-select>
+                        <md-input-container>
+                            <md-button class="md-button md-raised md-primary" ng-click="addDividendType()">
+                                添加红利领取方式
+                            </md-button>
+                        </md-input-container>
+                    </div>
+                    <div layout="row" class="md-padding" ng-if="data.product.insuranceDividendTypes.length>0">
+                        当前红利领取方式：
+                    </div>
+                    <md-grid-list md-cols-xs="2" md-cols-sm="3" md-cols-md="6" md-cols-gt-md="8"
+                                  md-row-height="2:2"
+                                  md-gutter="12px" md-gutter-gt-sm="8px">
+                        <md-grid-tile ng-repeat="dividendType in data.product.insuranceDividendTypes track by $index"
+                                      style="background-color:rgba(0,0,0,.18);">
+                            <div layout="row">{{dividendType|insuranceDividendType}}</div>
+                            <md-grid-tile-footer>
+                                <md-button class="md-raised md-normal" ng-click="deleteDividendType($index)">删除</md-button>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                    </md-grid-list>
+
+                    <md-content class="md-padding">
+                        <div layout="row">
+                            <md-input-container>
+                                <a class="md-button md-raised md-normal" ng-click="jobTreeQuery.name=null">清空职业树名</a>
+                            </md-input-container>
+                            <md-input-container class="md-block">
+                                <label>搜索职业树名</label>
+                                <input type="text" ng-model="jobTreeQuery.name"/>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex="100">
+                                <md-select ng-model="jobTree" ng-change="selectJobTree(jobTree)"
+                                           md-on-open="loadJobTree()" placeholder="选择职业树">
+                                    <md-option ng-repeat="jobTree in jobTrees" ng-value="jobTree">
+                                        {{jobTree.name}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <md-input-container class="md-padding">
+                            当前选择职业:{{jobTree.name}}
+                        </md-input-container>
+                        <md-input-container class="md-block" ng-if="jobTree">
+                            是否限制职业
+                            <md-switch ng-model="data.product.jobRestricted" ng-change="changeJobRestricted(data.product.jobRestricted)">
+                                <span ng-if="data.product.jobRestricted">是</span>
+                                <span ng-if="!data.product.jobRestricted">否</span>
+                            </md-switch>
+                        </md-input-container>
+                        <div layout="row" ng-if="data.product.jobRestricted">
+                            <span>选择职业等级：</span>
+                            <div layout="row" layout-wrap flex>
+                                <div flex="15" ng-repeat="level in jobLevels">
+                                    <label>
+                                        <input type="checkbox" ng-checked="existsJobLevel(level,data.product.jobLevels)"
+                                               ng-click="toggleJobLevel(level,data.product.jobLevels)"/>
+                                        等级{{level}}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <md-input-container ng-if="data.product.jobRestricted">已选择{{data.product.jobIds.length}}个职业(共{{jobs.length}}个)</md-input-container>
+                        <md-content class="md-padding" style="max-height:500px;" ng-if="data.product.jobRestricted">
+                            <div ng-repeat="firstLevel in jobTreeData track by $index">
+                                <div layout="column">
+                                    <div layout="row" style="align-items:center;">
+                                        <a class="md-button md-raised" style="width:30px;min-width:30px;min-height:30px;padding:0;"
+                                           ng-click="showJob(firstLevel)">{{firstLevel.show==true?"-":"+"}}</a>
+                                        <div style="cursor: pointer">{{firstLevel.job.displayName}}</div>
+                                        <md-checkbox ng-checked="allSecondLevelSelect(firstLevel)" ng-click="toggleFirstLevel(firstLevel)"></md-checkbox>
+                                    </div>
+                                    <div layout="column" ng-if="firstLevel.loaded==true" ng-show="firstLevel.show==true" style="margin-left:50px;"
+                                         ng-repeat="secondLevel in firstLevel.children track by $index">
+                                        <div layout="row" style="align-items:center;">
+                                            <a class="md-button md-raised" style="width:30px;min-width:30px;min-height:30px;padding:0;"
+                                               ng-click="showJob(secondLevel)">{{secondLevel.show==true?"-":"+"}}</a>
+                                            <div style="cursor: pointer">{{secondLevel.job.displayName}}</div>
+                                            <md-checkbox ng-checked="allThirdLevelSelect(secondLevel)" ng-click="toggleSecondLevel(secondLevel)"></md-checkbox>
+                                        </div>
+                                        <div layout="column" ng-if="secondLevel.loaded==true&&data.product.jobLevels.indexOf(thirdLevel.job.riskLevel)>-1" ng-show="secondLevel.show==true"
+                                             style="margin-left:50px;"
+                                             ng-repeat="thirdLevel in secondLevel.children track by $index">
+                                            <div layout="row" style="align-items:center;">
+                                                <div style="cursor: pointer">{{thirdLevel.job.displayName}}</div>
+                                                <md-checkbox ng-checked="existsThirdLevel(thirdLevel)" ng-click="toggleThirdLevel(thirdLevel)"></md-checkbox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </md-content>
+                    </md-content>
+                    <md-input-container class="md-block" flex="100">
+                        <label>产品亮点</label>
+                        <textarea ng-model="data.product.highlightContent" md-maxlength="300" rows="5" md-select-on-focus></textarea>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex="100">
+                        <label>产品特色</label>
+                        <textarea ng-model="data.product.featureContent" md-maxlength="1500" rows="5" md-select-on-focus></textarea>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex="100">
+                        <label>特别提示</label>
+                        <textarea ng-model="data.product.tipsContent" md-maxlength="1500" rows="5" md-select-on-focus></textarea>
+                    </md-input-container>
+                    <md-card ng-repeat="case in data.product.cases track by $index">
+                        <md-subheader>
+                            <div class="search-box" layout="row" layout-align="left center">
+                                <div flex>
+                                    投保示例{{$index+1}}
+                                    <a class="md-button" ng-if="$index!=0" ng-click="upCase($index)">
+                                        <i class="fa fa-arrow-up"></i>
+                                    </a>
+                                    <a class="md-button" ng-if="$index!=data.product.cases.length-1" ng-click="downCase($index)">
+                                        <i class="fa fa-arrow-down"></i>
+                                    </a>
+                                </div>
+                                <md-button class="md-icon-button" ng-click="deleteCase($index)">
+                                    <md-icon class="fa-trash" md-font-icon="fa"></md-icon>
+                                </md-button>
+                            </div>
+                        </md-subheader>
+                        <div class="md-padding">
+                            <md-input-container class="md-block" flex="100">
+                                <label>内容</label>
+                                <textarea ng-model="data.product.cases[$index]" md-maxlength="500" rows="5" md-select-on-focus></textarea>
+                            </md-input-container>
+                        </div>
+                    </md-card>
+                    <div layout="row" class="md-padding">
+                        <md-button class="md-button md-raised md-primary" ng-click="addNewCase()">
+                            添加投保示例
+                        </md-button>
+                    </div>
+                    <md-card ng-repeat="question in data.product.questions track by $index">
+                        <md-subheader>
+                            <div class="search-box" layout="row" layout-align="left center">
+                                <div flex>
+                                    常见问题{{$index+1}}
+                                    <a class="md-button" ng-if="$index!=0" ng-click="upQuestion($index)">
+                                        <i class="fa fa-arrow-up"></i>
+                                    </a>
+                                    <a class="md-button" ng-if="$index!=data.product.questions.length-1" ng-click="downQuestion($index)">
+                                        <i class="fa fa-arrow-down"></i>
+                                    </a>
+                                </div>
+                                <md-button class="md-icon-button" ng-click="deleteQuestion($index)">
+                                    <md-icon class="fa-trash" md-font-icon="fa"></md-icon>
+                                </md-button>
+                            </div>
+                        </md-subheader>
+                        <div class="md-padding">
+                            <md-input-container class="md-block" flex="100">
+                                <label>问题</label>
+                                <textarea ng-model="question.question" md-maxlength="300" rows="5" md-select-on-focus></textarea>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex="100">
+                                <label>答案</label>
+                                <textarea ng-model="question.answer" md-maxlength="600" rows="5" md-select-on-focus></textarea>
+                            </md-input-container>
+                        </div>
+                    </md-card>
+                    <div layout="row" class="md-padding">
+                        <md-button class="md-button md-raised md-primary" ng-click="addNewQuestion()">
+                            添加常见问题
+                        </md-button>
+                    </div>
+                    <div flex="100">
+                        <md-chips ng-model="data.product.keywords"
+                                  placeholder="+关键字(用回车键添加)"
+                                  delete-button-label="删除关键字"
+                                  delete-hint="点击删除按钮"
+                                  secondary-placeholder="+关键字(用回车键添加)"
+                                  class="md-block">
+                        </md-chips>
+                    </div>
+                    <div flex="100">
+                        <md-chips ng-model="data.product.tags"
+                                  placeholder="+产品标签"
+                                  delete-button-label="删除产品标签"
+                                  delete-hint="点击删除按钮"
+                                  secondary-placeholder="+产品标签"
+                                  class="md-block">
+                        </md-chips>
+                    </div>
+                    <md-input-container class="md-block" flex="100">
+                        <label>产品可见性</label>
+                        <md-select ng-model="data.product.publicVisible">
+                            <md-option ng-repeat="type in publicVisibleType" ng-value="type.value">
+                                {{type.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex="100">
+                        <label>排序</label>
+                        <input type="number" required name="displayOrder" ng-model="data.product.displayOrder"/>
+                        <div ng-messages="productForm.displayOrder.$error">
+                            <div ng-message="required">请输入排序</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>最大购买份数</label>
+                        <input type="number" name="maxUnits" required ng-model="data.product.maxUnits"/>
+                        <div ng-messages="productForm.maxUnits.$error">
+                            <div ng-message="required">请输入最大份数</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>最小购买份数</label>
+                        <input type="number" name="minUnits" required ng-model="data.product.minUnits"/>
+                        <div ng-messages="productForm.minUnits.$error">
+                            <div ng-message="required">请输入最小份数</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>折扣</label>
+                        <input min="0.01" max="1" type="number" name="discount" required ng-model="data.product.discount"/>
+                        <div ng-messages="productForm.discount.$error">
+                            <div ng-message="required">请输入折扣</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>保险计划代码</label>
+                        <input type="text" name="planCode" required ng-model="data.product.planCode"/>
+                        <div ng-messages="productForm.planCode.$error">
+                            <div ng-message="required">请输入计划代码</div>
+                        </div>
+                    </md-input-container>
+                    <h5>理赔指引</h5>
+                    <hr/>
+                    <div layout="row">
+                        <md-input-container>
+                            <a class="md-button md-raised md-normal" ng-click="insuranceClaimQuery.name==null">清空指引标题</a>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>搜索指引标题</label>
+                            <input type="text" ng-model="insuranceClaimQuery.name"/>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <md-select ng-model="insuranceClaim" ng-change="selectInsuranceClaim(insuranceClaim)"
+                                       md-on-open="loadInsuranceClaim()" placeholder="选择理赔指引">
+                                <md-option ng-repeat="claim in insuranceClaims" ng-value="claim">
+                                    {{claim.title}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container>
+                            <a class="md-button md-raised md-primary" ng-click="addInsuranceClaim()">添加理赔指引</a>
+                        </md-input-container>
+                    </div>
+                    <div layout="row" class="md-padding" ng-if="productClaims.length>0">
+                        当前理赔指引：
+                    </div>
+                    <div layout="column" ng-repeat="claim in productClaims track by $index">
+                        <div layout="row" style="border:1px solid black;">
+                            <div class="md-block" flex="40">标题：{{claim.title}}</div>
+                            <div class="md-block" flex="40">名称：{{claim.name}}</div>
+                            <div flex>
+                                <md-button class="md-raised md-normal" ng-click="deleteInsuranceClaim($index)">删除</md-button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>文件相关</h5>
+                    <hr/>
+                    <div layout="row" class="md-padding">
+                        <div flex="25">当前价格表：<span ng-if="!data.product.priceTableUrl">暂无</span><span ng-if="data.product.priceTableUrl"><a target="_blank"
+                                                                                                                                            href="{{data.product.priceTableUrl}}">点击查看</a></span>
+                        </div>
+                        <a class="md-button md-raised md-primary" ngf-select="uploadPriceTableUrl($files)" flex="25">上传新的价格表文件</a>
+                    </div>
+                    <div layout="row" class="md-padding">
+                        <div flex="25">当前告知书：<span ng-if="!data.product.customerNotificationUrl">暂无</span>
+                            <span ng-if="data.product.customerNotificationUrl"><a target="_blank" href="{{data.product.customerNotificationUrl}}">点击查看</a></span>
+                        </div>
+                        <a class="md-button md-raised md-primary" ngf-select="uploadCustomerNotificationUrl($files)" flex="25">上传新的客户告知单文件</a>
+                    </div>
+                    <div layout="row" class="md-padding">
+                        <div flex="25">当前投保声明：<span ng-if="!data.product.agreeUrls||data.product.agreeUrls.length==0">暂无</span>
+                            <span ng-if="data.product.agreeUrls"><a target="_blank" href="{{data.product.agreeUrls[0]}}">点击查看</a></span>
+                        </div>
+                        <a class="md-button md-raised md-primary" ngf-select="uploadAgreeUrl($files)" flex="25">上传新的投保声明</a>
+                    </div>
+                </form>
+            </md-card>
+        </md-tab>
+        <md-tab label="保险期间及缴费方式">
+            <md-card class="md-padding">
+                <form name="productForm" class="md-padding">
+                    <h5>保险期间</h5>
+                    <hr>
+                    <md-input-container class="md-block" flex="100">
+                        <label>保险期间类型</label>
+                        <md-select placeholder="选择保险期间类型" ng-model="data.product.period.type" ng-change="changePeriodType()">
+                            <md-option ng-repeat="periodType in periodTypes track by $index" ng-value="periodType.value">
+                                {{periodType.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <div layout="row" ng-if="data.product.period.type=='FIXED'">
+                        <md-input-container class="md-block">
+                            <label>固定值显示名称</label>
+                            <input type="text" name="displayName" required ng-model="data.product.period.fixedValue.displayName"/>
+                            <div ng-messages="fixedPeriodForm.displayName.$error">
+                                <div ng-message="required">请输入名称</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" ng-if="'LIFE'!=data.product.period.fixedValue.unit">
+                            <label>固定值数值</label>
+                            <input type="text" name="value" required ng-model="data.product.period.fixedValue.value"/>
+                            <div ng-messages="fixedPeriodForm.value.$error">
+                                <div ng-message="required">请输入数值</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <label>固定值单位</label>
+                            <md-select ng-change="changePeriodFixedValueUnit()" ng-model="data.product.period.fixedValue.unit">
+                                <md-option ng-repeat="unit in periodUnits" ng-value="unit.value">
+                                    {{unit.name}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
+                    <div layout="row" ng-if="data.product.period.type=='USER_INPUT'">
+                        <md-input-container md-class="md-block" flex="30">
+                            <label>期间单位</label>
+                            <md-select ng-model="data.product.period.inputUnit" ng-change="changePeriodInputUnit()">
+                                <md-option ng-if="unit.value!='LIFE'" ng-repeat="unit in periodUnits" ng-value="unit.value">
+                                    {{unit.name}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container md-class="md-block" flex="15">
+                            <label>最小值</label>
+                            <input type="number" ng-model="data.product.period.inputMin.value"/>
+                        </md-input-container>
+                        <md-input-container md-class="md-block" flex="20">
+                            <label>最小值显示内容</label>
+                            <input type="text" ng-model="data.product.period.inputMin.displayName"/>
+                        </md-input-container>
+                        <md-input-container md-class="md-block" flex="15">
+                            <label>最大值</label>
+                            <input type="number" ng-model="data.product.period.inputMax.value"/>
+                        </md-input-container>
+                        <md-input-container md-class="md-block" flex="20">
+                            <label>最大值显示内容</label>
+                            <input type="text" ng-model="data.product.period.inputMax.displayName"/>
+                        </md-input-container>
+                    </div>
+                    <div ng-if="data.product.period.type=='USER_SELECTION'">
+                        <div layout="row">
+                            <md-input-container>
+                                <label>显示名称</label>
+                                <input type="text" ng-model="selectPeriod.displayName"/>
+                            </md-input-container>
+                            <md-input-container ng-if="selectPeriod.unit!='LIFE'">
+                                <label>期间数值</label>
+                                <input type="number" ng-model="selectPeriod.value"/>
+                            </md-input-container>
+                            <md-input-container>
+                                <label>期间单位</label>
+                                <md-select ng-change="changeSelectPeriodUnit()" ng-model="selectPeriod.unit">
+                                    <md-option ng-repeat="unit in periodUnits" ng-value="unit.value">
+                                        {{unit.name}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container>
+                                <md-button class="md-raised md-primary" ng-click="addPeriodSelection()">添加</md-button>
+                            </md-input-container>
+                        </div>
+                        <div layout="row" ng-if="data.product.period.selections.length>0">
+                            当前选项
+                        </div>
+                        <md-grid-list md-cols-xs="2" md-cols-sm="3" md-cols-md="6" md-cols-gt-md="8"
+                                      md-row-height="2:2"
+                                      md-gutter="12px" md-gutter-gt-sm="8px">
+                            <md-grid-tile ng-repeat="selection in data.product.period.selections track by $index"
+                                          style="background-color:rgba(0,0,0,.18);">
+                                <div layout="row">{{selection.displayName}}({{selection.value}},{{selection.unit|insurancePeriodUnit}})</div>
+                                <md-grid-tile-footer>
+                                    <md-button class="md-raised md-normal" ng-click="deletePeriodSelection($index)">删除</md-button>
+                                </md-grid-tile-footer>
+                            </md-grid-tile>
+                        </md-grid-list>
+                    </div>
+                    <div ng-if="data.product.period.type=='AGE_DURATION'">
+                        <div layout="row">
+                            <md-input-container>
+                                <label>显示名称</label>
+                                <input required type="text" ng-model="selectAgePeriod.displayName"/>
+                            </md-input-container>
+                            <md-input-container ng-if="selectAgePeriod.unit!='LIFE'">
+                                <label>期间数值</label>
+                                <input required type="number" ng-model="selectAgePeriod.value"/>
+                            </md-input-container>
+                            <md-input-container>
+                                <md-button class="md-raised md-primary" ng-click="addPeriodAgeSelection()">添加</md-button>
+                            </md-input-container>
+                        </div>
+                        <div layout="row" ng-if="data.product.period.ages.length>0">
+                            当前选项
+                        </div>
+                        <md-grid-list md-cols-xs="2" md-cols-sm="3" md-cols-md="6" md-cols-gt-md="8"
+                                      md-row-height="2:2"
+                                      md-gutter="12px" md-gutter-gt-sm="8px">
+                            <md-grid-tile ng-repeat="age in data.product.period.ages track by $index"
+                                          style="background-color:rgba(0,0,0,.18);">
+                                <div layout="row">{{age.displayName}}({{age.value}},{{age.unit|insurancePeriodUnit}})</div>
+                                <md-grid-tile-footer>
+                                    <md-button class="md-raised md-normal" ng-click="deletePeriodAgeSelection($index)">删除</md-button>
+                                </md-grid-tile-footer>
+                            </md-grid-tile>
+                        </md-grid-list>
+                    </div>
+                    <md-input-container class="md-block" flex="100">
+                        <label>期间起始时间类型</label>
+                        <md-select placeholder="期间起始时间类型" ng-model="data.product.period.startTimeType" ng-change="startTimeType()">
+                            <md-option ng-repeat="periodStartTimeType in periodStartTimeTypes track by $index" ng-value="periodStartTimeType.value">
+                                {{periodStartTimeType.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <div ng-if="data.product.period.startTimeType=='LATEST'" layout="row" class="md-block">
+                        <md-input-container flex>
+                            <label>显示名称</label>
+                            <input required type="text" ng-model="data.product.period.earliestInsuranceTime.displayName"/>
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>期间数值</label>
+                            <input required type="number" ng-model="data.product.period.earliestInsuranceTime.value"/>
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>期间单位</label>
+                            <md-select ng-model="data.product.period.earliestInsuranceTime.unit">
+                                <md-option ng-if="unit.value!='LIFE'" ng-repeat="unit in periodUnits" ng-value="unit.value">
+                                    {{unit.name}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
+                    <h5>缴费方式</h5>
+                    <hr>
+                    <div layout="row">
+                        <span>选择缴费方式：</span>
+                        <div layout="row" layout-wrap flex>
+                            <div flex="15" ng-repeat="method in paymentMethods">
+                                <label>
+                                    <input type="checkbox" ng-checked="existsPayment(method,data.product.payment.methods)"
+                                           ng-click="togglePaymentMethod(method,data.product.payment.methods)"/>
+                                    {{method.name}}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <md-card ng-if="data.product.payment.methods.indexOf('YEAR')>-1">
+                        <md-subheader>
+                            <form class="search-box" layout="row" layout-align="left center">
+                                <div flex>{{paymentMethods[2].name}}</div>
+                            </form>
+                        </md-subheader>
+                        <md-card ng-repeat="period in data.product.payment.yearPeriods">
+                            <md-subheader>
+                                <form class="search-box" layout="row" layout-align="left center">
+                                    <div flex></div>
+                                    <md-button class="md-icon-button" ng-click="deletePaymentPeriod($index,data.product.payment.yearPeriods)">
+                                        <md-icon class="fa-trash" md-font-icon="fa"></md-icon>
+                                    </md-button>
+                                </form>
+                            </md-subheader>
+                            <div layout="row">
+                                <md-input-container class="md-block">
+                                    <label>显示名称</label>
+                                    <input type="text" ng-model="period.displayName"/>
+                                </md-input-container>
+                                <md-input-container class="md-block" ng-if="'LIFE'!=period.unit">
+                                    <label>数值</label>
+                                    <input type="text" ng-model="period.value"/>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex="100">
+                                    <label>单位</label>
+                                    <md-select ng-change="changePeriodValueUnit(period)" ng-model="period.unit">
+                                        <md-option ng-value="'YEAR'">
+                                            年
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </md-card>
+                        <md-button class="md-button md-raised md-primary" ng-click="addNewPaymentPeriod('YEAR',data.product.payment.yearPeriods)">
+                            添加
+                        </md-button>
+                    </md-card>
+                    <md-card ng-if="data.product.payment.methods.indexOf('AGE')>-1">
+                        <md-subheader>
+                            <form class="search-box" layout="row" layout-align="left center">
+                                <div flex>{{paymentMethods[3].name}}</div>
+                            </form>
+                        </md-subheader>
+                        <md-card ng-repeat="period in data.product.payment.agePeriods">
+                            <md-subheader>
+                                <form class="search-box" layout="row" layout-align="left center">
+                                    <div flex></div>
+                                    <md-button class="md-icon-button" ng-click="deletePaymentPeriod($index,data.product.payment.agePeriods)">
+                                        <md-icon class="fa-trash" md-font-icon="fa"></md-icon>
+                                    </md-button>
+                                </form>
+                            </md-subheader>
+                            <div layout="row">
+                                <md-input-container class="md-block">
+                                    <label>显示名称</label>
+                                    <input type="text" ng-model="period.displayName"/>
+                                </md-input-container>
+                                <md-input-container class="md-block" ng-if="'LIFE'!=period.unit">
+                                    <label>数值</label>
+                                    <input type="text" ng-model="period.value"/>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex="100">
+                                    <label>单位</label>
+                                    <md-select ng-change="changePeriodValueUnit(period)" ng-model="period.unit">
+                                        <md-option ng-value="'AGE'">
+                                            岁
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </md-card>
+                        <md-button class="md-button md-raised md-primary" ng-click="addNewPaymentPeriod('AGE',data.product.payment.agePeriods)">
+                            添加
+                        </md-button>
+                    </md-card>
+                </form>
+            </md-card>
+        </md-tab>
+        <md-tab label="保险责任">
+            <md-card class="md-padding">
+                <form name="productForm" class="md-padding">
+                    <h5>保险责任相关</h5>
+                    <hr/>
+                    <div layout="row">
+                        <md-input-container>
+                            <a class="md-button md-raised md-normal" ng-click="insuranceQuery.name=null">清空险种名</a>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>搜索险种名</label>
+                            <input type="text" ng-model="insuranceQuery.name"/>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <md-select ng-model="insurance" ng-change="selectInsurance(insurance)"
+                                       md-on-open="loadInsurance()" placeholder="选择险种">
+                                <md-option ng-repeat="insurance in insurances" ng-value="insurance">
+                                    {{insurance.name}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container>
+                            <md-button class="md-raised md-primary" ng-click="addInsurance()">添加险种</md-button>
+                        </md-input-container>
+                    </div>
+                    <md-card ng-repeat="insurance in data.product.insurances track by $index">
+                        <md-subheader>
+                            <div class="search-box" layout="row" layout-align="left center">
+                                <div flex>险种：{{insurance.name}}</div>
+                                <md-button class="md-icon-button" ng-click="deleteInsurance($index)">
+                                    <md-icon class="fa-trash" md-font-icon="fa"></md-icon>
+                                </md-button>
+                            </div>
+                        </md-subheader>
+                        <md-input-container>
+                            <label>是否必选</label>
+                            <md-select ng-model="insurance.optional">
+                                <md-option ng-value="selectBoolean.selectTrue">是</md-option>
+                                <md-option ng-value="selectBoolean.selectFalse">否</md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-card ng-repeat="liability in insurance.liabilities">
+                            <div layout="row">保险责任：{{liability.name}}</div>
+                            <div class="md-padding">
+                                <md-input-container class="md-block">
+                                    <md-select ng-model="liability.amount.type" placeholder="选择保额类型" ng-change="changeLiabilityType(liability.amount)">
+                                        <md-option ng-repeat="liabilityType in liabilityTypes" ng-value="liabilityType.value">
+                                            {{liabilityType.name}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                                <div layout="row" class="md-padding" ng-if="liability.amount.type=='USER_INPUT'">
+                                    <md-input-container class="md-block">
+                                        <input placeholder="最大保额" ng-model="liability.amount.inputMax" type="number"/>
+                                    </md-input-container>
+                                    <md-input-container class="md-block">
+                                        <input placeholder="最小保额" ng-model="liability.amount.inputMin" type="number"/>
+                                    </md-input-container>
+                                    <md-input-container class="md-block">
+                                        <input placeholder="最小计算单位" ng-model="liability.amount.inputIncrementUnit" type="number"/>
+                                    </md-input-container>
+                                </div>
+                                <div flex="100" ng-if="liability.amount.type=='USER_SELECTION'">
+                                    <md-chips ng-model="liability.amount.selections"
+                                              placeholder="+单选选项"
+                                              delete-button-label="删除选项"
+                                              delete-hint="点击删除"
+                                              secondary-placeholder="+单选选项"
+                                              class="md-block">
+                                    </md-chips>
+                                </div>
+                                <div layout="row" class="md-padding" ng-if="liability.amount.type=='UNIT_SELECTION'">
+                                    <md-input-container class="md-block">
+                                        <input placeholder="最大份数" ng-model="liability.amount.maxUnits" type="number"/>
+                                    </md-input-container>
+                                    <md-input-container class="md-block">
+                                        <input placeholder="最小份数" ng-model="liability.amount.minUnits" type="number"/>
+                                    </md-input-container>
+                                </div>
+                                <md-input-container class="md-block" ng-if="liability.amount.type=='FORMULA'">
+                                    <input placeholder="公式名称" ng-model="liability.amount.formulaName" type="text"/>
+                                </md-input-container>
+                                <md-input-container class="md-block" ng-if="liability.amount.type=='FIXED'">
+                                    <input placeholder="固定值" ng-model="liability.amount.fixedValue" type="text"/>
+                                </md-input-container>
+                            </div>
+                        </md-card>
+                    </md-card>
+                    <h5>投保人相关</h5>
+                    <hr>
+                    <div layout="row">
+                        <md-input-container class="md-block" flex="25">
+                            <label>投保人最大年龄显示名称</label>
+                            <input type="text" name="policyHolderMaxAgeDisplayName" required ng-model="data.product.policyHolderMaxAge.displayName"/>
+                            <div ng-messages="productForm.policyHolderMaxAgeDisplayName.$error">
+                                <div ng-message="required">请输入最大年龄显示名称</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="25">
+                            <label>投保人最大年龄数值</label>
+                            <input type="number" name="policyHolderMaxAgeValue" required ng-model="data.product.policyHolderMaxAge.value"/>
+                            <div ng-messages="productForm.policyHolderMaxAgeValue.$error">
+                                <div ng-message="required">请输入最大年龄数值</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <label>投保人最大年龄单位</label>
+                            <md-select ng-model="data.product.policyHolderMaxAge.unit">
+                                <md-option ng-value="'YEAR'">岁</md-option>
+                                <md-option ng-value="'MONTH'">月</md-option>
+                                <md-option ng-value="'DAY'">天</md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
+                    <div layout="row">
+                        <md-input-container class="md-block" flex="25">
+                            <label>投保人最小年龄显示名称</label>
+                            <input type="text" name="policyHolderMinAgeDisplayName" required ng-model="data.product.policyHolderMinAge.displayName"/>
+                            <div ng-messages="productForm.policyHolderMinAgeDisplayName.$error">
+                                <div ng-message="required">请输入最小年龄显示名称</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="25">
+                            <label>投保人最小年龄数值</label>
+                            <input type="number" name="policyHolderMinAgeValue" required ng-model="data.product.policyHolderMinAge.value"/>
+                            <div ng-messages="productForm.policyHolderMinAgeValue.$error">
+                                <div ng-message="required">请输入最小年龄数值</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <label>投保人最小年龄单位</label>
+                            <md-select ng-model="data.product.policyHolderMinAge.unit">
+                                <md-option ng-value="'YEAR'">岁</md-option>
+                                <md-option ng-value="'MONTH'">月</md-option>
+                                <md-option ng-value="'DAY'">天</md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
+                    <div layout="row">
+                        <md-input-container class="md-block" flex="25">
+                            <label>被保人最大年龄显示名称</label>
+                            <input type="text" name="insuredMaxAgeDisplayName" required ng-model="data.product.insuredMaxAge.displayName"/>
+                            <div ng-messages="productForm.insuredMaxAgeDisplayName.$error">
+                                <div ng-message="required">请输入最大年龄显示名称</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="25">
+                            <label>被保人最大年龄数值</label>
+                            <input type="number" name="insuredMaxAgeValue" required ng-model="data.product.insuredMaxAge.value"/>
+                            <div ng-messages="productForm.insuredMaxAgeValue.$error">
+                                <div ng-message="required">请输入最大年龄数值</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <label>被保人最大年龄单位</label>
+                            <md-select ng-model="data.product.insuredMaxAge.unit">
+                                <md-option ng-value="'YEAR'">岁</md-option>
+                                <md-option ng-value="'MONTH'">月</md-option>
+                                <md-option ng-value="'DAY'">天</md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
+                    <div layout="row">
+                        <md-input-container class="md-block" flex="25">
+                            <label>被保人最小年龄显示名称</label>
+                            <input type="text" name="insuredMinAgeDisplayName" required ng-model="data.product.insuredMinAge.displayName"/>
+                            <div ng-messages="productForm.insuredMinAgeDisplayName.$error">
+                                <div ng-message="required">请输入最小年龄显示名称</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="25">
+                            <label>被保人最小年龄数值</label>
+                            <input type="number" name="insuredMinAgeValue" required ng-model="data.product.insuredMinAge.value"/>
+                            <div ng-messages="productForm.insuredMinAgeValue.$error">
+                                <div ng-message="required">请输入最小年龄数值</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <label>被保人最小年龄单位</label>
+                            <md-select ng-model="data.product.insuredMinAge.unit">
+                                <md-option ng-value="'YEAR'">岁</md-option>
+                                <md-option ng-value="'MONTH'">月</md-option>
+                                <md-option ng-value="'DAY'">天</md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>
+                </form>
+            </md-card>
+        </md-tab>
+        <md-tab label="投保单">
+            <md-card class="md-padding">
+                <h5>投保单字段</h5>
+                <hr/>
+                <div layout="row" style="max-height: 700px;">
+                    <div flex="40">
+                        <md-content style="max-height: 600px;" class="md-padding">
+                            <div ng-repeat="group in formGroups track by $index" ng-init="gIndex=$index" ng-if="group.name!='liability'">
+                                <div layout="column">
+                                    <div layout="row">
+                                        <button style="width:30px;" ng-click="group.show=!group.show">{{group.show==true?"-":"+"}}</button>
+                                        <div style="cursor: pointer" ng-click="selectGroup(group)">{{group.displayName}}</div>
+                                        <md-checkbox ng-checked="existsGroup(group.name)" ng-click="toggleGroup(group)">
+                                        </md-checkbox>
+                                    </div>
+                                    <div layout="row" ng-if="group.show==true" style="margin-left:50px;" ng-repeat="field in group.fields track by $index">
+                                        <div style="cursor: pointer" ng-click="selectField(group,field)">{{field.displayName}}</div>
+                                        <md-checkbox ng-checked="existsField(field.name,group.name)" ng-click="toggleField(field,group)">
+                                        </md-checkbox>
+                                    </div>
+                                </div>
+                            </div>
+                        </md-content>
+                    </div>
+                    <md-divider></md-divider>
+                    <div flex="60" ng-if="selectedElement!=null">
+                        <md-content style="max-height: 600px;" class="md-padding">
+                            <div ng-if="selectedElement.type=='group'">
+                                <md-subheader>
+                                    <div layout="row" layout-align="space-between center">
+                                        <span>分组：{{data.product.formGroups[selectedElement.gIndex].displayName}}</span>
+                                    </div>
+                                </md-subheader>
+                                <md-list flex>
+                                    <md-list-item class="md-3-line">
+                                        <div class="md-list-item-text" layout="column">
+                                            <div layout="row">
+                                                <md-input-container flex>
+                                                    是否必填
+                                                    <md-switch ng-model="data.product.formGroups[selectedElement.gIndex].optional">
+                                                        <span ng-if="!data.product.formGroups[selectedElement.gIndex].optional">是</span>
+                                                        <span ng-if="data.product.formGroups[selectedElement.gIndex].optional">否</span>
+                                                    </md-switch>
+                                                </md-input-container>
+                                                <md-input-container class="md-block" flex>
+                                                    是否多项
+                                                    <md-switch ng-model="data.product.formGroups[selectedElement.gIndex].multiple">
+                                                        <span ng-if="data.product.formGroups[selectedElement.gIndex].multiple">是</span>
+                                                        <span ng-if="!data.product.formGroups[selectedElement.gIndex].multiple">否</span>
+                                                    </md-switch>
+                                                </md-input-container>
+                                            </div>
+                                        </div>
+                                    </md-list-item>
+                                </md-list>
+                            </div>
+                            <div ng-if="selectedElement.type=='field'">
+                                <md-subheader>
+                                    <div layout="row" layout-align="space-between center">
+                                        <span>字段：{{data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].displayName}}</span>
+                                    </div>
+                                </md-subheader>
+                                <div class="md-padding">
+                                    <div class="md-padding">
+                                        <div layout="row">
+                                            <md-input-container class="md-block" flex>
+                                                是否是投保规则
+                                                <md-switch ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].plp">
+                                                    <span ng-if="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].plp">是</span>
+                                                    <span ng-if="!data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].plp">否</span>
+                                                </md-switch>
+                                            </md-input-container>
+                                            <md-input-container class="md-block" ng-if="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].plp" flex>
+                                                投保规则是否可以编辑
+                                                <md-switch ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].plpEditable">
+                                                    <span ng-if="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].plpEditable">是</span>
+                                                    <span ng-if="!data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].plpEditable">否</span>
+                                                </md-switch>
+                                            </md-input-container>
+                                        </div>
+                                        <div layout="row">
+                                            <md-input-container class="md-block" flex>
+                                                是否是测算因子
+                                                <md-switch ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].pdp">
+                                                    <span ng-if="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].pdp">是</span>
+                                                    <span ng-if="!data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].pdp">否</span>
+                                                </md-switch>
+                                            </md-input-container>
+                                            <md-input-container class="md-block" ng-if="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].pdp" flex>
+                                                测算因子是否可以编辑
+                                                <md-switch ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].pdpEditable">
+                                                    <span ng-if="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].pdpEditable">是</span>
+                                                    <span ng-if="!data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].pdpEditable">否</span>
+                                                </md-switch>
+                                            </md-input-container>
+                                        </div>
+                                        <div layout="row">
+                                            <md-input-container class="md-block" flex>
+                                                是否多项
+                                                <md-switch ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].multiple">
+                                                    <span ng-if="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].multiple">是</span>
+                                                    <span ng-if="!data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].multiple">否</span>
+                                                </md-switch>
+                                            </md-input-container>
+                                            <md-input-container class="md-block" flex>
+                                                是否可编辑
+                                                <md-switch ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].editable">
+                                                    <span ng-if="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].editable">是</span>
+                                                    <span ng-if="!data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].editable">否</span>
+                                                </md-switch>
+                                            </md-input-container>
+                                        </div>
+                                        <md-input-container class="md-block"
+                                                            ng-if="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].displayAs!=null&&data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].displayAs!=''">
+                                            <label>显示方式</label>
+                                            <md-select ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].displayAs">
+                                                <md-option ng-repeat="displayAs in displayAsList" ng-value="displayAs.value">
+                                                    {{displayAs.displayName}}
+                                                </md-option>
+                                            </md-select>
+                                        </md-input-container>
+                                        <md-input-container class="md-block">
+                                            <label>默认值</label>
+                                            <textarea ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].defaultValue" md-maxlength="150" rows="5"
+                                                      md-select-on-focus></textarea>
+                                        </md-input-container>
+                                        <md-input-container class="md-block" ng-repeat="(key,value) in data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].options">
+                                            <!--label-->
+                                            <div ng-switch="key">
+                                                <div ng-switch-when="minMessage">
+                                                    <label><span md-msg="form.{{key}}"></span>(使用"{}"可以在页面上显示配置的值)</label>
+                                                </div>
+                                                <div ng-switch-when="maxMessage">
+                                                    <label><span md-msg="form.{{key}}"></span>(使用"{}"可以在页面上显示配置的值)</label>
+                                                </div>
+                                                <div ng-switch-when="constants">
+                                                    <label><span md-msg="form.{{key}}"></span></label>
+                                                </div>
+                                                <div ng-switch-default>
+                                                    <label><span md-msg="form.{{key}}"></span></label>
+                                                </div>
+                                            </div>
+                                            <!--value-->
+                                            <div ng-switch="key">
+                                                <div ng-switch-when="notNull">
+                                                    <md-select ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].options[key]">
+                                                        <md-option ng-value="selectBoolean.selectTrue">是</md-option>
+                                                        <md-option ng-value="selectBoolean.selectFalse">否</md-option>
+                                                    </md-select>
+                                                </div>
+                                                <div ng-switch-when="min">
+                                                    <input type="number" required ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].options[key]"/>
+                                                </div>
+                                                <div ng-switch-when="max">
+                                                    <input type="number" required ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].options[key]"/>
+                                                </div>
+                                                <div ng-switch-when="minMessage">
+                                                    <input type="text" required ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].options[key]"/>
+                                                </div>
+                                                <div ng-switch-when="trueOnly">
+                                                    <md-select ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].options[key]">
+                                                        <md-option ng-value="selectBoolean.selectTrue">是</md-option>
+                                                        <md-option ng-value="selectBoolean.selectFalse">否</md-option>
+                                                    </md-select>
+                                                    {{data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].options[key]}}
+                                                </div>
+                                                <div ng-switch-when="falseOnly">
+                                                    <md-select ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].options[key]">
+                                                        <md-option ng-value="selectBoolean.selectTrue">是</md-option>
+                                                        <md-option ng-value="selectBoolean.selectFalse">否</md-option>
+                                                    </md-select>
+                                                    {{data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].options[key]}}
+                                                </div>
+                                                <div ng-switch-when="customer">
+                                                    <md-select ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].options[key]">
+                                                        <md-option value="PH">投保人告知</md-option>
+                                                        <md-option value="LA1">被保人告知</md-option>
+                                                    </md-select>
+                                                    {{data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].options[key]}}
+                                                </div>
+                                                <div ng-switch-when="constants" class="md-block md-padding">
+                                                    <br><br>
+                                                    <div flex-xs flex="50">
+                                                        <md-checkbox aria-label="全选"
+                                                                     ng-checked="isAllConstantsChecked()"
+                                                                     md-indeterminate="isConstantsIndeterminate()"
+                                                                     ng-click="toggleAllConstants()">
+                                                            全<span ng-if="isAllConstantsChecked()">不</span>选
+                                                        </md-checkbox>
+                                                    </div>
+                                                    <div flex="100" ng-repeat="constant in selectedElement.data.options.constants">
+                                                        <md-checkbox ng-checked="existsConstant(constant)" ng-click="toggleConstant(constant)">
+                                                            {{ constant.displayName }}
+                                                        </md-checkbox>
+                                                    </div>
+                                                </div>
+                                                <div ng-switch-default>
+                                                    <input type="text" required ng-model="data.product.formGroups[selectedElement.gIndex].fields[selectedElement.fIndex].options[key]"/>
+                                                </div>
+                                            </div>
+                                        </md-input-container>
+                                    </div>
+                                </div>
+                            </div>
+                        </md-content>
+                    </div>
+                </div>
+                <h5>表单特殊规则</h5>
+                <hr/>
+                <md-input-container class="md-block">
+                    <label>特殊方法</label>
+                    <input type="text" ng-model="data.product.specialFunction"/>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>特殊规则</label>
+                    <textarea ng-model="data.product.specialRule" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+                </md-input-container>
+            </md-card>
+        </md-tab>
+    </md-tabs>
+    </form>
+</md-content>
+<div style="position:fixed;right: 40px;bottom:0;cursor:pointer;">
+    <div ng-click="goTop();">
+        <i class="fa fa-arrow-circle-up" style="font-size:40px;"></i>
+    </div>
+</div>

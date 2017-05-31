@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:j="" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>保险条款</title>
+</head>
+<body>
+<div class="header">
+    <div class="image-wrap" j:if="product.recommended">
+        <img j:src="vendor.imageURL" src="/static/img/lg20121106111644.gif" alt="">
+    </div>
+    <div class="header-content">
+        <h4 j:text="product.name">美亚“乐悠游”境外旅行保障</h4>
+        <p>保险条款列表</p>
+    </div>
+    <div class="main" j:if="hasMain">
+        主条款
+        <div j:for="main : terms">
+            <div class="row" j:if="main.type.name()=='MAIN'">
+                <span j:text="main.name">君龙龙e行终身寿险保险条款</span>
+                <span j:text="main.serialNumber"></span>
+                <span><a target="_blank" j:href="'/insurance-terms/'+main.id">查看</a>|
+                    <a target="_blank" j:href="'/insurance-terms/'+main.id+'/exclusion'">除外责任</a>|
+                    <a target="_blank" j:href="main.pdfURL">下载pdf</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="associate" j:if="hasAssociate">
+        附加条款
+        <div j:for="associate : terms" j:if="associate.type.name()=='ASSOCIATE'">
+            <div class="row">
+                <span j:text="associate.name">君龙龙e行终身寿险保险条款</span>
+                <span j:text="associate.serialNumber"></span>
+                <span>
+                    <a target="_blank" j:href="'/insurance-terms/'+associate.id">查看</a>|
+                    <a target="_blank" j:href="'/insurance-terms/'+associate.id+'/exclusion'">除外责任</a>|
+                    <a target="_blank" j:href="associate.pdfURL">下载pdf</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

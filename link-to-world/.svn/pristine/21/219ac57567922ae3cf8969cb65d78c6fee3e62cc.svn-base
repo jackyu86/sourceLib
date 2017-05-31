@@ -1,0 +1,98 @@
+[
+    {
+        "id": "57c24ce40879226abbb36030",
+        "name": "无关或不确定",
+        "value": "0",
+        "displayOrder": 0
+    },
+    {
+        "id": "57c24ce40879226abbb36031",
+        "name": "配偶",
+        "value": "1",
+        "displayOrder": 1
+    },
+    {
+        "id": "57c24ce40879226abbb36032",
+        "name": "子女",
+        "value": "2",
+        "displayOrder": 2
+    },
+    {
+        "id": "57c24ce40879226abbb36033",
+        "name": "父母",
+        "value": "3",
+        "displayOrder": 3
+    },
+    {
+        "id": "57c24ce40879226abbb36034",
+        "name": "亲属",
+        "value": "4",
+        "displayOrder": 4
+    },
+    {
+        "id": "57c24ce40879226abbb36035",
+        "name": "本人",
+        "value": "5",
+        "displayOrder": 5
+    },
+    {
+        "id": "57c24ce40879226abbb36036",
+        "name": "其它",
+        "value": "6",
+        "displayOrder": 6
+    },
+    {
+        "id": "57c24ce40879226abbb36037",
+        "name": "雇佣关系",
+        "value": "7",
+        "displayOrder": 7
+    },
+    {
+        "id": "57c24ce40879226abbb36038",
+        "name": "祖父母、外祖父母",
+        "value": "8",
+        "displayOrder": 8
+    },
+    {
+        "id": "57c24ce40879226abbb36039",
+        "name": "孙子女、外孙子女",
+        "value": "9",
+        "displayOrder": 9
+    },
+    {
+        "id": "a15bead3a34f2e3fdd557e5c",
+        "name": "本人",
+        "value": "8",
+        "displayOrder": 10
+    },
+    {
+        "id": "a15bead3a34f2f3fededccca",
+        "name": "父亲",
+        "value": "1",
+        "displayOrder": 11
+    },
+    {
+        "id": "a15bead3a34f303fe9c54631",
+        "name": "母亲",
+        "value": "2",
+        "displayOrder": 12
+    },
+    {
+        "id": "a15bead3a34f313fc2f539c5",
+        "name": "妻子",
+        "value": "4",
+        "displayOrder": 13
+    },
+    {
+        "id": "a15bead3a34f323fd6067d91",
+        "name": "儿子",
+        "value": "5",
+        "displayOrder": 14
+    },
+    {
+        "id": "a15bead3a34f333feb595fba",
+        "name": "女儿",
+        "value": "6",
+        "displayOrder": 15
+    }
+]

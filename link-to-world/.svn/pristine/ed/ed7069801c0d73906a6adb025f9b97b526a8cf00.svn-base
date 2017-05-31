@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>支付订单</title>
+    <link rel="stylesheet" j:css="/static//css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static//css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static//css/header.css">
+    <link rel="stylesheet" j:css="/static//css/footer.css">
+    <link rel="stylesheet" j:css="/static//css/common.css">
+    <link rel="stylesheet" j:css="/static//css/checkout.css">
+</head>
+<body>
+<j:header/>
+<div class="page">
+    <j:purchase-steps selected="4"/>
+    <div class="order-main">
+        <div class="detail-wrap">
+            <div class="section">
+                <div class="header no-border">
+                    <div class="header-content">
+                        <h4 class="text-primary">订单成功生成</h4>
+                        <p class="header-description text-muted">请尽快完成支付,完成保费支付后将向你的邮箱发送保费信息</p>
+                    </div>
+                    <input type="hidden" id="id" j:value="paymentId"/>
+                </div>
+            </div>
+        </div>
+        <form class="form-wrap form-horizontal">
+            <div class="section">
+                <div class="header">
+                    <div class="header-content">
+                        <h4>保单内容</h4>
+                    </div>
+                </div>
+                <div class="summary-table">
+                    <div class="summary-title">
+                        <div class="summary-cell-lg">产品名称</div>
+                        <div class="summary-cell">保障期限</div>
+                        <div class="summary-cell">有效份数</div>
+                        <div class="summary-cell">合计保费</div>
+                    </div>
+                    <div j:for="orderView:orderList">
+                        <div class="summary-item" j:for="orderItem:orderView.items">
+                            <div class="summary-cell-lg" j:text="orderView.productDisplayName">美亚“乐悠悠”境外旅游保障</div>
+                            <div class="summary-cell" j:text="orderView.periodDisplayName">1年</div>
+                            <div class="summary-cell"><span j:text="orderView.unit">1</span>份</div>
+                            <div class="summary-cell text-primary">
+                                ￥<span class="cost" j:text="orderView.total">360</span>元
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-footer">
+                        <span class="info"><span class="text-primary" j:text="insuredCount">1</span>位被保人</span>
+                        <span class="info">保费
+                            <span j:if="hasDiscount" class="text-muted text-linethrough">￥<span j:text="totalPrice">360</span>元</span>
+                            <span class="text-danger">￥<span j:text="salePrice">360</span>元</span>
+                        </span>
+                        <span class="info">发票运费<span class="text-danger">￥<span j:text="invoiceFee">360</span>元</span></span>
+                        <span class="info">合计<span class="text-primary">￥<span j:text="total">360</span>元</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="header">
+                    <div class="header-content">
+                        <h4>选择你的支付方式</h4>
+                    </div>
+                </div>
+                <div class="field-list">
+                    <div class="form-group" j:if="dealerId!=null">
+                        <div class="sub-title">授信支付</div>
+                        <input type="hidden" id="dealerId" j:value="dealerId"/>
+                        <div class="form-control-static input-lg" j:class="creditStatus == 'ACTIVE'?'':'hidden'">
+                            你的账户还有￥<span j:text="totalCredit">210</span>授信余额
+                            <a href="#" data-target="#modal-credit-pay" data-toggle="modal" class="btn btn-pay text-primary">点此使用授信额度支付</a>
+                        </div>
+                        <span j:class="creditStatus != 'ACTIVE'?'':'hidden'">信用账号被锁定，请联系管理员</span>
+                    </div>
+                    <div class="form-group">
+                        <div class="sub-title">支付平台支付</div>
+
+                        <div class="form-control-static input-lg">
+                            <a id="wechat-pay-button" href="javascript:void(0);" class="btn btn-pay btn-pay-wechat">
+                                <i class="pay-loading"></i>
+                            </a>
+                            <a id="ali-pay-button" href="javascript:void(0);" class="btn btn-pay btn-pay-ali">
+                                <i class="pay-loading"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="sub-title">线下支付</div>
+
+                        <div class="form-control-static input-lg">
+                            请点击右侧完善信息已保证人员来联系你进行线下支付
+                            <a href="javascript:void(0);" id="offline-pay-button" class="btn btn-pay text-primary btn-pay-offline">点此去完善信息</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal fade bs-example-modal-sm" id="wechat-pay" tabindex="-1" role="dialog" aria-labelledby="wechat-pay">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header no-border">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted text-center">请使用微信扫码支付</p>
+                    <div class="barcode-wrap">
+                        <img class="qrcode" src="/static/img/code.png" alt="barcode">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bs-example-modal-sm" id="ali-pay" tabindex="-1" role="dialog" aria-labelledby="wechat-pay">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header no-border">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted text-center">请使用支付宝扫码支付</p>
+                    <div class="barcode-wrap">
+                        <img class="qrc" src="/static/img/code.png" alt="barcode">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bs-example-modal-sm" id="offline-pay" tabindex="-1" role="dialog" aria-labelledby="offline-pay">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header no-border">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">线下联系人信息</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="login-form" id="offline-form">
+                        <div class="form-group">
+                            <input id="fullName" name="fullName" type="text" class="form-control input-lg" placeholder="请输入姓名" required/>
+                        </div>
+                        <div class="form-group">
+                            <input id="phone" name="phone" type="text" class="form-control input-lg" placeholder="请输入电话" required cellphone/>
+                        </div>
+                        <a href="javascript:void(0)" id="submit-offline-pay" class="btn btn-lg btn-primary login-button">提交</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-credit-pay" tabindex="-1" role="dialog" aria-labelledby="credit-pay">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header no-border">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">请填写支付密码</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="login-form">
+                        <div class="form-group">
+                            <input id="credit-password" name="payPassword" type="password" class="form-control input-lg" placeholder="请输入密码" required/>
+                        </div>
+                        <a href="javascript:void(0)" id="credit-pay" class="btn btn-lg btn-primary login-button">提交</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<j:utils/>
+<j:footer/>
+
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/checkout/pay.js"></script>
+</body>
+</html>

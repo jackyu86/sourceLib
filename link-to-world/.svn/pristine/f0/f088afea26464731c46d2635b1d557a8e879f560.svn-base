@@ -1,0 +1,14 @@
+[
+    {
+        "id": "58429784223fe928cc1b9bd0",
+        "name": "停效",
+        "value": "1",
+        "displayOrder": 1
+    },
+    {
+        "id": "58429784223fe928cc1b9bd1",
+        "name": "自动垫缴",
+        "value": "2",
+        "displayOrder": 2
+    }
+]

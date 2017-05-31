@@ -1,0 +1,49 @@
+<md-dialog aria-label="Create Insurance Category" flex="50">
+    <md-subheader>
+        <div layout="row" layout-align="space-between center">
+            <span>新增分类</span>
+            <span>
+            <md-icon md-font-icon="fa-close" class="fa" ng-click="cancel()"></md-icon>
+        </span>
+        </div>
+    </md-subheader>
+
+    <form name="categoryForm" class="md-padding">
+        <div>
+            <md-input-container class="md-block" flex="50">
+                <label>分类名称</label>
+                <input required name="name" ng-model="category.name"/>
+                <div ng-messages="categoryForm.name.$error">
+                    <div ng-message="required">请输入分类名称</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex="50">
+                <label>排序</label>
+                <input type="number" required name="displayOrder" ng-model="category.displayOrder"/>
+                <div ng-messages="categoryForm.displayOrder.$error">
+                    <div ng-message="required">请输入排序</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex="50">
+                是否推荐
+                <md-switch ng-model="category.recommended">
+                    <span ng-if="category.recommended">是</span>
+                    <span ng-if="!category.recommended">否</span>
+                </md-switch>
+                <div ng-messages="categoryForm.recommended.$error">
+                    <div ng-message="required">请输入是否推荐</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex="50">
+                <label>描述</label>
+                <input name="description" ng-model="category.description"/>
+                <div ng-messages="categoryForm.description.$error">
+                    <div ng-message="required">请输入描述</div>
+                </div>
+            </md-input-container>
+            <div layout="row">
+                <md-button class="md-button md-raised md-primary" ng-disabled="processing || categoryForm.$invalid" ng-click="save()" ng-disabled="processing">保存</md-button>
+            </div>
+        </div>
+    </form>
+</md-dialog>

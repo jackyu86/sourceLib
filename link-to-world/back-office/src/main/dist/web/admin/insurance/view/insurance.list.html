@@ -1,0 +1,65 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>险种</h2>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="新建险种" ui-sref="console.insurance.create">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-card>
+    <md-subheader ng-if="insuranceTable.searching">
+        <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadInsurances()">
+            <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            <div flex>
+                <input ng-model="insuranceTable.query.name" type="text">
+            </div>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!insuranceTable.searching && !insuranceTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>保险条款列表</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="insuranceTable.searching = !insuranceTable.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table ng-model="insuranceTable.selected">
+            <thead md-head md-order="insuranceTable.query.order" md-on-reorder="reloadInsurances" class="md-accent">
+            <tr md-row>
+                <th md-column md-order-by="id"><span>编号</span></th>
+                <th md-column><span>险种名称</span></th>
+                <th md-column><span>创建时间</span></th>
+                <th md-column><span>操作</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="insurance"
+                ng-repeat="insurance in insuranceTable.data.items" md-auto-select>
+                <td md-cell>{{insurance.id}}</td>
+                <td md-cell>{{insurance.name}}</td>
+                <td md-cell>{{insurance.createdTime | date:'yyyy/MM/dd'}}</td>
+                <td md-cell layout="row">
+                    <md-button class="md-icon-button" ng-click="insuranceTable.edit(insurance)">编辑</md-button>
+                    <!--<md-button class="md-icon-button" ng-click="deleteInsurance(insurance)">删除</md-button>-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+    <md-table-pagination md-limit="insuranceTable.query.limit" md-page="insuranceTable.query.page" md-total="{{insuranceTable.data.total}}"
+                         md-page-select="insuranceTable.options.pageSelector" md-boundary-links="insuranceTable.options.boundaryLinks"
+                         md-on-paginate="reloadInsurances"></md-table-pagination>
+
+</md-card>

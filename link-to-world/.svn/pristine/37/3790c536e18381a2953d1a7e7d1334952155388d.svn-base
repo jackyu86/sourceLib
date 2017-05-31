@@ -1,0 +1,117 @@
+<md-dialog aria-label="Edit Form Group" flex="50">
+    <md-subheader>
+        <div layout="row" layout-align="space-between center">
+            <span>字段：{{formField.displayName}}</span>
+        </div>
+    </md-subheader>
+    <form name="formFieldForm" class="md-padding">
+        <div class="md-padding">
+            <div layout="row">
+                <md-input-container class="md-block" flex>
+                    是否多项
+                    <md-switch ng-model="formField.multiple">
+                        <span ng-if="formField.multiple">是</span>
+                        <span ng-if="!formField.multiple">否</span>
+                    </md-switch>
+                </md-input-container>
+                <md-input-container class="md-block" flex>
+                    是否可编辑
+                    <md-switch ng-model="formField.editable">
+                        <span ng-if="formField.editable">是</span>
+                        <span ng-if="!formField.editable">否</span>
+                    </md-switch>
+                </md-input-container>
+            </div>
+            <md-input-container class="md-block" ng-if="formField.displayAs!=null&&formField.displayAs!=''">
+                <label>显示方式</label>
+                <md-select ng-model="formField.displayAs">
+                    <md-option ng-repeat="displayAs in displayAsList" ng-value="displayAs.value">
+                        {{displayAs.displayName}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>默认值</label>
+                <textarea ng-model="formField.defaultValue" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+            <md-input-container class="md-block" ng-repeat="(key,value) in formField.options">
+                <!--label-->
+                <div ng-switch="key">
+                    <div ng-switch-when="minMessage">
+                        <label><span md-msg="form.{{key}}"></span>(使用"{}"可以在页面上显示配置的值)</label>
+                    </div>
+                    <div ng-switch-when="maxMessage">
+                        <label><span md-msg="form.{{key}}"></span>(使用"{}"可以在页面上显示配置的值)</label>
+                    </div>
+                    <div ng-switch-when="constants">
+                        <label><span md-msg="form.{{key}}"></span></label>
+                    </div>
+                    <div ng-switch-default>
+                        <label><span md-msg="form.{{key}}"></span></label>
+                    </div>
+                </div>
+                <!--value-->
+                <div ng-switch="key">
+                    <div ng-switch-when="notNull">
+                        <md-select ng-model="formField.options[key]">
+                            <md-option value="true">是</md-option>
+                            <md-option value="false">否</md-option>
+                        </md-select>
+                    </div>
+                    <div ng-switch-when="min">
+                        <input type="number" required ng-model="formField.options[key]"/>
+                    </div>
+                    <div ng-switch-when="max">
+                        <input type="number" required ng-model="formField.options[key]"/>
+                    </div>
+                    <div ng-switch-when="minMessage">
+                        <input type="text" required ng-model="formField.options[key]"/>
+                    </div>
+                    <div ng-switch-when="trueOnly">
+                        <md-select ng-model="formField.options[key]">
+                            <md-option value="true">是</md-option>
+                            <md-option value="false">否</md-option>
+                        </md-select>
+                        {{formField.options[key]}}
+                    </div>
+                    <div ng-switch-when="falseOnly">
+                        <md-select ng-model="formField.options[key]">
+                            <md-option value="true">是</md-option>
+                            <md-option value="false">否</md-option>
+                        </md-select>
+                        {{formField.options[key]}}
+                    </div>
+                    <div ng-switch-when="customer">
+                        <md-select ng-model="formField.options[key]">
+                            <md-option value="PH">投保人告知</md-option>
+                            <md-option value="LA1">被保人告知</md-option>
+                        </md-select>
+                        {{formField.options[key]}}
+                    </div>
+                    <div ng-switch-when="constants" class="md-block md-padding">
+                        <br><br>
+                        <div flex-xs flex="50">
+                            <md-checkbox aria-label="全选"
+                                         ng-checked="isChecked()"
+                                         md-indeterminate="isIndeterminate()"
+                                         ng-click="toggleAll()">
+                                全<span ng-if="isChecked()">不</span>选
+                            </md-checkbox>
+                        </div>
+                        <div flex="100" ng-repeat="constant in constants">
+                            <md-checkbox ng-checked="exists(constant, constants)" ng-click="toggle(constant, selected)">
+                                {{ constant.displayName }}
+                            </md-checkbox>
+                        </div>
+                    </div>
+                    <div ng-switch-default>
+                        <input type="text" required ng-model="formField.options[key]"/>
+                    </div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row">
+            <md-button class="md-button md-raised md-primary" ng-disabled="processing || categoryForm.$invalid" ng-click="cancel()" ng-disabled="processing">确定</md-button>
+        </div>
+    </form>
+</md-dialog>

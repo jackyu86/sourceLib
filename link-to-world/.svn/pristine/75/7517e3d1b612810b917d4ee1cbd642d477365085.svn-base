@@ -1,0 +1,20 @@
+[
+    {
+        "id": "57c24ce40879226abbb36096",
+        "name": "纸质保单",
+        "value": "BD01",
+        "displayOrder": 1
+    },
+    {
+        "id": "57c24ce40879226abbb36097",
+        "name": "电子保单",
+        "value": "BD02",
+        "displayOrder": 2
+    },
+    {
+        "id": "57c24ce40879226abbb36098",
+        "name": "保险凭证",
+        "value": "BD03",
+        "displayOrder": 3
+    }
+]

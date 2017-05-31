@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:j="" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>购买声明</title>
+    <link rel="stylesheet" j:css="/static//css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static//css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static//css/header.css">
+    <link rel="stylesheet" j:css="/static//css/footer.css">
+    <link rel="stylesheet" j:css="/static//css/common.css">
+    <link rel="stylesheet" j:css="/static//css/checkout.css">
+</head>
+<body>
+<j:header folded="true"/>
+
+<div class="page">
+    <j:purchase-steps selected="2"/>
+    <div class="statement-main">
+        <div class="section">
+            <div class="sub-title">被保人健康告知</div>
+            <ul class="question-list">
+                <li class="question-wrap">
+                    <p>
+                        曾患病
+                        <span>
+                            <label class="radio ">
+                            <input type="radio" name="answer1" value=" true">
+                            <span class="radio-label">是</span>
+                            </label>
+                            <label class="radio ">
+                            <input type="radio" name="answer1" value="false">
+                            <span class="radio-label">否</span>
+                            </label>
+                        </span>
+                    </p>
+                </li>
+                <li class="question-wrap">
+                    <div class="question">曾患病2</div>
+                    <div class="answer">
+                        <div class="radio ">
+                            <input type="radio" name="answer1" value=" true">
+                            <label class="radio-label">
+                                是
+                            </label>
+
+                        </div>
+                        <div class="radio ">
+                            <input type="radio" name="answer1" value="false">
+                            <label class="radio-label">
+                                否
+                            </label>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="question-wrap">
+                    <div class="question ">高血压、先天性心脏病、风湿性心脏病</div>
+                </li>
+                <li class="question-wrap">
+                    <div class="question ">高血压、先天性心脏病、风湿性心脏病高血压、先天性心脏病、风湿性心脏病高血压、先天性心脏病、风湿性心脏病高血压、先天性心脏病、风湿性心脏病高血压、
+                        先天性心脏病、风湿性心脏病高血压、先天性心脏病、风湿性心脏病高血压、先天性心脏病、风湿性心脏病
+                    </div>
+                </li>
+
+                <li class="question-wrap">针对这个你想收益 <input type="number"> 万元</li>
+            </ul>
+            <!--<div class="section-footer">-->
+                <!--请确认被保险人上述问题答案:-->
+                <!--<div class="btn  btn-primary">全部为否</div>-->
+                <!--<div class="btn  btn-default">至少有一项为“是”</div>-->
+            <!--</div>-->
+        </div>
+        <div class="section">
+            <div class="sub-title">其他告知</div>
+            <ul class="question-list">
+                <li class="question-group">
+                    <div class="group-title">续保客户被保险人告知:</div>
+                    <ul class="question-group-list">
+                        <li class="question-wrap">
+                            <div class="question ">被保险人上一年没有发生过理赔</div>
+                        </li>
+                        <li class="question-wrap">
+                            <div class="question ">被保险人上一年没有发生过理赔</div>
+                        </li>
+                        <li class="question-wrap">
+                            <div class="question ">被保险人上一年没有发生过理赔</div>
+                        </li>
+                        <li class="question-wrap">
+                            <div class="question ">被保险人上一年没有发生过理赔</div>
+                        </li>
+                        <li class="question-wrap">
+                            <div class="question ">被保险人上一年没有发生过理赔</div>
+                        </li>
+                        <li class="question-wrap">
+                            <div class="question ">被保险人上一年没有发生过理赔</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="section-footer">
+                <div class="self-statement media">
+                    <div class="media-left">
+                        <img src="/static/img/icon_tips.png" alt="tips">
+                    </div>
+                    <div class="media-body">
+                        本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明本人声明
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-button-wrap text-center">
+            <div class="btn btn-lg btn-primary btn-submit">下一步</div>
+        </div>
+    </div>
+</div>
+<j:footer/>
+<j:template/>
+
+<script id="tpl_statement_message" type="text/x-handlebars-template">
+    <li class="question-wrap">
+        {{{message}}}
+    </li>
+
+</script>
+
+<script id="tpl_statement_boolean_radio" type="text/x-handlebars-template">
+    <span>
+        <label class="radio">
+            <input type="radio" name="{{name}}" value="true">
+            <span class="radio-label">是</span>
+        </label>
+        <label class="radio">
+            <input type="radio" name="{{name}}" value="false">
+            <span class="radio-label">否</span>
+        </label>
+    </span>
+</script>
+
+<script id="tpl_statement_number" type="text/x-handlebars-template">
+    <span><input type="number" name="{{name}}"></span>
+</script>
+
+<script id="tpl_statement_string" type="text/x-handlebars-template">
+    <span><input type="text" name="{{name}}"></span>
+</script>
+
+
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/checkout/statement.js"></script>
+</body>
+</html>

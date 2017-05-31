@@ -1,0 +1,50 @@
+[
+    {
+        "id": "584a791975c46e31f8d47fb2",
+        "name": "客户银行转帐",
+        "value": "3",
+        "displayOrder": 3
+    },
+    {
+        "id": "584a791975c46e31f8d47fb3",
+        "name": "代理代收",
+        "value": "7",
+        "displayOrder": 7
+    },
+    {
+        "id": "584a791975c46e31f8d47fb4",
+        "name": "单笔转账（付款专用）",
+        "value": "30",
+        "displayOrder": 30
+    },
+    {
+        "id": "584a791975c46e31f8d47fb5",
+        "name": "银联实时转账",
+        "value": "70",
+        "displayOrder": 70
+    },
+    {
+        "id": "584a791975c46e31f8d47fb6",
+        "name": "支付宝",
+        "value": "71",
+        "displayOrder": 71
+    },
+    {
+        "id": "584a791975c46e31f8d47fb7",
+        "name": "财付通",
+        "value": "72",
+        "displayOrder": 72
+    },
+    {
+        "id": "584a791975c46e31f8d47fb8",
+        "name": "快钱",
+        "value": "73",
+        "displayOrder": 73
+    },
+    {
+        "id": "584a791975c46e31f8d47fb9",
+        "name": "去哪儿快捷支付",
+        "value": "74",
+        "displayOrder": 74
+    }
+]

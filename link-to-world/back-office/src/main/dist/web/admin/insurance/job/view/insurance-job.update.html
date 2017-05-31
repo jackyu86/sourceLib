@@ -1,0 +1,45 @@
+<md-card>
+    <md-subheader>
+        <div layout="row" layout-align="space-between center">
+            <span>编辑职业</span>
+            <div layout="row">
+                <md-button ng-click="createChild($event)" class="md-icon-button">
+                    <md-tooltip md-direction="down">
+                        新建子职业
+                    </md-tooltip>
+                    <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+                </md-button>
+                <md-button ng-click="deleteJob($event)" class="md-icon-button" ng-if="deletable()">
+                    <md-tooltip md-direction="down">
+                        删除职业
+                    </md-tooltip>
+                    <md-icon class="fa-trash" md-font-icon="fa"></md-icon>
+                </md-button>
+            </div>
+        </div>
+    </md-subheader>
+    <form name="jobForm" class="md-padding">
+        <md-input-container class="md-block">
+            <label>职业名称</label>
+            <input required name="displayName" ng-model="jobNode.job.displayName"/>
+            <div ng-messages="jobForm.displayName.$error">
+                <div ng-message="required">请输入职业名称</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>职业代码</label>
+            <input required name="code" ng-model="jobNode.job.code"/>
+            <div ng-messages="jobForm.code.$error">
+                <div ng-message="required">请输入职业代码</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>风险等级</label>
+            <input required name="riskLevel" ng-model="jobNode.job.riskLevel"/>
+            <div ng-messages="jobForm.riskLevel.$error">
+                <div ng-message="required">请输入风险等级</div>
+            </div>
+        </md-input-container>
+        <md-button class="md-button md-raised md-primary" ng-disabled="processing || jobForm.$invalid" ng-click="save()">保存</md-button>
+    </form>
+</md-card>

@@ -1,0 +1,89 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>个人用户列表</h2>
+    </div>
+</md-toolbar>
+
+
+<md-card flex layout="column">
+    <md-subheader ng-if="table.searching">
+        <form class="search-box" layout="row" layout-align="left center">
+            <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            <div flex>
+                <md-input-container>
+                    <label>用户名</label>
+                    <input ng-model="query.username" type="text">
+                </md-input-container>
+
+                <md-input-container>
+                    <label>姓名</label>
+                    <input ng-model="query.fullName" type="text">
+                </md-input-container>
+
+                <md-input-container>
+                    <label>电话</label>
+                    <input ng-model="query.phone" type="text">
+                </md-input-container>
+
+                <md-input-container>
+                    <label>邮箱</label>
+                    <input ng-model="query.email" type="text">
+                </md-input-container>
+
+                <md-input-container>
+                    <label>证件</label>
+                    <input ng-model="query.identification" type="text">
+                </md-input-container>
+            </div>
+            <md-button class="md-primary md-raised" ng-click="load()">
+                搜索
+            </md-button>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!table.searching">
+        <div layout="row" layout-align="left center">
+            <span>用户列表</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="table.searching = !table.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-table-container flex>
+        <table md-table md-row-select="options.rowSelection" ng-model="selected" md-progress="promise">
+            <thead md-head>
+            <tr md-row>
+                <th md-column><span>用户名</span></th>
+                <th md-column><span>姓名</span></th>
+                <th md-column><span>手机号码</span></th>
+                <th md-column><span>电子邮箱</span></th>
+                <th md-column><span>所在地区</span></th>
+                <th md-column><span>注册时间</span></th>
+                <th md-column><span>投保保费</span></th>
+                <th md-column><span>账户状态</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row ng-repeat="customer in customers.items">
+                <td md-cell>{{customer.user.username}}</td>
+                <td md-cell>{{customer.user.fullName}}</td>
+                <td md-cell>{{customer.user.phone}}</td>
+                <td md-cell>{{customer.user.email}}</td>
+                <td md-cell>{{customer.customer.city}}</td>
+                <td md-cell>{{customer.user.createdTime}}</td>
+                <td md-cell>{{customer.totalOrder}}</td>
+                <td md-cell>{{customer.user.status}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+    <md-table-pagination md-limit="query.limit" md-page="options.index()" md-total="{{options.total()}}"
+                         md-page-select="options.pageSelector" md-boundary-links="options.boundaryLinks"
+                         md-on-paginate="logPagination"></md-table-pagination>
+
+</md-card>

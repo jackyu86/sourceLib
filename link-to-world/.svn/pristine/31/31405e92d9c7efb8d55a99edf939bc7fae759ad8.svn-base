@@ -1,0 +1,64 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>投保单分组</h2>
+        <span flex></span>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-subheader ng-if="formGroupTable.searching">
+        <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadFormGroups()">
+            <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            <div flex>
+                <input ng-model="formGroupTable.query.displayName" type="text">
+            </div>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!formGroupTable.searching && !formGroupTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>分组列表</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="formGroupTable.searching = !formGroupTable.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table ng-model="formGroupTable.selected">
+            <thead md-head md-order="formGroupTable.query.order" md-on-reorder="reloadFormGroups" class="md-accent">
+            <tr md-row>
+                <th md-column><span>编号</span></th>
+                <th md-column><span>名称</span></th>
+                <th md-column><span>显示顺序</span></th>
+                <th md-column><span>是否必须</span></th>
+                <th md-column><span>是否支持多个</span></th>
+                <th md-column md-order-by="created_time"><span>创建时间</span></th>
+                <th md-column><span>操作</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="formGroup"
+                ng-repeat="formGroup in formGroupTable.data.items" md-auto-select>
+                <td md-cell>{{formGroup.id}}</td>
+                <td md-cell><a href="javascript:void(0);" ng-click="viewFormGroup(formGroup)">{{formGroup.displayName}}</a></td>
+                <td md-cell>{{formGroup.displayOrder}}</td>
+                <td md-cell><span ng-if="formGroup.required">是</span><span ng-if="!formGroup.required">否</span></td>
+                <td md-cell><span ng-if="formGroup.multiple">是</span><span ng-if="!formGroup.multiple">否</span></td>
+                <td md-cell>{{formGroup.createdTime | date:'yyyy/MM/dd'}}</td>
+                <td md-cell layout="row">
+                    <md-button class="md-icon-button" ng-click="formGroupTable.edit(formGroup)">编辑</md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+    <md-table-pagination md-limit="formGroupTable.query.limit" md-page="formGroupTable.query.page" md-total="{{formGroupTable.data.total}}"
+                         md-page-select="formGroupTable.options.pageSelector" md-boundary-links="formGroupTable.options.boundaryLinks"
+                         md-on-paginate="reloadFormGroups"></md-table-pagination>
+
+</md-card>

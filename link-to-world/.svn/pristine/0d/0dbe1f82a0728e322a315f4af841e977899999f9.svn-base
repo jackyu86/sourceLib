@@ -1,0 +1,714 @@
+{
+    "name": "57c24ce40879226abbb35fbb",
+    "description": "SEO description",
+    "keywords": [
+        "SEO keywords"
+    ],
+    "displayName": "富邦旅行险",
+    "tags": [],
+    "publicVisible": "ALL",
+    "insuranceCategoryIds": [
+        "5789a68b28708a938f9b900b"
+    ],
+    "insuranceClaimId": "578b525f7214b5300823adf4",
+    "insuranceVendorId": "5789a68b28708a938f9b901b",
+    "insuranceJobTreeId": "584e06fa75c46e1f30cb7c0c",
+    "jobRestricted": true,
+    "jobLevels": [
+        1,
+        2,
+        3
+    ],
+    "jobIds": null,
+    "jobExclude": true,
+    "minUnits": 1,
+    "maxUnits": 5,
+    "policyTypes": [
+        "BD01",
+        "BD02"
+    ],
+    "highlightContent": "10万意外+1万意外医疗+50元每日津贴，仅需58元！",
+    "featureContent": "<p>1、意外伤害、意外医疗、意外住院津贴超实用搭配！基础必备保障计划！</p><p>2、该产品保障1-3类职业人士！意外医疗在社保范围内的合理部分在100元免赔后，100%比例报销！</p><p>3、网络投保，足不出户即可货比三家；365天全年无休，在线提供咨询和保全变更服务。</p>",
+    "tipsContent": "<p>	1、本计划由君龙人寿保险有限公司承保，目前该公司在福建和浙江设有分支机构。客户从中民保险网购买，后续变更与理赔事务均可由中民保险网协助您办理。</p><p>	2、<strong><strong>同一保障期间内，同一被保险人仅限购买一份君龙人寿保险公司的综合意外险产品，多购买部分保险公司不承担保险责任</strong>。</strong></p><p>	3、外籍人士可投保，但需在中国境内已定居半年以上。</p><p>	4、<strong><span>本计划中</span>医疗费用和住院津贴仅承保中国境内（不包含台湾、香港、澳门地区）发生的治疗，</strong><font>身故、伤残责任保障全球</font><strong><font><span>除下列国家外</span></font></strong><font><span style='line-height: 26px; font-family: simsun'>（<a href='http://images.zhongmin.cn/uploads/files/君龙除外国家(2).pdf' target='_blank'><span style='color: #0000cd'>点击查看</span></a>）</span></font><strong><font><span>。</span></font></strong></p><p>	5、本计划不承保高风险运动导致的意外伤害，高风险运动包括但不限于潜水、跳伞、攀岩、探险、蹦极、驾驶滑翔机、武术比赛、摔跤、特技表演、赛马、赛车等（具体可见除外责任）。</p><p>	6、本计划中的医疗相关保障限定为中华人民共和国境内合法经营的二级以上（含二级）医院或保险公司认可的其他医疗机构，除了北京平谷区所有医院。<span style='color: #ff0000'>请注意：北京平谷区所有医院的就医均不给予理赔，建议您去往其他区域二级以上（含二级）公立医院就医。</span></p><p>	7、本计划为网络销售产品，网上投保、网上支付、网上即时核保并出具保险凭证，您可拨君龙人寿客服电话：400-6660123 查询、验真。</p><p>	<span style='color:#ff0000;'>8、重要提示：本计划已经于2016.9.13重新调整上线，本次调整分为两部分：1、对健康告知5、6条进行了调整，使其描述更加清晰、明确。2、新增了部分拒保职业，详情请参见《职业表 》。3、扩展承保年龄为10-60周岁。</span></p>",
+    "cases": [
+        "<p>	陈女士刚工作不久，想要给自己买一份意外保障，在中民保险网上购买了中民君安综合意外保障计划一，仅保费58元/年。保险期间内，享有以下保障权益：</p><p>	1、10万元意外伤害保障</p><p>	2、10000元的意外医疗</p><p>	3、50元/天的意外住院津贴</p>"
+    ],
+    "questions": [
+        {
+            "question": "本款产品意外医疗报销有没有免赔额？赔付比例多少？",
+            "answer": "对于意外造成的合理的治疗费用，在扣除100元后再与100%给付比例赔付。"
+        },
+        {
+            "question": "这款产品的保障区域是哪里呢？",
+            "answer": "本计划身故、伤残责任全球（除部分国家，具体除外国家见中民提示）均可保，医疗费用和住院津贴仅承保中国境内（不包含台湾、香港、澳门地区）发生的治疗。"
+        },
+        {
+            "question": "我在北京、我家人在二级城市，我们都能购买这款保障计划吗？",
+            "answer": "可以的，本计划属于可全国购买的。中民保险网上所有产品，属于限制购买地区的，均有在中民提示提醒购买区域限制。"
+        }
+    ],
+    "plp": [
+        {
+            "group": "insured",
+            "field": "age",
+            "editable": false
+        },
+        {
+            "group": "plan",
+            "field": "period",
+            "editable": false
+        }
+    ],
+    "pdp": [
+        {
+            "group": "product",
+            "field": "serial",
+            "editable": false
+        },
+        {
+            "group": "insured",
+            "field": "age",
+            "editable": false
+        },
+        {
+            "group": "plan",
+            "field": "period",
+            "editable": false
+        },
+        {
+            "group": "liability",
+            "field": "57c24ce40879226abbb35fbe"
+        },
+        {
+            "group": "liability",
+            "field": "57c24ce40879226abbb35fb8"
+        },
+        {
+            "group": "liability",
+            "field": "5836501799a6bc0610348523"
+        },
+        {
+            "group": "liability",
+            "field": "5836501799a6bc061034851f"
+        },
+        {
+            "group": "liability",
+            "field": "58364ef499a6bc29d4ec74f6"
+        },
+        {
+            "group": "liability",
+            "field": "58364ef499a6bc29d4ec74f4"
+        },
+        {
+            "group": "liability",
+            "field": "58364dba99a6bc1744d1770e"
+        },
+        {
+            "group": "liability",
+            "field": "57c24ce40879226abbb35fd6"
+        },
+        {
+            "group": "liability",
+            "field": "57c24ce40879226abbb35fbf"
+        },
+        {
+            "group": "liability",
+            "field": "5836507a99a6bc08cc3d3868"
+        }
+    ],
+    "formGroups": [
+        {
+            "name": "plan",
+            "optional": false,
+            "fields": [
+                {
+                    "name": "startTime",
+                    "options": {
+                    },
+                    "editable": true
+                },
+                {
+                    "name": "period",
+                    "options": {
+                    },
+                    "editable": true,
+                    "hidden": true,
+                    "defaultValue": {
+                        "displayName": "1-3天",
+                        "unit": "DAY",
+                        "value": 3
+                    }
+                }
+            ]
+        },
+        {
+            "name": "policy-holder",
+            "optional": false,
+            "fields": [
+                {
+                    "name": "name",
+                    "editable": true
+                },
+                {
+                    "name": "id",
+                    "editable": true
+                },
+                {
+                    "name": "birthDate",
+                    "editable": true
+                },
+                {
+                    "name": "gender",
+                    "editable": true
+                },
+                {
+                    "name": "phone",
+                    "editable": true
+                },
+                {
+                    "name": "email",
+                    "editable": true
+                }
+            ]
+        },
+        {
+            "name": "insured",
+            "fields": [
+                {
+                    "name": "relation",
+                    "editable": true,
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "name",
+                    "editable": true
+                },
+                {
+                    "name": "id",
+                    "editable": true
+                },
+                {
+                    "name": "age",
+                    "options": {
+                        "min": 10,
+                        "max": 60
+                    },
+                    "editable": false,
+                    "hidden": true
+                },
+                {
+                    "name": "birthDate",
+                    "editable": true
+                },
+                {
+                    "name": "gender",
+                    "editable": true
+                },
+                {
+                    "name": "phone",
+                    "editable": true
+                },
+                {
+                    "name": "job",
+                    "editable": true
+                }
+            ]
+        },
+        {
+            "name": "beneficiary",
+            "fields": [
+                {
+                    "name": "type",
+                    "editable": true
+                },
+                {
+                    "name": "legalBeneficiary",
+                    "editable": true,
+                    "options": {}
+                }
+            ]
+        },
+        {
+            "name": "liability",
+            "fields": [
+                {
+                    "name": "57c24ce40879226abbb35fbe",
+                    "options": {},
+                    "message": {},
+                    "editable": true
+                },
+                {
+                    "name": "57c24ce40879226abbb35fb8",
+                    "options": {},
+                    "message": {},
+                    "editable": true
+                },
+                {
+                    "name": "5836507a99a6bc08cc3d3868",
+                    "options": {},
+                    "message": {},
+                    "editable": true
+                },
+                {
+                    "name": "5836501799a6bc0610348523",
+                    "options": {},
+                    "message": {},
+                    "editable": true
+                },
+                {
+                    "name": "5836501799a6bc061034851f",
+                    "options": {},
+                    "message": {},
+                    "editable": true
+                },
+                {
+                    "name": "58364ef499a6bc29d4ec74f6",
+                    "options": {},
+                    "message": {},
+                    "editable": true
+                },
+                {
+                    "name": "58364ef499a6bc29d4ec74f4",
+                    "options": {},
+                    "message": {},
+                    "editable": true
+                },
+                {
+                    "name": "58364dba99a6bc1744d1770e",
+                    "options": {},
+                    "message": {},
+                    "editable": true
+                },
+                {
+                    "name": "57c24ce40879226abbb35fd6",
+                    "options": {},
+                    "message": {},
+                    "editable": true
+                },
+                {
+                    "name": "57c24ce40879226abbb35fbf",
+                    "options": {},
+                    "message": {},
+                    "editable": true
+                }
+            ]
+        }
+    ],
+    "period": {
+        "type": "USER_SELECTION",
+        "selections": [
+            {
+                "displayName": "1-3天",
+                "unit": "DAY",
+                "value": 3
+            },
+            {
+                "displayName": "4-6天",
+                "unit": "DAY",
+                "value": 6
+            },
+            {
+                "displayName": "7-9天",
+                "unit": "DAY",
+                "value": 9
+            },
+            {
+                "displayName": "10-13天",
+                "unit": "DAY",
+                "value": 13
+            },
+            {
+                "displayName": "14-20天",
+                "unit": "DAY",
+                "value": 20
+            },
+            {
+                "displayName": "21-30天",
+                "unit": "DAY",
+                "value": 30
+            },
+            {
+                "displayName": "31-44天",
+                "unit": "DAY",
+                "value": 44
+            },
+            {
+                "displayName": "45-59天",
+                "unit": "DAY",
+                "value": 59
+            },
+            {
+                "displayName": "60-89天",
+                "unit": "DAY",
+                "value": 89
+            },
+            {
+                "displayName": "90-119天",
+                "unit": "DAY",
+                "value": 119
+            },
+            {
+                "displayName": "120-149天",
+                "unit": "DAY",
+                "value": 149
+            },
+            {
+                "displayName": "150-182天",
+                "unit": "DAY",
+                "value": 182
+            }
+        ],
+        "startTimeType": "USER_INPUT"
+    },
+    "payment": {
+        "methods": [
+            "FIXED"
+        ]
+    },
+    "discount": 0.9,
+    "insurances": [
+        {
+            "insuranceId": "57c24ce40879226abbb35fba",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "insuranceId": "57c24ce40879226abbb35fbc",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fbe",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "insuranceId": "57c24ce40879226abbb35fbd",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fbf",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "insuranceId": "57c24ce40879226abbb36004",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fbf",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "insuranceId": "57c24ce40879226abbb36005",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fd6",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            10000,
+                            20000,
+                            30000
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "insuranceId": "57c24ce40879226abbb36006",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "58364dba99a6bc1744d1770e",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "insuranceId": "57c24ce40879226abbb36007",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "58364ef499a6bc29d4ec74f4",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            50000,
+                            100000,
+                            300000
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "insuranceId": "57c24ce40879226abbb36008",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "58364ef499a6bc29d4ec74f6",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            5000,
+                            100000
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "insuranceId": "57c24ce40879226abbb36009",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "5836501799a6bc061034851f",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 600
+                    }
+                }
+            ]
+        },
+        {
+            "insuranceId": "57c24ce40879226abbb3600a",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "5836501799a6bc0610348523",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 1000
+                    }
+                }
+            ]
+        },
+        {
+            "insuranceId": "57c24ce40879226abbb3600c",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            100000,
+                            200000,
+                            300000,
+                            400000,
+                            500000,
+                            600000
+                        ]
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "5836507a99a6bc08cc3d3868",
+                    "amount": {
+                        "type": "USER_SELECTION",
+                        "selections": [
+                            300000,
+                            500000
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "status": "ACTIVE",
+    "type": "MAIN",
+    "insuranceClauseIds": [
+        "578b57967214b52d84eb4f56",
+        "57c24ce40879226abbb36087",
+        "57c24ce40879226abbb36088"
+    ],
+    "priceTableUrl": "http://baodan.zhongmin.cn/clause/Accid/Accid_1304_5.pdf",
+    "customerNotificationUrl": "http://baodan.zhongmin.cn/clause/ClientNotification.pdf",
+    "specialFunction": "cascade",
+    "specialRule": "{\"fields\":[\"liability.57c24ce40879226abbb35fb8\",\"liability.58364dba99a6bc1744d1770e\"],\"rules\":[{\"name\":\"100000\",\"value\":100000,\"children\":[{\"name\":\"100000\",\"value\":100000}]},{\"name\":\"200000\",\"value\":200000,\"children\":[{\"name\":\"100000\",\"value\":100000},{\"name\":\"200000\",\"value\":200000}]},{\"name\":\"300000\",\"value\":300000,\"children\":[{\"name\":\"100000\",\"value\":100000},{\"name\":\"200000\",\"value\":200000},{\"name\":\"300000\",\"value\":300000}]},{\"name\":\"400000\",\"value\":400000,\"children\":[{\"name\":\"100000\",\"value\":100000},{\"name\":\"200000\",\"value\":200000},{\"name\":\"300000\",\"value\":300000}]},{\"name\":\"500000\",\"value\":500000,\"children\":[{\"name\":\"100000\",\"value\":100000},{\"name\":\"200000\",\"value\":200000},{\"name\":\"300000\",\"value\":300000}]},{\"name\":\"600000\",\"value\":600000,\"children\":[{\"name\":\"100000\",\"value\":100000},{\"name\":\"200000\",\"value\":200000},{\"name\":\"300000\",\"value\":300000}]}]}"
+}

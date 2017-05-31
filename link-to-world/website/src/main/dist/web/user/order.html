@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>订单管理</title>
+    <link rel="stylesheet" j:css="/static//css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" j:css="/static//css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static//css/common.css">
+    <link rel="stylesheet" j:css="/static//css/header.css">
+    <link rel="stylesheet" j:css="/static//css/footer.css">
+    <link rel="stylesheet" j:css="/static//css/customer.css">
+    <link rel="stylesheet" j:css="/static//css/order.css">
+</head>
+<body>
+<j:header folded="false"/>
+<div class="page">
+    <j:customer-sidenav j:selected="status" category="order"/>
+    <div class="main">
+        <form id="search-form">
+            <div class="page-title">
+                订单管理
+                <div class="tool-bar">
+                    <div class="input-group search-wrap">
+                        <input type="text" name="insuredName" class="form-control input-lg" placeholder="请输入被保人姓名搜索" j:value="request.insuredName">
+                        <a href="javascript:void(0)" class="input-group-addon search-button"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="filter-bar">
+                <input type="hidden" name="status" j:value="request.status">
+                <input type="hidden" name="page" j:value="request.page">
+                <span>订单管理</span>
+                <input type="text" data-provide="datepicker" data-date-format="yyyy-mm-dd" name="orderDateFrom" j:value="orderDateFrom"
+                        data-date-language="zh-CN" class="form-control input-lg input-calendar">
+                <span>至</span>
+                <input type="text" data-provide="datepicker" data-date-format="yyyy-mm-dd" name="orderDateTo" j:value="orderDateTo"
+                       data-date-language="zh-CN" class="form-control input-lg input-calendar">
+                <a href="#" class="btn btn-lg btn-default search-button">搜索</a>
+            </div>
+        </form>
+        <div class="order-list-panel table-wrap" j:data-total="orders.total" j:data-page="orders.page" j:data-limit="orders.limit">
+            <table>
+                <thead>
+                <tr>
+                    <th>投保产品</th>
+                    <th>保险期限</th>
+                    <th>被保人</th>
+                    <th>订单金额</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <div j:for="order :orders">
+                    <tr class="order-table-divider">
+                        <td colspan="6"></td>
+                    </tr>
+                    <tr class="order-sub-title">
+                        <td colspan="6">
+                            <span j:text="order.planStartTime|format('yyyy-MM-dd')">2016-06-21</span> 订单号: <span j:text="order.id">9881823479</span>
+                            <a href="javascript:void(0)" j:data-id="order.id" class="order-delete-button pull-right"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="order-main">
+                            <div class="order-name">
+                                <div j:for="item:order.items" j:text="order.productDisplayName"></div>
+                            </div>
+                        </td>
+                        <td j:text="order.periodDisplayName"></td>
+                        <td>
+                            <div j:for="item:order.items" j:text="item.name"></div>
+                        </td>
+                        <td>
+                            ￥<span j:text="order.total"></span>元
+                        </td>
+                        <td>
+                            <span j:data-status="order.orderStatus" class="status-name"></span>
+                        </td>
+                        <td>
+                            <span j:dealer="status:ACTIVE">
+                                <a j:if="order.canEdit()" j:href="'/order/'+order.id+'/edit'" j:data-id="order.id" class="btn-block text-primary">编辑</a>
+                                <a j:if="order.orderStatus.name() == 'DRAFT'" href="javascript:void(0);" j:data-id="order.id" class="btn-block text-primary pay-btn">立即支付</a>
+                                <a j:if="order.canSurrendering()" href="javascript:void(0);" j:data-id="order.id" class="btn-block text-primary surrender-btn">退保</a>
+                            </span>
+                            <a j:if="order.canViewDetail()" href="javascript:void(0);" j:href="'/account/order/'+order.id" class="btn-block text-primary">详情</a>
+                        </td>
+                    </tr>
+                </div>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination-wrap">
+            <div class="pagination-list">
+                <a href="#" class="pagination-item">上一页</a>
+                <a href="#" class="pagination-item active">1</a>
+                <a href="#" class="pagination-item">2</a>
+                <a href="#" class="pagination-item">3</a>
+                <a href="#" class="pagination-item">...</a>
+                <a href="#" class="pagination-item">下一页</a>
+            </div>
+            <span>共12页</span>
+            <span>到第</span>
+            <input type="number" min="1" value="1">
+            <span>页</span>
+            <a href="#" class="btn">确定</a>
+        </div>
+
+    </div>
+</div>
+<j:utils></j:utils>
+<j:footer/>
+<script id="tpl-pagination" type="text/x-handlebars-template">
+    <div class="pagination-list">
+        {{#unequal page 1}}
+        <a href="javascript:void(0)" class="pagination-prev pagination-item">上一页</a>
+        {{/unequal}}
+        {{#each pages}}
+        <a href="javascript:void(0)" class="pagination-item {{active}}" data-value="{{no}}">{{no}}</a>
+        {{/each}}
+        {{#unequal page totalPages}}
+        <a href="javascript:void(0)" class="pagination-next pagination-item">下一页</a>
+        {{/unequal}}
+    </div>
+    <span>共{{totalPages}}页</span>
+    <span>到第</span>
+    <input type="number" id="goto-page" min="1" value="{{page}}">
+    <span>页</span>
+    <a href="javascript:void(0)" class="btn btn-goto">确定</a>
+</script>
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datepicker.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datepicker.zh-CN.min.js"></script>
+<script j:js="/static/js/lib/handlebars-v4.0.5.js"></script>
+<script j:js="/static/js/handlebars-helper.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/user/order.js"></script>
+<script j:js="/static/js/common.js"></script>
+
+</body>
+</html>

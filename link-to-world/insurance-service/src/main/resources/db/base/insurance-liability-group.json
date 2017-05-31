@@ -1,0 +1,52 @@
+[
+    {
+        "id": "57c24ce40879226abbb35fc2",
+        "name": "生存/领取保障",
+        "priority": 1000
+    },
+    {
+        "id": "57c24ce40879226abbb35fc3",
+        "name": "账户价值",
+        "priority": 2000
+    },
+    {
+        "id": "57c24ce40879226abbb35fb6",
+        "name": "身故保障",
+        "priority": 1000
+    },
+    {
+        "id": "57c24ce40879226abbb35fb7",
+        "name": "伤残保障",
+        "priority": 2000
+    },
+    {
+        "id": "57c24ce40879226abbb35fc4",
+        "name": "健康/医疗保障",
+        "priority": 3000
+    },
+    {
+        "id": "57c24ce40879226abbb35fc5",
+        "name": "紧急救援保障",
+        "priority": 4000
+    },
+    {
+        "id": "57c24ce40879226abbb35fc6",
+        "name": "财产保障",
+        "priority": 5000
+    },
+    {
+        "id": "57c24ce40879226abbb35fc7",
+        "name": "责任保障",
+        "priority": 6000
+    },
+    {
+        "id": "57c24ce40879226abbb35fc8",
+        "name": "信用/保证保障",
+        "priority": 7000
+    },
+    {
+        "id": "a15bead3a34c103fec3cb8e7",
+        "name": "意外伤害和疾病保障",
+        "priority": 8000
+    }
+]

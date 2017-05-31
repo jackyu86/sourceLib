@@ -1,0 +1,3 @@
+<div ng-repeat="dashboard in Console.dashboard" layout="row">
+    <div ng-include="dashboard.templateUrl" ng-controller="dashboard.controller" flex="100"></div>
+</div>

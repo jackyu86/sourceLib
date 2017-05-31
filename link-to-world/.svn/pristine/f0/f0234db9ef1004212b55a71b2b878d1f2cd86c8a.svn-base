@@ -1,0 +1,68 @@
+site:
+  name: 君龙保险管理后台
+  host: localhost
+  locale: zh-CN
+
+web:
+  cacheEnabled: false
+  dirs:
+    - ./src/main/dist/web
+  baseURL: http://localhost:8082
+
+admin:
+  cacheEnabled: false
+  dirs:
+    - ./src/main/dist/web
+    - ../sited-project/sited-admin/src/main/resources/META-INF/web
+    - ../sited-project/file-admin/src/main/resources/META-INF/web
+    - ../sited-project/user-admin/src/main/resources/META-INF/web
+
+log:
+  level: INFO
+
+kdlins.api:
+  esbServiceURL: http://localhost:8080
+  payServiceURL: http://uat-pay.kdlins.com.cn/eco
+
+underwriting:
+  underwritingWsdl: http://117.25.161.139/Exchange.ws?wsdl
+  agentCode: 2dab7698c81211e6a851005056862fc8
+  jobEnabled: true
+  jobInterval: 60
+
+user.api:
+  url: http://localhost:8081
+
+customer.api:
+  url: http://localhost:8081
+
+file.api:
+  url: http://localhost:8081
+  dir: file
+
+message:
+  url: http://localhost:8081
+
+product.api:
+  url: http://localhost:8081
+
+insurance.api:
+  url: http://localhost:8081
+
+cart.api:
+  url: http://localhost:8081
+
+order.api:
+  url: http://localhost:8081
+
+esb.api:
+  url: http://localhost:8081
+
+dealer.api:
+  url: http://localhost:8081
+
+underwriting.api:
+  url: http://localhost:8081
+
+ticket.api:
+  url: http://localhost:8081

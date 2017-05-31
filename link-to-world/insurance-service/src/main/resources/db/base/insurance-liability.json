@@ -1,0 +1,1373 @@
+[
+    {
+        "id": "57c24ce40879226abbb35fb8",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "身故保险金",
+        "description": "若被保险人于本合同生效(若曾复效,则自本合同最后复效)之日起在保障责任范围内身故的，按照保单上所载的保险金额与投保人所交保险费之和给付身故保险金。",
+        "type": "RISK_PROTECTION",
+        "amount": {
+            "type": "USER_SELECTION",
+            "selections": [
+                100000,
+                200000,
+                300000,
+                400000,
+                500000,
+                600000
+            ]
+        },
+        "priority": 1000
+    },
+    {
+        "id": "57c24ce40879226abbb35fbe",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "航空意外身故保险金",
+        "description": "若被保险人于本合同生效(若曾复效,则自本合同最后复效)之日起在保障责任范围内身故的，按照保单上所载的保险金额与投保人所交保险费之和给付身故保险金。",
+        "type": "RISK_PROTECTION",
+        "amount": {
+            "type": "USER_SELECTION",
+            "selections": [
+                100000,
+                200000,
+                300000,
+                400000,
+                500000,
+                600000
+            ]
+        },
+        "priority": 1800
+    },
+    {
+        "id": "57c24ce40879226abbb35fbf",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "公共交通意外身故保险金",
+        "description": "若被保险人于本合同生效(若曾复效,则自本合同最后复效)之日起在保障责任范围内身故的，按照保单上所载的保险金额与投保人所交保险费之和给付身故保险金。",
+        "type": "RISK_PROTECTION",
+        "amount": {
+            "type": "USER_SELECTION",
+            "selections": [
+                100000,
+                200000,
+                300000,
+                400000,
+                500000,
+                600000
+            ]
+        },
+        "priority": 1600
+    },
+    {
+        "id": "57c24ce40879226abbb35fc9",
+        "groupId": "57c24ce40879226abbb35fc2",
+        "name": "满期保险金",
+        "description": "满期保险金",
+        "type": "LIVE_BENEFIT",
+        "amount": {},
+        "priority": 1000
+    },
+    {
+        "id": "57c24ce40879226abbb35fca",
+        "groupId": "57c24ce40879226abbb35fc2",
+        "name": "初中教育金",
+        "description": "初中教育金",
+        "type": "LIVE_BENEFIT",
+        "amount": {},
+        "priority": 2000
+    },
+    {
+        "id": "57c24ce40879226abbb35fcb",
+        "groupId": "57c24ce40879226abbb35fc2",
+        "name": "高中教育金",
+        "description": "高中教育金",
+        "type": "LIVE_BENEFIT",
+        "amount": {},
+        "priority": 3000
+    },
+    {
+        "id": "57c24ce40879226abbb35fcc",
+        "groupId": "57c24ce40879226abbb35fc2",
+        "name": "大学教育金",
+        "description": "大学教育金",
+        "type": "LIVE_BENEFIT",
+        "amount": {},
+        "priority": 4000
+    },
+    {
+        "id": "57c24ce40879226abbb35fcd",
+        "groupId": "57c24ce40879226abbb35fc2",
+        "name": "创业/婚嫁金",
+        "description": "创业/婚嫁金",
+        "type": "LIVE_BENEFIT",
+        "amount": {},
+        "priority": 5000
+    },
+    {
+        "id": "57c24ce40879226abbb35fce",
+        "groupId": "57c24ce40879226abbb35fc2",
+        "name": "生存年金",
+        "description": "生存年金",
+        "type": "LIVE_BENEFIT",
+        "amount": {},
+        "priority": 6000
+    },
+    {
+        "id": "57c24ce40879226abbb35fcf",
+        "groupId": "57c24ce40879226abbb35fc2",
+        "name": "养老年金",
+        "description": "养老年金",
+        "type": "LIVE_BENEFIT",
+        "amount": {},
+        "priority": 7000
+    },
+    {
+        "id": "57c24ce40879226abbb35fd0",
+        "groupId": "57c24ce40879226abbb35fc2",
+        "name": "投连账户价值",
+        "description": "投连账户价值",
+        "type": "LIVE_BENEFIT",
+        "amount": {},
+        "priority": 1000
+    },
+    {
+        "id": "57c24ce40879226abbb35fd1",
+        "groupId": "57c24ce40879226abbb35fc2",
+        "name": "万能账户价值",
+        "description": "万能账户价值",
+        "type": "LIVE_BENEFIT",
+        "amount": {},
+        "priority": 2000
+    },
+    {
+        "id": "57c24ce40879226abbb35fd2",
+        "groupId": "57c24ce40879226abbb35fc2",
+        "name": "分红保险红利",
+        "description": "分红保险红利",
+        "type": "LIVE_BENEFIT",
+        "amount": {},
+        "priority": 3000
+    },
+    {
+        "id": "57c24ce40879226abbb35fd3",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "非意外身故保险金",
+        "description": "非意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1100
+    },
+    {
+        "id": "57c24ce40879226abbb35fd4",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "意外伤害保险金",
+        "description": "意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1200
+    },
+    {
+        "id": "57c24ce40879226abbb35fd5",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "意外身故保险金",
+        "description": "意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1300
+    },
+    {
+        "id": "57c24ce40879226abbb35fd6",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "急性病身故保险金",
+        "description": "急性病身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1400
+    },
+    {
+        "id": "57c24ce40879226abbb35fd7",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "公共交通意外伤害保险金",
+        "description": "公共交通意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1500
+    },
+    {
+        "id": "57c24ce40879226abbb35fd8",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "航空意外伤害保险金",
+        "description": "航空意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1700
+    },
+    {
+        "id": "57c24ce40879226abbb35fd9",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "私家车意外伤害保险金",
+        "description": "私家车意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1900
+    },
+    {
+        "id": "57c24ce40879226abbb35fda",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "私家车意外身故保险金",
+        "description": "私家车意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1901
+    },
+    {
+        "id": "57c24ce40879226abbb35ff1",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "公务汽车意外伤害保险金",
+        "description": "公务汽车意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1902
+    },
+    {
+        "id": "57c24ce40879226abbb35fef",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "公务汽车意外身故保险金",
+        "description": "公务汽车意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1903
+    },
+    {
+        "id": "57c24ce40879226abbb35fee",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "轨道交通意外伤害保险金",
+        "description": "轨道交通意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1904
+    },
+    {
+        "id": "57c24ce40879226abbb35fed",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "轨道交通意外身故保险金",
+        "description": "轨道交通意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1905
+    },
+    {
+        "id": "57c24ce40879226abbb35fec",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "地铁意外伤害保险金",
+        "description": "地铁意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1906
+    },
+    {
+        "id": "57c24ce40879226abbb35feb",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "地铁意外身故保险金",
+        "description": "地铁意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1907
+    },
+    {
+        "id": "57c24ce40879226abbb35fea",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "轻轨意外伤害保险金",
+        "description": "轻轨意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1908
+    },
+    {
+        "id": "57c24ce40879226abbb35fe9",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "轻轨意外身故保险金",
+        "description": "轻轨意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1909
+    },
+    {
+        "id": "57c24ce40879226abbb35fe8",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "火车意外伤害保险金",
+        "description": "火车意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1910
+    },
+    {
+        "id": "57c24ce40879226abbb35fe7",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "火车意外身故保险金",
+        "description": "火车意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1911
+    },
+    {
+        "id": "57c24ce40879226abbb35fe6",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "营运汽车意外伤害保险金",
+        "description": "营运汽车意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1912
+    },
+    {
+        "id": "57c24ce40879226abbb35fe5",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "营运汽车意外身故保险金",
+        "description": "营运汽车意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1913
+    },
+    {
+        "id": "57c24ce40879226abbb35fe4",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "市内公共汽车意外伤害保险金",
+        "description": "市内公共汽车意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1914
+    },
+    {
+        "id": "57c24ce40879226abbb35fe3",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "市内公共汽车意外身故保险金",
+        "description": "市内公共汽车意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1915
+    },
+    {
+        "id": "57c24ce40879226abbb35fe2",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "长途公共汽车意外伤害保险金",
+        "description": "长途公共汽车意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1916
+    },
+    {
+        "id": "57c24ce40879226abbb35fe1",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "长途公共汽车意外身故保险金",
+        "description": "长途公共汽车意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1917
+    },
+    {
+        "id": "57c24ce40879226abbb35fe0",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "机场/旅行社大巴意外伤害保险金",
+        "description": "机场/旅行社大巴意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1918
+    },
+    {
+        "id": "57c24ce40879226abbb35fdf",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "机场/旅行社大巴意外身故保险金",
+        "description": "机场/旅行社大巴意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1919
+    },
+    {
+        "id": "57c24ce40879226abbb35fde",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "出租车意外伤害保险金",
+        "description": "出租车意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1920
+    },
+    {
+        "id": "57c24ce40879226abbb35fdd",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "出租车意外身故保险金",
+        "description": "出租车意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1921
+    },
+    {
+        "id": "57c24ce40879226abbb35fdc",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "营运轮船意外身故保险金",
+        "description": "营运轮船意外身故保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1922
+    },
+    {
+        "id": "57c24ce40879226abbb35fdb",
+        "groupId": "57c24ce40879226abbb35fb6",
+        "name": "营运轮船意外伤害保险金",
+        "description": "营运轮船意外伤害保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1923
+    },
+    {
+        "id": "57c24ce40879226abbb35ff2",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "全残保险金",
+        "description": "全残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1000
+    },
+    {
+        "id": "57c24ce40879226abbb35ff3",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "部分残疾保险金",
+        "description": "部分残疾保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1100
+    },
+    {
+        "id": "57c24ce40879226abbb35ff4",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "非意外伤残保险金",
+        "description": "非意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1200
+    },
+    {
+        "id": "57c24ce40879226abbb35fb9",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "意外伤残保险金",
+        "description": "旅行期间发生意外事故，且在发生该事故180天内导致身故，一次性给付50000元；旅行期间发生意外事故，且在发生该事故180天内导致残疾，根据残疾程度按比例赔付，最高给付50000元。71周岁及以上的被保险人，身故/残疾保险金保额减半。",
+        "type": "RISK_PROTECTION",
+        "amount": {
+            "type": "FIXED",
+            "fixValue": 20000
+        },
+        "priority": 1300
+    },
+    {
+        "id": "57c24ce40879226abbb35ff5",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "急性病伤残保险金",
+        "description": "急性病伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1400
+    },
+    {
+        "id": "57c24ce40879226abbb35ff6",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "公共交通意外伤残保险金",
+        "description": "公共交通意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1500
+    },
+    {
+        "id": "57c24ce40879226abbb35ff7",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "航空意外伤残保险金",
+        "description": "航空意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1600
+    },
+    {
+        "id": "57c24ce40879226abbb35ff8",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "私家车意外伤残保险金",
+        "description": "私家车意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1700
+    },
+    {
+        "id": "57c24ce40879226abbb35ff9",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "公务汽车意外伤残保险金",
+        "description": "公务汽车意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1800
+    },
+    {
+        "id": "57c24ce40879226abbb35ffa",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "轨道交通意外伤残保险金",
+        "description": "轨道交通意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1900
+    },
+    {
+        "id": "57c24ce40879226abbb35ffb",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "地铁意外伤残保险金",
+        "description": "地铁意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2000
+    },
+    {
+        "id": "57c24ce40879226abbb35ffc",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "轻轨意外伤残保险金",
+        "description": "轻轨意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2200
+    },
+    {
+        "id": "57c24ce40879226abbb35ffd",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "火车意外伤残保险金",
+        "description": "火车意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2300
+    },
+    {
+        "id": "57c24ce40879226abbb35ffe",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "营运汽车意外伤残保险金",
+        "description": "营运汽车意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2400
+    },
+    {
+        "id": "57c24ce40879226abbb35fff",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "市内公共汽车意外伤残保险金",
+        "description": "市内公共汽车意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2500
+    },
+    {
+        "id": "57c24ce40879226abbb36000",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "长途公共汽车意外伤残保险金",
+        "description": "长途公共汽车意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2600
+    },
+    {
+        "id": "57c24ce40879226abbb36001",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "机场/旅行社大巴意外伤残保险金",
+        "description": "机场/旅行社大巴意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2700
+    },
+    {
+        "id": "57c24ce40879226abbb36002",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "出租车意外伤残保险金",
+        "description": "出租车意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2800
+    },
+    {
+        "id": "57c24ce40879226abbb36003",
+        "groupId": "57c24ce40879226abbb35fb7",
+        "name": "营运轮船意外伤残保险金",
+        "description": "营运轮船意外伤残保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2900
+    },
+    {
+        "id": "58364dba99a6bc1744d17705",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "重大疾病保险金",
+        "description": "重大疾病保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1000
+    },
+    {
+        "id": "58364dba99a6bc1744d17706",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "特定疾病保险金",
+        "description": "特定疾病保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1100
+    },
+    {
+        "id": "58364dba99a6bc1744d17707",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "轻症疾病保险金",
+        "description": "轻症疾病保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1200
+    },
+    {
+        "id": "58364dba99a6bc1744d17708",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "医疗费用",
+        "description": "医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1300
+    },
+    {
+        "id": "58364dba99a6bc1744d17709",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "门诊医疗费用",
+        "description": "门诊医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1400
+    },
+    {
+        "id": "58364dba99a6bc1744d1770a",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "住院医疗费用",
+        "description": "住院医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1500
+    },
+    {
+        "id": "58364dba99a6bc1744d1770b",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "疾病医疗费用",
+        "description": "疾病医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1600
+    },
+    {
+        "id": "58364dba99a6bc1744d1770c",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "疾病门诊医疗费用",
+        "description": "疾病门诊医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1700
+    },
+    {
+        "id": "58364dba99a6bc1744d1770d",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "疾病住院医疗费用",
+        "description": "疾病住院医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1800
+    },
+    {
+        "id": "58364dba99a6bc1744d1770e",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "意外医疗费用",
+        "description": "意外医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1900
+    },
+    {
+        "id": "58364dba99a6bc1744d1770f",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "意外门诊医疗费用",
+        "description": "意外门诊医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2000
+    },
+    {
+        "id": "58364dba99a6bc1744d17710",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "意外住院医疗费用",
+        "description": "意外住院医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2100
+    },
+    {
+        "id": "58364dba99a6bc1744d17711",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "急性病医疗费用",
+        "description": "急性病医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2200
+    },
+    {
+        "id": "58364dba99a6bc1744d17712",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "急性病门诊医疗费用",
+        "description": "急性病门诊医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2300
+    },
+    {
+        "id": "58364dba99a6bc1744d17713",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "急性病住院医疗费用",
+        "description": "急性病住院医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2400
+    },
+    {
+        "id": "58364dba99a6bc1744d17714",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "紧急牙科门诊医疗费用",
+        "description": "紧急牙科门诊医疗费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2500
+    },
+    {
+        "id": "58364dba99a6bc1744d17715",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "生育费用",
+        "description": "生育费用",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2600
+    },
+    {
+        "id": "58364dba99a6bc1744d17716",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "住院津贴",
+        "description": "住院津贴",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2700
+    },
+    {
+        "id": "58364dba99a6bc1744d17717",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "意外住院津贴",
+        "description": "意外住院津贴",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2800
+    },
+    {
+        "id": "58364dba99a6bc1744d17718",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "疾病住院津贴",
+        "description": "疾病住院津贴",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2900
+    },
+    {
+        "id": "58364dba99a6bc1744d17719",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "重症住院津贴",
+        "description": "重症住院津贴",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3000
+    },
+    {
+        "id": "58364dba99a6bc1744d1771a",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "生育津贴",
+        "description": "生育津贴",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3100
+    },
+    {
+        "id": "58364dba99a6bc1744d1771b",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "健检保健保险金",
+        "description": "健检保健保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3200
+    },
+    {
+        "id": "58364dba99a6bc1744d1771c",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "护理保险金",
+        "description": "护理保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3300
+    },
+    {
+        "id": "58364dba99a6bc1744d1771d",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "收入补偿",
+        "description": "收入补偿",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3400
+    },
+    {
+        "id": "58364ef499a6bc29d4ec74f3",
+        "groupId": "57c24ce40879226abbb35fc5",
+        "name": "医疗转送和送返",
+        "description": "医疗转送和送返",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1000
+    },
+    {
+        "id": "58364ef499a6bc29d4ec74f4",
+        "groupId": "57c24ce40879226abbb35fc5",
+        "name": "身故遗体/骨灰送返",
+        "description": "身故遗体/骨灰送返",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1100
+    },
+    {
+        "id": "58364ef499a6bc29d4ec74f5",
+        "groupId": "57c24ce40879226abbb35fc5",
+        "name": "丧葬保险金",
+        "description": "丧葬保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1200
+    },
+    {
+        "id": "58364ef499a6bc29d4ec74f6",
+        "groupId": "57c24ce40879226abbb35fc5",
+        "name": "亲属慰问探访",
+        "description": "亲属慰问探访",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1300
+    },
+    {
+        "id": "58364ef499a6bc29d4ec74f7",
+        "groupId": "57c24ce40879226abbb35fc5",
+        "name": "未成年子女送返",
+        "description": "未成年子女送返",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1400
+    },
+    {
+        "id": "58364ef499a6bc29d4ec74f8",
+        "groupId": "57c24ce40879226abbb35fc5",
+        "name": "休养期酒店住宿",
+        "description": "休养期酒店住宿",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1500
+    },
+    {
+        "id": "58364ef499a6bc29d4ec74f9",
+        "groupId": "57c24ce40879226abbb35fc5",
+        "name": "亲属处理后事",
+        "description": "亲属处理后事",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1600
+    },
+    {
+        "id": "58364ef499a6bc29d4ec74fa",
+        "groupId": "57c24ce40879226abbb35fc5",
+        "name": "绑架及非法拘禁每日津贴",
+        "description": "绑架及非法拘禁每日津贴",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1700
+    },
+    {
+        "id": "58364ef499a6bc29d4ec74fb",
+        "groupId": "57c24ce40879226abbb35fc5",
+        "name": "紧急搜救",
+        "description": "紧急搜救",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1800
+    },
+    {
+        "id": "58364ef499a6bc29d4ec74fc",
+        "groupId": "57c24ce40879226abbb35fc5",
+        "name": "递送药物",
+        "description": "递送药物",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1900
+    },
+    {
+        "id": "58364ef499a6bc29d4ec74fd",
+        "groupId": "57c24ce40879226abbb35fc5",
+        "name": "员工替换",
+        "description": "员工替换",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2000
+    },
+    {
+        "id": "5836501799a6bc061034851e",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "旅行延误保险金",
+        "description": "旅行延误保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1000
+    },
+    {
+        "id": "5836501799a6bc061034851f",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "航班延误保险金",
+        "description": "航班延误保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1100
+    },
+    {
+        "id": "5836501799a6bc0610348520",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "旅行变更保险金",
+        "description": "旅行变更保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1200
+    },
+    {
+        "id": "5836501799a6bc0610348521",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "旅行取消保险金",
+        "description": "旅行取消保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1300
+    },
+    {
+        "id": "5836501799a6bc0610348522",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "旅行缩短保险金",
+        "description": "旅行缩短保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1400
+    },
+    {
+        "id": "5836501799a6bc0610348523",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "行李延误保险金",
+        "description": "行李延误保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1500
+    },
+    {
+        "id": "5836501799a6bc0610348524",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "行李遗失保险金",
+        "description": "行李遗失保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1600
+    },
+    {
+        "id": "5836501799a6bc0610348525",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "旅行证件损失保险金",
+        "description": "旅行证件损失保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1700
+    },
+    {
+        "id": "5836501799a6bc0610348526",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "个人随身财物保险金",
+        "description": "个人随身财物保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1800
+    },
+    {
+        "id": "5836501799a6bc0610348527",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "电子产品保险金",
+        "description": "电子产品保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1900
+    },
+    {
+        "id": "5836501799a6bc0610348528",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "个人钱财损失保险金",
+        "description": "个人钱财损失保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2000
+    },
+    {
+        "id": "5836501799a6bc0610348529",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "银行卡盗刷保险金",
+        "description": "银行卡盗刷保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2100
+    },
+    {
+        "id": "5836501799a6bc061034852a",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "信用卡购物保险金",
+        "description": "信用卡购物保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2200
+    },
+    {
+        "id": "5836501799a6bc061034852b",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "旅行期间家财保险金",
+        "description": "旅行期间家财保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2300
+    },
+    {
+        "id": "5836501799a6bc061034852c",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "拒签补偿",
+        "description": "拒签补偿",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2400
+    },
+    {
+        "id": "5836501799a6bc061034852d",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "旅行期间紧急状态保障",
+        "description": "旅行期间紧急状态保障",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2500
+    },
+    {
+        "id": "5836501799a6bc061034852e",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "房屋及室内装潢保障",
+        "description": "房屋及室内装潢保障",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2600
+    },
+    {
+        "id": "5836501799a6bc061034852f",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "室内财产保障",
+        "description": "室内财产保障",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2700
+    },
+    {
+        "id": "5836501799a6bc0610348530",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "家用电器保障",
+        "description": "家用电器保障",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2800
+    },
+    {
+        "id": "5836501799a6bc0610348531",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "家具保障",
+        "description": "家具保障",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 2900
+    },
+    {
+        "id": "5836501799a6bc0610348532",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "衣服和床上用品保障",
+        "description": "衣服和床上用品保障",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3000
+    },
+    {
+        "id": "5836501799a6bc0610348533",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "文体娱乐用品保障",
+        "description": "文体娱乐用品保障",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3100
+    },
+    {
+        "id": "5836501799a6bc0610348534",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "现金保障",
+        "description": "现金保障",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3200
+    },
+    {
+        "id": "5836501799a6bc0610348535",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "首饰保障",
+        "description": "首饰保障",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3300
+    },
+    {
+        "id": "5836501799a6bc0610348536",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "便携类用品",
+        "description": "便携类用品",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3400
+    },
+    {
+        "id": "5836501799a6bc0610348537",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "其它生活用具保障",
+        "description": "其它生活用具保障",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3500
+    },
+    {
+        "id": "5836501799a6bc0610348538",
+        "groupId": "57c24ce40879226abbb35fc6",
+        "name": "间接损失费用补偿",
+        "description": "间接损失费用补偿",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3600
+    },
+    {
+        "id": "5836507a99a6bc08cc3d3868",
+        "groupId": "57c24ce40879226abbb35fc7",
+        "name": "个人责任",
+        "description": "个人责任",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1000
+    },
+    {
+        "id": "5836507a99a6bc08cc3d3869",
+        "groupId": "57c24ce40879226abbb35fc7",
+        "name": "宠物责任",
+        "description": "宠物责任",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1100
+    },
+    {
+        "id": "5836507a99a6bc08cc3d386a",
+        "groupId": "57c24ce40879226abbb35fc7",
+        "name": "监护人责任",
+        "description": "监护人责任",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1200
+    },
+    {
+        "id": "5836507a99a6bc08cc3d386b",
+        "groupId": "57c24ce40879226abbb35fc7",
+        "name": "高空坠物责任",
+        "description": "高空坠物责任",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1300
+    },
+    {
+        "id": "5836507a99a6bc08cc3d386c",
+        "groupId": "57c24ce40879226abbb35fc7",
+        "name": "交通第三者责任",
+        "description": "交通第三者责任",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1400
+    },
+    {
+        "id": "5836507a99a6bc08cc3d386d",
+        "groupId": "57c24ce40879226abbb35fc7",
+        "name": "法律费用补偿",
+        "description": "法律费用补偿",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1500
+    },
+    {
+        "id": "583650b499a6bc20b499f353",
+        "groupId": "57c24ce40879226abbb35fc8",
+        "name": "履约保证保险金",
+        "description": "履约保证保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1000
+    },
+    {
+        "id": "583650b499a6bc20b499f354",
+        "groupId": "57c24ce40879226abbb35fc8",
+        "name": "个人借/贷款保证保险金",
+        "description": "个人借/贷款保证保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1100
+    },
+    {
+        "id": "583650b499a6bc20b499f355",
+        "groupId": "57c24ce40879226abbb35fc8",
+        "name": "企业贷款保证保险金",
+        "description": "企业贷款保证保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1200
+    },
+    {
+        "id": "583650b499a6bc20b499f356",
+        "groupId": "57c24ce40879226abbb35fc8",
+        "name": "担保贷款保证保险金",
+        "description": "担保贷款保证保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1300
+    },
+    {
+        "id": "583650b499a6bc20b499f357",
+        "groupId": "57c24ce40879226abbb35fc8",
+        "name": "诉讼财产保全保证保险金",
+        "description": "诉讼财产保全保证保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1400
+    },
+    {
+        "id": "583650b499a6bc20b499f358",
+        "groupId": "57c24ce40879226abbb35fc8",
+        "name": "商业合同信用保险金",
+        "description": "商业合同信用保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1500
+    },
+    {
+        "id": "583650b499a6bc20b499f359",
+        "groupId": "57c24ce40879226abbb35fc8",
+        "name": "个人借/贷款信用保险金",
+        "description": "个人借/贷款信用保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1600
+    },
+    {
+        "id": "583650b499a6bc20b499f35a",
+        "groupId": "57c24ce40879226abbb35fc8",
+        "name": "消费信用保险金",
+        "description": "消费信用保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1700
+    },
+    {
+        "id": "583650b499a6bc20b499f35b",
+        "groupId": "57c24ce40879226abbb35fc8",
+        "name": "企业贷款信用保险金",
+        "description": "企业贷款信用保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1800
+    },
+    {
+        "id": "583650b499a6bc20b499f35c",
+        "groupId": "57c24ce40879226abbb35fc8",
+        "name": "担保贷款保证保险金",
+        "description": "担保贷款保证保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 1900
+    },
+    {
+        "id": "57c24ce40879226abbb3606f",
+        "groupId": "57c24ce40879226abbb35fc4",
+        "name": "航空意外医疗保险金",
+        "description": "航空意外医疗保险金",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3500
+    },
+    
+    
+    
+    
+    
+     {
+        "id": "a15bead3a34c113feb94bf53",
+        "groupId": "a15bead3a34c103fec3cb8e7",
+        "name": "飞机意外身故、伤残",
+        "description": "飞机意外身故、伤残",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3501
+    },
+     {
+        "id": "a15bead3a34c123fef5a1f18",
+        "groupId": "a15bead3a34c103fec3cb8e7",
+        "name": "火车意外身故、伤残",
+        "description": "火车意外身故、伤残",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3502
+    }
+    ,
+     {
+        "id": "a15bead3a34c133fee246707",
+        "groupId": "a15bead3a34c103fec3cb8e7",
+        "name": "轮船意外身故、伤残",
+        "description": "轮船意外身故、伤残",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3503
+    },
+     {
+        "id": "a15bead3a34c143fc8eec448",
+        "groupId": "a15bead3a34c103fec3cb8e7",
+        "name": "公共汽车意外身故、伤残",
+        "description": "公共汽车意外身故、伤残",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3504
+    },
+    {
+        "id": "a15bead3a34c153fdd786e85",
+        "groupId": "a15bead3a34c103fec3cb8e7",
+        "name": "公务汽车意外身故、伤残",
+        "description": "公务汽车意外身故、伤残",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3505
+    },
+    {
+        "id": "a15bead3a34d163fe0e8b96d",
+        "groupId": "a15bead3a34c103fec3cb8e7",
+        "name": "私有汽车意外身故、伤残",
+        "description": "私有汽车意外身故、伤残",
+        "type": "RISK_PROTECTION",
+        "amount": {},
+        "priority": 3506
+    }
+]

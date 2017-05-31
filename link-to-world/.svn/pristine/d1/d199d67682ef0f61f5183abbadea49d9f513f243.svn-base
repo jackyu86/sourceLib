@@ -1,0 +1,183 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Go back">
+            <md-icon md-font-icon="fa" class="fa-home"></md-icon>
+        </md-button>
+        <span ng-if="$state.is('console.dealer.create')">新建</span>
+        <span ng-if="$state.is('console.dealer.update')">编辑 <span class="modified">*</span></span>
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="Reload current dealer">
+            <md-icon class="fa-refresh" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-content flex>
+    <md-card flex>
+        <form name="dealerForm" class="md-padding">
+            <div layout="row">
+                <md-input-container class="md-block" flex="80">
+                    <label>用户名</label>
+                    <input username invalid required name="username" ng-model="data.user.username" ng-disabled="$state.is('console.dealer.update')">
+                    <div ng-messages="dealerForm.username.$error">
+                        <div ng-message="required">请输入用户名</div>
+                        <div ng-message="username">请输入正确的手机号码或电子邮箱</div>
+                        <div ng-message="invalid">用户名已存在</div>
+                    </div>
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+                <md-input-container class="md-block" flex="50">
+                    <label>密码</label>
+                    <input type="password" name="text" ng-model="data.password">
+                </md-input-container>
+            </div>
+
+            <md-input-container class="md-block">
+                <label>企业名称</label>
+                <input required name="name" ng-model="data.dealer.name">
+                <div ng-messages="dealerForm.name.$error">
+                    <div ng-message="required">请输入企业名称</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>营业执照</label>
+                <input required name="businessLicence" ng-model="data.dealer.businessLicence">
+                <div ng-messages="dealerForm.businessLicence.$error">
+                    <div ng-message="required">请输入营业执照</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container>
+                <label>所在地区（省）</label>
+                <md-select name="state" ng-change="changeCity()" ng-model="data.dealer.state" required>
+                    <md-option ng-repeat="state in states" value="{{state.name}}">{{state.name}}</md-option>
+                </md-select>
+                <div class="errors" ng-messages="dealerForm.state.$error">
+                    <div ng-message="required">请选择省</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>所在地区（市）</label>
+                <md-select name="city" ng-change="changeWard()" ng-model="data.dealer.city" required>
+                    <md-option ng-module="cities" ng-repeat="city in cities" value="{{city.name}}">{{city.name}}</md-option>
+                </md-select>
+                <div class="errors" ng-messages="dealerForm.city.$error">
+                    <div ng-message="required">请选择市</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>所在地区（区）</label>
+                <md-select name="ward" ng-model="data.dealer.ward" required>
+                    <md-option ng-module="wards" ng-repeat="ward in wards" value="{{ward.name}}">{{ward.name}}</md-option>
+                </md-select>
+                <div class="errors" ng-messages="dealerForm.ward.$error">
+                    <div ng-message="required">请选择区</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>企业邮箱</label>
+                <input type="email" required invalid name="email" ng-model="data.dealer.email">
+                <div ng-messages="dealerForm.email.$error">
+                    <div ng-message="required">请输入企业邮箱</div>
+                    <div ng-message="email">请填写正确格式的邮箱</div>
+                    <div ng-message="invalid">邮箱已存在</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>联系人姓名</label>
+                <input required name="contactName" ng-model="data.dealer.contactName">
+                <div ng-messages="dealerForm.contactName.$error">
+                    <div ng-message="required">请输入联系人姓名</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>联系电话</label>
+                <input ng-pattern="/^1[3578]\d{9}$/" required invalid name="phone" ng-model="data.dealer.cellphone">
+                <div ng-messages="dealerForm.phone.$error">
+                    <div ng-message="required">请输入联系电话</div>
+                    <div ng-message="pattern">请填写正确格式的联系电话</div>
+                    <div ng-message="invalid">手机号已存在</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>身份证号</label>
+                <input identification required name="contactIdNumber" invalid ng-model="data.dealer.contactIdNumber">
+                <div ng-messages="dealerForm.contactIdNumber.$error">
+                    <div ng-message="required">请输入身份证号</div>
+                    <div ng-message="identification">请填写正确格式的身份证</div>
+                    <div ng-message="invalid">身份证号已存在</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex="20">
+                <label>信用额度</label>
+                <input type="number" required name="quota" ng-model="data.credit.quota">
+                <div ng-messages="dealerForm.quota.$error">
+                    <div ng-message="required">请输入信用额度</div>
+                    <div ng-message="number">请输入数字</div>
+                </div>
+            </md-input-container>
+
+            <div layout="row" class="md-padding">
+                <md-button class="md-button md-raised md-primary" ng-click="save()" ng-disabled="processing || dealerForm.$invalid">保存</md-button>
+                <md-button class="md-button" ng-click="cancel()">取消</md-button>
+            </div>
+        </form>
+    </md-card>
+    <md-card ng-show="isEdit" ng-if="data.dealer.parentDealerId == null">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">信用账号</span>
+            </md-card-title-text>
+        </md-card-title>
+        <form name="creditForm" class="md-padding">
+            <div layout="row">
+                <md-input-container class="md-block" flex="20">
+                    <label>信用余额</label>
+                    <input type="number" ng-disabled="true" ng-model="data.credit.totalCredits">
+                </md-input-container>
+            </div>
+
+            <div layout="row" class="md-padding">
+                <md-button class="md-button md-raised md-primary" ng-click="reset()">回销</md-button>
+                <md-button class="md-button md-raised md-primary" ng-show="existCredit" ng-click="changeCreditStatus()">{{creditStatusDisplay}}</md-button>
+            </div>
+        </form>
+
+        <md-subheader>
+            <div layout="row" layout-align="left center">
+                <span>信用账号修改记录</span>
+            </div>
+        </md-subheader>
+
+        <md-table-container>
+            <table md-table multiple>
+                <thead md-head class="md-accent">
+                <tr md-row>
+                    <th md-column><span>时间</span></th>
+                    <th md-column><span>信用额度</span></th>
+                    <th md-column><span>信用余额</span></th>
+                    <th md-column><span>操作</span></th>
+                    <th md-column><span>操作者</span></th>
+                </tr>
+                </thead>
+                <tbody md-body>
+                <tr md-row ng-repeat="creditTracking in creditTrackingTable.data.items" md-auto-select>
+                    <td md-cell>{{creditTracking.createdTime}}</td>
+                    <td md-cell>{{creditTracking.quota}}</td>
+                    <td md-cell>{{creditTracking.totalCredits}}</td>
+                    <td md-cell ng-model="creditTracking.type" credit-tracking-type></td>
+                    <td md-cell>{{creditTracking.operator}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+    </md-card>
+</md-content>

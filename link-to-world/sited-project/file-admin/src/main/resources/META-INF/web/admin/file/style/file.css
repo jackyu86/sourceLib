@@ -1,0 +1,192 @@
+table.md-table.no-table {
+    display: block;
+}
+
+table.md-table.no-table > tbody.md-body {
+    display: block;
+    width: 100%;
+}
+
+table.md-table.no-table > tbody.md-body > tr.md-row {
+    display: inline-block;
+    min-width: 200px;
+    min-height: 120px;
+    width: 20%;
+    height: 100%;
+    vertical-align: top;
+}
+
+table.md-table.no-table > tbody.md-body > tr.md-row > td.md-cell,
+table.md-table.no-table.md-row-select > tbody.md-body > tr.md-row > td.md-cell {
+    padding: 0;
+    height: 100%;
+    border: 0;
+}
+
+table.md-table.no-table > tbody.md-body > tr.md-row > td.md-cell .file-panel {
+    position: relative;
+    width: 100%;
+    /* transition: all .1s ease; */
+}
+
+table.md-table.no-table > tbody.md-body > tr.md-row > td.md-cell .file-panel:hover {
+    z-index: 10;
+}
+
+table.md-table.no-table > tbody.md-body > tr.md-row > td.md-cell .file-panel img {
+    width: 100%;
+    z-index: 2;
+}
+
+table.md-table.no-table > tbody.md-body > tr.md-row > td.md-cell .file-panel .file-detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    background: #fff;
+    word-break: keep-all;
+    white-space: nowrap;
+    height: 100%;
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 5px 0 #eee;
+    z-index: -1;
+    opacity: 0;
+    transition: all .2s;
+}
+
+table.md-table.no-table > tbody.md-body > tr.md-row:hover > td.md-cell .file-panel .file-detail {
+    margin-left: 100%;
+    opacity: 1;
+}
+
+table.md-table.no-table > tbody.md-body > tr.md-row:nth-child(5n):hover > td.md-cell .file-panel .file-detail {
+    margin-right: 100%;
+    opacity: 1;
+}
+
+.file-modal {
+    width: 800px;
+}
+
+.file-modal .icon-clear {
+    float: right;
+    font-size: 20px;
+}
+
+.file-modal img {
+    width: 100%;
+}
+
+.file-modal .file-detail {
+    padding: 0 10px;
+    height: 100%;
+}
+
+md-fab-speed-dial {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+md-grid-list {
+    margin: 10px;
+}
+
+md-grid-list md-grid-tile {
+    transition: border .4s ease, box-shadow .4s ease;
+}
+
+md-grid-list md-grid-tile{
+    border: 2px solid transparent;
+}
+md-grid-list md-grid-tile{
+    outline: none;
+}
+
+md-grid-list md-grid-tile.selected {
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+md-grid-list md-grid-tile.directory md-icon {
+    width: 96px;
+    height: 96px;
+}
+
+md-grid-list md-grid-tile.directory md-icon:before {
+    width: 96px;
+    height: 96px;
+    font-size: 96px;
+    line-height: 96px;
+}
+
+md-grid-list md-grid-tile.directory md-grid-tile-footer {
+    background: none;
+    color: #333;
+    text-align: center;
+}
+
+md-grid-list md-grid-tile.directory md-grid-tile-footer figcaption {
+    width: 100%;
+}
+
+md-grid-list md-grid-tile.directory md-grid-tile-footer h3 {
+    margin: 0;
+}
+
+md-grid-list md-grid-tile .file-panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+
+md-grid-list md-grid-tile .file-panel:hover {
+    z-index: 1;
+}
+
+md-grid-list md-grid-tile .file-panel img {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+md-grid-list md-grid-tile .file-panel .file-detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    background: #fff;
+    word-break: keep-all;
+    white-space: nowrap;
+    height: 100%;
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 5px 0 #eee;
+    z-index: -1;
+    opacity: 0;
+    transition: all .2s;
+}
+
+md-grid-list md-grid-tile .file-panel .file-detail {
+    margin-left: 100%;
+    opacity: 1;
+}
+
+md-grid-list md-grid-tile .file-panel .file-detail {
+    margin-right: 100%;
+    opacity: 1;
+}
+
+md-tooltip .md-content {
+    height: auto;
+    font-size: 12px;
+}
+
+*:focus {
+    outline: none;
+}

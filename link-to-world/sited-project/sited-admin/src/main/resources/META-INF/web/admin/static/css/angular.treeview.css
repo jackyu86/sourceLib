@@ -1,0 +1,86 @@
+div[data-angular-treeview] {
+    /* prevent user selection */
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    color: #555;
+    text-decoration: none;
+}
+
+div[data-tree-model] ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    overflow: hidden;
+}
+
+div[data-tree-model] li {
+    position: relative;
+    padding: 0 0 0 10px;
+    line-height: 20px;
+}
+
+div[data-tree-model] li .expanded {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    width: 16px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+}
+
+div[data-tree-model] li .expanded:before {
+    content: "\f115";
+}
+
+div[data-tree-model] li .collapsed {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    width: 16px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+}
+
+div[data-tree-model] li .collapsed:before {
+    content: "\f114";
+}
+
+div[data-tree-model] li .normal {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    width: 16px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+}
+
+div[data-tree-model] li .normal:before {
+    content: "\f114";
+}
+
+div[data-tree-model] li i, div[data-tree-model] li span {
+    cursor: pointer;
+}
+
+div[data-tree-model] li .selected {
+    background-color: #aaddff;
+    border: 0;
+    outline: none;
+}

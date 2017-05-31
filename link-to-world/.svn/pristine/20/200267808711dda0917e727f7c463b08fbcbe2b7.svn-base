@@ -1,0 +1,20 @@
+[
+    {
+        "id": "58427cb0223fe9338cb62c97",
+        "name": "是",
+        "value": "Y",
+        "displayOrder": 1
+    },
+    {
+        "id": "58427cb0223fe9338cb62c98",
+        "name": "否",
+        "value": "N",
+        "displayOrder": 2
+    },
+    {
+        "id": "58427cb0223fe9338cb62c99",
+        "name": "与该项无关",
+        "value": "W",
+        "displayOrder": 3
+    }
+]

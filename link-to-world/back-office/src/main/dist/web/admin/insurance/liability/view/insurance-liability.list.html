@@ -1,0 +1,68 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ui-sref="console.insurance.liability-group.list" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <h2>保险责任</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="添加保险责任" ui-sref="console.insurance.liability.create({groupId:groupId})">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-subheader ng-if="liabilityTable.searching">
+        <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadLiabilities()">
+            <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            <div flex>
+                <input ng-model="liabilityTable.query.name" type="text">
+            </div>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!liabilityTable.searching && !liabilityTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>保险责任列表({{group.name}}分组)</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="liabilityTable.searching = !liabilityTable.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table ng-model="liabilityTable.selected">
+            <thead md-head md-order="liabilityTable.query.order" md-on-reorder="reloadLiabilities" class="md-accent">
+            <tr md-row>
+                <th md-column><span>编号</span></th>
+                <th md-column><span>名称</span></th>
+                <th md-column md-order-by="priority"><span>优先级</span></th>
+                <th md-column><span>创建时间</span></th>
+                <th md-column><span>操作</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="liability"
+                ng-repeat="liability in liabilityTable.data.items" md-auto-select>
+                <td md-cell>{{liability.id}}</td>
+                <td md-cell>{{liability.name}}</td>
+                <td md-cell>{{liability.priority}}</td>
+                <td md-cell>{{liability.createdTime | date:'yyyy/MM/dd'}}</td>
+                <td md-cell layout="row">
+                    <md-button class="md-icon-button" ng-click="liabilityTable.edit(liability)">编辑</md-button>
+                    <md-button class="md-icon-button" ng-click="deleteLiability(liability)">删除</md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+    <md-table-pagination md-limit="liabilityTable.query.limit" md-page="liabilityTable.query.page" md-total="{{liabilityTable.data.total}}"
+                         md-page-select="liabilityTable.options.pageSelector" md-boundary-links="liabilityTable.options.boundaryLinks"
+                         md-on-paginate="reloadLiabilities"></md-table-pagination>
+
+</md-card>

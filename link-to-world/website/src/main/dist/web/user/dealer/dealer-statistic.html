@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>分销商列表</title>
+    <link rel="stylesheet" j:css="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" j:css="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static/css/common.css">
+    <link rel="stylesheet" j:css="/static/css/header.css">
+    <link rel="stylesheet" j:css="/static/css/footer.css">
+    <link rel="stylesheet" j:css="/static/css/customer.css">
+</head>
+<body>
+<j:header folded="false"/>
+<div class="page">
+    <j:customer-sidenav selected="statistic" category="dealer"/>
+    <div class="main">
+        <div class="page-title">业绩汇总统计</div>
+
+        <form class="filter-bar">
+            <div class="form-group">
+                <label for="name">分销商</label>
+                <input type="text" class="form-control input-lg" id="name" name="name" placeholder="分销商">
+            </div>
+            <div class="form-group">
+                <label for="role">角色</label>
+                <select class="form-control selector" id="role" name="role" required>
+                    <option selected="selected" value="dealerAdmin">分销商</option>
+                    <option value="dealerUser">出单员</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="startTime">开始时间</label>
+                <input type="text" class="form-control input-lg input-calendar" id="startTime" name="startTime" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-language="zh-CN"
+                       placeholder="开始时间">
+            </div>
+            <div class="form-group">
+                <label for="endTime">结束时间</label>
+                <input type="text" class="form-control input-lg input-calendar" id="endTime" name="endTime" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-language="zh-CN"
+                       placeholder="结束时间">
+            </div>
+
+            <a href="javascript:void(0)" class="search-button btn btn-lg btn-default">搜索</a>
+        </form>
+        <div class="table-wrap">
+            <table class="dealer-table">
+                <thead>
+                <tr>
+                    <th rowspan="2">分销商</th>
+                    <th colspan="3">承保</th>
+                    <th colspan="3">退保</th>
+                    <th colspan="3">拒保</th>
+                </tr>
+                <tr>
+                    <th>保费</th>
+                    <th>投保单数</th>
+                    <th>被保人数</th>
+                    <th>保费</th>
+                    <th>投保单数</th>
+                    <th>被保人数</th>
+                    <th>保费</th>
+                    <th>投保单数</th>
+                    <th>被保人数</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="pagination-wrap">
+    </div>
+
+</div>
+<j:footer/>
+<j:utils/>
+
+<script id="tpl-statistics-item" type="text/x-handlebars-template">
+    <tr>
+        <td>{{username}}</td>
+        <td>{{insuredFee}}</td>
+        <td>{{insuredNum}}</td>
+        <td>{{insuredInsuredNum}}</td>
+        <td>{{surrenderFee}}</td>
+        <td>{{surrenderNum}}</td>
+        <td>{{surrenderInsuredNum}}</td>
+        <td>{{rejectFee}}</td>
+        <td>{{rejectNum}}</td>
+        <td>{{rejectInsuredNum}}</td>
+    </tr>
+</script>
+
+<script id="tpl-statistics-count" type="text/x-handlebars-template">
+    <tr>
+        <td>合计</td>
+        <td>{{insuredFeeCount}}</td>
+        <td>{{insuredNumCount}}</td>
+        <td>{{insuredInsuredNumCount}}</td>
+        <td>{{surrenderFeeCount}}</td>
+        <td>{{surrenderNumCount}}</td>
+        <td>{{surrenderInsuredNumCount}}</td>
+        <td>{{rejectFeeCount}}</td>
+        <td>{{rejectNumCount}}</td>
+        <td>{{rejectInsuredNumCount}}</td>
+    </tr>
+</script>
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datepicker.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datepicker.zh-CN.min.js"></script>
+<script j:js="/static/js/lib/handlebars-v4.0.5.js"></script>
+<script j:js="/static/js/handlebars-helper.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/user/dealer/dealer-statistic.js"></script>
+<script j:js="/static/js/common.js"></script>
+
+</body>
+</html>

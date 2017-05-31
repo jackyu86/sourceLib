@@ -1,0 +1,69 @@
+db:
+  mongo:
+      url: fongo://localhost:27017/mock
+
+  jdbc:
+      url: jdbc:hsqldb:mem:.;sql.syntax_mys=true
+
+log:
+  level: INFO
+kdlins.api:
+  esbServiceURL: http://localhost:8080
+  payServiceURL: http://uat-pay.kdlins.com.cn/eco
+
+kdlins.web:
+  pay:
+    payUserId: 16fc499864dc11e69495005056862fc8
+    payKey: 847cd47664df11e6b10d0050568633ad
+    returnUrl: /checkout/pay-finish
+    notifyUrl: /order/pay/notify
+    timeout: 3600
+  underwriting:
+    underwritingWsdl: http://117.25.161.139/Exchange.ws?wsdl
+    agentCode: 2dab7698c81211e6a851005056862fc8
+  esb:
+    esbWsdl: http://uat-pay.kdlins.com.cn/esb/ws?wsdl
+    encrypt: 0
+    reqSysCode: U12
+    reqType: 1
+    appKey: dd6b3b9c-09bb-4681-8bd0-758eda15f883
+    serviceCode: U01_S_SMS_00001
+    channelCode: MALL
+    sendType: 1
+underwriting:
+  underwritingWsdl: http://117.25.161.139/Exchange.ws?wsdl
+  agentCode: 2dab7698c81211e6a851005056862fc8
+  jobEnabled: false
+  jobInterval: 60
+order.api:
+  url: http://localhost:8081
+  jobEnabled: false
+  jobInterval: 6000000
+  pay:
+    payUserId: 16fc499864dc11e69495005056862fc8
+    payKey: 847cd47664df11e6b10d0050568633ad
+
+
+user.api:
+  url: http://localhost:8081
+
+customer.api:
+  url: http://localhost:8081
+
+file.api:
+  url: http://localhost:8081
+
+product.api:
+  url: http://localhost:8081
+
+insurance.api:
+  url: http://localhost:8081
+
+cart.api:
+  url: http://localhost:8081
+
+esb.api:
+  url: http://localhost:8081
+
+dealer.api:
+  url: http://localhost:8081

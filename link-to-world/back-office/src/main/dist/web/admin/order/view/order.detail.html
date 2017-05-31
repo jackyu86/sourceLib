@@ -1,0 +1,116 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Go back" ng-click="goBack()">
+            <md-icon md-font-icon="fa" class="fa-arrow-left"></md-icon>
+        </md-button>
+        <span flex></span>
+
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">投保单详情</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+        <div class="field" layout="row">
+            <div class="name" flex="40">投保单号</div>
+            <div class="value" flex="60">{{order.applyCode}}</div>
+        </div>
+        <div class="field" layout="row">
+            <div class="name" flex="40">产品名称</div>
+            <div class="value" flex="60">{{order.productDisplayName}}</div>
+        </div>
+        <div class="field" layout="row">
+            <div class="name" flex="40" md-msg="order.price">保费</div>
+            <div class="value" flex="60">{{order.price}}</div>
+        </div>
+        <div class="field" layout="row">
+            <div class="name" flex="40" md-msg="order.dealer">销售分销商</div>
+            <div class="value" flex="60">{{order.dealerName}}</div>
+        </div>
+        <div class="field" layout="row">
+            <div class="name" flex="40" md-msg="order.status">投保单状态</div>
+            <div class="value" flex="60" ng-model="order.orderStatus" order-status></div>
+        </div>
+        <div class="field" layout="row">
+            <div class="name" flex="40">支付方式</div>
+            <div class="value" flex="60">暂缺</div>
+        </div>
+        <div class="field" layout="row">
+            <div class="name" flex="40">支付流水号</div>
+            <div class="value" flex="60">暂缺</div>
+        </div>
+        <div class="field" layout="row">
+            <div class="name" flex="40">保单号</div>
+            <div class="value" flex="60" ng-model="order.items" policy-code></div>
+        </div>
+
+        <md-divider></md-divider>
+
+        <div class="field" layout="row">
+            <div class="name" flex="40">保障项目及保额</div>
+            <div class="value" flex="60"></div>
+        </div>
+        <div class="field" layout="row">
+            <div class="name" flex="40">保险期间信息</div>
+            <div class="value" flex="60">{{order.form.plan.startTime | date:"yyyy-MM-dd"}} 开始，{{order.periodDisplayName}}</div>
+        </div>
+        <div class="field" layout="row">
+            <div class="name" flex="40">投保人姓名</div>
+            <div class="value" flex="60">{{order.policyHolderName}}</div>
+        </div>
+        <div class="field" layout="row">
+            <div class="name" flex="40">投保人邮箱</div>
+            <div class="value" flex="60">{{order.policyHolderEmail}}</div>
+        </div>
+        <div class="field" layout="row">
+            <div class="name" flex="40">投保人电话</div>
+            <div class="value" flex="60">{{order.policyHolderPhone}}</div>
+        </div>
+        <div class="field" layout="row">
+            <div class="name" flex="40">投保人证件信息</div>
+            <div class="value" flex="60">{{order.policyHolderIdNumber}}</div>
+        </div>
+        <md-content class="sub-table">
+            <div class="field" layout="row">
+                <div class="name" flex="40"><b>被保险人信息</b></div>
+            </div>
+            <div ng-repeat="item in order.items">
+                <div class="field" layout="row">
+                    <div class="name" flex="40">被保险人姓名</div>
+                    <div class="value" flex="60">{{item.name}}</div>
+                </div>
+                <div class="field" layout="row">
+                    <div class="name" flex="40">投保人电话</div>
+                    <div class="value" flex="60">{{item.form.phone}}</div>
+                </div>
+                <div class="field" layout="row">
+                    <div class="name" flex="40">投保人证件信息</div>
+                    <div class="value" flex="60">{{item.form.id.number}}</div>
+                </div>
+                <div class="field" layout="row">
+                    <div class="name" flex="40">保单号</div>
+                    <div class="value" flex="60">{{item.policyCode}}</div>
+                </div>
+                <div class="field" layout="row">
+                    <div class="name" flex="40">保单状态</div>
+                    <div class="value" flex="60" ng-model="item.orderStatus" order-status></div>
+                </div>
+            </div>
+        </md-content>
+        <md-card-actions>
+            <div class="field" layout="row">
+                <div flex="40"></div>
+                <md-button class="md-warn md-raised" ng-click="discharge()" ng-if="order.orderStatus=='VENDOR_INSURED'">撤单</md-button>
+                <div flex></div>
+            </div>
+        </md-card-actions>
+
+
+    </md-card-content>
+
+
+</md-card>

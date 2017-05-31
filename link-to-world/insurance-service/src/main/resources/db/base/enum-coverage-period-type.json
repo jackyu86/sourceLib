@@ -1,0 +1,38 @@
+[
+    {
+        "id": "584299cb223fe928c44a4c78",
+        "name": "无关",
+        "value": "0",
+        "displayOrder": 0
+    },
+    {
+        "id": "584299cb223fe928c44a4c79",
+        "name": "保终身",
+        "value": "1",
+        "displayOrder": 1
+    },
+    {
+        "id": "584299cb223fe928c44a4c7a",
+        "name": "按年限保",
+        "value": "2",
+        "displayOrder": 2
+    },
+    {
+        "id": "584299cb223fe928c44a4c7b",
+        "name": "保至某确定年龄",
+        "value": "3",
+        "displayOrder": 3
+    },
+    {
+        "id": "584299cb223fe928c44a4c7c",
+        "name": "按月保",
+        "value": "4",
+        "displayOrder": 4
+    },
+    {
+        "id": "584299cb223fe928c44a4c7d",
+        "name": "按天保",
+        "value": "5",
+        "displayOrder": 5
+    }
+]

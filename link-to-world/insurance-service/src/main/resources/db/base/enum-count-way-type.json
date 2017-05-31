@@ -1,0 +1,32 @@
+[
+    {
+        "id": "58429d64223fe92c08c72fe8",
+        "name": "保额算保费",
+        "value": "1",
+        "displayOrder": 1
+    },
+    {
+        "id": "58429d64223fe92c08c72fe9",
+        "name": "保费算保额",
+        "value": "2",
+        "displayOrder": 2
+    },
+    {
+        "id": "58429d64223fe92c08c72fea",
+        "name": "约定费率",
+        "value": "3",
+        "displayOrder": 3
+    },
+    {
+        "id": "58429d64223fe92c08c72feb",
+        "name": "非表定费率",
+        "value": "4",
+        "displayOrder": 4
+    },
+    {
+        "id": "58429d64223fe92c08c72fec",
+        "name": "约定保额保费",
+        "value": "5",
+        "displayOrder": 5
+    }
+]

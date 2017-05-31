@@ -1,0 +1,10 @@
+message.message=消息管理
+message.list=消息列表
+message.selected=选中
+message.from=发送者
+message.content=内容
+message.type=类型
+message.createdTime=创建时间
+message.action=操作
+message.read=已读
+message.delete=删除

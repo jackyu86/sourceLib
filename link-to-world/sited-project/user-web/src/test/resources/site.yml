@@ -1,0 +1,6 @@
+db:
+  mongo:
+    url: fongo://localhost:27017/mock
+
+user.web:
+  captchaCodeEnabled: false

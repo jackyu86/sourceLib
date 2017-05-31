@@ -1,0 +1,400 @@
+{
+    "name": "57c24ce40879226abbb36090",
+    "description": "保险描述",
+    "keywords": [
+        "航空意外"
+    ],
+    "displayName": "君龙7日航空意外保障计划三",
+    "tags": [],
+    "publicVisible": "ALL",
+    "insuranceCategoryIds": [
+        "5789a68b28708a938f9b900b",
+        "5789a68b28708a938f9b900d",
+        "5789a68b28708a938f9b900f"
+    ],
+    "insuranceClaimId": "578b525f7214b5300823adf4",
+    "insuranceVendorId": "5789a68b28708a938f9b901c",
+    "insuranceJobTreeId": "584e06fa75c46e1f30cb7c0c",
+    "jobRestricted": null,
+    "jobLevels": [
+    ],
+    "jobIds": null,
+    "jobExclude": true,
+    "minUnits": null,
+    "maxUnits": null,
+    "policyTypes": null,
+    "highlightContent": "即投即生效，保障高达200万，专为短期乘坐飞机往返出行的人士设计。",
+    "featureContent": "<p>1、提供80-200万7日航空意外保障，短期往返行程全覆盖。</p><p>2、0-100岁均可投保，不限职业、不限国籍、几乎适合所有人群。</p><p>3、即买即保即生效，出行不必提前预约购买，设计更细致更贴心，客户方便省心！</p><p>4、附加航空意外医疗责任，使保障更完善、更无后顾之忧！</p><p>5、全年365天、全天24小时在线投保，方便快捷享受超高保障；专业咨询服务就在您的身边！</p>",
+    "tipsContent": "<p>1、本产品由君龙人寿保险有限公司承保,目前该公司在福建、浙江设有分支机构。客户购买后，保单生效前可办理退保及变更，后续变更与理赔事务请联系网站客服专员。</p><p>2、同一保障期间内，同一被保险人仅限购买一份君龙人寿保险公司的航空意外险产品，多购买部分保险公司不承担保险责任。</p><p>3、本产品支持个人和团体投保，外籍人士也可以投保。</p><p>4、本产品中医疗费用仅承保中国境内（不包含台湾、香港、澳门地区）发生的治疗。</p><p>5、本产品中的医疗相关保障限定为中华人民共和国境内合法经营的二级以上（含二级）医院或保险公司认可的其他医疗机构，除了北京平谷区所有医院。请注意：北京平谷区所有医院的就医均不给予理赔，建议您去往其他区域二级以上（含二级）公立医院就医。</p><p>6、本产品最快可选择承保后当日生效，生效时间默认为航班起飞时间，但生效时间不早于承保时间；</p><p>7、航空意外身故/残疾、航空意外医疗责任的保险责任，自被保险人持有效机票乘坐民航班机并进入机舱门时起，至被保险人抵达机票载明的终点走出民航班机舱门时止；</p><p>8、意外医疗免赔1万元，对符合保单签发地社会医疗保险规定的合理且必要的医疗费用，扣除免赔额1万元后按照100%比例赔付。</p><p>                                                                          9、本产品为网络销售产品，网上投保、网上支付、网上即时核保并出具电子保单，您可拨打君龙人寿保险公司电话400-666-0123或登录君龙人寿保险公司官网http://www.kdlins.com.cn/cavLogon.action?queryType=singleCust 查询、验真。</p>",
+    "cases": [
+        "<p>林女士准备乘坐飞机从广州前往哈尔滨游玩,行程7天，考虑到近期天气变化及飞机意外事故的频繁发生,担心自身风险,林女士为自己投保了一份君龙7日航空意外保障计划三,刚好覆盖往返行程中乘坐飞机的保障，享有如下保障利益：<br/>1、若发生航空意外事故导致身故，林女士家人便可获得200万元的身故保险金；<br/>2、若发生航空意外事故导致林女士受伤，则可享有最高3万元医疗费用报销保障。。</p>"
+    ],
+    "questions": [
+        {
+            "question": "这款产品有没有职业和年龄限制，小孩可以投保吗？",
+            "answer": "这款产品是不限职业的，只要被保险人年龄在:28天-100周岁都可以投保本产品。"
+        },
+        {
+            "question": "网上出具的电子保单是否具有法律效力？",
+            "answer": "本保险为网络销售产品，网上投保、网上支付、网上即时核保并出具电子保单。网上投保为您提供电子保险合同，根据《中华人民共和国合同法》第十一条规定，数据电文是合法的合同表现形式，电子保险合同与纸质保险合同具有同等法律效力。"
+        },
+        {
+            "question": "该产品是否保障前往境外、国外的航班？",
+            "answer": "是承保的，但对于境外发生的航空意外事故，仅承担身故/残疾保障，不承担航空意外医疗保障。"
+        },
+        {
+            "question": "什么是航班期间？什么是等效航班？",
+            "answer": "航班期间：自被保险人以乘客身份进入本合同约定客运民航班机的舱门时起至飞抵目的地走出舱门时止。<br/>等效航班:指由于各种原因由客运航空公司为约定航班所有旅客调整的客运班机或被保险人经航空公司同意对约定航班改签并且起始港和目的港与原约定航班相同的客运班机。"
+        },
+        {
+            "question": "即买即生效是什么意思？",
+            "answer": "即买即生效是指该产品最快可指定当日生效，若指定当日生效，生效时间默认航班起飞时间，即自航班起飞起就进入了保障范围。但生效时间不得早于承保时间。"
+        }
+    ],
+    "plp": [
+        {
+            "group": "plan",
+            "field": "period",
+            "editable": false
+        }
+    ],
+    "pdp": [
+        {
+            "group": "product",
+            "field": "serial",
+            "editable": false
+        },
+        {
+            "group": "plan",
+            "field": "period",
+            "editable": false
+        },
+        {
+            "group": "liability",
+            "field": "57c24ce40879226abbb35fbe"
+        },
+        {
+            "group": "liability",
+            "field": "57c24ce40879226abbb3606f"
+        }
+    ],
+    "formGroups": [
+        {
+            "name": "plan",
+            "optional": false,
+            "fields": [
+                {
+                    "name": "startTime",
+                    "options": {},
+                    "editable": true
+                },
+                {
+                    "name": "period",
+                    "options": {},
+                    "editable": true,
+                    "hidden": true,
+                    "defaultValue": {
+                        "displayName": "7天",
+                        "unit": "DAY",
+                        "value": 7
+                    }
+                }
+            ]
+        },
+        {
+            "name": "policy-holder",
+            "fields": [
+                {
+                    "name": "name",
+                    "editable": true
+                },
+                {
+                    "name": "id",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "身份证",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "护照",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "军人证",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "台胞证",
+                                "value": "14"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "9"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "birthDate",
+                    "editable": true
+                },
+                {
+                    "name": "gender",
+                    "editable": true
+                },
+                {
+                    "name": "phone",
+                    "editable": true
+                },
+                {
+                    "name": "email",
+                    "editable": true,
+                    "options": {
+                        "NotNull": false
+                    }
+                },
+                {
+                    "name": "age",
+                    "options": {
+                        "min": 18
+                    },
+                    "editable": false,
+                    "hidden": true
+                }
+            ]
+        },
+        {
+            "name": "insured",
+            "fields": [
+                {
+                    "name": "name",
+                    "editable": true
+                },
+                {
+                    "name": "id",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "身份证",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "护照",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "军人证",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "台胞证",
+                                "value": "14"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "9"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "birthDate",
+                    "editable": true
+                },
+                {
+                    "name": "gender",
+                    "editable": true
+                },
+                {
+                    "name": "relation",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "本人",
+                                "value": "5"
+                            },
+                            {
+                                "displayName": "父母",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "子女",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "配偶",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "6"
+                            }
+                        ]
+                    },
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "age",
+                    "options": {
+                        "min": 0,
+                        "max": 100
+                    },
+                    "editable": false,
+                    "hidden": true
+                }
+            ]
+        },
+        {
+            "name": "beneficiary",
+            "fields": [
+                {
+                    "name": "legalBeneficiary",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "是",
+                                "value": "Y"
+                            }
+                        ]
+                    },
+                    "displayAs": "radio",
+                    "defaultValue": "Y"
+                }
+            ]
+        },
+        {
+            "name": "liability",
+            "fields": [
+                {
+                    "name": "57c24ce40879226abbb35fbe",
+                    "editable": true,
+                    "defaultValue": 2000000
+                },
+                {
+                    "name": "57c24ce40879226abbb3606f",
+                    "editable": true,
+                    "defaultValue": 30000
+                }
+            ]
+        },
+        {
+            "name": "policy",
+            "fields": [
+                {
+                    "name": "deliverType",
+                    "editable": false,
+                    "defaultValue": 5,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "电子保单",
+                                "value": 5
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "flight",
+            "fields": [
+                {
+                    "name": "flightNo",
+                    "editable": true
+                },
+                {
+                    "name": "flightTime",
+                    "editable": true
+                }
+            ]
+        },
+        {
+            "name": "others",
+            "optional": true,
+            "fields": [
+                {
+                    "name": "invoiceName",
+                    "editable": true
+                },
+                {
+                    "name": "invoiceDate",
+                    "editable": true
+                },
+                {
+                    "name": "invoiceDeliverType",
+                    "editable": true
+                },
+                {
+                    "name": "firstName",
+                    "editable": true
+                },
+                {
+                    "name": "mobile",
+                    "editable": true
+                },
+                {
+                    "name": "address",
+                    "editable": true
+                },
+                {
+                    "name": "postalCode",
+                    "editable": true
+                }
+            ]
+        }
+    ],
+    "period": {
+        "type": "FIXED",
+        "fixedValue": {
+            "displayName": "7天",
+            "unit": "DAY",
+            "value": 7
+        },
+        "startTimeType": "USER_INPUT"
+    },
+    "payment": {
+        "methods": [
+            "FIXED"
+        ]
+    },
+    "insurances": [
+        {
+            "insuranceId": "57c24ce40879226abbb36078",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fbe",
+                    "description": "",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 2000000
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb3606f",
+                    "description": "免赔100元，赔付比例100%",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 30000
+                    }
+                }
+            ]
+        }
+    ],
+    "status": "ACTIVE",
+    "type": "MAIN",
+    "discount": 1,
+    "insuranceClauseIds": [
+        "578b57967214b52d84eb4f56",
+        "57c24ce40879226abbb36087",
+        "57c24ce40879226abbb36088"
+    ],
+    "priceTableUrl": "http://baodan.zhongmin.cn/clause/Accid/Accid_1304_5.pdf",
+    "customerNotificationUrl": "http://baodan.zhongmin.cn/clause/ClientNotification.pdf",
+    "planCode": "1001106"
+}

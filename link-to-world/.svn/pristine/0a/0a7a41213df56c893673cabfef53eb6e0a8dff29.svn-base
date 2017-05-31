@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:j="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>查看子分销商</title>
+    <link rel="stylesheet" j:css="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static/css/common.css">
+    <link rel="stylesheet" j:css="/static/css/header.css">
+    <link rel="stylesheet" j:css="/static/css/footer.css">
+    <link rel="stylesheet" j:css="/static/css/customer.css">
+</head>
+<body>
+<j:header folded="false"/>
+<div class="page">
+    <j:customer-sidenav selected="list" category="dealer"/>
+    <div class="main">
+        <div class="page-title">基本资料</div>
+        <input type="hidden" id="dealerId" name="id" j:value="dealer.id">
+
+        <div class="field">
+            <div class="field-name">企业名称</div>
+            <div class="field-value" j:text="dealer.name">***</div>
+        </div>
+        <div class="field">
+            <div class="field-name">分销商级别</div>
+            <div class="field-value" j:text="dealer.level.display">***</div>
+        </div>
+        <div class="field">
+            <div class="field-name">所在地区</div>
+            <div class="field-value">
+                <span j:text="dealer.state"></span>
+                <span j:text="dealer.city"></span>
+                <span j:text="dealer.ward"></span>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="field-name">企业邮箱</div>
+            <div class="field-value" j:text="dealer.email"></div>
+        </div>
+        <div class="field">
+            <div class="field-name">联系人姓名</div>
+            <div class="field-value" j:text="dealer.contactName"></div>
+        </div>
+        <div class="field">
+            <div class="field-name">联系电话</div>
+            <div class="field-value" j:text="dealer.cellphone"></div>
+        </div>
+        <div class="field">
+            <div class="field-name">身份证号</div>
+            <div class="field-value" j:text="dealer.contactIdNumber"></div>
+        </div>
+        <div class="field">
+            <div class="field-name">账号状态</div>
+            <div class="field-value" j:text="user.status.display"></div>
+        </div>
+
+        <j:manager-operation/>
+
+        <j:credit-tracking-list/>
+    </div>
+</div>
+<j:footer/>
+<j:utils/>
+
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/handlebars-v4.0.5.js"></script>
+<script j:js="/static/js/handlebars-helper.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/user/dealer/dealer-update.js"></script>
+<script j:js="/static/js/region/state.js"></script>
+<script j:js="/static/js/credit/tracking.js"></script>
+<script j:js="/static/js/user/dealer/manager-operation.js"></script>
+</body>
+</html>

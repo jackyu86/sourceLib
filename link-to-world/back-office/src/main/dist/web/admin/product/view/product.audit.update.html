@@ -1,0 +1,33 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ui-sref="console.product.audit.list" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <span>审核产品</span>
+
+        <span flex></span>
+
+    </div>
+</md-toolbar>
+<md-card class="md-padding" flex layout="column">
+    <div class="md-padding">
+        产品名称:{{data.auditProduct.productDisplayName}}
+    </div>
+    <div class="md-padding">
+        当前状态:<span ng-if="data.auditProduct.status=='PENDING'">待审核</span><span ng-if="data.auditProduct.status=='SUCCESS'">审核成功</span><span ng-if="data.auditProduct.status=='FAILED'">审核失败</span>
+    </div>
+    <ma-card flex style="overflow: scroll;">
+        <md-subheader>
+            <div>字段变更详情</div>
+        </md-subheader>
+        <div class="md-padding" ng-bind-html="differHtml(differ)"></div>
+    </ma-card>
+    <md-input-container>
+        <label>审核备注</label>
+        <textarea placeholder="请输入审核备注" ng-model="auditRequest.comment" md-maxlength="150" rows="2" md-select-on-focus></textarea>
+    </md-input-container>
+    <div>
+        <md-button ng-if="data.auditProduct.status=='PENDING'" class="md-raised md-primary" ng-click="submit('SUCCESS')">审核通过</md-button>
+        <md-button ng-if="data.auditProduct.status=='PENDING'" class="md-raised md-danger" ng-click="submit('FAILED')">审核失败</md-button>
+    </div>
+</md-card>

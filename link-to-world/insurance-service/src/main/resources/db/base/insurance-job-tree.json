@@ -1,0 +1,57 @@
+[
+    {
+        "id": "57b94f5ba71fac11c4112a44",
+        "name": "职业树",
+        "description": "职业树描述",
+        "createdTime": "2016-08-21T11:33:00Z",
+        "createdBy": "init",
+        "updatedTime": "2016-08-21T13:23:43Z",
+        "updatedBy": ""
+    },
+    {
+        "id": "584e06fa75c46e1f30cb7773",
+        "name": "寿险职业树",
+        "description": "寿险职业树",
+        "createdTime": "2016-12-12T02:10:02Z",
+        "createdBy": "init",
+        "updatedTime": "2016-12-12T02:10:02Z",
+        "updatedBy": "init"
+    },
+    {
+        "id": "584e06fa75c46e1f30cb7c0c",
+        "name": "意外险职业树",
+        "description": "意外险职业树",
+        "createdTime": "2016-12-12T02:10:02Z",
+        "createdBy": "init",
+        "updatedTime": "2016-12-12T02:10:02Z",
+        "updatedBy": "init"
+    },
+    {
+        "id": "584e06fa75c46e1f30cb80a5",
+        "name": "医疗险职业树",
+        "description": "医疗险职业树",
+        "createdTime": "2016-12-12T02:10:02Z",
+        "createdBy": "init",
+        "updatedTime": "2016-12-12T02:10:02Z",
+        "updatedBy": "init"
+    },
+    
+     {
+        "id": "a15bead3a34cf3fedd232c1b",
+        "name": "高额交通意外保险职业树",
+        "description": "高额交通意外保险职业树",
+        "createdTime": "2017-05-08T03:27:55Z",
+        "createdBy": "init",
+        "updatedTime": "2017-05-08T03:27:55Z",
+        "updatedBy": "init"
+    },
+     {
+        "id": "a15bec18ec892a3fe08797b2",
+        "name": "新系统简易职业树",
+        "description": "新系统简易职业树",
+        "createdTime": "2016-12-12T02:10:02Z",
+        "createdBy": "init",
+        "updatedTime": "2016-12-12T02:10:02Z",
+        "updatedBy": "init"
+    }
+]

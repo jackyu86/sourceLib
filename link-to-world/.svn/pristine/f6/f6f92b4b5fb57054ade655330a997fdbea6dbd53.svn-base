@@ -1,0 +1,31 @@
+.page {
+    box-sizing: border-box;
+}
+
+.field {
+    padding: 10px 0;
+}
+
+.field .name {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.field .name::after {
+    content: "：";
+}
+
+.order-search-wrap {
+    height: 72px;
+    overflow: hidden;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.order-search-wrap.open {
+    height: 240px;
+}
+

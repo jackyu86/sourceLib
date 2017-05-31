@@ -1,0 +1,220 @@
+<!doctype html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Console</title>
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="applicable-device" content="pc,mobile">
+
+    <link rel="stylesheet" type="text/css" href="static/css/angular-material.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/loading-bar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/md-data-table.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/textAngular.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/angular.treeview.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/nv.d3.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/console.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/aside.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/ng-sortable.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/ng-sortable.style.min.css"/>
+</head>
+<body layout="column">
+
+<div class="loader">
+    <div class="loader-figure"></div>
+    <p class="loader-label">sited</p>
+</div>
+
+<div layout="row" style="min-height: 100%" flex>
+    <div class="aside" layout="row" ng-class="{folded: Console.menu.autoHide && !Console.menu.hasSubMenu() && Console.menu.focus!='main'}">
+        <md-sidenav md-is-locked-open="true" layout="column" class="md-accent main-menu" md-theme="default"
+                    ng-class="{folded: Console.menu.autoHide && !Console.menu.hasSubMenu() && Console.menu.focus!='main', 'has-sub': Console.menu.hasSubMenu(), 'hide-text': Console.menu.hasSubMenu() && Console.menu.focus!='main'}"
+                    ng-mouseover="Console.menu.focusMain()">
+            <md-toolbar class="md-primary">
+                <div class="md-toolbar-tools logo" layout="row" layout-align="space-between center">
+                    <div>
+                        {{site.name}}
+                    </div>
+                    <md-button class="md-icon-button menu-pin-button" aria-label="Refresh" ng-click="Console.menu.autoHide=!Console.menu.autoHide">
+                        <md-icon class="fa" md-font-icon="fa-circle-thin" ng-if="Console.menu.autoHide"></md-icon>
+                        <md-icon class="fa" md-font-icon="fa-circle" ng-if="!Console.menu.autoHide"></md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+            <md-content role="navigation" class="md-primary" flex>
+                <ul class="menu md-primary">
+                    <li ng-repeat="item in Console.menu.items" class="parent-list-item"
+                        ng-class="{'active' : $state.includes(item.state)}">
+                        <menu-toggle item="item" menu="Console.menu" user="user"
+                                     ng-if="item.children.length"></menu-toggle>
+                        <menu-link item="item" menu="Console.menu" ng-if="!item.children.length" user="user"
+                                   ng-click="Console.menu.select(item)"></menu-link>
+                    </li>
+                </ul>
+            </md-content>
+            <div item="item" menu="Console.menu"
+                 user="user" class="btn-user ng-scope ng-isolate-scope" role="button" tabindex="0" layout="row" layout-align="space-between center">
+                <md-button class=" menu-pin-button" aria-label="Refresh">
+                    <md-icon class="fa" md-font-icon="fa-user"></md-icon>
+                    <span>{{user.username}}</span>
+                </md-button>
+                <md-button class="menu-pin-button" aria-label="Sign Out" ng-click="user.logout()">
+                    <span md-msg="console.logout">Logout</span>
+                </md-button>
+            </div>
+
+        </md-sidenav>
+
+        <md-sidenav md-is-locked-open="true" layout="column" class="sub-menu"
+                    ng-class="{away:!Console.menu.hasSubMenu() || Console.menu.focus!='second'}">
+            <div class="menu-heading">
+                <menu-heading menu="Console.menu"></menu-heading>
+            </div>
+            <div class="sub-menu-container" flex>
+                <ul class="menu">
+                    <li ng-repeat="child in Console.menu.selected.children">
+                        <menu-link item="child" user="user" menu="Console.menu"></menu-link>
+                    </li>
+                </ul>
+            </div>
+        </md-sidenav>
+    </div>
+    <div ui-view="" ng-mouseover="Console.menu.focusSecond()" class="page" layout="column" flex>
+    </div>
+</div>
+
+<script type="text/javascript" j:html="consoleScript">
+</script>
+<script src="static/js/system.js"></script>
+<script>
+    window.define = System.amdDefine;
+    window.require = window.requirejs = System.amdRequire;
+
+    SystemJS.config({
+        baseURL: '/admin/',
+        defaultJSExtensions: true,
+        map: {
+            'jquery': 'static/js/jquery-1.11.3.min',
+            'angular': 'static/js/angular.min',
+            'ngAnimate': 'static/js/angular-animate.min',
+            'ngAria': 'static/js/angular-aria.min',
+            'ngMessages': 'static/js/angular-messages.min',
+            'ngCookies': 'static/js/angular-cookies.min',
+            'ngFileUpload': 'static/js/ng-file-upload.min',
+            'ngTreeView': 'static/js/angular.treeview.min',
+            'uiRouter': 'static/js/angular-ui-router.min',
+            'ngLoadingBar': 'static/js/loading-bar.min',
+            'mdMaterial': 'static/js/angular-material.min',
+            'mdDataTable': 'static/js/md-data-table.min',
+            'json': 'static/js/system.json',
+            'css': 'static/js/system.css',
+            'rangy': 'static/js/rangy-core',
+            'rangy/lib/rangy-selectionsaverestore': 'static/js/rangy-selectionsaverestore',
+            'ngTextAngular': 'static/js/textAngular.min',
+            'ngSanitize': 'static/js/textAngular-sanitize.min',
+            'd3': 'static/js/d3.min',
+            'nvd3': 'static/js/nv.d3',
+            'ngNvd3': 'static/js/angular-nvd3.min',
+            'ngSortable': 'static/js/ng-sortable.min'
+        },
+        meta: {
+            '*.json': {
+                loader: 'json'
+            },
+            '*.css': {
+                loader: 'css'
+            },
+            'static/js/jquery-1.11.3.min': {
+                format: 'amd'
+            },
+            'static/js/angular.min': {
+                deps: ['jquery']
+            },
+            'static/js/angular-animate.min': {
+                deps: ['angular']
+            },
+            'static/js/angular-aria.min': {
+                deps: ['angular']
+            },
+            'static/js/angular-messages.min': {
+                deps: ['angular']
+            },
+            'static/js/angular-cookies.min': {
+                deps: ['angular']
+            },
+            'static/js/ng-file-upload.min': {
+                deps: ['angular']
+            },
+            'static/js/angular.treeview.min': {
+                deps: ['angular']
+            },
+            'static/js/angular-ui-router.min': {
+                deps: ['angular']
+            },
+            'static/js/loading-bar.min': {
+                deps: ['angular']
+            },
+            'static/js/rangy-selectionsaverestore': {
+                deps: ['rangy']
+            },
+            'static/js/textAngular-sanitize.min': {
+                deps: ['angular']
+            },
+            'static/js/textAngular.min': {
+                deps: ['angular', 'ngSanitize']
+            },
+            'static/js/angular-material.min': {
+                deps: ['static/js/angular.min', 'ngAria']
+            },
+            'static/js/md-data-table.min': {
+                deps: ['mdMaterial']
+            },
+            'static/js/nv.d3': {
+                deps: ['d3']
+            },
+            'static/js/angular-nvd3.min': {
+                deps: ['nvd3', 'angular']
+            }
+        }
+    });
+
+    SystemJS.import('main');
+</script>
+
+<script type="text/ng-template" id="partials/menu-heading.tmpl.html">
+    <button class="md-button">
+        <span ng-bind="menu.heading" ng-if="menu"></span>
+    </button>
+</script>
+
+<script type="text/ng-template" id="partials/menu-link.tmpl.html">
+    <md-button ng-class="{'active': $state.is(item.state)}"
+               ui-sref="{{item.state}}" layout="row" ng-if="user.hasPermission(item.permission)">
+        <md-icon class="fa" md-font-icon="{{item.icon}}"></md-icon>
+        <span class="menu-name" flex md-msg="{{item.name}}">Name</span>
+    </md-button>
+</script>
+
+<script type="text/ng-template" id="partials/menu-toggle.tmpl.html">
+    <div ng-if="user.hasPermission(item.permission)">
+        <md-button class="md-button-toggle"
+                   ng-class="{'active': menu.isItemSelected(item)}"
+                   ng-click="menu.select(item)"
+                   aria-controls="docs-menu-{{item.name}}"
+                   aria-expanded="{{menu.isItemSelected(item)}}">
+            <div layout="row" layout-align="space-between center">
+                <md-icon class="fa" md-font-icon="{{item.icon}}"></md-icon>
+                <span class="menu-name" flex md-msg="{{item.name}}">Name</span>
+                <md-icon class="fa menu-toggle pull-right md-toggle-icon"
+                         ng-class="{'toggled' : menu.isItemSelected(item)}" md-font-icon="fa-angle-right"></md-icon>
+            </div>
+        </md-button>
+    </div>
+</script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" j:css="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static/css/header.css">
+    <link rel="stylesheet" j:css="/static/css/footer.css">
+    <link rel="stylesheet" j:css="/static/css/common.css">
+    <link rel="stylesheet" j:css="/static/css/login.css">
+</head>
+<body>
+<div class="page">
+    <div class="banner">
+        <div class="container-fluid">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="form-group login-title">
+                        <a href="/" class="close" data-dismiss="modal" aria-label="Close"><i class="icon_wrong"></i></a>
+                        <span id="register-title">注册君龙人寿帐号</span>
+                        <div class="form-group type-selector radio-group">
+                            <div class="radio pull-left">
+                                <input id="dealer-1" type="radio" name="dealer" value="false" j:checked="isCustomer">
+                                <label for="dealer-1" class="radio-label">
+                                    个人用户
+                                </label>
+                            </div>
+                            <div class="radio pull-right" j:if="showDealerRegister">
+                                <input id="dealer-2" type="radio" name="dealer" value="true" j:checked="!isCustomer">
+                                <label for="dealer-2" class="radio-label">
+                                    企业用户
+                                </label>
+                            </div>
+                        </div>
+                    </h1>
+                </div>
+
+                <div class="panel-body">
+                    <form class="login-form" id="register-form">
+                        <div class="form-group">
+                            <label for="username" class="control-label col-xs-4">手机号或邮箱</label>
+                            <div class="col-xs-8">
+                                <input id="username" name="username" type="text" class="form-control input-lg"
+                                       required phoneOrEmail placeholder="请输入手机号或邮箱">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name" class="control-label col-xs-4">验证码</label>
+                            <div class="col-xs-8 captcha-wrap available">
+                                <input id="pinCode" name="pinCode" type="text" class="form-control input-lg pull-left"
+                                       placeholder="请输入您收到的验证码" required>
+                                <a href="javascript:void(0)" id="send-captcha" class="btn btn-default btn-lg">发送验证码</a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name" class="control-label col-xs-4">密码</label>
+                            <div class="col-xs-8">
+                                <input id="password" name="password" type="password" class="form-control input-lg"
+                                       placeholder="请输入6位以上数字或字母" required password>
+                                <div id="password-tips">密码强度: <span id="password-safety"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name" class="control-label col-xs-4">确认密码</label>
+                            <div class="col-xs-8">
+                                <input id="re-password" name="re-password" type="password" class="form-control input-lg"
+                                       placeholder="请再次输入密码" required equalTo="#password" password>
+                            </div>
+                        </div>
+
+                        <div class="dealer-form-group">
+                            <hr>
+                            <div class="form-group">
+                                <label class="control-label col-xs-9">联系人姓名-手机号码</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactName" class="control-label col-xs-4">联系人姓名</label>
+                                <div class="col-xs-8">
+                                    <input type="text" class="form-control input-lg" placeholder="-" id="contactName" name="contactName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactIdNumber" class="control-label col-xs-4">联系人身份证号</label>
+                                <div class="col-xs-8">
+                                    <input type="tel" class="form-control input-lg" placeholder="-" id="contactIdNumber" name="contactIdNumber" required identification>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cellphone" class="control-label col-xs-4">手机号码</label>
+                                <div class="col-xs-8">
+                                    <input type="tel" class="form-control input-lg" placeholder="-" id="cellphone" name="cellphone" required cellphone>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <div class="form-group">
+                                <label class="control-label col-xs-9">企业名称-推荐企业代码</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="control-label col-xs-4">企业名称</label>
+                                <div class="col-xs-8">
+                                    <input type="text" class="form-control input-lg" placeholder="-" name="name" id="name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="businessLicence" class="control-label col-xs-4">营业执照代码</label>
+                                <div class="col-xs-8">
+                                    <input type="text" class="form-control input-lg" placeholder="-" name="businessLicence" id="businessLicence" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-4">所在地区</label>
+                                <div class="col-xs-8">
+                                    <div class="dealer-city row">
+                                        <div class="col-xs-4">
+                                            <select class="form-control input-lg" name="state" required>
+                                                <option j:for="state : states" j:data-id="state.id" j:value="state.name" j:text="state.name"></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <select class="form-control input-lg" name="city" required>
+                                            </select>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <select class="form-control input-lg" name="ward" required>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div j:if="!isCustomer" class="form-group">
+                                <label class="control-label col-xs-4">推荐企业</label>
+                                <div class="col-xs-8">
+                                    <p class=" form-control-static input-lg" j:text="parentDealerName"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-4">推荐企业代码</label>
+                                <div class="col-xs-8">
+                                    <input j:if="!isCustomer" type="text" class="form-control input-lg" j:value="parentDealerId" name="parentDealerId" readOnly>
+                                    <input j:if="isCustomer" type="text" class="form-control input-lg" j:value="parentDealerId" name="parentDealerId">
+                                    <label class="text-danger validation-message" style="display: none"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group link-panel checkbox">
+                            <input id="term" name="term" type="checkbox" term checked>
+                            <label class="checkbox-label">
+                                我已阅读并同意
+                            </label>
+                            <a id="user-protocol" href="/about/user-protocol" j:class="isCustomer?'':'hidden'" target="_blank">君龙人寿注册协议</a>
+                            <a id="dealer-protocol" href="/about/dealer-protocol" j:class="isCustomer?'hidden':''" target="_blank">君龙人寿注册协议</a>
+                            <div id="term-notice" class="help-block text-danger">请阅读并确认协议内容</div>
+                        </div>
+
+                        <div class="form-group link-panel">
+                            <button type="button" class="btn btn-lg btn-primary login-button">注册</button>
+                        </div>
+
+                        <div class="form-group link-panel">
+                    <span href="forget-password.html" class="pull-left">已有君龙人寿帐号&nbsp;&nbsp;
+                        <a href="/account/login">立即登录</a></span>
+                        </div>
+                    </form>
+                    <form class="login-form" id="success-form">
+                        <div class="register-success"></div>
+                        <h1 class="form-group login-title text-center ">注册成功 马上可以开始投保啦</h1>
+                        <p class="text-center"><span class="count-down">3</span>秒后自动跳转到 <span class="go-to"> 登录</span></p>
+                        <div class="form-group">
+                            <a href="/account/login" id="btn-go-to" class="btn btn-lg btn-primary">立即登录</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<j:footer/>
+<j:utils/>
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/region/state.js"></script>
+<script j:js="/static/js/user/register.js"></script>
+
+</body>
+</html>

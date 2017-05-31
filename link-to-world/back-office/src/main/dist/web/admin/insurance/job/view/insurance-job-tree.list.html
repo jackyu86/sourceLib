@@ -1,0 +1,67 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>职业树</h2>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="新建职业树" ui-sref="console.insurance.job-tree.create">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-content flex>
+    <md-card>
+        <md-subheader ng-if="jobTreeTable.searching">
+            <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadJobTrees()">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+                <div flex>
+                    <input ng-model="jobTreeTable.query.name" type="text">
+                </div>
+                <md-button class="md-icon-button" ng-click="cancelSearching()">
+                    <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+                </md-button>
+            </form>
+        </md-subheader>
+
+        <md-subheader ng-if="!jobTreeTable.searching && !jobTreeTable.selected.length">
+            <div layout="row" layout-align="left center">
+                <span>职业树列表</span>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="jobTreeTable.searching = !jobTreeTable.searching">
+                    <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+                </md-button>
+            </div>
+        </md-subheader>
+
+        <md-table-container>
+            <table md-table ng-model="jobTreeTable.selected">
+                <thead md-head md-order="jobTreeTable.query.order" md-on-reorder="reloadJobTrees" class="md-accent">
+                <tr md-row>
+                    <th md-column><span>编号</span></th>
+                    <th md-column><span>名称</span></th>
+                    <th md-column md-order-by="created_time"><span>创建时间</span></th>
+                    <th md-column><span>操作</span></th>
+                </tr>
+                </thead>
+                <tbody md-body>
+                <tr md-row md-select="jobTree"
+                    ng-repeat="jobTree in jobTreeTable.data.items" md-auto-select>
+                    <td md-cell>{{jobTree.id}}</td>
+                    <td md-cell><a href="javascript:void(0);" ng-click="viewTree(jobTree)">{{jobTree.name}}</a></td>
+                    <td md-cell>{{jobTree.createdTime | date:'yyyy/MM/dd'}}</td>
+                    <td md-cell layout="row">
+                        <md-button class="md-icon-button" ng-click="jobTreeTable.edit(jobTree)">编辑</md-button>
+                        <md-button class="md-icon-button" ng-click="deleteJobTree(jobTree)">删除</md-button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+
+        <md-table-pagination md-limit="jobTreeTable.query.limit" md-page="jobTreeTable.query.page" md-total="{{jobTreeTable.data.total}}"
+                             md-page-select="jobTreeTable.options.pageSelector" md-boundary-links="jobTreeTable.options.boundaryLinks"
+                             md-on-paginate="reloadJobTrees"></md-table-pagination>
+
+    </md-card>
+</md-content>

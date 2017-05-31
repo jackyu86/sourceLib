@@ -1,0 +1,67 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>产品系列列表</h2>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="新建产品系列" ui-sref="console.product.serial.create">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-subheader ng-if="serialTable.searching">
+        <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadSerials()">
+            <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            <div flex>
+                <input ng-model="serialTable.query.name" type="text">
+            </div>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!serialTable.searching && !serialTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>产品系列列表</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="serialTable.searching = !serialTable.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table ng-model="serialTable.selected">
+            <thead md-head md-order="serialTable.query.order" md-on-reorder="reloadSerials" class="md-accent">
+            <tr md-row>
+                <th md-column><span>编号</span></th>
+                <th md-column><span>系列名称</span></th>
+                <th md-column><span>产品</span></th>
+                <th md-column md-order-by="created_time"><span>创建时间</span></th>
+                <th md-column><span>操作</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="serial"
+                ng-repeat="serial in serialTable.data.items" md-auto-select>
+                <td md-cell>{{serial.id}}</td>
+                <td md-cell>{{serial.name}}</td>
+                <td md-cell><span ng-repeat="product in serial.products track by $index">{{product.productDisplayName}}<span ng-if="$index<serial.products.length-1">|</span></span></td>
+                <td md-cell>{{serial.createdTime | date:'yyyy/MM/dd'}}</td>
+                <td md-cell layout="row">
+                    <md-button class="md-icon-button" ng-click="serialTable.edit(serial)">编辑</md-button>
+                    <md-button class="md-icon-button" ng-click="deleteSerial(serial)">删除</md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+    <md-table-pagination md-limit="serialTable.query.limit" md-page="serialTable.query.page" md-total="{{serialTable.data.total}}"
+                         md-page-select="serialTable.options.pageSelector" md-boundary-links="serialTable.options.boundaryLinks"
+                         md-on-paginate="reloadSerials"></md-table-pagination>
+
+</md-card>

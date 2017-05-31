@@ -1,0 +1,490 @@
+apply from: file("${rootDir}/gradle/project.gradle")
+
+subprojects {
+    group = 'app'
+    version = "1.0.1"
+
+    apply from: file("${rootDir}/gradle/app.gradle")
+
+    repositories {
+        maven {
+            url 'http://git.yiue.com/maven-repo/'
+        }
+    }
+}
+
+project(':website') {
+    dependencies {
+        compile(
+                project(':kdlins-api'),
+                project(':dealer-service-api'),
+                project(':insurance-service-api'),
+                project(':user-service-api'),
+                project(':user-web'),
+                project(':file-service-api'),
+                project(':file-web'),
+                project(':customer-service-api'),
+                project(':customer-web'),
+                project(':email-service-api'),
+                project(':message-service-api'),
+                'redis.clients:jedis:2.9.0',
+                'org.apache.httpcomponents:httpclient:4.5.1',
+                'org.apache.httpcomponents:httpmime:4.5.1'
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+
+    apply plugin: 'org.hidetake.ssh'
+
+    remotes {
+        qa {
+            host = '120.26.65.79'
+            user = 'ubuntu'
+            identity = file('../website.pem')
+        }
+    }
+
+    task deploy << {
+        ssh.run {
+            session(remotes.qa) {
+                execute "rm -fr /opt/website.zip"
+                println "uploading website"
+                put from: "${rootDir}/build/website/distributions/website.zip", into: '/opt/'
+                execute "unzip -o /opt/website.zip -d /opt"
+                println "restart website"
+                execute "sudo supervisorctl restart website"
+            }
+        }
+    }
+}
+
+project(':back-office') {
+    dependencies {
+        compile(
+                project(':insurance-service-api'),
+                project(':dealer-service-api'),
+                project(':sited-admin'),
+                project(':user-admin'),
+                project(':file-admin'),
+                project(':file-web'),
+                project(':customer-service-api'),
+                project(':message-admin'),
+                'redis.clients:jedis:2.9.0',
+                'com.rabbitmq:amqp-client:3.5.6',
+                'org.apache.httpcomponents:httpclient:4.5.1',
+                'org.apache.httpcomponents:httpmime:4.5.1'
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+
+    apply plugin: 'org.hidetake.ssh'
+
+    remotes {
+        qa {
+            host = '120.26.65.79'
+            user = 'ubuntu'
+            identity = file('../website.pem')
+        }
+    }
+
+    task deploy << {
+        ssh.run {
+            session(remotes.qa) {
+                execute "rm -fr /opt/back-office.zip"
+                println "uploading back-office"
+                put from: "${rootDir}/build/back-office/distributions/back-office.zip", into: '/opt/'
+                execute "unzip -o /opt/back-office.zip -d /opt"
+                println "restart back-office"
+                execute "sudo supervisorctl restart back-office"
+            }
+        }
+    }
+}
+
+project(':dealer-service-api') {
+    dependencies {
+        compile(
+                project(':sited'),
+                'com.rabbitmq:amqp-client:3.5.6',
+                'org.apache.httpcomponents:httpclient:4.5.1',
+                'org.apache.httpcomponents:httpmime:4.5.1'
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':dealer-service') {
+    dependencies {
+        compile(
+                project(':dealer-service-api'),
+                'org.apache.httpcomponents:httpclient:4.5.1',
+                'org.apache.httpcomponents:httpmime:4.5.1',
+                'mysql:mysql-connector-java:5.1.40',
+                'com.zaxxer:HikariCP:2.5.1'
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':insurance-service') {
+    dependencies {
+        compile(
+                project(':kdlins-api'),
+                project(":insurance-service-api"),
+                project(':dealer-service'),
+                project(':user-service'),
+                project(':file-service'),
+                project(':customer-service'),
+                project(':email-service'),
+                project(':message-service'),
+                'mysql:mysql-connector-java:5.1.40',
+                'com.zaxxer:HikariCP:2.5.1',
+                'org.xhtmlrenderer:flying-saucer-pdf:9.1.1'
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+
+    apply plugin: 'org.hidetake.ssh'
+
+    remotes {
+        qa {
+            host = '120.55.67.19'
+            user = 'ubuntu'
+            identity = file('../api.pem')
+        }
+    }
+
+    task deploy << {
+        ssh.run {
+            session(remotes.qa) {
+                execute "rm -fr /opt/insurance-service.zip"
+                println "uploading insurance-service-api"
+                put from: "${rootDir}/build/insurance-service/distributions/insurance-service.zip", into: '/opt/'
+                execute "unzip -o /opt/insurance-service.zip -d /opt"
+                println "restart insurance-service"
+                execute "sudo supervisorctl restart insurance-service"
+            }
+        }
+    }
+}
+
+project(':insurance-service-api') {
+    dependencies {
+        compile(
+                project(':sited')
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':kdlins-api') {
+    dependencies {
+        compile('org.apache.cxf:apache-cxf:3.1.8') {
+            exclude group: "org.slf4j", module: "slf4j-jdk14"
+        }
+        compile(
+                project(':sited')
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':doc') {
+    dependencies {
+        compile(
+                project(':back-office'),
+                project(':dealer-service'),
+                project(':dealer-service-api'),
+                project(':insurance-service'),
+                project(':insurance-service-api'),
+                project(':kdlins-api'),
+                project(':website')
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':sited') {
+    dependencies {
+        compile(
+                'mysql:mysql-connector-java:5.1.38',
+                'redis.clients:jedis:2.9.0',
+                'com.zaxxer:HikariCP:2.5.1',
+                'org.slf4j:slf4j-api:1.7.21',
+                'ch.qos.logback:logback-classic:1.1.7',
+                'javax.inject:javax.inject:1',
+                'com.fasterxml.jackson.core:jackson-databind:2.8.5',
+                'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.5',
+                'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.8.5',
+                'com.fasterxml.jackson.module:jackson-module-afterburner:2.8.5',
+                'com.yahoo.platform.yui:yuicompressor:2.4.8',
+                'com.google.guava:guava:20.0',
+                'org.mongodb:mongo-java-driver:3.3.0',
+                'io.undertow:undertow-core:1.4.4.Final',
+                'org.javassist:javassist:3.21.0-GA',
+                'net.htmlparser.jericho:jericho-html:3.4',
+                'org.apache.httpcomponents:httpclient:4.5.2'
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':sited-test') {
+    apply from: file("${rootDir}/gradle/app.gradle")
+
+    dependencies {
+        compile(
+                project(':sited'),
+                'junit:junit:4.12',
+                'com.github.fakemongo:fongo:2.0.9',
+                'org.hsqldb:hsqldb:2.3.4'
+        )
+    }
+}
+
+project(':sited-admin') {
+    apply from: file("${rootDir}/gradle/app.gradle")
+
+    dependencies {
+        compile(
+                project(':sited')
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':user-service-api') {
+    dependencies {
+        compile(
+                project(':sited'),
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':user-service') {
+    dependencies {
+        compile(
+                project(':user-service-api'),
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':user-web') {
+    dependencies {
+        compile(
+                project(':sited'),
+                project(':user-service-api'),
+                'com.github.cage:cage:1.0'
+        )
+        testCompile(
+                project(':user-service'),
+                project(':sited-test')
+        )
+    }
+}
+
+project(':user-admin') {
+    dependencies {
+        compile(
+                project(':sited'),
+                project(':sited-admin'),
+                project(':user-service-api'),
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':file-service-api') {
+    dependencies {
+        compile(
+                project(':sited'),
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':file-service') {
+    dependencies {
+        compile(
+                project(':sited'),
+                project(':file-service-api')
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':file-web') {
+    dependencies {
+        compile(
+                project(':sited'),
+                project(':file-service-api'),
+                project(':user-web'),
+                'org.imgscalr:imgscalr-lib:4.2'
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+
+project(':file-admin') {
+    dependencies {
+        compile(
+                project(':sited'),
+                project(':sited-admin'),
+                project(':user-admin'),
+                project(':file-service-api'),
+                'com.belerweb:pinyin4j:2.5.1'
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+
+project(':message-service-api') {
+    dependencies {
+        compile(
+                project(':sited'),
+        )
+    }
+}
+
+
+project(':message-service') {
+    dependencies {
+        compile(
+                project(':sited'),
+                project(':message-service-api')
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':message-web') {
+    dependencies {
+        compile(
+                project(':sited'),
+                project(':message-service-api')
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+
+project(':message-admin') {
+    dependencies {
+        compile(
+                project(':sited'),
+                project(':sited-admin'),
+                project(':user-admin'),
+                project(':message-service-api')
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':email-service-api') {
+    dependencies {
+        compile(
+                project(':sited'),
+        )
+    }
+}
+
+project(':email-service') {
+    dependencies {
+        compile(
+                project(':sited'),
+                project(':email-service-api'),
+                'javax.mail:mail:1.4.7'
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':customer-service-api') {
+    dependencies {
+        compile(
+                project(':sited')
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':customer-service') {
+    dependencies {
+        compile(
+                project(':customer-service-api'),
+                'com.zaxxer:HikariCP:2.5.1'
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+project(':customer-web') {
+    dependencies {
+        compile(
+                project(':customer-service-api'),
+                project(':user-web')
+        )
+        testCompile(
+                project(':sited-test')
+        )
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.hidetake:gradle-ssh-plugin:1.1.3'
+    }
+}

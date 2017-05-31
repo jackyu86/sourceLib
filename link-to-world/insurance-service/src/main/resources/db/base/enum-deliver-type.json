@@ -1,0 +1,38 @@
+[
+    {
+        "id": "57c24ce40879226abbb36016",
+        "name": "部门发送",
+        "value": "1",
+        "displayOrder": 1
+    },
+    {
+        "id": "57c24ce40879226abbb36017",
+        "name": "邮寄",
+        "value": "2",
+        "displayOrder": 2
+    },
+    {
+        "id": "57c24ce40879226abbb36018",
+        "name": "上门递送",
+        "value": "3",
+        "displayOrder": 3
+    },
+    {
+        "id": "57c24ce40879226abbb36019",
+        "name": "银行柜台领取",
+        "value": "4",
+        "displayOrder": 4
+    },
+    {
+        "id": "57c24ce40879226abbb3601a",
+        "name": "电子保单",
+        "value": "5",
+        "displayOrder": 5
+    },
+    {
+        "id": "57c24ce40879226abbb3601b",
+        "name": "纸质保单",
+        "value": "6",
+        "displayOrder": 6
+    }
+]

@@ -1,0 +1,28 @@
+<md-content class="file-modal" layout-padding>
+    <md-button class="md-icon-button icon-clear" ng-click="close()">X</md-button>
+    <form name="projectForm" class="form-horizontal ">
+        <div layout="row">
+            <div flex="50">
+                <img src="{{file.path}}" alt="">
+            </div>
+            <div flex="50">
+                <div class="file-detail" layout="column">
+                    <span flex="20"><span md-msg="file.title">Title</span>: {{file.title}}</span>
+                    <span flex="20"><span md-msg="file.tags">Tags</span>: {{file.tags}}</span>
+                    <span flex="20"><span md-msg="file.author">Author</span>: {{file.createdBy}}</span>
+                    <span flex="20"><span md-msg="file.createdTime">Created Time</span>: {{file.createdTime | date:'yyyy/MM/dd HH:mm'}}</span>
+                    <div class="file-operation" flex="20">
+                        <md-button class="md-button md-raised md-primary" ng-click="updateFile(file)" flex md-msg="file.update">
+                            Edit
+                        </md-button>
+
+                        <md-button class="md-button md-raised md-warn" ng-click="deleteFile(file)" flex md-msg="file.delete">
+                            Delete
+                        </md-button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</md-content>

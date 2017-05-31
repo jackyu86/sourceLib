@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+<div class="modal fade" id="credit-tracking-list" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">信用账号修改记录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-wrap">
+                    <table class="credit-tracking-table">
+                        <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>信用额度</th>
+                            <th>信用余额</th>
+                            <th>操作</th>
+                            <th>操作者</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="tpl-credit-tracking-item" type="text/x-handlebars-template">
+    <tr data-id="id">
+        <td>{{#DateFormat createdTime "yyyy.MM.dd hh:mm:ss"}}{{/DateFormat}}</td>
+        <td>{{quota}}</td>
+        <td>{{totalCredits}}</td>
+        <td>{{#translateType type}}{{/translateType}}</td>
+        <td>{{operator}}</td>
+    </tr>
+</script>
+</body>
+</html>

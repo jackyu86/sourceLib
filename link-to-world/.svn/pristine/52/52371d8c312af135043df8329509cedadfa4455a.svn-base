@@ -1,0 +1,113 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2 md-msg="user.user">User</h2>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="Create user" ui-sref="console.user.create">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+
+<md-card flex layout="column">
+    <md-subheader ng-if="table.searching">
+        <form class="search-box" layout="row" layout-align="left center">
+            <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            <div flex>
+                <md-input-container>
+                    <label>用户名</label>
+                    <input ng-model="query.username" type="text">
+                </md-input-container>
+                <md-input-container>
+                    <label>使用人姓名</label>
+                    <input ng-model="query.fullName" type="text">
+                </md-input-container>
+                <md-input-container>
+                    <label>联系电话</label>
+                    <input ng-model="query.phone" type="text">
+                </md-input-container>
+                <md-input-container>
+                    <label>角色</label>
+                    <md-select ng-model="query.role">
+                        <md-option value="">
+                            全部
+                        </md-option>
+                        <md-option ng-repeat="role in roles" value="{{role.name}}">
+                            {{role.displayName}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container>
+                    <label>状态</label>
+                    <md-select ng-model="query.status">
+                        <md-option value="">
+                            全部
+                        </md-option>
+                        <md-option value="ACTIVE">正常</md-option>
+                        <md-option value="INACTIVE">禁用</md-option>
+                        <md-option value="AUDITING">审核中</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <md-button class="md-primary md-raised" ng-click="load()">
+                搜索
+            </md-button>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!table.searching">
+        <div layout="row" layout-align="left center">
+            <span>用户列表</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="table.searching = !table.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-table-container flex>
+        <table md-table md-row-select="options.rowSelection" ng-model="selected" md-progress="promise">
+            <thead md-head md-order="query.order">
+            <tr md-row>
+                <th md-column md-order-by="id"><span>用户名</span></th>
+                <th md-column md-order-by="title"><span>用户角色</span></th>
+                <th md-column md-order-by="path"><span>使用人姓名</span></th>
+                <th md-column md-order-by="title"><span>联系电话</span></th>
+                <th md-column md-order-by="title"><span>状态</span></th>
+                <th md-column><span>创建时间</span></th>
+                <th md-column>
+                    <span md-msg="user.action">Action</span>
+                </th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="user"
+                ng-repeat="user in users.items">
+                <td md-cell>{{user.username}}</td>
+                <td md-cell>{{user.roles}}</td>
+                <td md-cell>{{user.fullName}}</td>
+                <td md-cell>{{user.phone}}</td>
+                <td md-cell>{{user.status}}</td>
+                <td md-cell>{{user.createdTime}}</td>
+                <td md-cell layout="row">
+                    <md-button class="md-icon-button" ng-click="updateUser(user)" md-msg="user.edit">
+                        Edit
+                    </md-button>
+                    <md-button class="md-icon-button" ng-click="deleteUser(user, $event)" md-msg="user.deleteUser">
+                        Delete
+                    </md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+    <md-table-pagination md-limit="query.limit" md-page="options.index()" md-total="{{options.total()}}"
+                         md-page-select="options.pageSelector" md-boundary-links="options.boundaryLinks"
+                         md-on-paginate="logPagination"></md-table-pagination>
+
+</md-card>

@@ -1,0 +1,62 @@
+[
+    {
+        "id": "5842950d223fe92a7c49a472",
+        "name": "无关",
+        "value": "0",
+        "displayOrder": 0
+    },
+    {
+        "id": "5842950d223fe92a7c49a46a",
+        "name": "保险公司账号",
+        "value": "1",
+        "displayOrder": 1
+    },
+    {
+        "id": "5842950d223fe92a7c49a46b",
+        "name": "GIRO帐号",
+        "value": "2",
+        "displayOrder": 2
+    },
+    {
+        "id": "5842950d223fe92a7c49a46c",
+        "name": "CPF代理银行帐号",
+        "value": "3",
+        "displayOrder": 3
+    },
+    {
+        "id": "5842950d223fe92a7c49a46d",
+        "name": "CPF帐号",
+        "value": "4",
+        "displayOrder": 4
+    },
+    {
+        "id": "5842950d223fe92a7c49a46e",
+        "name": "CHECKOFF帐号",
+        "value": "5",
+        "displayOrder": 5
+    },
+    {
+        "id": "5842950d223fe92a7c49a46f",
+        "name": "其他银行账号",
+        "value": "9",
+        "displayOrder": 9
+    },
+    {
+        "id": "5842950d223fe92a7c49a470",
+        "name": "普通卡",
+        "value": "7",
+        "displayOrder": 7
+    },
+    {
+        "id": "5842950d223fe92a7c49a471",
+        "name": "存折",
+        "value": "8",
+        "displayOrder": 8
+    },
+    {
+        "id": "5842950d223fe92a7c49a473",
+        "name": "社保卡",
+        "value": "6",
+        "displayOrder": 6
+    }
+]

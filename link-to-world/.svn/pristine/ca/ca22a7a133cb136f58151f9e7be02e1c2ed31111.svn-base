@@ -1,0 +1,14 @@
+[
+    {
+        "id": "57c24ce40879226abbb3601d",
+        "name": "男",
+        "value": "1",
+        "displayOrder": 1
+    },
+    {
+        "id": "57c24ce40879226abbb3601e",
+        "name": "女",
+        "value": "2",
+        "displayOrder": 2
+    }
+]

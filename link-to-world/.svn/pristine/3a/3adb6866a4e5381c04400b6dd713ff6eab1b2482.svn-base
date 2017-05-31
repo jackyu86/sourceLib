@@ -1,0 +1,3 @@
+db:
+  mongo:
+    url: fongo://localhost:27017/mock

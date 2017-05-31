@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>分销商产品管理</title>
+    <link rel="stylesheet" j:css="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static/css/common.css">
+    <link rel="stylesheet" j:css="/static/css/header.css">
+    <link rel="stylesheet" j:css="/static/css/footer.css">
+    <link rel="stylesheet" j:css="/static/css/customer.css">
+    <link rel="stylesheet" j:css="/static/css/dealer-product.css">
+</head>
+<body>
+<j:header folded="false"/>
+<div class="page">
+    <j:customer-sidenav selected="list" category="dealer"/>
+    <div class="main">
+        <div class="page-title">分销商产品管理</div>
+
+        <div id="auto-allocate" class="checkbox">
+            <input j:if="dealer.autoAllocate" checked="checked" type="checkbox">
+            <input j:if="!dealer.autoAllocate" type="checkbox">
+            <label class="checkbox-label">自动分配</label>
+        </div>
+        <div class="management-panel">
+            <input type="hidden" id="dealer-id" j:value="dealer.id">
+            <div class="total-product-panel product-panel">
+            </div>
+            <div class="product-transform">
+                <div class="btn-add">添加</div>
+            </div>
+            <div class="allocated-product-panel product-panel">
+            </div>
+
+        </div>
+
+        <a href="javascript:void(0)" class="btn btn-lg btn-primary btn-save">保存</a>
+    </div>
+</div>
+<j:utils/>
+<j:footer/>
+<script id="tpl_tree" type="text/x-handlebars-template">
+    <div class="mask"></div>
+    <ul class="category-list">
+        {{#each list}}
+        {{#if show}}
+        <li class="category  {{#if checked}}{{else}}closed{{/if}}">
+            <div class="checkbox product">
+                <input name="productNames" type="checkbox" {{#if checked}}checked="checked" {{/if}} value="{{category.id}}">
+                <label class="checkbox-label product-name">
+                    {{category.name}}
+                </label>
+            </div>
+            {{#if productList}}
+            <ul class="product-list">
+                {{#each productList}}
+                <li class=" {{#if checked}}{{else}}closed{{/if}}">
+                    <div class="product checkbox">
+                        <input name="productNames" type="checkbox" {{#if checked}}checked="checked" {{/if}} value="{{name}}">
+                        <label class="checkbox-label product-name">
+                            {{displayName}}
+                        </label>
+                    </div>
+
+                </li>
+                {{/each}}
+            </ul>
+            {{/if}}
+            {{#exist children }}
+            <ul class="sub-category-list">
+                {{#each children}}
+                {{#if show}}
+                <li class="sub-category {{#if checked}}{{else}}closed{{/if}}">
+                    <div class="product checkbox">
+                        <input name="productNames" type="checkbox" {{#if checked}}checked="checked" {{/if}} value="{{category.id}}">
+                        <label class="checkbox-label product-name">
+                            {{category.name}}
+                        </label>
+                    </div>
+                    {{#if productList}}
+                    <ul class="product-list">
+                        {{#each productList}}
+                        <li class=" {{#if checked}}{{else}}closed{{/if}}">
+                            <div class="product checkbox">
+                                <input name="productNames" type="checkbox" {{#if checked}}checked="checked" {{/if}} value="{{name}}">
+                                <label class="checkbox-label product-name">
+                                    {{displayName}}
+                                </label>
+                            </div>
+
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                    {{#exist children }}
+                    <ul class="sub-category-list">
+                        {{#each children}}
+                        {{#if show}}
+                        <li class="sub-category {{#if checked}}{{else}}closed{{/if}}">
+                            <div class="product checkbox">
+                                <input name="productNames" type="checkbox" {{#if checked}}checked="checked" {{/if}} value="{{category.id}}">
+                                <label class="checkbox-label product-name">
+                                    {{category.name}}
+                                </label>
+                            </div>
+                            {{#if productList}}
+                            <ul class="product-list">
+                                {{#each productList}}
+                                <li class=" {{#if checked}}{{else}}closed{{/if}}">
+                                    <div class="product checkbox">
+                                        <input name="productNames" type="checkbox" {{#if checked}}checked="checked" {{/if}} value="{{name}}">
+                                        <label class="checkbox-label product-name">
+                                            {{displayName}}
+                                        </label>
+                                    </div>
+
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/if}}
+                        </li>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                    {{/exist}}
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+            {{/exist}}
+        </li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</script>
+<script id="tpl_tree_allocated" type="text/x-handlebars-template">
+    <ul class="category-list">
+        {{#each list}}
+        {{#if checked}}
+        <li class="category">
+            <div class="product">
+                <div class="product-name">
+                    {{category.name}}
+                </div>
+            </div>
+            {{#if productList}}
+            <ul class="product-list">
+                {{#each productList}}
+                {{#if checked}}
+                <li class="product-wrap">
+                    <div class="product">
+                        <div class=" product-name">
+                            {{displayName}}<a href="javascript:void(0)" class="btn-delete text-danger" data-id="{{name}}"><i class="fa fa-minus-circle"></i></a>
+                        </div>
+                    </div>
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+            {{/if}}
+            {{#exist children }}
+            <ul class="sub-category-list">
+                {{#each children}}
+                {{#if checked}}
+                <li class="sub-category">
+                    <div class="product">
+                        <div class="product-name">
+                            {{category.name}}
+                        </div>
+                    </div>
+                    {{#if productList}}
+                    <ul class="product-list">
+                        {{#each productList}}
+                        {{#if checked}}
+                        <li class="product-wrap">
+                            <div class="product">
+                                <div class=" product-name">
+                                    {{displayName}}<a href="javascript:void(0)" class="btn-delete text-danger" data-id="{{name}}"><i class="fa fa-minus-circle"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                    {{#exist children }}
+                    <ul class="sub-category-list">
+                        {{#each children}}
+                        {{#if checked}}
+                        <li class="sub-category">
+                            <div class="product">
+                                <div class=" product-name">
+                                    {{category.name}}
+                                </div>
+                            </div>
+                            {{#if productList}}
+                            <ul class="product-list">
+                                {{#each productList}}
+                                {{#if checked}}
+                                <li class="product-wrap">
+                                    <div class="product">
+                                        <div class=" product-name">
+                                            {{displayName}}<a href="javascript:void(0)" class="btn-delete text-danger" data-id="{{name}}"><i class="fa fa-minus-circle"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                {{/if}}
+                                {{/each}}
+                            </ul>
+                            {{/if}}
+                        </li>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                    {{/exist}}
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+            {{/exist}}
+        </li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</script>
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/lib/handlebars-v4.0.5.js"></script>
+<script j:js="/static/js/handlebars-helper.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/user/dealer/dealer-product.js"></script>
+
+</body>
+</html>

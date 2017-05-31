@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:j="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>常用投保人</title>
+    <link rel="stylesheet" j:css="/static//css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static//css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static//css/common.css">
+    <link rel="stylesheet" j:css="/static//css/header.css">
+    <link rel="stylesheet" j:css="/static//css/footer.css">
+    <link rel="stylesheet" j:css="/static//css/login.css">
+    <link rel="stylesheet" j:css="/static//css/customer.css">
+</head>
+<body>
+<j:header folded="false"/>
+<div class="page">
+    <j:customer-sidenav selected="policy-holder" category="center"/>
+    <div class="main">
+        <div class="page-title">常用投保人
+            <a j:dealer="status:ACTIVE" href="javascript:void(0)" class="create-btn pull-right">+添加投保人</a>
+        </div>
+        <div class="table-wrap">
+            <input type="hidden" id="policyHoldersSize" j:value="policyHolders.items.size()">
+            <table class="insurant-table">
+                <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>出生日期</th>
+                    <th>证件号码</th>
+                    <th>手机号码</th>
+                    <th>邮箱</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr j:for="policyHolder:policyHolders">
+                    <td j:text="policyHolder.name"></td>
+                    <td j:text="policyHolder.gender"></td>
+                    <td j:text="policyHolder.birthDate"></td>
+                    <td j:text="policyHolder.idNumber"></td>
+                    <td j:text="policyHolder.phone"></td>
+                    <td j:text="policyHolder.email"></td>
+                    <td>
+                        <a j:dealer="status:ACTIVE" j:href="'policy-holder/'+policyHolder.id+'/update'" class="btn text-primary">修改</a>
+                        <a j:dealer="status:ACTIVE" href="javascript:void(0)" j:data-id="policyHolder.id" class="btn text-primary delete-btn">删除</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+<j:footer/>
+<j:utils/>
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/user/policy-holder.js"></script>
+
+</body>
+</html>

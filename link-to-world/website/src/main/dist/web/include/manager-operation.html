@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<div class="divider"></div>
+<div class="page-title">管理操作</div>
+<div id="manager-operation">
+    <script id="tpl-manager-operation" type="text/x-handlebars-template">
+        {{#notAllowedNull status}}
+        <div class="field">
+            <div class="field-name">信用额度</div>
+            <div class="field-value">
+                <input type="text" name="quota" value="{{quota}}" required number>
+                <a href="javascript:void(0)" class="btn updateQuota">分配</a>
+            </div>
+        </div>
+        {{else}}
+        <div class="field">
+            <div class="field-name">信用额度</div>
+            {{#isActive status}}
+            <div class="field-value">
+                <input type="text" name="quota" value="{{quota}}" required number>
+                <a href="javascript:void(0)" class="btn updateQuota">重新分配</a>
+                <a href="#" data-toggle="modal" data-target="#credit-tracking-list" class="btn">修改记录</a>
+            </div>
+            {{else}}
+            <div class="field-value">
+                <input type="text" name="quota" value="{{quota}}" readonly>
+            </div>
+            {{/isActive}}
+        </div>
+        <div class="field">
+            <div class="field-name">我的可用额度</div>
+            <div class="field-value">{{totalCredits}}</div>
+        </div>
+        <div class="field">
+            <div class="field-name">已使用额度</div>
+            <div class="field-value">
+                {{sub quota totalCredits}}
+                {{#isActive status}}
+                <a href="javascript:void(0)" class="btn resetQuota">设置为零</a>
+                {{/isActive}}
+            </div>
+        </div>
+        <div class="field">
+            <div class="field-name">账户状态</div>
+            <div class="field-value">
+                {{#translateStatus status}}{{/translateStatus}}
+                {{#isActive status}}
+                <a href="javascript:void(0)" class="btn updateQuotaStatus">锁定</a>
+                {{else}}
+                <a href="javascript:void(0)" class="btn updateQuotaStatus">解锁</a>
+                {{/isActive}}
+            </div>
+        </div>
+        <div class="field">
+            <div class="field-name">可售产品</div>
+            <div class="field-value">默认<a href="/account/dealer/{{dealerId}}/product" class="btn">查看配置</a></div>
+        </div>
+        {{/notAllowedNull}}
+    </script>
+</div>
+</body>
+</html>

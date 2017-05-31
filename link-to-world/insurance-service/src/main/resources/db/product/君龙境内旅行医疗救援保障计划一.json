@@ -1,0 +1,594 @@
+{
+    "name": "7f8d286df9c846eea367b4ac08a060ee",
+    "description": "保险描述",
+    "keywords": [
+        "境内旅行医疗救援"
+    ],
+    "displayName": "君龙人寿境内旅行医疗救援保障计划一",
+    "tags": [],
+    "publicVisible": "ALL",
+    "insuranceCategoryIds": [
+        "5789a68b28708a938f9b8ffa",
+        "5789a68b28708a938f9b9006"
+    ],
+    "insuranceClaimId": "578b525f7214b5300823adf4",
+    "insuranceVendorId": "5789a68b28708a938f9b901c",
+    "insuranceJobTreeId": "584e06fa75c46e1f30cb80a5",
+    "jobRestricted": null,
+    "jobLevels": [],
+    "jobIds": null,
+    "jobExclude": true,
+    "minUnits": null,
+    "maxUnits": null,
+    "policyTypes": null,
+    "highlightContent": "境内旅行首选，3元起可享救援服务的旅行保障",
+    "featureContent": "<p>1、含紧急救援服务的超高性价比境内旅行保险！</p><p> 2、涵盖意外伤害、意外医疗、急性病医疗、医疗转运、亲属探访等全面保障！</p><p>3、出生满28天至80周岁人士均可投保，跟团、自助出游均适合，24小时随时在线投保！</p>",
+    "tipsContent": "<p>1、本产品由君龙人寿保险有限公司承保,目前该公司在福建、浙江设有分支机构。客户购买后，保单生效前可办理退保及变更，后续变更与理赔事务请联系网站客服专员。</p><p>2、18周岁以下的未成年人身故保险金额以保险事故发生时中国保监会规定的未成年人身故保险金额限额为准。</p><p>3、本产品中的意外/急性病医疗保障,两者赔偿总额不超过单个责任的保额,100元免赔额,扣除免赔额后按100%给付比例给付医疗保险金。</p><p>4、本产品71周岁及以上的被保险人身故/全残保险金额减半;医疗费用保险金额不变,赔偿标准按扣减100元免赔后按50%赔付。</p><p>5、本产品不支持企事业单位作为投保人。</p><p>6、本产品不承保被保险人从事潜水、滑水、滑雪、滑冰、驾驶或乘坐滑翔翼、滑翔伞、跳伞、攀岩运动、探险活动(如江河漂流)、武术比赛、摔跤比赛、柔道、空手道、跆拳道、马术、拳击、特技表演、驾驶卡丁车、赛马、赛车、各种车辆表演、蹦极等高风险运动。景区内的滑雪、漂流、骑马运动除外。可承保旅行期间的休闲旅游、业余跑步、远足徒步、登山运动、定向运动、拓展活动、场地趣味活动、自行车运动、山地自行车越野、场地/越野轮滑、自驾车旅行、游泳等低风险运动（前述仅限体验式活动，不包含专业性质的训练或运动）。</p><p>7、本产品由远盟康健提供紧急救援服务,救援热线:400-8185050或010-57390650,免除您旅途中的后顾之忧。</p><p>8、本产品仅提供电子保单。</p><p>9、同一保险期间内，本产品各计划间仅限购买一份，可承保游览性质的本市出行。</p><p>10、在中国境内(不含港澳台)的外籍人士购买本产品需满足:在中国生活或工作半年以上。</p><p>11、本产品指定医院为符合条款要求的医院,除了北京平谷区所有医院。请注意:北京市平谷区所有医院的就医均不给予理赔。</p><p>12、本产品为网络销售产品，网上投保、网上支付、网上即时核保并出具电子保单，您可拨打君龙人寿保险公司电话400-666-0123或登录君龙人寿保险公司官网http://www.kdlins.com.cn/cavLogon.action?queryType=singleCust查询、验真。</p>",
+    "cases": [
+        "<p>陈女士今年28岁，公司组织从上海去黄山旅游，陈女士购买了一份“君龙境内旅行医疗救援保障计划”，保险期限3天，保费仅花3元。下山时因过于疲惫，踩空台阶不慎摔伤并导致左腿大腿骨折，在医院住院10天，手术加治疗总计花费10680元。因陈女士治疗需要，经向保险公司申请，其母亲从上海至黄山当地医院探访照料。后扣除非社保目录范围的费用1200元及免赔额100元后，陈女士获得意外医疗费用报销（10680-1200-100）*100%=9380元，以及其母亲往返交通费及合理住宿费共计1850元，合计获得理赔11230元。</p>"
+    ],
+    "questions": [
+        {
+            "question": "本产品要求的医院是指?",
+            "answer": "本产品要求的医院是指经中华人民共和国卫生行政部门评审确定的二级或以上的公立医院,但不包括精神病院及专供康复、护理、疗养、戒酒、戒毒、养老等非以直接诊治病人为目的的医疗机构,该医院必须具有符合国家有关医院管理规则设置标准的医疗设施,且全天24小时有合格的医师和护士驻院提供医疗和护理服务。"
+        },
+        {
+            "question": "本产品是否承保本市出行?",
+            "answer": "本产品可承保本市出行,但仅限以旅游为目的的出行。"
+        },
+        {
+            "question": "急性病如何定义？",
+            "answer": "指突然发生急性疾病，该急性疾病是被保险人在本附加合同生效之前未曾接受诊疗的，在本附加合同保险期间内突然发生的、不及时救治将危及生命的急性疾病，但以下疾病或由以下原因所导致的疾病不在本定义的范围之内：<br/>(1)任何获取移植器官或者捐献器官的行为；<br/>(2)化学污染；<br/>(3)既往症或慢性疾病急性发作。"
+        },
+        {
+            "question": "这款产品对投保份数和保额是否有限制呢？",
+            "answer": "同一保障期间内，与君龙其它境内旅行保险合计每人限购一份，可投保意外身故/残疾的限额最高不超过60万元。同时根据保监会的规定，未满10岁的未成年人身故保险金额最高不能超过人民币20万元，满10周岁、未满18周岁的未成年人身故保险金额最高不能超过人民币50万元。"
+        },
+        {
+            "question": "保单生效后是否还能退保呢？",
+            "answer": "不能。但在保单生效前，都可以联系君龙人寿客服协助您办理退保或其它变更事项。"
+        }
+    ],
+    "plp": [
+        {
+            "group": "plan",
+            "field": "period",
+            "editable": false
+        }
+    ],
+    "pdp": [
+        {
+            "group": "product",
+            "field": "serial",
+            "editable": false
+        },
+        {
+            "group": "plan",
+            "field": "period",
+            "editable": false
+        },
+        {
+            "group": "liability",
+            "field": "57c24ce40879226abbb35fb8"
+        },
+        {
+            "group": "liability",
+            "field": "57c24ce40879226abbb35fd6"
+        },
+        {
+            "group": "liability",
+            "field": "58364dba99a6bc1744d17711"
+        },
+        {
+            "group": "liability",
+            "field": "58364ef499a6bc29d4ec74f5"
+        },
+        {
+            "group": "liability",
+            "field": "58364ef499a6bc29d4ec74f3"
+        },
+        {
+            "group": "liability",
+            "field": "58364ef499a6bc29d4ec74f9"
+        },
+        {
+            "group": "liability",
+            "field": "58364ef499a6bc29d4ec74f6"
+        }
+    ],
+    "formGroups": [
+        {
+            "name": "plan",
+            "optional": false,
+            "fields": [
+                {
+                    "name": "startTime",
+                    "optional": {},
+                    "editable": true
+                },
+                {
+                    "name": "period",
+                    "options": {},
+                    "editable": true,
+                    "hidden": true,
+                    "defaultValue": {
+                        "displayName": "1天",
+                        "unit": "DAY",
+                        "value": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "policy-holder",
+            "fields": [
+                {
+                    "name": "name",
+                    "editable": true
+                },
+                {
+                    "name": "id",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "身份证",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "护照",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "军人证",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "台胞证",
+                                "value": "14"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "9"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "birthDate",
+                    "editable": true
+                },
+                {
+                    "name": "gender",
+                    "editable": true
+                },
+                {
+                    "name": "phone",
+                    "editable": true
+                },
+                {
+                    "name": "email",
+                    "editable": true
+                },
+                {
+                    "name": "age",
+                    "options": {
+                        "min": 18
+                    },
+                    "editable": false,
+                    "hidden": true
+                }
+            ]
+        },
+        {
+            "name": "insured",
+            "fields": [
+                {
+                    "name": "name",
+                    "editable": true
+                },
+                {
+                    "name": "id",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "身份证",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "护照",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "军人证",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "台胞证",
+                                "value": "14"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "9"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "birthDate",
+                    "editable": true
+                },
+                {
+                    "name": "gender",
+                    "editable": true
+                },
+                {
+                    "name": "relation",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "本人",
+                                "value": "5"
+                            },
+                            {
+                                "displayName": "父母",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "子女",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "配偶",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "6"
+                            }
+                        ]
+                    },
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "age",
+                    "options": {
+                        "min": 0,
+                        "max": 80
+                    },
+                    "editable": false,
+                    "hidden": true
+                }
+            ]
+        },
+        {
+            "name": "beneficiary",
+            "fields": [
+                {
+                    "name": "legalBeneficiary",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "是",
+                                "value": "Y"
+                            }
+                        ]
+                    },
+                    "displayAs": "radio",
+                    "defaultValue": "Y"
+                }
+            ]
+        },
+        {
+            "name": "liability",
+            "fields": [
+                {
+                    "name": "57c24ce40879226abbb35fb8",
+                    "editable": true,
+                    "defaultValue": 100000
+                },
+                {
+                    "name": "57c24ce40879226abbb35fd6",
+                    "editable": true,
+                    "defaultValue": 100000
+                },
+                {
+                    "name": "58364dba99a6bc1744d17711",
+                    "editable": true,
+                    "defaultValue": 30000
+                },
+                {
+                    "name": "58364ef499a6bc29d4ec74f5",
+                    "editable": true,
+                    "defaultValue": 8000
+                },
+                {
+                    "name": "58364ef499a6bc29d4ec74f3",
+                    "editable": true,
+                    "defaultValue": 100000
+                },
+                {
+                    "name": "58364ef499a6bc29d4ec74f9",
+                    "editable": true,
+                    "defaultValue": 5000
+                },
+                {
+                    "name": "58364ef499a6bc29d4ec74f6",
+                    "editable": true,
+                    "defaultValue": 5000
+                }
+            ]
+        },
+        {
+            "name": "policy",
+            "optional": false,
+            "fields": [
+                {
+                    "name": "deliverType",
+                    "options": {},
+                    "editable": true
+                }
+            ]
+        },
+        {
+            "name": "insurance-statement",
+            "optional": false,
+            "fields": [
+                {
+                    "name": "agree",
+                    "options": {},
+                    "editable": true
+                }
+            ]
+        }
+    ],
+    "period": {
+        "type": "USER_SELECTION",
+        "selections": [
+            {
+                "displayName": "1天",
+                "unit": "DAY",
+                "value": 1
+            },
+            {
+                "displayName": "2天",
+                "unit": "DAY",
+                "value": 2
+            },
+            {
+                "displayName": "3天",
+                "unit": "DAY",
+                "value": 3
+            },
+            {
+                "displayName": "4天",
+                "unit": "DAY",
+                "value": 4
+            },
+            {
+                "displayName": "5天",
+                "unit": "DAY",
+                "value": 5
+            },
+            {
+                "displayName": "6天",
+                "unit": "DAY",
+                "value": 6
+            },
+            {
+                "displayName": "7天",
+                "unit": "DAY",
+                "value": 7
+            },
+            {
+                "displayName": "8天",
+                "unit": "DAY",
+                "value": 8
+            },
+            {
+                "displayName": "9天",
+                "unit": "DAY",
+                "value": 9
+            },
+            {
+                "displayName": "10天",
+                "unit": "DAY",
+                "value": 10
+            },
+            {
+                "displayName": "11天",
+                "unit": "DAY",
+                "value": 11
+            },
+            {
+                "displayName": "12天",
+                "unit": "DAY",
+                "value": 12
+            },
+            {
+                "displayName": "13天",
+                "unit": "DAY",
+                "value": 13
+            },
+            {
+                "displayName": "14天",
+                "unit": "DAY",
+                "value": 14
+            },
+            {
+                "displayName": "15天",
+                "unit": "DAY",
+                "value": 15
+            },
+            {
+                "displayName": "16天",
+                "unit": "DAY",
+                "value": 16
+            },
+            {
+                "displayName": "17天",
+                "unit": "DAY",
+                "value": 17
+            },
+            {
+                "displayName": "18天",
+                "unit": "DAY",
+                "value": 18
+            },
+            {
+                "displayName": "19天",
+                "unit": "DAY",
+                "value": 19
+            },
+            {
+                "displayName": "20天",
+                "unit": "DAY",
+                "value": 20
+            },
+            {
+                "displayName": "21天",
+                "unit": "DAY",
+                "value": 21
+            },
+            {
+                "displayName": "22天",
+                "unit": "DAY",
+                "value": 22
+            },
+            {
+                "displayName": "23天",
+                "unit": "DAY",
+                "value": 23
+            },
+            {
+                "displayName": "24天",
+                "unit": "DAY",
+                "value": 24
+            },
+            {
+                "displayName": "25天",
+                "unit": "DAY",
+                "value": 25
+            },
+            {
+                "displayName": "26天",
+                "unit": "DAY",
+                "value": 26
+            },
+            {
+                "displayName": "27天",
+                "unit": "DAY",
+                "value": 27
+            },
+            {
+                "displayName": "28天",
+                "unit": "DAY",
+                "value": 28
+            },
+            {
+                "displayName": "29天",
+                "unit": "DAY",
+                "value": 29
+            },
+            {
+                "displayName": "30天",
+                "unit": "DAY",
+                "value": 30
+            }
+        ],
+        "startTimeType": "USER_INPUT"
+    },
+    "payment": {
+        "methods": [
+            "FIXED"
+        ]
+    },
+    "insurances": [
+        {
+            "insuranceId": "57c24ce40879226abbb3604d",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "description": "被保险人在旅行期间发生意外事故，且在发生该事故180天内导致身故或伤残，保险公司按照保单上所载相应保险金额给付身故保险金或伤残保险金。其中伤残保险金根据伤残程度按比例赔付。71周岁及以上的被保险人，意外身故/伤残保险金额减半。 ",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 100000
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fd6",
+                    "description": "被保险人在旅行期间突发急性病，并自急性病发作之日起30日内因该急性病身故的，保险公司按照保单上所载相应保险金额给付急性病身故保险金。71周岁及以上的被保险人，急性病身故保险金额减半。 ",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 100000
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "58364dba99a6bc1744d17711",
+                    "description": "被保险人在旅行期间遭受意外事故、自事故发生之日起180天内产生的合理且必要的医院治疗费用，或被保险人在旅行期间突发急性病、3日内因急性病在医院进行治疗、自治疗之日起180天内产生的合理且必要的医疗费用，保险公司将在保单上所载相应保险金额内免赔100元后，100%赔付。（71周岁及以上的被保险人，因保险事故造成的医疗费用，保险公司在扣除100元免赔后，50%赔付） ",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 30000
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "58364ef499a6bc29d4ec74f5",
+                    "description": "被保险人在旅行期间因遭受意外伤害事故身故或突发急性病导致身故，保险公司按照保单上所载相应保险金额给付丧葬保险金。",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 8000
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "58364ef499a6bc29d4ec74f3",
+                    "description": "被保险人在旅行期间遭受意外事故或突发急性病，经救援服务机构授权医生从医疗角度认定为有运送必要的,则将该被保险人送至更为合适之医院；经认定为有送返必要的,则将被保险人送返至常住地或距离其常住地最近的医院。保险公司在保单上所载相应保险金额内承担运送或送返费用。",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 100000
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "58364ef499a6bc29d4ec74f9",
+                    "description": "被保险人在旅行期间遭受意外伤害或突发急性病导致在非常住地身故的，经保险公司许可，救援服务机构可安排该被保险人的一名成年直系亲属前往被保险人身故地办理善后。保险公司在保单上所载相应保险金额内承担该名亲属一套往返被保险人身故地与亲属所在地的普通航班经济舱机票或其他更经济交通方式的费用以及实际支出的合理住宿费。",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 5000
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "58364ef499a6bc29d4ec74f6",
+                    "description": "被保险人在旅行期间遭受意外伤害或突发急性病的，经救援服务机构的授权医生与主治医生共同认定被保险人预计住院时间超过7日(不含7日)，经保险公司许可，救援服务机构可安排该被保险人的一名成年直系亲属前往被保险人住院地点探望。保险公司在保单上所载相应保险金额内承担该名亲属一套往返普通航班经济舱机票或其他更经济交通方式的费用以及实际支出的合理住宿费。",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 5000
+                    }
+                }
+            ]
+        }
+    ],
+    "status": "ACTIVE",
+    "type": "MAIN",
+    "discount": 1,
+    "insuranceClauseIds": [
+        "578b57967214b52d84eb4f56",
+        "57c24ce40879226abbb36087",
+        "57c24ce40879226abbb36088"
+    ],
+    "priceTableUrl": "http://baodan.zhongmin.cn/clause/Accid/Accid_1304_5.pdf",
+    "customerNotificationUrl": "http://baodan.zhongmin.cn/clause/ClientNotification.pdf",
+    "agreeUrls": [
+        {
+            "name": "保险条款",
+            "url": "/product/7f8d286df9c846eea367b4ac08a060ee/clause"
+        },
+        {
+            "name": "客户告知书",
+            "url": "http://baodan.zhongmin.cn/clause/ClientNotification.pdf"
+        }
+    ],
+    "planCode": "0104001"
+}

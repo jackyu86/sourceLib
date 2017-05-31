@@ -1,0 +1,45 @@
+<md-dialog aria-label="Update enum value">
+    <md-dialog-title>
+        <md-subheader>
+            <div layout="row">
+                <span>更新枚举值</span>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-font-icon="fa-close" class="fa" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-subheader>
+    </md-dialog-title>
+
+    <md-dialog-content md-padding class="md-padding">
+        <div>
+            <md-input-container>
+                <label>显示名称</label>
+                <input ng-model="value.name">
+            </md-input-container>
+        </div>
+
+        <div>
+            <md-input-container>
+                <label>值</label>
+                <input ng-model="value.value">
+            </md-input-container>
+        </div>
+
+        <div>
+            <md-input-container>
+                <label>顺序</label>
+                <input ng-model="value.displayOrder">
+            </md-input-container>
+        </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+        <md-button ng-click="update()">
+            保存
+        </md-button>
+        <md-button ng-click="cancel()">
+            取消
+        </md-button>
+    </md-dialog-actions>
+</md-dialog>

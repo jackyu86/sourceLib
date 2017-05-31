@@ -1,0 +1,60 @@
+package com.caej.insurance.api;
+
+import com.caej.product.api.ProductPriceWebService;
+
+import io.sited.Module;
+import io.sited.ModuleInfo;
+import io.sited.api.APIConfig;
+import io.sited.api.APIModule;
+
+/**
+ * @author chi
+ */
+@ModuleInfo(name = "insurance.api", require = {APIModule.class})
+public class InsuranceModule extends Module {
+    @Override
+    protected void configure() throws Exception {
+        InsuranceOptions options = options(InsuranceOptions.class);
+        APIConfig apiConfig = require(APIConfig.class);
+        apiConfig.client(InsuranceAreaWebService.class, options.url);
+        apiConfig.client(InsuranceCategoryWebService.class, options.url);
+        apiConfig.client(InsuranceClaimWebService.class, options.url);
+        apiConfig.client(InsuranceClauseWebService.class, options.url);
+        apiConfig.client(InsuranceCountryWebService.class, options.url);
+        apiConfig.client(InsuranceDeclarationWebService.class, options.url);
+        apiConfig.client(InsuranceFormGroupWebService.class, options.url);
+        apiConfig.client(InsuranceFormFieldWebService.class, options.url);
+        apiConfig.client(InsuranceJobTreeWebService.class, options.url);
+        apiConfig.client(InsuranceJobWebService.class, options.url);
+        apiConfig.client(InsuranceWebService.class, options.url);
+        apiConfig.client(InsuranceLiabilityGroupWebService.class, options.url);
+        apiConfig.client(InsuranceLiabilityWebService.class, options.url);
+        apiConfig.client(InsuranceSubjectWebService.class, options.url);
+        apiConfig.client(ProductPriceWebService.class, options.url);
+        apiConfig.client(InsuranceVendorWebService.class, options.url);
+
+        apiConfig.client(EnumDeliverTypeWebService.class, options.url);
+        apiConfig.client(EnumGenderTypeWebService.class, options.url);
+        apiConfig.client(EnumCertiTypeWebService.class, options.url);
+        apiConfig.client(EnumMarriageTypeWebService.class, options.url);
+        apiConfig.client(EnumPolicyRelationTypeWebService.class, options.url);
+        apiConfig.client(EnumBeneficiaryTypeWebService.class, options.url);
+        apiConfig.client(EnumLegalBeneficiaryTypeWebService.class, options.url);
+        apiConfig.client(EnumPayModeTypeWebService.class, options.url);
+        apiConfig.client(EnumAccountTypeWebService.class, options.url);
+        apiConfig.client(EnumOverManageTypeWebService.class, options.url);
+        apiConfig.client(EnumOverdueOptionTypeWebService.class, options.url);
+        apiConfig.client(EnumBankTypeWebService.class, options.url);
+        apiConfig.client(EnumCoveragePeriodTypeWebService.class, options.url);
+        apiConfig.client(EnumChargeModeTypeWebService.class, options.url);
+        apiConfig.client(EnumChargePeriodTypeWebService.class, options.url);
+        apiConfig.client(EnumCountWayTypeWebService.class, options.url);
+        apiConfig.client(EnumInvoiceDeliverTypeWebService.class, options.url);
+        apiConfig.client(EnumYesOrNotTypeWebService.class, options.url);
+        apiConfig.client(EnumPayModeWebService.class, options.url);
+        apiConfig.client(EnumPolicyTypeWebService.class, options.url);
+
+        apiConfig.client(EnumTypeWebService.class, options.url);
+        apiConfig.client(EnumValueWebService.class, options.url);
+    }
+}

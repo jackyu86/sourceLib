@@ -1,0 +1,85 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ui-sref="console.insurance.clause.list" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <span>更新保险条款</span>
+        <span flex></span>
+    </div>
+</md-toolbar>
+
+<md-content flex>
+    <md-card>
+        <form name="clauseForm" class="md-padding">
+            <md-input-container class="md-block">
+                <label>条款名称</label>
+                <input required name="name" ng-model="data.clause.name"/>
+                <div ng-messages="clauseForm.name.$error">
+                    <div ng-message="required">请输入条款名称</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>条款备案号</label>
+                <input required name="serialNumber" ng-model="data.clause.serialNumber"/>
+                <div ng-messages="clauseForm.serialNumber.$error">
+                    <div ng-message="required">请输入条款备案号</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>保险条款类型</label>
+                <md-select name="type" ng-change="changeType()" ng-model="data.clause.type" required>
+                    <md-option ng-repeat="type in types" value="{{type}}">
+                        {{type|clauseType}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="clauseForm.type.$error">
+                    <div ng-message="required">请选择供应商级别</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <md-button class="md-button md-raised" ngf-select="uploadContent($file)">上传条款</md-button>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <div layout="row">
+                    条款内容：
+                    <div ng-if="data.clause.contentURL"><a target="_blank" href="{{data.clause.contentURL}}">点击查看</a></div>
+                    <div ng-if="!data.clause.contentURL">暂无</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <md-button class="md-button md-raised" ngf-select="uploadExclusion($file)">上传除外责任</md-button>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <div layout="row">
+                    除外责任：
+                    <div ng-if="data.clause.exclusionsUrl"><a target="_blank" href="{{data.clause.exclusionsUrl}}">点击查看</a></div>
+                    <div ng-if="!data.clause.exclusionsUrl">暂无</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <md-button class="md-button md-raised" ngf-select="uploadWord($file)">上传WORD</md-button>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <div layout="row">
+                    WORD：
+                    <div ng-if="data.clause.wordURL"><a target="_blank" href="{{data.clause.wordURL}}">点击查看</a></div>
+                    <div ng-if="!data.clause.wordURL">暂无</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <md-button class="md-button md-raised" ngf-select="uploadPdf($file)">上传PDF</md-button>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <div layout="row">
+                    PDF：
+                    <div ng-if="data.clause.pdfURL"><a target="_blank" href="{{data.clause.pdfURL}}">点击查看</a></div>
+                    <div ng-if="!data.clause.pdfURL">暂无</div>
+                </div>
+            </md-input-container>
+            <div layout="row" class="md-padding">
+                <md-button class="md-button md-raised md-primary" ng-disabled="processing || clauseForm.$invalid" ng-click="save()" ng-disabled="processing">保存</md-button>
+                <md-button class="md-button" ng-click="cancel()">取消</md-button>
+            </div>
+        </form>
+    </md-card>
+</md-content>

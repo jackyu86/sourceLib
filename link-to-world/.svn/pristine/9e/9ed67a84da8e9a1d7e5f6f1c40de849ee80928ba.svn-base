@@ -1,0 +1,45 @@
+{
+    "parent": {
+        "username": "18200000001",
+        "password": "111111",
+        "name": "18200000001",
+        "email": "18200000001@jl.com",
+        "contactName": "18200000001",
+        "contactIdNumber": "431381198109106573",
+        "cellphone": "18200000001",
+        "state": "福建省",
+        "city": "厦门市",
+        "ward": "思明区",
+        "level": "LEVEL1",
+        "products": [
+            "57c24ce40879226abbb36014",
+            "57c24ce40879226abbb3600f",
+            "57c24ce40879226abbb36010"
+        ],
+        "credit": {
+            "totalCredits": 20000,
+            "quota": 20000
+        }
+    },
+    "child": {
+        "username": "18200000002",
+        "password": "111111",
+        "name": "18200000002",
+        "email": "18200000002@jl.com",
+        "contactName": "18200000002",
+        "contactIdNumber": "431381198809122734",
+        "cellphone": "18200000002",
+        "state": "福建省",
+        "city": "厦门市",
+        "ward": "思明区",
+        "level": "LEVEL2",
+        "products": [
+            "57c24ce40879226abbb36014",
+            "57c24ce40879226abbb3600f"
+        ],
+        "credit": {
+            "totalCredits": 10000,
+            "quota": 10000
+        }
+    }
+}

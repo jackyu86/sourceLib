@@ -1,0 +1,308 @@
+[
+    {
+        "id": "584e5b91223fe90820b8f1ab",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "北京市",
+        "shortName": "beijing",
+        "provinceCode": "110000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f1bd",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "天津市",
+        "shortName": "tianjin",
+        "provinceCode": "120000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f1cf",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "河北省",
+        "shortName": "hebei",
+        "provinceCode": "130000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f291",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "山西省",
+        "shortName": "shanxi",
+        "provinceCode": "140000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f31f",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "内蒙古自治区",
+        "shortName": "neimenggu",
+        "provinceCode": "150000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f39b",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "辽宁省",
+        "shortName": "liaoning",
+        "provinceCode": "210000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f41c",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "吉林省",
+        "shortName": "jilin",
+        "provinceCode": "220000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f46a",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "黑龙江省",
+        "shortName": "heilongjiang",
+        "provinceCode": "230000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f504",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "上海市",
+        "shortName": "shanghai",
+        "provinceCode": "310000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f517",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "江苏省",
+        "shortName": "jiangsu",
+        "provinceCode": "320000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f594",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "浙江省",
+        "shortName": "zhejiang",
+        "provinceCode": "330000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f605",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "安徽省",
+        "shortName": "anhui",
+        "provinceCode": "340000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f68f",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "福建省",
+        "shortName": "fujian",
+        "provinceCode": "350000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f6f7",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "江西省",
+        "shortName": "jiangxi",
+        "provinceCode": "360000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f772",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "山东省",
+        "shortName": "shandong",
+        "provinceCode": "370000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f81e",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "河南省",
+        "shortName": "henan",
+        "provinceCode": "410000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f8e1",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "湖北省",
+        "shortName": "hubei",
+        "provinceCode": "420000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f963",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "湖南省",
+        "shortName": "hunan",
+        "provinceCode": "430000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8f9f9",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "广东省",
+        "shortName": "guangdong",
+        "provinceCode": "440000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fa99",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "广西壮族自治区",
+        "shortName": "guangxi",
+        "provinceCode": "450000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb24",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "海南省",
+        "shortName": "hainan",
+        "provinceCode": "460000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb46",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "重庆市",
+        "shortName": "chongqing",
+        "provinceCode": "500000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fb6e",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "四川省",
+        "shortName": "sicuan",
+        "provinceCode": "510000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fc4d",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "贵州省",
+        "shortName": "guizhou",
+        "provinceCode": "520000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fcb4",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "云南省",
+        "shortName": "yunnan",
+        "provinceCode": "530000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fd4e",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "西藏自治区",
+        "shortName": "xizang",
+        "provinceCode": "540000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fda1",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "陕西省",
+        "shortName": "shanxi",
+        "provinceCode": "610000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe21",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "甘肃省",
+        "shortName": "gansu",
+        "provinceCode": "620000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fe92",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "青海省",
+        "shortName": "qinghai",
+        "provinceCode": "630000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fec7",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "宁夏回族自治区",
+        "shortName": "ninxia",
+        "provinceCode": "640000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8fee8",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "新疆维吾尔自治区",
+        "shortName": "xinjiang",
+        "provinceCode": "650000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff5e",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "台湾省",
+        "shortName": "taiwan",
+        "provinceCode": "710000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff5f",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "香港特别行政区",
+        "shortName": "xianggang",
+        "provinceCode": "810000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    },
+    {
+        "id": "584e5b91223fe90820b8ff60",
+        "countryId": "5789ed9896ad8fb67fec0936",
+        "name": "澳门特别行政区",
+        "shortName": "aomen",
+        "provinceCode": "820000",
+        "createdTime": "2016-12-12T08:10:57Z",
+        "createdBy": "init"
+    }
+]

@@ -1,0 +1,71 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>产品列表</h2>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="新建产品" ui-sref="console.product.create">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-subheader ng-if="productTable.searching">
+        <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadProducts()">
+            <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            <div flex>
+                <input ng-model="productTable.query.displayName" type="text">
+            </div>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!productTable.searching && !productTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>产品列表</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="productTable.searching = !productTable.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table ng-model="productTable.selected">
+            <thead md-head md-order="productTable.query.order" md-on-reorder="reloadProducts" class="md-accent">
+            <tr md-row>
+                <th md-column><span>编号</span></th>
+                <th md-column><span>产品名称</span></th>
+                <th md-column><span>版本号</span></th>
+                <th md-column><span>是否上线</span></th>
+                <th md-column md-order-by="created_time"><span>创建时间</span></th>
+                <th md-column><span>操作</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="product"
+                ng-repeat="product in productTable.data.items" md-auto-select>
+                <td md-cell>{{product.name}}</td>
+                <td md-cell>{{product.displayName}}</td>
+                <td md-cell>{{product.version}}</td>
+                <td md-cell><span ng-if="product.status=='ACTIVE'">已上线</span><span ng-if="product.status=='INACTIVE'">已下线</span></td>
+                <td md-cell>{{product.createdTime | date:'yyyy/MM/dd'}}</td>
+                <td md-cell layout="row">
+                    <md-button class="md-icon-button" ng-if="product.latestVersion" ng-click="productTable.edit(product)">编辑</md-button>
+                    <md-button class="md-icon-button" ng-if="product.status=='INACTIVE'" ng-click="active(product)">上线</md-button>
+                    <md-button class="md-icon-button" ng-if="product.status=='ACTIVE'" ng-click="inActive(product)">下线</md-button>
+                    <md-button class="md-icon-button" ng-click="copy(product)">复制</md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+    <md-table-pagination md-limit="productTable.query.limit" md-page="productTable.query.page" md-total="{{productTable.data.total}}"
+                         md-page-select="productTable.options.pageSelector" md-boundary-links="productTable.options.boundaryLinks"
+                         md-on-paginate="reloadProducts"></md-table-pagination>
+
+</md-card>

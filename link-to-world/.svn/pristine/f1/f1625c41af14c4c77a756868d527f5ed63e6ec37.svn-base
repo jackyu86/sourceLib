@@ -1,0 +1,311 @@
+html,
+body {
+    height: 100%;
+    position: relative;
+    min-height: 600px;
+    background-color: #f4f4f4;
+}
+
+input[type=date],
+.input-calendar {
+    -webkit-appearance: none;
+    background: #fff url(/static/img/icon_date.png) no-repeat right 10px center;
+}
+
+.page {
+    width: 1200px;
+    margin: 36px auto;
+}
+
+.page::before, .page::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.side-nav {
+    float: left;
+    width: 220px;
+    border: 2px solid #0d9da0;
+}
+
+.side-nav .list-group-item {
+    position: relative;
+    border-left: 0;
+    border-right: 0;
+    padding: 0;
+}
+
+.side-nav .list-group-item:first-child {
+    border-top: 0;
+}
+
+.side-nav .list-group-item:last-child {
+    border-bottom: 0;
+}
+
+.side-nav .list-group-item:hover {
+    background: #f4f4f4;
+}
+
+.side-nav .list-group-item > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    padding: 16px;
+}
+
+.side-nav .list-group-item.active > a {
+    color: #fff;
+}
+
+.side-nav .list-group-item.active:hover {
+    background: #0d9da0;
+}
+
+.side-nav .sub-list-group {
+    display: none;
+    position: absolute;
+    top: -2px;
+    left: 100%;
+    width: 220px;
+    border: 2px solid #0d9da0;
+    z-index: 100;
+}
+
+.side-nav .list-group-item:hover > .sub-list-group {
+    display: block;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    float: left;
+    width: 960px;
+    min-height: 600px;
+    margin-left: 20px;
+}
+
+.product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product {
+    position: relative;
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.product .recommend-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/hot.png) no-repeat;
+    width: 44px;
+    height: 44px;
+    background-size: 44px;
+}
+
+.product .header {
+    padding: 30px 20px;
+    display: table;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+}
+
+.product .header .image-wrap {
+    width: 100px;
+    height: 42px;
+    display: table-cell;
+}
+
+.product .header .header-content {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 20px;
+}
+
+.product .header .header-content h4 {
+    margin: 0 0 10px;
+    line-height: 18px;
+}
+
+.product .header .header-content p {
+    margin: 0;
+    font-size: 12px;
+    color: #ccc;
+    line-height: 18px;
+}
+
+.product .header .header-link {
+    display: table-cell;
+    width: 100px;
+}
+
+.product .content {
+    padding: 30px 20px;
+}
+
+.product .content .attribute-list {
+    line-height: 36px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.product .content .attribute-list:before, .product .content .attribute-list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.product .content .attribute {
+    float: left;
+    color: #ccc;
+    margin-right: 40px;
+}
+
+.product .content .attribute-name {
+    font-weight: normal;
+}
+
+.product .content .attribute-value {
+    margin-left: 5px;
+    display: inline-block;
+    position: relative;
+}
+
+.product .content .attribute-value .attribute-message {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    white-space: nowrap;
+    padding-left: 15px;
+}
+
+.product .content .attribute-value .attribute-message.show {
+    display: block;
+}
+
+.product .content .liability-list {
+    clear: left;
+    display: table;
+}
+
+.product .content .liability-list:before,
+.product .content .liability-list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.product .content .liability {
+    display: table-row;
+    padding: 10px 0;
+}
+
+.product .content .liability:before {
+    content: "";
+    width: 1px;
+    min-height: 34px;
+    margin: 10px 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.product .content .liability-name {
+    display: table-cell;
+    padding-right: 20px;
+    max-width: 200px;
+    vertical-align: middle;
+}
+
+.product .content .liability-name.small {
+    font-size: 12px;
+}
+
+.product .content .liability-name.smaller {
+    font-size: 11px;
+}
+
+.product .content .liability-name.smallest {
+    font-size: 10px;
+    max-width: 100%;
+}
+
+.product .content .liability-value {
+    display: table-cell;
+}
+
+.product .content .liability-value select,
+.product .content .liability-value input {
+    width: auto;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.product .media {
+    margin: 0;
+}
+
+.product .footer {
+    line-height: 55px;
+    padding: 20px;
+    text-align: center;
+    border-left: 1px solid #eee;
+    vertical-align: middle;
+    min-width: 280px;
+    max-width: 280px;
+}
+
+.product .footer-price {
+    text-align: center;
+    width: 100%;
+}
+
+.product .footer .score {
+    display: block;
+    font-size: 12px;
+}
+
+.product .footer .score > span {
+    color: #e2626f;
+}
+
+.product .footer .original {
+    font-size: 16px;
+    color: #ccc;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.product .footer .sale {
+    color: #6ec5c6;
+    font-size: 20px;
+}
+
+.product .footer .button-wrap {
+    width: 100%;
+}
+
+.product .footer .buy {
+    height: 55px;
+    line-height: 55px;
+    padding: 0 35px;
+}
+
+.recommend-product {
+    margin-top: 50px;
+}
+
+.recommend-product > h4 {
+    padding: 30px 0;
+    margin: 0;
+}

@@ -1,0 +1,11 @@
+.idea/
+.gradle/
+build/
+*.iml
+classes/
+gradle.properties
+**/src/dev/java/
+**/src/main/dist/file/
+**/src/main/dist/index/
+
+

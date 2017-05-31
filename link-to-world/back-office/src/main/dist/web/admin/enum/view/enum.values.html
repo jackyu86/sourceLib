@@ -1,0 +1,38 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>{{enumType.displayName}}</h2>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="新建枚举" ng-click="create($event)">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-table-container>
+        <table md-table ng-model="selected">
+            <thead md-head md-order="query.order" md-on-reorder="reload" class="md-accent">
+            <tr md-row>
+                <th md-column><span>名称</span></th>
+                <th md-column><span>值</span></th>
+                <th md-column><span>顺序</span></th>
+                <th md-column><span>操作</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="value"
+                ng-repeat="value in values" md-auto-select>
+                <td md-cell>{{value.name}}</td>
+                <td md-cell>{{value.value}}</td>
+                <td md-cell>{{value.displayOrder}}</td>
+                <td md-cell layout="row">
+                    <md-button class="md-icon-button" ng-click="update(value, $event)">编辑</md-button>
+                    <md-button class="md-icon-button" ng-click="delete(value, $event)">删除</md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+</md-card>

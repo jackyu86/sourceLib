@@ -1,0 +1,61 @@
+.string-input-group {
+    position: relative;
+    margin-top: 15px;
+}
+
+.string-input-group:before,
+.string-input-group:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.string-input-group:first-child {
+    margin-top: 0;
+}
+
+.string-input-group .string-input-operation {
+    position: absolute;
+    top: 0;
+    right: -75px;
+    width: 75px;
+}
+
+.string-input-group .string-input-operation .fa-plus {
+    display: none;
+}
+
+.string-input-group .attribute-message {
+    position: absolute;
+    top: 0;
+    right: -172px;
+}
+
+.form-control-static.input-lg, .form-control-static.input-sm {
+    padding: 10px 20px;
+}
+
+.field-list .btn-link {
+    line-height: 24px;
+    float: left;
+}
+
+.field-list .btn-link:hover {
+    text-decoration: none;
+}
+
+.field-list .link-wrap .checkbox {
+    float: left;
+    margin-right: 0;
+    height: 38px;
+}
+
+.field-list .link-wrap .attribute-message {
+    float: left;
+}
+
+input[type=date],
+.input-calendar {
+    -webkit-appearance: none;
+    background: #fff url(/static/img/icon_date.png) no-repeat right 10px center;
+}

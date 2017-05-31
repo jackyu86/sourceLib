@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>确认订单</title>
+    <style>
+        html {
+            font-family: sans-serif;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0
+        }
+
+        a {
+            background-color: transparent
+        }
+
+        a:active, a:hover {
+            outline: 0
+        }
+
+        img {
+            border: 0
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        *:before, *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        html {
+            font-size: 10px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, "Microsoft Yahei", Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #f4f5fa
+        }
+
+        a {
+            color: #0d9da0;
+            text-decoration: none
+        }
+
+        a:hover, a:focus {
+            color: #075859;
+            text-decoration: underline
+        }
+
+        a:focus {
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset: -2px
+        }
+
+        img {
+            vertical-align: middle
+        }
+
+        [role="button"] {
+            cursor: pointer
+        }
+
+        h4 {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 18px
+
+        }
+
+        p {
+            margin: 0 0 10px
+        }
+
+        .text-muted {
+            color: #aaa
+        }
+
+        .text-danger {
+            color: #cf0014
+        }
+
+        a.text-danger:hover, a.text-danger:focus {
+            color: #9c000f
+        }
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px
+        }
+
+        label {
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 5px;
+            font-weight: bold
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #e3e3e3;
+            border-radius: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+        }
+
+        .form-control:focus {
+            border-color: #66afe9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6)
+        }
+
+        .form-control::-moz-placeholder {
+            color: #aaa;
+            opacity: 1
+        }
+
+        .form-control:-ms-input-placeholder {
+            color: #aaa
+        }
+
+        .form-control::-webkit-input-placeholder {
+            color: #aaa
+        }
+
+        .form-control::-ms-expand {
+            border: 0;
+            background-color: transparent
+        }
+
+        .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+            background-color: #eee;
+            opacity: 1
+        }
+
+        .form-control[disabled], fieldset[disabled] .form-control {
+            cursor: not-allowed
+        }
+
+        .form-group {
+            margin-bottom: 20px
+        }
+
+        .input-lg {
+            height: 46px;
+            padding: 10px 16px;
+            font-size: 14px;
+            line-height: 1.3333333;
+            border-radius: 0
+        }
+
+        .form-horizontal .form-group {
+            margin-left: -15px;
+            margin-right: -15px
+        }
+
+        .pull-left {
+            float: left !important
+        }
+
+    </style>
+    <style>
+        .text-linethrough {
+            text-decoration: line-through;
+        }
+
+        .page {
+            width: 100%;
+        }
+
+        .header {
+            padding: 30px 20px;
+            display: table;
+            width: 100%;
+        }
+
+        .header .image-wrap {
+            width: 100px;
+            height: 42px;
+            display: table-cell;
+        }
+
+        .header .header-content {
+            display: table-cell;
+            vertical-align: top;
+            padding-left: 20px;
+        }
+
+        .header .header-content h4 {
+            margin: 0 0 10px;
+            line-height: 18px;
+        }
+
+        .header .header-content p {
+            margin: 0;
+            font-size: 12px;
+            color: #999;
+            line-height: 12px;
+        }
+
+        .section {
+            margin-top: 10px;
+            padding-top: 25px;
+        }
+
+        .section:first-child {
+            margin-top: 0;
+            border-top: 0;
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        .order-main {
+            padding: 30px;
+            background: #fff;
+        }
+
+        .order-main .section {
+            position: relative;
+            background: #fff;
+        }
+
+        .order-main .section .header {
+            padding-bottom: 16px;
+            display: table;
+            border-bottom: 1px solid #0d9da0;
+            width: 100%;
+        }
+
+        .order-main .section .header .image-wrap {
+            width: 100px;
+            height: 42px;
+            display: table-cell;
+            padding-right: 20px;
+        }
+
+        .order-main .section .header .header-content {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .order-main .section .header .header-content > a {
+            margin-left: 25px;
+        }
+
+        .order-main .section .header .header-content h4 {
+            margin: 0;
+            line-height: 18px;
+        }
+
+        .order-main .section .header .header-content p {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #ccc;
+            line-height: 12px;
+        }
+
+        .field-list {
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+        .field-list:nth-child(odd) {
+            background-color: #fcfcfc;
+        }
+
+        .field-list:first-child {
+            background-color: #fff;
+        }
+
+        .field-list .form-group {
+            display: table;
+            min-height: 88px;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        .form-group .form-control-static {
+            padding-top: 7px;
+            padding-bottom: 7px;
+            margin-bottom: 0;
+            min-height: 34px;
+            line-height: 28px;
+            padding-left: 20px;
+            border: 0;
+            box-shadow: none;
+            background: none;
+        }
+
+        .field-list .form-group > label {
+            width: 200px;
+            line-height: 20px;
+            text-align: right;
+            display: table-cell;
+            min-height: 48px;
+            height: 48px;
+            vertical-align: top;
+            padding-right: 20px;
+            padding-top: 16px;
+        }
+
+        .form-group > .pull-left {
+            position: relative;
+            white-space: nowrap;
+            padding-top: 5px;
+        }
+
+        .summary-table {
+            margin-top: 30px;
+            line-height: 46px;
+            text-align: center;
+            border: 1px solid #e3e3e3;
+        }
+
+        .summary-table:first-child {
+            margin-top: 40px;
+        }
+
+        .summary-table .summary-title {
+            display: table;
+            width: 100%;
+        }
+
+        .summary-table .summary-item {
+            border-top: 1px solid #e3e3e3;
+            min-height: 46px;
+            display: table;
+            width: 100%;
+        }
+
+        .summary-table .summary-title:after, .summary-table .summary-item:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .summary-table .summary-cell {
+            width: 20%;
+            display: table-cell;
+            vertical-align: middle;
+            border-left: 1px solid #e3e3e3;
+            color: #000;
+        }
+
+        .summary-table .summary-cell-lg {
+            width: 40%;
+            padding: 0 15px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .summary-table .cost {
+            font-size: 20px;
+        }
+
+        .summary-table .summary-footer {
+            border-top: 1px solid #e3e3e3;
+            text-align: right;
+            line-height: 66px;
+            padding: 0 10px;
+        }
+
+        .summary-table .summary-footer .info {
+            margin-right: 20px;
+        }
+
+        .table {
+            display: table;
+            margin-top: 20px;
+            border: 1px solid #eee;
+        }
+
+        .table .table-row {
+            display: table-row;
+        }
+
+        .table .table-row .table-cell {
+            display: table-cell;
+            width: auto;
+            text-align: left;
+            padding: 10px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .table .table-row .table-cell .static-value {
+            white-space: nowrap;
+        }
+
+        .table .table-row label.table-cell {
+            border-right: 1px solid #eee;
+        }
+
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <div class="order-main">
+        <div class="header">
+            <div class="image-wrap">
+                <img j:src="vendor.imageURL" src="/static/img/lg20121106111644.gif" alt="">
+            </div>
+            <div class="header-content">
+                <h4 j:text="product.displayName">保险名称</h4>
+                <p j:text="product.highlightContent">保险描述</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <form class="form-wrap form-horizontal">
+                <div class="Dynamic_Form_Container">
+                    <div class="section" j:for="groupArray : list">
+                        <div class="header">
+                            <div class="header-content">
+                                <h4 j:text="groupArray.displayName">
+                                    保障计划
+                                </h4>
+                            </div>
+                        </div>
+                        <div j:if="groupArray.name!='information'">
+                            <div class="field-list Dynamic_Group_Container"
+                                 j:for="group : groupArray.groups">
+                                <div class="form-group" j:for="field : group.fields">
+                                    <label j:text="field.displayName">起保时间</label>
+                                    <div class="pull-left">
+                                        <span class="form-control form-control-static static-value input-lg " j:text="field.value">2017-02-26</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div j:if="groupArray.name=='information'">
+                            <div class="Dynamic_Group_Container table"
+                                 j:for="group : groupArray.groups">
+                                <div class="table-row" j:for="field : group.fields">
+                                    <label class="table-cell" j:text="field.displayName">问题1</label>
+                                    <div class="table-cell">
+                                        <span class="static-value" j:text="field.value">是</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="header">
+                        <div class="header-content"><h4>备注信息</h4></div>
+                    </div>
+                    <div class="summary-table">
+                        <div class="summary-title">
+                            <div class="summary-cell-lg">产品名称</div>
+                            <div class="summary-cell">保障期限</div>
+                            <div class="summary-cell">有效份数</div>
+                            <div class="summary-cell">合计保费</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-cell-lg" j:text="product.displayName">美亚“乐悠悠”境外旅游保障</div>
+                            <div class="summary-cell"><span j:text="form.period()">1年</span></div>
+                            <div class="summary-cell" data-name="unit"><span j:text='form.effectCount()'>1</span>份</div>
+                            <div class="summary-cell text-danger">
+                                ￥<span class="cost">360</span>元
+                            </div>
+                        </div>
+                        <div class="summary-footer">
+                            <span class="info customer"><span class="text-danger amount">1</span>位被保人</span>
+                            <span class="info">保费
+                        <span class="text-muted total-price text-linethrough" style="display: none">￥<span class="amount">360</span>元</span>
+                        <span class="text-danger sale-price">￥<span class="amount">360</span>元</span>
+                    </span>
+                            <span class="info">发票运费<span class="text-danger invoice-fee">￥<span class="amount">360</span>元</span></span>
+                            <span class="info">合计<span class="text-danger total-sale-price">￥<span class="amount">360</span>元</span></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

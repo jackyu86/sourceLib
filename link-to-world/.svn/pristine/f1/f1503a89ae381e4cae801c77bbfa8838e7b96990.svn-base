@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>基本资料</title>
+    <link rel="stylesheet" j:css="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" j:css="/static/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" j:css="/static/css/common.css">
+    <link rel="stylesheet" j:css="/static/css/header.css">
+    <link rel="stylesheet" j:css="/static/css/footer.css">
+    <link rel="stylesheet" j:css="/static/css/login.css">
+    <link rel="stylesheet" j:css="/static/css/customer.css">
+</head>
+<body>
+<j:header folded="false"/>
+<div class="page">
+    <j:customer-sidenav selected="info" category="center"/>
+    <div class="main">
+        <input type="hidden" id="customer-id" j:value="customer.id">
+        <div class="page-title">基本资料</div>
+        <div class="field">
+            <div class="field-name">账户类型</div>
+            <div class="field-value">用户</div>
+        </div>
+        <div class="field">
+            <div class="field-name">用户名</div>
+            <div class="field-value">
+                <span j:text="user.username">***</span>
+                <a href="#" data-toggle="modal" data-target="#change-password" class="btn">修改登录密码</a>
+            </div>
+        </div>
+        <div class="field" j:if="user.fullName!=null">
+            <div class="field-name">姓名</div>
+            <div class="field-value" j:text="user.fullName">XXX</div>
+        </div>
+        <div class="field" j:if="customer.identification!=null">
+            <div class="field-name">证件号码</div>
+            <div class="field-value" j:text="customer.identificationDescription()">XXXX</div>
+        </div>
+        <div class="field" j:if="user.fullName!=null">
+            <div class="field-name">性别</div>
+            <div class="field-value" j:text="customer.gender.display">XXX</div>
+        </div>
+        <div class="field" j:if="user.fullName!=null">
+            <div class="field-name">生日</div>
+            <div class="field-value" j:text="customer.birthday">XXX</div>
+        </div>
+        <div class="divider"></div>
+
+        <form class="info-form">
+            <div class="field" j:if="user.fullName==null">
+                <div class="field-name">姓名</div>
+                <div class="field-value">
+                    <input type="text" name="fullName"/>
+                </div>
+            </div>
+            <div class="field" j:if="customer.identification==null">
+                <div class="field-name">证件号码</div>
+                <div class="field-value">
+                    <select name="idType" class="form-control selector">
+                        <option value="Id">身份证</option>
+                        <option value="mid">军人证</option>
+                        <option value="passport">护照</option>
+                        <option value="bid">出生证明</option>
+                        <option value="other">其他</option>
+                        <option value="rid">户口簿</option>
+                    </select>
+                    <input type="text" name="identification" identification maxlength="18"/>
+                </div>
+            </div>
+            <div class="field" j:if="user.fullName==null">
+                <div class="field-name">性别</div>
+                <div class="field-value">
+                    <select class="form-control selector" name="gender" required>
+                        <option value="MALE">男</option>
+                        <option value="FEMALE">女</option>
+                    </select>
+                </div>
+            </div>
+            <div class="field" j:if="user.fullName==null">
+                <div class="field-name">生日</div>
+                <div class="field-value">
+                    <input type="text" name="birthday" class="input-calendar"
+                           data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-language="zh-CN">
+                </div>
+            </div>
+            <div class="field">
+                <div class="field-name">手机号码</div>
+                <div class="field-value">
+                    <input type="text" name="phone" j:value="user.phone" cellphone maxlength="11"/>
+                </div>
+            </div>
+            <div class="field">
+                <div class="field-name">电子邮箱</div>
+                <div class="field-value">
+                    <input type="email" name="email" j:value="user.email" required>
+                </div>
+            </div>
+            <div class="field">
+                <div class="field-name">联系地址</div>
+                <div class="field-value">
+                    <input type="hidden" name="stateVal" j:value="address.state">
+                    <input type="hidden" name="cityVal" j:value="address.city">
+                    <input type="hidden" name="wardVal" j:value="address.ward">
+                    <select class="form-control selector" name="state">
+                        <option j:for="state : states" j:data-id="state.id" j:value="state.name" j:text="state.name"></option>
+                    </select>
+                    <select class="form-control selector" name="city"></select>
+                    <select class="form-control selector" name="ward"></select>
+                    <input type="text" name="address" j:value="address.address1" required>
+                </div>
+            </div>
+        </form>
+
+        <div class="submit-button-wrap">
+            <a href="javascript:void(0)" class="submit-button btn btn-lg btn-primary">保存</a>
+        </div>
+
+    </div>
+</div>
+<j:user-change-password/>
+<j:footer/>
+<j:utils/>
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datepicker.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datepicker.zh-CN.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datetimepicker.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datetimepicker.zh-CN.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/user/customer/info.js"></script>
+<script j:js="/static/js/user/manage-password.js"></script>
+<script j:js="/static/js/region/state.js"></script>
+
+</body>
+</html>

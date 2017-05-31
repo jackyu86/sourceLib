@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>基本资料</title>
+    <link rel="stylesheet" j:css="/static//css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static//css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" j:css="/static/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" j:css="/static//css/common.css">
+    <link rel="stylesheet" j:css="/static//css/header.css">
+    <link rel="stylesheet" j:css="/static//css/footer.css">
+    <link rel="stylesheet" j:css="/static//css/login.css">
+    <link rel="stylesheet" j:css="/static//css/customer.css">
+</head>
+<body>
+<j:header folded="false"/>
+<div class="page">
+    <j:customer-sidenav selected="info" category="center"/>
+    <div class="main">
+        <input id="dealerId" type="hidden" j:value="dealer.id">
+        <div class="page-title">基本资料</div>
+        <div class="field">
+            <div class="field-name">账户类型</div>
+            <div class="field-value">企业</div>
+        </div>
+        <div class="field">
+            <div class="field-name">用户名</div>
+            <div class="field-value">
+                <span j:text="user.username">***</span>
+                <span j:dealer="status:ACTIVE">
+                    <a href="#" data-toggle="modal" data-target="#change-password" class="btn btn-change-password">修改登录密码</a>
+                    <a href="#" data-toggle="modal" data-target="#change-password" class="btn btn-change-pay-password">设置支付密码</a>
+                </span>
+            </div>
+        </div>
+        <div class="field">
+            <div class="field-name">用户角色</div>
+            <div class="field-value" j:text="userRoles">13000000000</div>
+        </div>
+        <div class="field">
+            <div class="field-name">企业名称</div>
+            <div class="field-value" j:text="dealer.name">13000000000</div>
+        </div>
+        <div class="field">
+            <div class="field-name">营业执照</div>
+            <div class="field-value" j:text="dealer.businessLicence">13000000000</div>
+        </div>
+        <div class="field">
+            <div class="field-name">上级代理商</div>
+            <div class="field-value" j:text="parentName">13000000000</div>
+        </div>
+        <div class="field">
+            <div class="field-name">信用余额</div>
+            <div class="field-value">
+                <span j:text="totalCredits"></span>
+                <span j:if="userRoles.contains('管理员')">
+                    <a href="#" data-toggle="modal" data-target="#credit-tracking-list" class="btn">修改记录</a>
+                    <j:credit-tracking-list/>
+                </span>
+            </div>
+        </div>
+        <div class="field">
+            <div class="field-name">所在地区</div>
+            <div class="field-value" j:text="dealer.state+' '+dealer.city+' '+dealer.ward">13000000000</div>
+        </div>
+        <div class="divider"></div>
+
+        <div class="info-form" j:dealer="status:INACTIVE">
+            <div class="field" j:if="user.roles.contains('dealerAdmin')">
+                <div class="field-name">联系人姓名</div>
+                <div class="field-value" j:text="user.fullName"></div>
+            </div>
+            <div class="field" j:if="user.roles.contains('dealerUser')">
+                <div class="field-name">使用人/部门</div>
+                <div class="field-value" j:text="user.fullName"></div>
+            </div>
+            <div class="field">
+                <div class="field-name">身份证号码</div>
+                <div class="field-value" j:text="customer.identification.number"></div>
+            </div>
+            <div class="field">
+                <div class="field-name">手机号码</div>
+                <div class="field-value" j:text="user.phone"></div>
+            </div>
+            <div class="field">
+                <div class="field-name">电子邮箱</div>
+                <div class="field-value" j:text="user.email"></div>
+            </div>
+        </div>
+
+
+        <form class="info-form" j:dealer="status:ACTIVE">
+            <div class="field" j:if="user.roles.contains('dealerAdmin')">
+                <div class="field-name">联系人姓名</div>
+                <div class="field-value">
+                    <input type="text" name="fullName" j:value="user.fullName" required/>
+                </div>
+            </div>
+            <div class="field" j:if="user.roles.contains('dealerUser')">
+                <div class="field-name">使用人/部门</div>
+                <div class="field-value">
+                    <input type="text" name="fullName" j:value="user.fullName" required/>
+                </div>
+            </div>
+            <div class="field">
+                <div class="field-name">身份证号码</div>
+                <div class="field-value">
+                    <input type="text" name="contactIdNumber" j:value="customer.identification.number" identification maxlength="18"/>
+                </div>
+            </div>
+            <div class="field">
+                <div class="field-name">手机号码</div>
+                <div class="field-value">
+                    <input type="text" name="phone" j:value="user.phone" required/>
+                </div>
+            </div>
+            <div class="field">
+                <div class="field-name">电子邮箱</div>
+                <div class="field-value">
+                    <input type="text" name="email" j:value="user.email" email>
+                </div>
+            </div>
+        </form>
+
+        <div class="submit-button-wrap" j:dealer="status:ACTIVE">
+            <a href="javascript:void(0)" class="submit-button btn btn-lg btn-primary">保存</a>
+        </div>
+    </div>
+</div>
+<j:user-change-password/>
+<j:footer/>
+<j:utils/>
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datepicker.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datepicker.zh-CN.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datetimepicker.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datetimepicker.zh-CN.js"></script>
+<script j:js="/static/js/lib/handlebars-v4.0.5.js"></script>
+<script j:js="/static/js/handlebars-helper.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/region/state.js"></script>
+<script j:js="/static/js/user/dealer/info.js"></script>
+<script j:js="/static/js/user/manage-password.js"></script>
+<div j:if="userRoles.contains('管理员')">
+    <script j:js="/static/js/credit/tracking.js"></script>
+</div>
+</body>
+</html>

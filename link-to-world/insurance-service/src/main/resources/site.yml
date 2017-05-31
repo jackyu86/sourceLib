@@ -1,0 +1,51 @@
+site:
+  host: localhost
+  locale: zh-CN
+
+web:
+  cacheEnabled: false
+  dirs:
+    - ./src/main/dist/web
+  baseURL: http://localhost:8081
+
+log:
+  level: INFO
+
+db:
+  mongo:
+    url: mongodb://localhost:27017/kdlins
+
+  jdbc:
+    url: jdbc:mysql://localhost/kdlins?nullNamePatternMatchesAll=true&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+
+user.api:
+  pinCode:
+    length: 0
+
+email:
+  smtp:
+    host: smtp.qq.com
+    port: 993
+    username: xxxx
+    password: xxxx
+
+kdlins.api:
+  esbServiceURL: http://localhost:8080
+  payServiceURL: http://uat-pay.kdlins.com.cn/eco
+
+order.api:
+  jobEnabled: true
+  jobInterval: 60
+  pay:
+      payUserId: 16fc499864dc11e69495005056862fc8
+      payKey: 847cd47664df11e6b10d0050568633ad
+      timeout: 1800
+      paymentTimeout: 1800
+
+underwriting.api:
+  underwritingWsdl: http://117.25.161.139/Exchange.ws?wsdl
+  agentCode: 2dab7698c81211e6a851005056862fc8
+  jobEnabled: true
+  jobInterval: 60

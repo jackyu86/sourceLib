@@ -1,0 +1,104 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>更新用户</h2>
+        <span flex></span>
+        <span ng-if="$state.is('site.user.create')" md-msg="user.create">Create</span>
+        <span ng-if="$state.is('site.user.update')" md-msg="user.update">Update <span ng-if="isPageChanged()"
+                                                                                      class="modified">*</span></span>
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="Reload current user">
+            <md-icon class="fa-refresh" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-content flex>
+    <form name="userForm" class="md-padding">
+        <md-card>
+            <md-card-content>
+                <div layout="row">
+                    <div ngf-select="upload($file)" class="image-upload" flex="20">
+                        <img src="{{user.imageURL}}" alt="">
+                    </div>
+
+                    <md-input-container class="md-block" flex="80">
+                        <label>用户名</label>
+                        <input required name="username" ng-model="user.username" ng-disabled="$state.is('console.user.update')">
+                        <div ng-messages="userForm.username.$error">
+                            <div ng-message="required">请输入用户名</div>
+                        </div>
+                    </md-input-container>
+                </div>
+
+                <md-input-container class="md-block">
+                    <label>用户昵称</label>
+                    <input required name="username" ng-model="user.fullName">
+                    <div ng-messages="userForm.fullName.$error">
+                        <div ng-message="required">请输入用户昵称</div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>邮箱</label>
+                    <input required name="email" ng-model="user.email">
+                    <div ng-messages="userForm.email.$error">
+                        <div ng-message="required">请输入邮箱</div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>手机</label>
+                    <input required name="phone" ng-model="user.phone">
+                    <div ng-messages="userForm.phone.$error">
+                        <div ng-message="required">请输入手机</div>
+                    </div>
+                </md-input-container>
+            </md-card-content>
+        </md-card>
+        <md-card>
+            <md-card-content>
+                <div layout="row">
+                    <md-input-container class="md-block" flex="50">
+                        <label>密码</label>
+                        <input name="text" ng-model="user.password">
+                    </md-input-container>
+                </div>
+            </md-card-content>
+
+        </md-card>
+        <md-card>
+            <md-card-content>
+                <md-input-container class="md-block">
+                    <label>状态</label>
+
+                    <md-select ng-model="user.status" placeholder="选择状态">
+                        <md-option value="ACTIVE">正常</md-option>
+                        <md-option value="INACTIVE">禁用</md-option>
+                        <md-option value="AUDITING">审核中</md-option>
+                    </md-select>
+
+                    <div ng-messages="userForm.status.$error">
+                        <div ng-message="required">请输入状态</div>
+                    </div>
+                </md-input-container>
+            </md-card-content>
+        </md-card>
+        <md-card>
+            <md-card-content>
+                <md-input-container>
+                    <label>角色</label>
+
+                    <md-select ng-model="user.roles" placeholder="选择角色" multiple>
+                        <md-option ng-value="role.name" ng-repeat="role in roles">{{role.displayName}}</md-option>
+                    </md-select>
+                </md-input-container>
+
+                <div layout="row" class="md-padding">
+                    <md-button class="md-button md-raised md-primary" ng-click="save()" ng-disabled="processing || userForm.$invalid">保存</md-button>
+                    <md-button class="md-button" ng-click="cancel()">取消</md-button>
+                </div>
+            </md-card-content>
+        </md-card>
+    </form>
+</md-content>

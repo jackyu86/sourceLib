@@ -1,0 +1,135 @@
+.page {
+    position: relative;
+    width: 1200px;
+    margin: 30px auto;
+}
+
+.page::before, .page::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.side-nav {
+    float: left;
+    width: 220px;
+}
+
+.side-nav .list-group {
+    border: 2px solid #0d9da0;
+}
+
+.side-nav .list-group.all-active {
+    background: #fff;
+    color: #0d9da0;
+}
+
+.side-nav .list-group-item {
+    display: none;
+    position: relative;
+    border: 0;
+    padding: 16px;
+}
+
+.side-nav .list-group-item.title {
+    display: block;
+}
+
+.side-nav .active .list-group-item {
+    display: block;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    color: #000;
+    background-color: #f4f4f4;
+}
+
+.side-nav .list-group-item.title, .side-nav .list-group-item.title:hover {
+    color: #fff;
+    background-color: #0d9da0;
+    font-size: 18px;
+}
+
+.side-nav .list-group-item.title.active, .side-nav .list-group-item.title.active:hover {
+    background-color: #fff;
+}
+
+.side-nav .list-group-item.title > a {
+    color: #fff;
+}
+
+.side-nav .list-group-item.title.active > a {
+    color: #0d9da0;
+}
+
+.side-nav .list-group-item:first-child {
+    border-top: 0;
+}
+
+.side-nav .list-group-item:last-child {
+    border-bottom: 0;
+}
+
+.side-nav .list-group-item:hover {
+    background: #f4f4f4;
+}
+
+.side-nav .list-group-item > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+}
+
+.side-nav .sub-list-group {
+    display: none;
+    position: absolute;
+    top: -2px;
+    left: 100%;
+    width: 220px;
+    border: 2px solid #0d9da0;
+    z-index: 100;
+}
+
+.side-nav .list-group-item:hover > .sub-list-group {
+    display: block;
+}
+
+.main {
+    float: left;
+    width: 100%;
+    margin-left: 20px;
+    padding: 30px;
+    background: #fff;
+}
+
+.main.middle {
+    float: none;
+    margin: auto;
+}
+
+.main h3 {
+    margin-bottom: 80px;
+}
+
+.main .page-title {
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 45px;
+}
+
+.main p {
+    color: #666;
+    line-height: 30px;
+    margin: 30px 0;
+}
+
+.main ul {
+    list-style: none;
+}
+
+.main ul li {
+    line-height: 32px;
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title j:text="'服务出错 - ' + site.name()">500</title>
+    <link rel="stylesheet" j:css="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static/css/common.css">
+    <link rel="stylesheet" j:css="/static/css/header.css">
+    <link rel="stylesheet" j:css="/static/css/footer.css">
+    <link rel="stylesheet" j:css="/static/css/error-page.css">
+</head>
+<body>
+<j:header></j:header>
+<div class="page">
+    <div class="container-fluid">
+        <div class="panel panel-default">
+            <div class="description text-primary">
+                <h1>500</h1>
+                <p>遇到错误啦！服务器出走了...</p>
+                <a href="javascript:history.back()" class="btn btn-default btn-back">返回上一页</a>
+            </div>
+            <div class="logo">
+                <img class="logo-500" src="/static/img/icon_500.png">
+            </div>
+
+        </div>
+
+    </div>
+    <j:footer></j:footer>
+</div>
+<script j:js="/static/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:j="" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title j:text="product.displayName + '保险条款 - 君龙保险'">保险条款</title>
+    <link rel="stylesheet" j:css="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static/css/common.css">
+    <link rel="stylesheet" j:css="/static/css/pdp.css">
+</head>
+<body>
+
+<div class="page">
+    <div class="product">
+        <div class="header">
+            <div class="image-wrap">
+                <img j:src="vendor.imageURL" src="/static/img/lg20121106111644.gif" alt="">
+            </div>
+            <div class="header-content">
+                <h4 j:text="product.displayName">保险名称</h4>
+                <p>保险条款列表</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="detail-section">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="detail">
+                        <div class="section">
+                            <div class="sub-title">主条款</div>
+                            <div class="table insurance-content">
+                                <div class="row" j:for="clause : clauses" j:if='clause.type.name().equals("MAIN")'>
+                                    <span j:text="clause.name"></span><span j:text="clause.serialNumber"></span><a target="_blank" j:href="clause.contentURL">查看</a>|<a target="_blank"
+                                                                                                                                                                        j:href="clause.exclusionsUrl">除外责任</a>|<a
+                                        target="_blank" j:href="clause.pdfURL">下载PDF版</a>
+                                </div>
+                            </div>
+                            <div class="sub-title">附加条款</div>
+                            <div class="table insurance-content">
+                                <div class="row" j:for="clause : clauses" j:if='clause.type.name().equals("ADDITIONAL")'>
+                                    <span j:text="clause.name"></span><span j:text="clause.serialNumber"></span><a target="_blank" j:href="clause.contentURL">查看</a>|<a target="_blank"
+                                                                                                                                                                        j:href="clause.exclusionsUrl">除外责任</a>|<a
+                                        target="_blank" j:href="clause.pdfURL">下载PDF版</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/common.js"></script>
+</body>
+</html>
