@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DubboProvider.iml" filepath="$PROJECT_DIR$/DubboProvider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-admin/dubbo-admin.iml" filepath="$PROJECT_DIR$/dubbo-admin/dubbo-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-code/dubbo-code.iml" filepath="$PROJECT_DIR$/dubbo-code/dubbo-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-web/dubbo-web.iml" filepath="$PROJECT_DIR$/dubbo-web/dubbo-web.iml" />
+    </modules>
+  </component>
+</project>

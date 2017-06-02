@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="hightmaps"
+  id="myeclipse.1412777659862"
+  context-root="/hightmaps"
+  j2ee-spec="5.0"
+  archive="hightmaps.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

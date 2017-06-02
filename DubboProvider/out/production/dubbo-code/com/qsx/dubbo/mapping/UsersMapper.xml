@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qsx.dubbo.dao.UsersDao" >
+  <resultMap id="BaseResultMap" type="com.qsx.dubbo.model.Users" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="INTEGER" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="getUsers" resultMap="BaseResultMap">
+    SELECT id,name,age,sex
+    FROM Users
+  </select>
+  <select id="getUsersByName" resultMap="BaseResultMap">
+    SELECT id,name,age,sex
+    FROM Users WHERE name = #{name}
+  </select>
+  <insert id="addUsers" parameterType="com.qsx.dubbo.model.Users"
+          useGeneratedKeys="true" keyProperty="id">
+    insert into Users(name,age,sex)
+             values(#{name},#{age},#{sex})
+  </insert>
+  <update id="updateUsers" parameterType="com.qsx.dubbo.model.Users">
+    update Users set name = #{name} , sex = #{sex} , age = #{age} where id = #{id}
+  </update>
+  <delete id="deleteUsers" parameterType="int">
+    delete from Users where id = #{id}
+  </delete>
+</mapper>

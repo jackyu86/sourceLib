@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.qsx.dubbo</groupId>
+    <artifactId>DubboProvider</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>dubbo-code</module>
+        <module>dubbo-admin</module>
+        <module>dubbo-web</module>
+    </modules>
+
+
+
+    <properties>
+        <base.version>1.1.1-SNAPSHOT</base.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.version>3.6.1</maven.compiler.version>
+        <source.version>8</source.version>
+        <target.version>8</target.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--统一springframework的版本-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>4.3.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <deployUrl>http://localhost/manager/text</deployUrl>
+                <portNumber>80</portNumber>
+                <username>m2user</username>
+                <password>m2user</password>
+                <env>dev</env>
+                <tomcat7.serverid>tomcat-7.0.67</tomcat7.serverid>
+                <path>DubboPrrovider</path>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <deployUrl>http://repo.kai-men.cn:3333/manager/text</deployUrl>
+                <portNumber>3333</portNumber>
+                <username>m2user</username>
+                <password>m2user</password>
+                <env>test</env>
+                <tomcat7.serverid>tomcat-7.0.67</tomcat7.serverid>
+                <path>DubboPrrovider</path>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>mock</id>
+            <properties>
+                <deployUrl>http://localhost/manager/text</deployUrl>
+                <portNumber>80</portNumber>
+                <username>m2user</username>
+                <password>m2user</password>
+                <env>mock</env>
+                <tomcat7.serverid>tomcat-7.0.67</tomcat7.serverid>
+                <path>DubboPrrovider</path>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod</id>
+            <properties>
+                <deployUrl>http://localhost/manager/text</deployUrl>
+                <portNumber>80</portNumber>
+                <username>m2user</username>
+                <password>m2user</password>
+                <env>prod</env>
+                <tomcat7.serverid>tomcat-7.0.67</tomcat7.serverid>
+                <path>DubboPrrovider</path>
+            </properties>
+        </profile>
+    </profiles>
+
+
+</project>
