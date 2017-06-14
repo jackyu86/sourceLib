@@ -57,14 +57,15 @@ public class KaixinCrawler extends ECCrawler {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		for (int i=300 ;i<500; i++ )
+		for (int i=940 ;i<1500; i++ )
 		{
-		String url ="http://kaixin65.com/forum.php?mod=viewthread&tid="+i+"&highlight=%C2%ED%BC%D2%B1%A4";
+
+		String url ="http://kaixin65.com/forum.php?mod=viewthread&tid="+i+"&extra=page%3D1";
 	//	JDCrawler crawler=new JDCrawler("c:/nevi/test/crawler/jd/", "http://list.jd.com/list.html?cat=1319,1523,7052&page=%s&go=0&JL=6_0_0");
 		KaixinCrawler crawler=new KaixinCrawler("c:/nevi/test/crawler/jd/", url);
 		crawler.setThreads(1);//抓取启动线程数
 		crawler.start(1);//层数
-		
+
 		crawler.print();
 		}
 	}

@@ -107,8 +107,15 @@ public abstract class ECCrawler extends DeepCrawler {
 		HttpRequest httpRequest = new HttpRequest(url);
 		
 		RequestConfig requestConfig=new RequestConfig();
-		String cookie = "S3rD_2132_noticeTitle=1; S3rD_2132_saltkey=YrWLr6qH; S3rD_2132_lastvisit=1496395967; S3rD_2132_st_p=0%7C1496399567%7Cae6fef01ecb54ab29b4c65528c8416eb; S3rD_2132_visitedfid=44; S3rD_2132_viewid=tid_164; jiathis_rdc=%7B%22http%3A//kaixin65.com/forum.php%3Fmod%3Dviewthread%26tid%3D164ighlight%3D%25C2%25ED%25BC%25D2%25B1%25A4%22%3A%220%7C1496398586073%22%7D; S3rD_2132_smile=1D1; Hm_lvt_63b8f8f4895a04769ec9d88bfd02f566=1496359442,1496382108,1496387415,1496398411; Hm_lpvt_63b8f8f4895a04769ec9d88bfd02f566=1496398588; S3rD_2132_sendmail=1; S3rD_2132_nofocus_forum=1; S3rD_2132_adclose_5=1; S3rD_2132_sid=q2V2Co; S3rD_2132_lastact=1496399611%09misc.php%09seccode; S3rD_2132_seccode=202.db2f2d4b7f6c3a4fab";
-		requestConfig.setCookie(cookie);
+
+		requestConfig.setHeader("Host", "kaixin65.com");
+		requestConfig.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 5.2; rv:5.0.1) Gecko/20100101 Firefox/5.0.1");
+		requestConfig.setHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+		requestConfig.setHeader("Accept-Language", "zh-cn,zh;q=0.5");
+		requestConfig.setHeader("Accept-Charset", "GB2312,utf-8;q=0.7,*;q=0.7");
+		requestConfig.setHeader("Connection", "keep-alive");
+		requestConfig.setHeader("Cookie", "yunsuo_session_verify=0b1ebbb8c7cefb1719cb8d690a1e202c; S3rD_2132_saltkey=nSll7Tsi; S3rD_2132_lastvisit=1497347758; S3rD_2132_adclose_5=1; S3rD_2132_adclose_2=1; S3rD_2132_nofocus_forum=1; S3rD_2132_seccode=127.9c68176f8c812d3f51; S3rD_2132_ulastactivity=21c4Jn3YPaag4FCvh7ZB8ZomqrKXE3AVCTwgprVr1Z8Z7wK1jkav; S3rD_2132_auth=9108nyuzYEcn4Iw%2FEB8M04skeBSjebAYq5MxaHF5yySTC3m1exjqGHRVToMbHUIhhVTSPD5xyT2yxELjKazwOWup; S3rD_2132_lastcheckfeed=4088%7C1497352880; S3rD_2132_lip=210.77.180.14%2C1497351064; S3rD_2132_lastact=1497352885%09forum.php%09; S3rD_2132_nofavfid=1; S3rD_2132_study_nge_extstyle=2; S3rD_2132_study_nge_extstyle_default=2; S3rD_2132_sid=ANNnLS; S3rD_2132_noticeTitle=1; Hm_lvt_63b8f8f4895a04769ec9d88bfd02f566=1496398890,1496659462,1496816549,1497351027; Hm_lpvt_63b8f8f4895a04769ec9d88bfd02f566=1497352846; tjpctrl=1497354646614");
+
 		httpRequest.setRequestConfig(requestConfig);
 		HttpResponse response = httpRequest.getResponse();
 		Page page = new Page();

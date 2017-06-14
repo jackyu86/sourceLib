@@ -20,6 +20,7 @@ package com.zhao.crawler.jd;
 import cn.edu.hfut.dmic.webcollector.model.Page;
 import com.zhao.crawler.Goods;
 import com.zhao.crawler.GoodsList;
+import com.zhao.crawler.util.HttpURLConnectionUtil;
 import com.zhao.crawler.util.PageUtils;
 import com.zhao.crawler.util.Platform;
 import com.zhao.crawler.util.Tools;
@@ -27,6 +28,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -48,6 +50,7 @@ public class QunaerGoodsList extends GoodsList {
 		try {
 
 			String selector = "html";
+			String tid = page.getUrl().split("&")[1];
 			//li.premium-pricecube
 			driver = PageUtils.getWebDriver(page);
 //			List<WebElement> eles = driver.findElements(By.cssSelector(selector));
@@ -94,10 +97,18 @@ public class QunaerGoodsList extends GoodsList {
 			//zoom
 			List<WebElement> photoEles = driver.findElements(By.className("guestviewthumb_cur"));
 			if (!photoEles.isEmpty()) {
+				 int i = 0;
 				for (WebElement ele : photoEles) {
-					
+					i++;
 			String phoUrl = ele.getAttribute("file");
 					System.out.println(" ### " + phoUrl);
+
+                    try {
+                        HttpURLConnectionUtil.saveData(HttpURLConnectionUtil.getInputStreamByGet(phoUrl),new File("./rst/"+tid.split("=")[1]+"_"+i+".jpg"));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
 //					// 商品链接
 //					g.setUrl(ele.findElement(By.className("p-name"))
 //							.findElement(By.tagName("a"))

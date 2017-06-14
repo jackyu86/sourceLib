@@ -3,7 +3,7 @@
   <groupId>WebCollectorDemo</groupId>
   <artifactId>WebCollectorDemo</artifactId>
   <version>1.0</version>
-  <packaging>war</packaging>
+<!--   <packaging>war</packaging> -->
   <name/>
   <description/>
   <properties>
@@ -43,11 +43,11 @@
     		<artifactId>phantomjsdriver</artifactId>
     		<version>1.2.0</version>
 		</dependency>
-		 <dependency>
+<!-- 		 <dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.4</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>commons-httpclient</groupId>
 			<artifactId>commons-httpclient</artifactId>
@@ -81,8 +81,8 @@
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
     </plugins>
