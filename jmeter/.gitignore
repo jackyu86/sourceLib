@@ -47,3 +47,4 @@ out/
 hs_err_pid*
 # other jvm related files
 .attach_*
+/classes/

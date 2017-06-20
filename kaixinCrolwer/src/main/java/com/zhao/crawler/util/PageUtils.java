@@ -23,6 +23,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
@@ -75,7 +76,7 @@ public class PageUtils {
 	public static WebDriver getWebDriver(Page page) {
 //    	WebDriver driver = new HtmlUnitDriver(true);
     	
-//    	System.setProperty("webdriver.chrome.driver", "D:\\Installs\\Develop\\crawling\\chromedriver.exe");
+//    	System.setProperty("webdriver.chrome.driver", "./chromedriver_x64.exe");
 //    	WebDriver driver = new ChromeDriver();
     	
     	System.setProperty("phantomjs.binary.path", "./phantomjs.exe");

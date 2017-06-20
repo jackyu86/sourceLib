@@ -50,7 +50,8 @@ public class SMIMEAssertionTestElement extends AbstractTestElement implements
     @Override
     public AssertionResult getResult(SampleResult response) {
         try {
-            return SMIMEAssertion.getResult(this, response, getName());
+          //  return SMIMEAssertion.getResult(this, response, getName());
+       return null;
         } catch (NoClassDefFoundError e) {
             AssertionResult assertionResult = new AssertionResult(getName());
             assertionResult.setError(true);

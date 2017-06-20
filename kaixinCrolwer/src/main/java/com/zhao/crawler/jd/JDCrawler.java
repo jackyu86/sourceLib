@@ -60,7 +60,7 @@ public class JDCrawler extends ECCrawler {
 	public static void main(String[] args) throws Exception {
 
 		//String url ="https://bao.qunar.com/auto/price?f=TCpPp6EuwZ&from=groupmessage&carNo=%E9%97%BDD926BX";
-		JDCrawler crawler=new JDCrawler("c:/nevi/test/crawler/jd/", "http://list.jd.com/list.html?cat=1319,1523,7052&page=%s&go=0&JL=6_0_0");
+		JDCrawler crawler=new JDCrawler("./jd/", "http://list.jd.com/list.html?cat=1319,1523,7052&page=%s&go=0&JL=6_0_0");
 		//JDCrawler crawler=new JDCrawler("c:/nevi/test/crawler/jd/", url);
 		crawler.setThreads(100);//抓取启动线程数
 		crawler.start(1);//层数
