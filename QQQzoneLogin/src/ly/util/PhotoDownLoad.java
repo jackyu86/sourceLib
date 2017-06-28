@@ -396,7 +396,7 @@ public class PhotoDownLoad {
 
     public static void main(String[] args) {
         PhotoDownLoad pdl = new PhotoDownLoad();
-        String qq ="312397789";
+        String qq ="3296144290";
         albums = pdl.getAlbums(qq, albumbase1);
         if (albums == null || albums.size() == 0) {
             albums = pdl.getAlbums(qq, albumbase2);

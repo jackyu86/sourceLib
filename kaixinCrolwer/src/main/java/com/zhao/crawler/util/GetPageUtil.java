@@ -37,7 +37,8 @@ public class GetPageUtil {
                 }
 
 
-                 httpRequester.setCookie( "4bd54_lastpos=T1527108; 4bd54_ol_offset=616629; 4bd54_c_stamp="+1497856231+i*1000+"; sc_is_visitor_unique=rx4629288.1497847292.2A51302650114FDACD988C1AD3E3732A.1.1.1.1.1.1.1.1.1");
+                 httpRequester.setCookie( "4bd54_threadlog=%2C18%2C; 4bd54_c_stamp="+1498470782+i*1000+"; 4bd54_lastpos=T1528794; 4bd54_lastvisit=74%091498470782%09%2Fbbs%2Fread.php%3Ftid1528794; 4bd54_ol_offset=306908; 4bd54_ipstate=1498470782; 4bd54_readlog=%2C1528049%2C1528794%2C; sc_is_visitor_unique=rx4629288.1498470903.AA90513BD9364F6617BBC6B1CA34EEAB.3.3.3.3.3.3.3.3.2");
+
 
                  response = httpRequester.getResponse(url);
 
@@ -53,7 +54,8 @@ public class GetPageUtil {
             }
 
                 String title = doc.getElementsByTag("title").toString();
-            if (title.indexOf("网友自拍")>0) {
+            if (title.indexOf("网友自拍")>0)
+            {
                 //List<Element> eles =  doc.getElementsByAttributeValue("class","t_fsz");
                 List<Element> eles = doc.getElementsByAttributeValue("class", "f14 mb10");
 
@@ -243,8 +245,8 @@ public class GetPageUtil {
             _10086.getPage("http://x77320.com/bbs/read.php?tid=","",
                     header,
                     null,
-                    1511670,
-                    1557108);
+                    1389476,
+                    1489476);
            //sleep(10000);
         } catch (Exception e) {
             // TODO Auto-generated catch block
