@@ -1,0 +1,12 @@
+com\caej\batch\writer\AbonusWriter.class
+com\caej\batch\quarz\JobQuartz.class
+com\caej\batch\App.class
+com\caej\batch\model\BufAbonus.class
+com\caej\batch\Launcher.class
+com\caej\batch\model\BufAccountConfirm.class
+com\caej\batch\writer\AccountConfirmWriter.class
+com\caej\batch\processor\ProductItemProcessor.class
+com\caej\batch\processor\AbonusProcessor.class
+com\caej\batch\reader\ProductFieldSetMapper.class
+com\caej\batch\tasklet\ArchiveProductImportFileTasklet.class
+com\caej\batch\processor\AccountConfirmProcessor.class
