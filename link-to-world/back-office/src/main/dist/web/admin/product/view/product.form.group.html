@@ -1,0 +1,25 @@
+<md-dialog aria-label="Edit Form Group" flex="50">
+    <md-subheader>
+        <div layout="row" layout-align="space-between center">
+            <span>分组：{{formGroup.displayName}}</span>
+        </div>
+    </md-subheader>
+    <form name="formGroupForm" class="md-padding">
+        <div flex-xs flex="50">
+            <md-checkbox aria-label="全选"
+                         ng-checked="isChecked()"
+                         md-indeterminate="isIndeterminate()"
+                         ng-click="toggleAll()">
+                全<span ng-if="isChecked()">不</span>选
+            </md-checkbox>
+        </div>
+        <div flex="100" ng-repeat="field in fields">
+            <md-checkbox ng-checked="exists(field, selected)" ng-click="toggle(field, selected)">
+                {{ field.displayName }}
+            </md-checkbox>
+        </div>
+        <div layout="row">
+            <md-button class="md-button md-raised md-primary" ng-disabled="processing || categoryForm.$invalid" ng-click="cancel()" ng-disabled="processing">确定</md-button>
+        </div>
+    </form>
+</md-dialog>

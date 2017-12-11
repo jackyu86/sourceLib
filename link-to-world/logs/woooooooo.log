@@ -1,0 +1,91 @@
+2017-05-27 14:36:45,745 [main] INFO  io.sited.Sited - install site, host=localhost
+2017-05-27 14:36:45,787 [main] INFO  io.sited.db.DBModule - jdbc options, url=jdbc:mysql://localhost/kdlins?nullNamePatternMatchesAll=true&useUnicode=true&characterEncoding=utf8
+2017-05-27 14:36:45,791 [main] INFO  io.sited.db.DBModule - mongo options, url=mongodb://localhost:27017/kdlins
+2017-05-27 14:36:46,177 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-05-27 14:36:46,178 [main] INFO  org.mongodb.driver.cluster - Adding discovered server localhost:27017 to client view of cluster
+2017-05-27 14:36:46,250 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class io.sited.http.impl.SessionImpl$SessionData
+2017-05-27 14:38:10,006 [main] INFO  io.sited.Sited - install site, host=localhost
+2017-05-27 14:38:10,029 [main] INFO  io.sited.db.DBModule - jdbc options, url=jdbc:mysql://localhost/kdlins?nullNamePatternMatchesAll=true&useUnicode=true&characterEncoding=utf8
+2017-05-27 14:38:10,032 [main] INFO  io.sited.db.DBModule - mongo options, url=mongodb://localhost:27017/kdlins
+2017-05-27 14:38:10,373 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-05-27 14:38:10,374 [main] INFO  org.mongodb.driver.cluster - Adding discovered server localhost:27017 to client view of cluster
+2017-05-27 14:38:10,440 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class io.sited.http.impl.SessionImpl$SessionData
+2017-05-27 14:38:11,545 [main] INFO  io.sited.file.FileModuleImpl - file repository, dir=file
+2017-05-27 14:38:11,607 [main] INFO  io.sited.queue.QueueModule - create queue, type=io.sited.email.api.email.EmailRequest
+2017-05-27 14:38:11,685 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumPolicyRelationTypeResponse
+2017-05-27 14:38:11,685 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumGenderTypeResponse
+2017-05-27 14:38:11,685 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumCertiTypeResponse
+2017-05-27 14:38:11,685 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumMarriageTypeResponse
+2017-05-27 14:38:11,685 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.country.AllInsuranceCountryResponse
+2017-05-27 14:38:11,685 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.job.JobResponseList
+2017-05-27 14:38:11,686 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumBeneficiaryTypeResponse
+2017-05-27 14:38:11,686 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumLegalBeneficiaryTypeResponse
+2017-05-27 14:38:11,686 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumDeliverTypeResponse
+2017-05-27 14:38:11,686 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumInvoiceDeliverTypeResponse
+2017-05-27 14:38:11,686 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.vendor.InsuranceVendorResponse
+2017-05-27 14:38:11,686 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.insurance.InsuranceLiabilityGroupResponseList
+2017-05-27 14:38:11,686 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.insurance.InsuranceLiabilityResponse
+2017-05-27 14:38:11,686 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.insurance.InsuranceResponse
+2017-05-27 14:38:12,038 [main] INFO  io.sited.scheduler.SchedulerModule - schedule job, job=com.caej.order.job.QueryOrderStatusJob, options={"start":"00:00:00","interval":"1M","fixedInterval":false}
+2017-05-27 14:38:12,048 [main] INFO  io.sited.scheduler.SchedulerModule - schedule job, job=com.caej.order.job.PaymentTimeoutJob, options={"start":"00:00:00","interval":"1M","fixedInterval":false}
+2017-05-27 14:38:12,049 [main] INFO  io.sited.scheduler.SchedulerModule - schedule job, job=com.caej.order.job.OrderArchiveJob, options={"start":"00:00:00","interval":"1M","fixedInterval":false}
+2017-05-27 14:38:13,655 [main] INFO  org.apache.cxf.endpoint.dynamic.DynamicClientFactory - Created classes: com.kdl.ih.td.service.BaseException, com.kdl.ih.td.service.Handle, com.kdl.ih.td.service.HandleResponse, com.kdl.ih.td.service.ImportData, com.kdl.ih.td.service.ImportDataResponse, com.kdl.ih.td.service.ObjectFactory
+2017-05-27 14:38:14,650 [main] INFO  io.sited.scheduler.SchedulerModule - schedule job, job=com.caej.underwriting.job.UnderwritingJob, options={"start":"00:00:00","interval":"1M","fixedInterval":false}
+2017-05-27 14:38:14,654 [main] INFO  io.sited.Site - run startup hook, site=localhost, module=class io.sited.scheduler.SchedulerModule, hook=io.sited.scheduler.SchedulerModule$$Lambda$22/1822525972@6e8fdd19
+2017-05-27 14:38:14,942 [main] INFO  io.sited.Sited - sited 0.0.0.0:8081 started in 4932ms
+2017-05-27 14:39:47,483 [main] INFO  io.sited.Sited - install site, host=localhost
+2017-05-27 14:39:47,504 [main] INFO  io.sited.db.DBModule - jdbc options, url=jdbc:mysql://localhost/kdlins?nullNamePatternMatchesAll=true&useUnicode=true&characterEncoding=utf8
+2017-05-27 14:39:47,507 [main] INFO  io.sited.db.DBModule - mongo options, url=mongodb://localhost:27017/kdlins
+2017-05-27 14:39:47,836 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-05-27 14:39:47,837 [main] INFO  org.mongodb.driver.cluster - Adding discovered server localhost:27017 to client view of cluster
+2017-05-27 14:39:47,885 [cluster-ClusterId{value='59291f3330543e2d04cd383c', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:3}] to localhost:27017
+2017-05-27 14:39:47,887 [cluster-ClusterId{value='59291f3330543e2d04cd383c', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 4]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=529295}
+2017-05-27 14:39:47,888 [cluster-ClusterId{value='59291f3330543e2d04cd383c', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Discovered cluster type of STANDALONE
+2017-05-27 14:39:47,901 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class io.sited.http.impl.SessionImpl$SessionData
+2017-05-27 14:39:49,019 [main] INFO  io.sited.file.FileModuleImpl - file repository, dir=file
+2017-05-27 14:39:49,069 [main] INFO  io.sited.queue.QueueModule - create queue, type=io.sited.email.api.email.EmailRequest
+2017-05-27 14:39:49,143 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumPolicyRelationTypeResponse
+2017-05-27 14:39:49,143 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumGenderTypeResponse
+2017-05-27 14:39:49,143 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumCertiTypeResponse
+2017-05-27 14:39:49,143 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumMarriageTypeResponse
+2017-05-27 14:39:49,143 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.country.AllInsuranceCountryResponse
+2017-05-27 14:39:49,143 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.job.JobResponseList
+2017-05-27 14:39:49,143 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumBeneficiaryTypeResponse
+2017-05-27 14:39:49,144 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumLegalBeneficiaryTypeResponse
+2017-05-27 14:39:49,144 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumDeliverTypeResponse
+2017-05-27 14:39:49,144 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.enumtype.AllEnumInvoiceDeliverTypeResponse
+2017-05-27 14:39:49,144 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.vendor.InsuranceVendorResponse
+2017-05-27 14:39:49,144 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.insurance.InsuranceLiabilityGroupResponseList
+2017-05-27 14:39:49,144 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.insurance.InsuranceLiabilityResponse
+2017-05-27 14:39:49,144 [main] INFO  io.sited.cache.impl.guava.LocalCacheProviderImpl - create local cache, type=class com.caej.insurance.api.insurance.InsuranceResponse
+2017-05-27 14:39:49,457 [main] INFO  io.sited.scheduler.SchedulerModule - schedule job, job=com.caej.order.job.QueryOrderStatusJob, options={"start":"00:00:00","interval":"1M","fixedInterval":false}
+2017-05-27 14:39:49,465 [main] INFO  io.sited.scheduler.SchedulerModule - schedule job, job=com.caej.order.job.PaymentTimeoutJob, options={"start":"00:00:00","interval":"1M","fixedInterval":false}
+2017-05-27 14:39:49,466 [main] INFO  io.sited.scheduler.SchedulerModule - schedule job, job=com.caej.order.job.OrderArchiveJob, options={"start":"00:00:00","interval":"1M","fixedInterval":false}
+2017-05-27 14:39:59,529 [main] INFO  org.apache.cxf.endpoint.dynamic.DynamicClientFactory - Created classes: com.kdl.ih.td.service.BaseException, com.kdl.ih.td.service.Handle, com.kdl.ih.td.service.HandleResponse, com.kdl.ih.td.service.ImportData, com.kdl.ih.td.service.ImportDataResponse, com.kdl.ih.td.service.ObjectFactory
+2017-05-27 14:40:00,376 [main] INFO  io.sited.scheduler.SchedulerModule - schedule job, job=com.caej.underwriting.job.UnderwritingJob, options={"start":"00:00:00","interval":"1M","fixedInterval":false}
+2017-05-27 14:40:00,380 [main] INFO  io.sited.Site - run startup hook, site=localhost, module=class io.sited.scheduler.SchedulerModule, hook=io.sited.scheduler.SchedulerModule$$Lambda$22/1822525972@6e8fdd19
+2017-05-27 14:40:00,481 [main] INFO  io.sited.Sited - sited 0.0.0.0:8081 started in 12994ms
+2017-05-27 14:41:02,738 [XNIO-1 task-2] ERROR io.undertow.request - UT005071: Undertow request failed HttpServerExchange{ GET /api/product/category/tree/first-level request {Accept=[application/json], Connection=[Keep-Alive], Accept-Encoding=[gzip,deflate], User-Agent=[HttpClient], Host=[localhost:8081]} response {}}
+java.lang.NoClassDefFoundError: io/sited/http/impl/RequestImpl
+	at io.sited.SiteHandler.handleRequest(SiteHandler.java:39)
+	at io.sited.Sited$SitedIOHandler.lambda$new$48(Sited.java:135)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:207)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: io.sited.http.impl.RequestImpl
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 7 common frames omitted
+2017-05-27 14:41:02,830 [XNIO-1 task-4] ERROR io.undertow.request - UT005071: Undertow request failed HttpServerExchange{ GET /api/product/category/tree/first-level request {Accept=[application/json], Connection=[Keep-Alive], Accept-Encoding=[gzip,deflate], User-Agent=[HttpClient], Host=[localhost:8081]} response {}}
+java.lang.NoClassDefFoundError: io/sited/http/impl/RequestImpl
+	at io.sited.SiteHandler.handleRequest(SiteHandler.java:39)
+	at io.sited.Sited$SitedIOHandler.lambda$new$48(Sited.java:135)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:207)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:809)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)

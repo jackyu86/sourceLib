@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>DubboConsumer</artifactId>
+        <groupId>com.qsx.dubbo</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>dubbo-web</artifactId>
+    <packaging>war</packaging>
+    <name>dubbo-web</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>com.qsx.dubbo</groupId>
+            <artifactId>dubbo-admin</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>DubboConsumer</finalName>
+        <!--<resources>-->
+        <!--<resource>-->
+        <!--<directory>src/main/resources</directory>-->
+        <!--<includes>-->
+        <!--<include>*.xml</include>-->
+        <!--<include>*.properties</include>-->
+        <!--<include>locale/*</include>-->
+        <!--<include>conf/${env}/*</include>-->
+        <!--</includes>-->
+        <!--<filtering>true</filtering>-->
+        <!--</resource>-->
+
+        <!--<resource>-->
+        <!--<directory>/src/main/resources/conf/${profiles.active}/*</directory>-->
+        <!--</resource>-->
+        <!--</resources>-->
+
+        <plugins>
+            <!--<plugin>-->
+            <!--<groupId>org.apache.tomcat.maven</groupId>-->
+            <!--<artifactId>tomcat7-maven-plugin</artifactId>-->
+            <!--<version>2.2</version>-->
+            <!--<configuration>-->
+            <!--<url>${deployUrl}</url>-->
+            <!--<server>${tomcat7.serverid}</server>-->
+            <!--<path>${path}</path>-->
+            <!--<port>${portNumber}</port>-->
+            <!--<username>${username}</username>-->
+            <!--<password>${password}</password>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <webXml>WEB-INF/web.xml</webXml>
+                    <!--<packagingExcludes>WEB-INF/web.xml</packagingExcludes>-->
+                    <!--<overlays>-->
+                        <!--<overlay>-->
+                            <!--<groupId>com.qsx.dubbo</groupId>-->
+                            <!--<artifactId>dubbo-admin</artifactId>-->
+
+                        <!--</overlay>-->
+
+                        <!--&lt;!&ndash;<overlay>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<groupId>com.qsx.dubbo</groupId>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<artifactId>dubbo-code</artifactId>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</overlay>&ndash;&gt;-->
+                    <!--</overlays>-->
+                </configuration>
+
+            </plugin>
+        </plugins>
+    </build>
+</project>

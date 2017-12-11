@@ -1,0 +1,344 @@
+package com.caej.insurance;
+
+
+import com.caej.insurance.api.EnumAccountTypeWebService;
+import com.caej.insurance.api.EnumBankTypeWebService;
+import com.caej.insurance.api.EnumBeneficiaryTypeWebService;
+import com.caej.insurance.api.EnumCertiTypeWebService;
+import com.caej.insurance.api.EnumChargeModeTypeWebService;
+import com.caej.insurance.api.EnumChargePeriodTypeWebService;
+import com.caej.insurance.api.EnumCountWayTypeWebService;
+import com.caej.insurance.api.EnumCoveragePeriodTypeWebService;
+import com.caej.insurance.api.EnumDeliverTypeWebService;
+import com.caej.insurance.api.EnumGenderTypeWebService;
+import com.caej.insurance.api.EnumInvoiceDeliverTypeWebService;
+import com.caej.insurance.api.EnumLegalBeneficiaryTypeWebService;
+import com.caej.insurance.api.EnumMarriageTypeWebService;
+import com.caej.insurance.api.EnumOverManageTypeWebService;
+import com.caej.insurance.api.EnumOverdueOptionTypeWebService;
+import com.caej.insurance.api.EnumPayModeTypeWebService;
+import com.caej.insurance.api.EnumPayModeWebService;
+import com.caej.insurance.api.EnumPolicyRelationTypeWebService;
+import com.caej.insurance.api.EnumPolicyTypeWebService;
+import com.caej.insurance.api.EnumTypeWebService;
+import com.caej.insurance.api.EnumValueWebService;
+import com.caej.insurance.api.EnumYesOrNotTypeWebService;
+import com.caej.insurance.api.InsuranceAreaWebService;
+import com.caej.insurance.api.InsuranceCategoryWebService;
+import com.caej.insurance.api.InsuranceClaimWebService;
+import com.caej.insurance.api.InsuranceClauseWebService;
+import com.caej.insurance.api.InsuranceCountryWebService;
+import com.caej.insurance.api.InsuranceDeclarationWebService;
+import com.caej.insurance.api.InsuranceFormFieldWebService;
+import com.caej.insurance.api.InsuranceFormGroupWebService;
+import com.caej.insurance.api.InsuranceJobTreeWebService;
+import com.caej.insurance.api.InsuranceJobWebService;
+import com.caej.insurance.api.InsuranceLiabilityGroupWebService;
+import com.caej.insurance.api.InsuranceLiabilityWebService;
+import com.caej.insurance.api.InsuranceModule;
+import com.caej.insurance.api.InsuranceSubjectWebService;
+import com.caej.insurance.api.InsuranceVendorWebService;
+import com.caej.insurance.api.InsuranceWebService;
+import com.caej.insurance.api.ReceiveWebService;
+import com.caej.insurance.domain.EnumAccountType;
+import com.caej.insurance.domain.EnumBankType;
+import com.caej.insurance.domain.EnumBeneficiaryType;
+import com.caej.insurance.domain.EnumCertiType;
+import com.caej.insurance.domain.EnumChargeModeType;
+import com.caej.insurance.domain.EnumChargePeriodType;
+import com.caej.insurance.domain.EnumCountWayType;
+import com.caej.insurance.domain.EnumCoveragePeriodType;
+import com.caej.insurance.domain.EnumDeliverType;
+import com.caej.insurance.domain.EnumGenderType;
+import com.caej.insurance.domain.EnumInvoiceDeliverType;
+import com.caej.insurance.domain.EnumLegalBeneficiaryType;
+import com.caej.insurance.domain.EnumMarriageType;
+import com.caej.insurance.domain.EnumOverManageType;
+import com.caej.insurance.domain.EnumOverdueOptionType;
+import com.caej.insurance.domain.EnumPayMode;
+import com.caej.insurance.domain.EnumPayModeType;
+import com.caej.insurance.domain.EnumPolicyRelationType;
+import com.caej.insurance.domain.EnumPolicyType;
+import com.caej.insurance.domain.EnumYesOrNotType;
+import com.caej.insurance.domain.Insurance;
+import com.caej.insurance.domain.InsuranceArea;
+import com.caej.insurance.domain.InsuranceCategory;
+import com.caej.insurance.domain.InsuranceCity;
+import com.caej.insurance.domain.InsuranceClaim;
+import com.caej.insurance.domain.InsuranceClause;
+import com.caej.insurance.domain.InsuranceCountry;
+import com.caej.insurance.domain.InsuranceDeclaration;
+import com.caej.insurance.domain.InsuranceFormField;
+import com.caej.insurance.domain.InsuranceFormGroup;
+import com.caej.insurance.domain.InsuranceJob;
+import com.caej.insurance.domain.InsuranceJobTree;
+import com.caej.insurance.domain.InsuranceLiability;
+import com.caej.insurance.domain.InsuranceLiabilityGroup;
+import com.caej.insurance.domain.InsuranceProvince;
+import com.caej.insurance.domain.InsuranceSubject;
+import com.caej.insurance.domain.InsuranceVendor;
+import com.caej.insurance.domain.InsuranceWard;
+import com.caej.insurance.receive.web.ReceiveWebServiceImpl;
+import com.caej.insurance.service.EnumAccountTypeService;
+import com.caej.insurance.service.EnumBankTypeService;
+import com.caej.insurance.service.EnumBeneficiaryTypeService;
+import com.caej.insurance.service.EnumCertiTypeService;
+import com.caej.insurance.service.EnumChargeModeTypeService;
+import com.caej.insurance.service.EnumChargePeriodTypeService;
+import com.caej.insurance.service.EnumCountWayTypeService;
+import com.caej.insurance.service.EnumCoveragePeriodTypeService;
+import com.caej.insurance.service.EnumDeliverTypeService;
+import com.caej.insurance.service.EnumGenderTypeService;
+import com.caej.insurance.service.EnumInvoiceDeliverTypeService;
+import com.caej.insurance.service.EnumLegalBeneficiaryTypeService;
+import com.caej.insurance.service.EnumMarriageTypeService;
+import com.caej.insurance.service.EnumOverManageTypeService;
+import com.caej.insurance.service.EnumOverdueOptionTypeService;
+import com.caej.insurance.service.EnumPayModeService;
+import com.caej.insurance.service.EnumPayModeTypeService;
+import com.caej.insurance.service.EnumPolicyRelationTypeService;
+import com.caej.insurance.service.EnumPolicyTypeService;
+import com.caej.insurance.service.EnumTypeService;
+import com.caej.insurance.service.EnumValueService;
+import com.caej.insurance.service.EnumYesOrNotTypeService;
+import com.caej.insurance.service.InstallInsuranceFormGroupService;
+import com.caej.insurance.service.InsuranceAreaService;
+import com.caej.insurance.service.InsuranceCategoryService;
+import com.caej.insurance.service.InsuranceClaimService;
+import com.caej.insurance.service.InsuranceClauseService;
+import com.caej.insurance.service.InsuranceCountryService;
+import com.caej.insurance.service.InsuranceDeclarationService;
+import com.caej.insurance.service.InsuranceFormFieldService;
+import com.caej.insurance.service.InsuranceFormGroupService;
+import com.caej.insurance.service.InsuranceJobService;
+import com.caej.insurance.service.InsuranceJobTreeService;
+import com.caej.insurance.service.InsuranceLiabilityGroupService;
+import com.caej.insurance.service.InsuranceLiabilityService;
+import com.caej.insurance.service.InsuranceService;
+import com.caej.insurance.service.InsuranceSubjectService;
+import com.caej.insurance.service.InsuranceVendorService;
+import com.caej.insurance.web.EnumAccountTypeWebServiceImpl;
+import com.caej.insurance.web.EnumBankTypeWebServiceImpl;
+import com.caej.insurance.web.EnumBeneficiaryTypeWebServiceImpl;
+import com.caej.insurance.web.EnumCertiTypeWebServiceImpl;
+import com.caej.insurance.web.EnumChargeModeTypeWebServiceImpl;
+import com.caej.insurance.web.EnumChargePeriodTypeWebServiceImpl;
+import com.caej.insurance.web.EnumCountWayTypeWebServiceImpl;
+import com.caej.insurance.web.EnumCoveragePeriodTypeWebServiceImpl;
+import com.caej.insurance.web.EnumDeliverTypeWebServiceImpl;
+import com.caej.insurance.web.EnumGenderTypeWebServiceImpl;
+import com.caej.insurance.web.EnumInvoiceDeliverTypeWebServiceImpl;
+import com.caej.insurance.web.EnumLegalBeneficiaryTypeWebServiceImpl;
+import com.caej.insurance.web.EnumMarriageTypeWebServiceImpl;
+import com.caej.insurance.web.EnumOverManageTypeWebServiceImpl;
+import com.caej.insurance.web.EnumOverdueOptionTypeWebServiceImpl;
+import com.caej.insurance.web.EnumPayModeTypeWebServiceImpl;
+import com.caej.insurance.web.EnumPayModeWebServiceImpl;
+import com.caej.insurance.web.EnumPolicyRelationTypeWebServiceImpl;
+import com.caej.insurance.web.EnumPolicyTypeWebServiceImpl;
+import com.caej.insurance.web.EnumTypeWebServiceImpl;
+import com.caej.insurance.web.EnumValueWebServiceImpl;
+import com.caej.insurance.web.EnumYesOrNotTypeWebServiceImpl;
+import com.caej.insurance.web.InsuranceAreaWebServiceImpl;
+import com.caej.insurance.web.InsuranceCategoryWebServiceImpl;
+import com.caej.insurance.web.InsuranceClaimWebServiceImpl;
+import com.caej.insurance.web.InsuranceClauseWebServiceImpl;
+import com.caej.insurance.web.InsuranceCountryWebServiceImpl;
+import com.caej.insurance.web.InsuranceDeclarationWebServiceImpl;
+import com.caej.insurance.web.InsuranceFormFieldWebServiceImpl;
+import com.caej.insurance.web.InsuranceFormGroupWebServiceImpl;
+import com.caej.insurance.web.InsuranceJobTreeWebServiceImpl;
+import com.caej.insurance.web.InsuranceJobWebServiceImpl;
+import com.caej.insurance.web.InsuranceLiabilityGroupWebServiceImpl;
+import com.caej.insurance.web.InsuranceLiabilityWebServiceImpl;
+import com.caej.insurance.web.InsuranceSubjectWebServiceImpl;
+import com.caej.insurance.web.InsuranceVendorWebServiceImpl;
+import com.caej.insurance.web.InsuranceWebServiceImpl;
+import com.mongodb.client.MongoDatabase;
+
+import io.sited.ModuleInfo;
+import io.sited.api.APIConfig;
+import io.sited.api.APIModule;
+import io.sited.db.DBModule;
+import io.sited.db.MongoConfig;
+import io.sited.db.impl.mongo.MongoInstaller;
+
+/**
+ * @author chi
+ */
+@ModuleInfo(name = "insurance.api", require = {DBModule.class, APIModule.class})
+public class InsuranceModuleImpl extends InsuranceModule {
+    @Override
+    protected void configure() throws Exception {
+        require(MongoConfig.class)
+            .entity(Insurance.class)
+            .entity(InsuranceLiability.class)
+            .entity(InsuranceLiabilityGroup.class)
+            .entity(InsuranceArea.class)
+            .entity(InsuranceCategory.class)
+            .entity(InsuranceCity.class)
+            .entity(InsuranceClaim.class)
+            .entity(InsuranceClause.class)
+            .entity(InsuranceCountry.class)
+            .entity(InsuranceDeclaration.class)
+            .entity(InsuranceFormField.class)
+            .entity(InsuranceFormGroup.class)
+            .entity(InsuranceJob.class)
+            .entity(InsuranceJobTree.class)
+            .entity(InsuranceProvince.class)
+            .entity(InsuranceSubject.class)
+            .entity(InsuranceVendor.class)
+            .entity(EnumDeliverType.class)
+            .entity(EnumGenderType.class)
+            .entity(EnumCertiType.class)
+            .entity(EnumMarriageType.class)
+            .entity(EnumPolicyRelationType.class)
+            .entity(EnumBeneficiaryType.class)
+            .entity(EnumLegalBeneficiaryType.class)
+            .entity(EnumPayModeType.class)
+            .entity(EnumAccountType.class)
+            .entity(EnumOverManageType.class)
+            .entity(EnumOverdueOptionType.class)
+            .entity(EnumBankType.class)
+            .entity(EnumCoveragePeriodType.class)
+            .entity(EnumChargeModeType.class)
+            .entity(EnumChargePeriodType.class)
+            .entity(EnumCountWayType.class)
+            .entity(EnumInvoiceDeliverType.class)
+            .entity(EnumYesOrNotType.class)
+            .entity(EnumPayMode.class)
+            .entity(InsuranceWard.class)
+            .entity(EnumPolicyType.class);
+
+        bind(InsuranceService.class);
+        bind(InsuranceLiabilityService.class);
+        bind(InsuranceLiabilityGroupService.class);
+        bind(InsuranceAreaService.class);
+        bind(InsuranceCategoryService.class);
+        bind(InsuranceClaimService.class);
+        bind(InsuranceClauseService.class);
+        bind(InsuranceCountryService.class);
+        bind(InsuranceDeclarationService.class);
+        bind(InsuranceFormFieldService.class);
+        bind(InsuranceFormGroupService.class);
+        bind(InsuranceJobService.class);
+        bind(InsuranceJobTreeService.class);
+        bind(InsuranceSubjectService.class);
+        bind(InsuranceVendorService.class);
+        bind(EnumDeliverTypeService.class);
+        bind(EnumGenderTypeService.class);
+        bind(EnumCertiTypeService.class);
+        bind(EnumMarriageTypeService.class);
+        bind(EnumPolicyRelationTypeService.class);
+        bind(EnumBeneficiaryTypeService.class);
+        bind(EnumLegalBeneficiaryTypeService.class);
+        bind(EnumPayModeTypeService.class);
+        bind(EnumAccountTypeService.class);
+        bind(EnumOverManageTypeService.class);
+        bind(EnumOverdueOptionTypeService.class);
+        bind(EnumBankTypeService.class);
+        bind(EnumCoveragePeriodTypeService.class);
+        bind(EnumChargeModeTypeService.class);
+        bind(EnumChargePeriodTypeService.class);
+        bind(EnumCountWayTypeService.class);
+        bind(EnumInvoiceDeliverTypeService.class);
+        bind(EnumYesOrNotTypeService.class);
+        bind(EnumPayModeService.class);
+        bind(EnumPolicyTypeService.class);
+
+        bind(EnumTypeService.class);
+        bind(EnumValueService.class);
+
+        APIConfig apiConfig = require(APIConfig.class);
+        apiConfig.service(InsuranceAreaWebService.class, InsuranceAreaWebServiceImpl.class);
+        apiConfig.service(InsuranceCategoryWebService.class, InsuranceCategoryWebServiceImpl.class);
+        apiConfig.service(InsuranceClaimWebService.class, InsuranceClaimWebServiceImpl.class);
+        apiConfig.service(InsuranceClauseWebService.class, InsuranceClauseWebServiceImpl.class);
+        apiConfig.service(InsuranceCountryWebService.class, InsuranceCountryWebServiceImpl.class);
+        apiConfig.service(InsuranceDeclarationWebService.class, InsuranceDeclarationWebServiceImpl.class);
+        apiConfig.service(InsuranceFormGroupWebService.class, InsuranceFormGroupWebServiceImpl.class);
+        apiConfig.service(InsuranceFormFieldWebService.class, InsuranceFormFieldWebServiceImpl.class);
+        apiConfig.service(InsuranceJobWebService.class, InsuranceJobWebServiceImpl.class);
+        apiConfig.service(InsuranceJobTreeWebService.class, InsuranceJobTreeWebServiceImpl.class);
+        apiConfig.service(InsuranceSubjectWebService.class, InsuranceSubjectWebServiceImpl.class);
+        apiConfig.service(InsuranceVendorWebService.class, InsuranceVendorWebServiceImpl.class);
+        apiConfig.service(InsuranceWebService.class, InsuranceWebServiceImpl.class);
+        apiConfig.service(InsuranceLiabilityGroupWebService.class, InsuranceLiabilityGroupWebServiceImpl.class);
+        apiConfig.service(InsuranceLiabilityWebService.class, InsuranceLiabilityWebServiceImpl.class);
+        apiConfig.service(EnumDeliverTypeWebService.class, EnumDeliverTypeWebServiceImpl.class);
+        apiConfig.service(EnumGenderTypeWebService.class, EnumGenderTypeWebServiceImpl.class);
+        apiConfig.service(EnumCertiTypeWebService.class, EnumCertiTypeWebServiceImpl.class);
+        apiConfig.service(EnumMarriageTypeWebService.class, EnumMarriageTypeWebServiceImpl.class);
+        apiConfig.service(EnumPolicyRelationTypeWebService.class, EnumPolicyRelationTypeWebServiceImpl.class);
+        apiConfig.service(EnumBeneficiaryTypeWebService.class, EnumBeneficiaryTypeWebServiceImpl.class);
+        apiConfig.service(EnumLegalBeneficiaryTypeWebService.class, EnumLegalBeneficiaryTypeWebServiceImpl.class);
+        apiConfig.service(EnumPayModeTypeWebService.class, EnumPayModeTypeWebServiceImpl.class);
+        apiConfig.service(EnumAccountTypeWebService.class, EnumAccountTypeWebServiceImpl.class);
+        apiConfig.service(EnumOverManageTypeWebService.class, EnumOverManageTypeWebServiceImpl.class);
+        apiConfig.service(EnumOverdueOptionTypeWebService.class, EnumOverdueOptionTypeWebServiceImpl.class);
+        apiConfig.service(EnumBankTypeWebService.class, EnumBankTypeWebServiceImpl.class);
+        apiConfig.service(EnumCoveragePeriodTypeWebService.class, EnumCoveragePeriodTypeWebServiceImpl.class);
+        apiConfig.service(EnumChargeModeTypeWebService.class, EnumChargeModeTypeWebServiceImpl.class);
+        apiConfig.service(EnumChargePeriodTypeWebService.class, EnumChargePeriodTypeWebServiceImpl.class);
+        apiConfig.service(EnumCountWayTypeWebService.class, EnumCountWayTypeWebServiceImpl.class);
+        apiConfig.service(EnumInvoiceDeliverTypeWebService.class, EnumInvoiceDeliverTypeWebServiceImpl.class);
+        apiConfig.service(EnumYesOrNotTypeWebService.class, EnumYesOrNotTypeWebServiceImpl.class);
+        apiConfig.service(EnumPayModeWebService.class, EnumPayModeWebServiceImpl.class);
+        apiConfig.service(EnumPolicyTypeWebService.class, EnumPolicyTypeWebServiceImpl.class);
+
+        apiConfig.service(EnumTypeWebService.class, EnumTypeWebServiceImpl.class);
+        apiConfig.service(EnumValueWebService.class, EnumValueWebServiceImpl.class);
+        apiConfig.service(ReceiveWebService.class, ReceiveWebServiceImpl.class);
+
+
+        initEnums();
+        initDB();
+    }
+
+    private void initEnums() {
+        MongoDatabase db = require(MongoConfig.class).db();
+        new MongoInstaller<>(EnumDeliverType.class, db).installIfEmpty("db/base/enum-deliver-type.json");
+        new MongoInstaller<>(EnumGenderType.class, db).installIfEmpty("db/base/enum-gender.json");
+        new MongoInstaller<>(EnumCertiType.class, db).installIfEmpty("db/base/enum-certi-type.json");
+        new MongoInstaller<>(EnumMarriageType.class, db).installIfEmpty("db/base/enum-marriage-type.json");
+        new MongoInstaller<>(EnumPolicyRelationType.class, db).installIfEmpty("db/base/enum-policy-relation-type.json");
+        new MongoInstaller<>(EnumBeneficiaryType.class, db).installIfEmpty("db/base/enum-beneficiary-type.json");
+        new MongoInstaller<>(EnumLegalBeneficiaryType.class, db).installIfEmpty("db/base/enum-legal-beneficiary-type.json");
+        new MongoInstaller<>(EnumPayModeType.class, db).installIfEmpty("db/base/enum-pay-mode-type.json");
+        new MongoInstaller<>(EnumAccountType.class, db).installIfEmpty("db/base/enum-account-type.json");
+        new MongoInstaller<>(EnumOverManageType.class, db).installIfEmpty("db/base/enum-over-manage-type.json");
+        new MongoInstaller<>(EnumOverdueOptionType.class, db).installIfEmpty("db/base/enum-overdue-option-type.json");
+        new MongoInstaller<>(EnumBankType.class, db).installIfEmpty("db/base/enum-bank-type.json");
+        new MongoInstaller<>(EnumCoveragePeriodType.class, db).installIfEmpty("db/base/enum-coverage-period-type.json");
+        new MongoInstaller<>(EnumChargeModeType.class, db).installIfEmpty("db/base/enum-charge-mode-type.json");
+        new MongoInstaller<>(EnumChargePeriodType.class, db).installIfEmpty("db/base/enum-charge-period-type.json");
+        new MongoInstaller<>(EnumCountWayType.class, db).installIfEmpty("db/base/enum-count-way-type.json");
+        new MongoInstaller<>(EnumInvoiceDeliverType.class, db).installIfEmpty("db/base/enum-invoice-deliver-type.json");
+        new MongoInstaller<>(EnumYesOrNotType.class, db).installIfEmpty("db/base/enum-yes-or-not-type.json");
+        new MongoInstaller<>(EnumPayMode.class, db).installIfEmpty("db/base/enum-pay-mode.json");
+        new MongoInstaller<>(EnumPolicyType.class, db).installIfEmpty("db/base/enum-policy-type.json");
+    }
+
+    private void initDB() {
+        MongoDatabase db = require(MongoConfig.class).db();
+        new MongoInstaller<>(Insurance.class, db).installIfEmpty("db/base/insurance.json");
+        new MongoInstaller<>(InsuranceCategory.class, db).installIfEmpty("db/base/insurance-category.json");
+        new MongoInstaller<>(InsuranceCity.class, db).installIfEmpty("db/base/insurance-city.json");
+        new MongoInstaller<>(InsuranceWard.class, db).installIfEmpty("db/base/insurance-ward.json");
+        new MongoInstaller<>(InsuranceArea.class, db).installIfEmpty("db/base/insurance-region.json");
+        new MongoInstaller<>(InsuranceClaim.class, db).installIfEmpty("db/base/insurance-claim.json");
+        new MongoInstaller<>(InsuranceCountry.class, db).installIfEmpty("db/base/insurance-country.json");
+        new MongoInstaller<>(InsuranceDeclaration.class, db).installIfEmpty("db/base/insurance-information.json");
+        new MongoInstaller<>(InsuranceJob.class, db).installIfEmpty("db/base/insurance-job.json");
+        new MongoInstaller<>(InsuranceJobTree.class, db).installIfEmpty("db/base/insurance-job-tree.json");
+        new MongoInstaller<>(InsuranceClause.class, db).installIfEmpty("db/base/insurance-clause.json");
+        new MongoInstaller<>(InsuranceVendor.class, db).installIfEmpty("db/base/insurance-vendor.json");
+        new MongoInstaller<>(InsuranceProvince.class, db).installIfEmpty("db/base/insurance-province.json");
+        new MongoInstaller<>(InsuranceSubject.class, db).installIfEmpty("db/base/insurance-subject.json");
+        new MongoInstaller<>(InsuranceLiabilityGroup.class, db).installIfEmpty("db/base/insurance-liability-group.json");
+        new MongoInstaller<>(InsuranceLiability.class, db).installIfEmpty("db/base/insurance-liability.json");
+
+        InstallInsuranceFormGroupService installInsuranceFormGroupService = bind(InstallInsuranceFormGroupService.class);
+        installInsuranceFormGroupService.installIfEmpty("db/base/insurance-form-group.json");
+    }
+}

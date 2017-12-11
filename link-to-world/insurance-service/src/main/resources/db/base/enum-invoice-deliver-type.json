@@ -1,0 +1,16 @@
+[
+    {
+        "id": "58429e6d223fe935c8f8c14d",
+        "name": "挂号信",
+        "value": "0",
+        "price": 4,
+        "displayOrder": 1
+    },
+    {
+        "id": "58429e6d223fe935c8f8c14e",
+        "name": "快递",
+        "value": "1",
+        "price": 16,
+        "displayOrder": 2
+    }
+]

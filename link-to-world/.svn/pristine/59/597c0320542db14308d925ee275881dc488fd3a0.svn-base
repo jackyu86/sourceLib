@@ -1,0 +1,26 @@
+<html xmlns:j="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+<div class="side-nav">
+    <div class="list-group">
+        <div class="list-group-item title" j:class="selected=='about'?'active':''">
+            <a href="/about/about"
+               j:href="selected=='about'?'#':'/about/about'"
+               > 关于君龙分销平台</a>
+        </div>
+    </div>
+    <div class="list-group" >
+        <div class="list-group-item title" j:class="selected=='contact'?'active':''">
+            <a href="/about/contact" j:href="selected=='contact'?'#':'/about/contact'">联系我们</a>
+        </div>
+    </div>
+    <div class="list-group" >
+        <div class="list-group-item title" j:class="selected=='law'?'active':''">
+            <a href="/about/law" j:href="selected=='law'?'#':'/about/law'">法律声明</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

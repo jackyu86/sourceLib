@@ -1,0 +1,68 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ui-sref="console.insurance.form-group.list" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <h2 flex>{{formGroup.displayName}}</h2>
+        <md-button class="md-icon-button" aria-label="新建字段" ui-sref="console.insurance.form-field.create" ng-if="isCustomGroup(formGroup)">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-subheader ng-if="formFieldTable.searching">
+        <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadFormFields()">
+            <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            <div flex>
+                <input ng-model="formFieldTable.query.displayName" type="text">
+            </div>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!formFieldTable.searching && !formFieldTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>字段列表</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="formFieldTable.searching = !formFieldTable.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table ng-model="formFieldTable.selected">
+            <thead md-head md-order="formFieldTable.query.order" md-on-reorder="reloadFormFields" class="md-accent">
+            <tr md-row>
+                <th md-column><span>编号</span></th>
+                <th md-column><span>名称</span></th>
+                <th md-column><span>显示顺序</span></th>
+                <th md-column><span>类型</span></th>
+                <th md-column md-order-by="created_time"><span>创建时间</span></th>
+                <th md-column><span>操作</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="formField"
+                ng-repeat="formField in formFieldTable.data.items" md-auto-select>
+                <td md-cell>{{formField.id}}</td>
+                <td md-cell>{{formField.displayName}}</td>
+                <td md-cell>{{formField.displayOrder}}</td>
+                <td md-cell>{{formField.type}}</td>
+                <td md-cell>{{formField.createdTime | date:'yyyy/MM/dd'}}</td>
+                <td md-cell layout="row">
+                    <md-button class="md-icon-button" ng-click="formFieldTable.edit(formField)">编辑</md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+    <md-table-pagination md-limit="formFieldTable.query.limit" md-page="formFieldTable.query.page" md-total="{{formFieldTable.data.total}}"
+                         md-page-select="formFieldTable.options.pageSelector" md-boundary-links="formFieldTable.options.boundaryLinks"
+                         md-on-paginate="reloadFormFields"></md-table-pagination>
+
+</md-card>

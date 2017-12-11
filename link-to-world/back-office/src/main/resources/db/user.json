@@ -1,0 +1,49 @@
+[
+    {
+        "username": "fujianAdmin",
+        "fullName": "福建管理员",
+        "email": "fujianAdmin@kdlins.com",
+        "password": "fujianAdmin",
+        "roles": [
+            "fujianProvinceAdmin"
+        ],
+        "requestBy": "init"
+    },
+    {
+        "username": "beijingAdmin",
+        "fullName": "北京管理员",
+        "email": "beijingAdmin@kdlins.com",
+        "password": "beijingAdmin",
+        "roles": [
+            "beijingProvinceAdmin"
+        ],
+        "requestBy": "init"
+    },
+    {
+        "username": "junlongAdmin",
+        "fullName": "君龙人寿供应商管理员",
+        "email": "junlongAdmin@kdlins.com",
+        "password": "junlongAdmin",
+        "roles": [
+            "5789a68b28708a938f9b901cVendorAdmin"
+        ],
+        "requestBy": "init"
+    },
+    {
+        "username": "taikangAdmin",
+        "fullName": "泰康人寿供应商管理员",
+        "email": "taikangAdmin@kdlins.com",
+        "password": "taikangAdmin",
+        "roles": [
+            "5789a68b28708a938f9b901bVendorAdmin"
+        ],
+        "requestBy": "init"
+    },
+    {
+        "username": "anonym",
+        "fullName": "匿名购买公共账号",
+        "email": "anonym@kdlins.com",
+        "password": "anonym",
+        "requestBy": "init"
+    }
+]

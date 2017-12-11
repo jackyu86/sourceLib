@@ -1,0 +1,75 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>客户联系方式列表</h2>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="Create dealer" ui-sref="console.dealer.create">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-subheader ng-if="ticketTable.searching">
+        <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadTicket()">
+            <div flex>
+                <md-input-container>
+                    <label>姓名</label>
+                    <input ng-model="ticketTable.query.name" type="text">
+                </md-input-container>
+                <md-input-container>
+                    <label>电话</label>
+                    <input ng-model="ticketTable.query.phone" type="text">
+                </md-input-container>
+            </div>
+            <md-button class="md-icon-button" ng-click="reloadTicket()">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!ticketTable.searching && !ticketTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>客户联系方式列表</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="ticketTable.searching = !ticketTable.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-subheader ng-if="ticketTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>{{ticketTable.selected.length}} Selected</span>
+            <span flex></span>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table md-row-select multiple ng-model="ticketTable.selected">
+            <thead md-head md-on-reorder="reloadTickets" class="md-accent">
+            <tr md-row>
+                <th md-column><span>姓名</span></th>
+                <th md-column><span>电话</span></th>
+                <th md-column><span>注册时间</span></th>
+                <th md-column><span>内容</span></th>
+                <th md-column><span>备注</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="ticket"
+                ng-repeat="ticket in ticketTable.data.items" md-auto-select>
+                <td md-cell>{{ticket.fullName}}</td>
+                <td md-cell>{{ticket.phone}}</td>
+                <td md-cell>{{ticket.createdTime | date:'yyyy/MM/dd'}}</td>
+                <td md-cell>{{ticket.content}}</td>
+                <td md-cell>{{ticket.comment}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+</md-card>

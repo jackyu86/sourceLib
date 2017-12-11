@@ -1,0 +1,490 @@
+{
+    "name": "57c24ce40879226abbb36068",
+    "description": "保险描述",
+    "keywords": [
+        "高额综合意外"
+    ],
+    "displayName": "君龙高额综合意外险金领计划",
+    "tags": [],
+    "publicVisible": "ALL",
+    "insuranceCategoryIds": [
+        "5789a68b28708a938f9b900b",
+        "5789a68b28708a938f9b900c"
+    ],
+    "insuranceClaimId": "578b525f7214b5300823adf4",
+    "insuranceVendorId": "5789a68b28708a938f9b901c",
+    "insuranceJobTreeId": "584e06fa75c46e1f30cb7c0c",
+    "jobRestricted": null,
+    "jobLevels": [
+        1,
+        2,
+        3
+    ],
+    "jobIds": null,
+    "jobExclude": true,
+    "minUnits": null,
+    "maxUnits": null,
+    "policyTypes": null,
+    "highlightContent": "200万意外伤害保障、高额意外医疗及住院津贴保障、满足金领人士高保障需求！",
+    "featureContent": "<p>1、50-300万超高额意外保障，为客户提供更高、更充足的保障！</p><p>2、高额住院津贴，更高的意外医疗保额，弥补因意外住院造成的损失，给您贴心全面的保障计划。</p><p>3、18-60周岁、1-2类职业人士均可投保，支持在境内定居半年以上的外籍人士投保，更大程度满足您的需求！</p><p>4、全年365天、全天24小时在线投保，方便快捷享受超高保障；专业咨询服务就在您的身边！</p>",
+    "tipsContent": "<p>1、本产品由君龙人寿保险有限公司承保,目前该公司在福建、浙江设有分支机构。客户购买后，保单生效前可办理退保及变更，后续变更与理赔事务请联系网站客服专员。</p><p>2、同一保障期间内，同一被保险人仅限购买一份君龙人寿保险公司的综合意外险产品，多购买部分保险公司不承担保险责任。</p><p>3、在中国境内(不含港澳台)的外籍人士购买本产品需满足:在中国生活或工作半年以上。</p><p>4、本产品中医疗费用和住院津贴仅承保中国境内（不包含台湾、香港、澳门地区）发生的治疗，身故、伤残责任保障全球除下列国家和地区：阿尔巴尼亚、阿尔及利亚、阿富汗、埃及、埃塞俄比亚、安哥拉、巴布亚新几内亚、巴基斯坦、巴勒斯坦、巴林、波黑、布基纳法索、布隆迪、赤道几内亚、东帝汶、多哥、厄瓜多尔、厄立特里亚、菲律宾、冈比亚、刚果共和国（布）、刚果民主共和国（金）、哥伦比亚、格鲁吉亚、圭亚那、海地共和国、黑山、洪都拉斯、吉布提、吉尔吉斯斯坦、几内亚、几内亚比绍、加纳、加蓬、柬埔寨、泰国（特指缅甸与柬埔寨边境,极南部省北大年（extreme southern provinces Pattani）,也拉（Yala）,那拉提瓦（Narathiwat）和宋卡（Songkhla））津巴布韦、喀麦隆、科特迪瓦、肯尼亚、莱索托、黎巴嫩、利比里亚、利比亚、卢旺达、马达加斯加、马拉维、马里、马其顿、毛里塔尼亚、孟加拉国、秘鲁、缅甸、莫桑比克、南非、南极洲、尼泊尔、尼加拉瓜、尼日尔、尼日利亚、塞尔维亚、塞拉利昂、斯里兰卡、斯威士兰、苏丹、苏里南、索马里、塔吉克斯坦、汤加、突尼斯、危地马拉、委内瑞拉、乌干达、乌克兰、叙利亚、亚美尼亚、也门、伊拉克、伊朗、以色列、印度（除克什米尔地区）、印度尼西亚（除亚齐、马鲁古、伊里安、加里曼丹省）、赞比亚、乍得、中非、南苏丹、科摩罗、萨尔瓦多、所罗门群岛、西撒哈拉。</p><p>5、本产品不承保高风险运动导致的意外伤害，高风险运动包括但不限于潜水、跳伞、攀岩、探险、蹦极、驾驶滑翔机、武术比赛、摔跤、特技表演、赛马、赛车等（具体可见除外责任）。</p><p>                                                                                                                             6、本产品中的医疗相关保障限定为中华人民共和国境内合法经营的二级以上（含二级）医院或保险公司认可的其他医疗机构，除了北京平谷区所有医院。请注意：北京平谷区所有医院的就医均不给予理赔，建议您去往其他区域二级以上（含二级）公立医院就医。</p><p>7、本产品仅限1-2类职业人员，若被保险人从事3类及3类以上职业或拒保职业的工作发生意外事故，不属于保险责任范围，点击查看《职业分类表》。同时暂不接受无固定职业者、孕妇投保，投保无效。成年在读学生，只接受最高50万保额投保，多投无效。</p><p>8、本产品投保意外伤害保额不得超过年收入10倍。其中: 投保精英计划,对应50万保额，需每年固定收入满5万元; 投保白领计划,对应100万保额，需每年固定收入满10万元; 投保金领计划,对应200万保额，需每年固定收入满20万元; 投保至尊计划,对应300万保额，需每年固定收入满30万元。发生意外身故、残疾或烧烫伤理赔时需提供上一年度的固定收入证明，若实际收入低于上述规定，则保险公司将按实际收入和投保该产品要求收入的比例支付保险金，并不退还保费。</p><p>9、本产品理赔时所要求的固定收入证明，以国家税务机关出具的完税证明或国家社保机构开具的养老金证明为准。</p><p>10、本产品为网络销售产品，网上投保、网上支付、网上即时核保并出具电子保单，您可拨打君龙人寿保险公司电话400-666-0123或登录君龙人寿保险公司官网http://www.kdlins.com.cn/cavLogon.action?queryType=singleCust 查询、验真。</p>",
+    "cases": [
+        "<p>张阿姨,今年50岁,是一家企业的财务总监。女儿为她投保“君龙高额综合意外险”,选择保额为意外身故/残疾100万元、意外住院津贴200元/天、意外医疗3万元,保费899元,保障期间一年。在一次跳广场舞时,张阿姨不慎扭伤,前往医院就医,住院12天,合理范围内共花费8600元。后保险公司经核实符合保险责任范围,作出如下赔付:<br/>赔付张阿姨10000元,包括以下:<br/>1、意外医疗补偿(8600-200)*100%=8400元(200元免赔,100%赔付)。<br/>2、意外住院津贴200*(12-4)=1600元(免赔4天)<br/></p>"
+    ],
+    "questions": [
+        {
+            "question": "本产品要求的医院是指?",
+            "answer": "指经中华人民共和国卫生行政部门评审确定的二级或以上的公立医院(不含港澳台医院),但不包括精神病院及专供康复、护理、疗养、戒酒、戒毒、养老等非以直接诊治病人为目的的医疗机构,该医院必须具有符合国家有关医院管理规则设置标准的医疗设施,且全天24小时有合格的医师和护士驻院提供医疗和护理服务。请注意:北京平谷区所有医院均不给理赔。"
+        },
+        {
+            "question": "本产品是否承保高风险运动导致的意外伤害?",
+            "answer": "本产品不承保高风险运动导致的意外伤害,高风险运动包括但不限于潜水、跳伞、攀岩、探险、蹦极、驾驶滑翔机、武术比赛、摔跤、特技表演、赛马、赛车等。"
+        },
+        {
+            "question": "这款产品的保障区域是哪里呢？",
+            "answer": "本产品身故、伤残责任全球（除部分国家，具体除外国家见中民提示）均可保，医疗费用和住院津贴仅承保中国境内（不包含台湾、香港、澳门地区）发生的治疗。"
+        },
+        {
+            "question": "这款产品的意外医疗报销和意外住院津贴给付有没有什么限制？",
+            "answer": "对于意外造成的合理的治疗费用，在扣除200元后再按100%比例赔付；对于意外住院津贴，需按实际住院天数扣除4天免赔后给付。"
+        },
+        {
+            "question": "我在北京、我家人在别的城市，我们都能购买这款保障产品吗？",
+            "answer": "可以的，本产品支持全国购买。"
+        }
+    ],
+    "plp": [
+        {
+            "group": "plan",
+            "field": "period",
+            "editable": false
+        }
+    ],
+    "pdp": [
+        {
+            "group": "product",
+            "field": "serial",
+            "editable": false
+        },
+        {
+            "group": "plan",
+            "field": "period",
+            "editable": false
+        },
+        {
+            "group": "liability",
+            "field": "57c24ce40879226abbb35fb8"
+        },
+        {
+            "group": "liability",
+            "field": "58364dba99a6bc1744d1770e"
+        },
+        {
+            "group": "liability",
+            "field": "58364dba99a6bc1744d17717"
+        }
+    ],
+    "formGroups": [
+        {
+            "name": "plan",
+            "optional": false,
+            "fields": [
+                {
+                    "name": "startTime",
+                    "options": {},
+                    "editable": true
+                },
+                {
+                    "name": "period",
+                    "options": {},
+                    "editable": true,
+                    "hidden": true,
+                    "defaultValue": {
+                        "displayName": "1年",
+                        "unit": "YEAR",
+                        "value": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "policy-holder",
+            "fields": [
+                {
+                    "name": "name",
+                    "editable": true
+                },
+                {
+                    "name": "id",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "身份证",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "护照",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "军人证",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "台胞证",
+                                "value": "14"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "9"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "birthDate",
+                    "editable": true
+                },
+                {
+                    "name": "gender",
+                    "editable": true
+                },
+                {
+                    "name": "phone",
+                    "editable": true
+                },
+                {
+                    "name": "email",
+                    "editable": true
+                },
+                {
+                    "name": "age",
+                    "options": {
+                        "min": 18
+                    },
+                    "editable": false,
+                    "hidden": true
+                }
+            ]
+        },
+        {
+            "name": "insured",
+            "fields": [
+                {
+                    "name": "name",
+                    "editable": true
+                },
+                {
+                    "name": "id",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "身份证",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "护照",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "军人证",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "台胞证",
+                                "value": "14"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "9"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "birthDate",
+                    "editable": true
+                },
+                {
+                    "name": "gender",
+                    "editable": true
+                },
+                {
+                    "name": "relation",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "本人",
+                                "value": "5"
+                            },
+                            {
+                                "displayName": "父母",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "子女",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "配偶",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "6"
+                            }
+                        ]
+                    },
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "job",
+                    "editable": true
+                },
+                {
+                    "name": "age",
+                    "options": {
+                        "min": 0,
+                        "max": 60
+                    },
+                    "editable": false,
+                    "hidden": true
+                }
+            ]
+        },
+        {
+            "name": "beneficiary",
+            "fields": [
+                {
+                    "name": "legalBeneficiary",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "是",
+                                "value": "Y"
+                            },
+                            {
+                                "displayName": "否",
+                                "value": "N"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "type",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "身故受益人",
+                                "value": "2"
+                            }
+                        ]
+                    },
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "name",
+                    "editable": true
+                },
+                {
+                    "name": "gender",
+                    "editable": true
+                },
+                {
+                    "name": "birthDate",
+                    "editable": true
+                },
+                {
+                    "name": "id",
+                    "editable": true,
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "身份证",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "护照",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "军人证",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "台胞证",
+                                "value": "14"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "9"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "relation",
+                    "editable": true
+                },
+                {
+                    "name": "beneficiaryRate",
+                    "editable": true
+                }
+            ]
+        },
+        {
+            "name": "liability",
+            "fields": [
+                {
+                    "name": "57c24ce40879226abbb35fb8",
+                    "editable": true,
+                    "defaultValue": 2000000
+                },
+                {
+                    "name": "58364dba99a6bc1744d1770e",
+                    "editable": true,
+                    "defaultValue": 30000
+                },
+                {
+                    "name": "58364dba99a6bc1744d17717",
+                    "editable": true,
+                    "defaultValue": 200
+                }
+            ]
+        },
+        {
+            "name": "policy",
+            "fields": [
+                {
+                    "name": "deliverType",
+                    "editable": true
+                }
+            ]
+        },
+        {
+            "name": "others",
+            "optional": true,
+            "fields": [
+                {
+                    "name": "invoiceName",
+                    "editable": true
+                },
+                {
+                    "name": "invoiceDate",
+                    "editable": true
+                },
+                {
+                    "name": "invoiceDeliverType",
+                    "editable": true
+                },
+                {
+                    "name": "firstName",
+                    "editable": true
+                },
+                {
+                    "name": "mobile",
+                    "editable": true
+                },
+                {
+                    "name": "address",
+                    "editable": true
+                },
+                {
+                    "name": "postalCode",
+                    "editable": true
+                }
+            ]
+        },
+        {
+            "name": "information",
+            "fields": [
+                {
+                    "name": "highAccidentInsuranceQuestion1",
+                    "editable": true
+                },
+                {
+                    "name": "highAccidentInsuranceQuestion2",
+                    "editable": true
+                },
+                {
+                    "name": "highAccidentInsuranceQuestion3",
+                    "editable": true
+                },
+                {
+                    "name": "highAccidentInsuranceQuestion4",
+                    "editable": true
+                },
+                {
+                    "name": "highAccidentInsuranceQuestion5",
+                    "editable": true
+                },
+                {
+                    "name": "highAccidentInsuranceQuestion6",
+                    "editable": true
+                }
+            ]
+        }
+    ],
+    "period": {
+        "type": "FIXED",
+        "fixedValue": {
+            "displayName": "1年",
+            "unit": "YEAR",
+            "value": 1
+        },
+        "startTimeType": "USER_INPUT"
+    },
+    "payment": {
+        "methods": [
+            "FIXED"
+        ]
+    },
+    "insurances": [
+        {
+            "insuranceId": "57c24ce40879226abbb36067",
+            "optional": false,
+            "liabilities": [
+                {
+                    "insuranceLiabilityId": "57c24ce40879226abbb35fb8",
+                    "description": "意外身故全额给付；意外残疾、烧伤根据残疾等级按比例进行赔付",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 2000000
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "58364dba99a6bc1744d1770e",
+                    "description": "免赔100元，赔付比例100%",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 30000
+                    }
+                },
+                {
+                    "insuranceLiabilityId": "58364dba99a6bc1744d17717",
+                    "description": "每人每次事故免赔4天，单次限额90天，全年限额180天",
+                    "amount": {
+                        "type": "FIXED",
+                        "fixedValue": 200
+                    }
+                }
+            ]
+        }
+    ],
+    "status": "ACTIVE",
+    "type": "MAIN",
+    "discount": 1,
+    "planCode": "0201115",
+    "insuranceClauseIds": [
+        "578b57967214b52d84eb4f56",
+        "57c24ce40879226abbb36087",
+        "57c24ce40879226abbb36088"
+    ],
+    "priceTableUrl": "http://baodan.zhongmin.cn/clause/Accid/Accid_1304_5.pdf",
+    "customerNotificationUrl": "http://baodan.zhongmin.cn/clause/ClientNotification.pdf"
+}

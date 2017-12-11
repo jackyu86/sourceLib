@@ -1,0 +1,98 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Go back" ng-click="goBack()">
+            <md-icon md-font-icon="fa" class="fa-arrow-left"></md-icon>
+        </md-button>
+        <span flex></span>
+
+        <md-button class="md-raised" aria-label="Save" ng-click="save()">保存</md-button>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-content layout="row">
+        <md-card class="product-panel" flex>
+            <md-content>
+                <ul class="category-list">
+                    <li class="category" ng-repeat="category in categoryList" category="category"
+                        is-category-selected="isCategorySelected(category)"
+                        is-product-selected="isProductSelected(product)"
+                        check-category="checkCategory(category)"
+                        check-product="checkProduct(product)"
+                        ng-if="category.show"
+                        dealer-product-category></li>
+                </ul>
+            </md-content>
+        </md-card>
+        <md-card class="product-panel" flex>
+            <md-content>
+                <ul class="category-list">
+                    <li class="category" ng-repeat="category in categoryList" category="category"
+                        is-category-selected="isCategorySelected(category)"
+                        is-product-selected="isProductSelected(product)"
+                        check-category="checkCategory(category)"
+                        check-product="checkProduct(product)"
+                        ng-if="isCategorySelected(category.category)"
+                        surrender-marks="surrenderMarks"
+                        bank-account-marks="bankAccountMarks"
+                        rates="rates"
+                        dealer-allocated-product-category></li>
+                </ul>
+            </md-content>
+        </md-card>
+    </md-content>
+</md-card>
+
+
+<script type="text/ng-template" id="partials/dealer-product-category.tmpl.html">
+    <md-checkbox ng-checked="isCategorySelected({category: category.category})" ng-click="checkCategory({category:category})">
+        {{category.category.name}}
+    </md-checkbox>
+    <ul class="product-list" ng-if="category.productList.length>0">
+        <li class="product" ng-repeat="product in category.productList">
+            <md-checkbox ng-checked="isProductSelected({product: product})" ng-click="checkProduct({product:product})">
+                {{product.displayName}}
+            </md-checkbox>
+        </li>
+    </ul>
+    <ul class="sub-category-list" ng-if="category.children.length>0">
+        <li class="sub-category" ng-repeat="subCategory in category.children" category="subCategory"
+            is-category-selected="isCategorySelected({category:category})"
+            is-product-selected="isProductSelected({product:product})"
+            check-category="checkCategory({category:category})"
+            check-product="checkProduct({product:product})"
+            ng-if="subCategory.show"
+            dealer-product-category></li>
+    </ul>
+</script>
+<script type="text/ng-template" id="partials/dealer-allocated-product-category.tmpl.html">
+    <md-checkbox ng-checked="isCategorySelected({category: category.category})" ng-click="checkCategory({category:category})">
+        {{category.category.name}}
+    </md-checkbox>
+    <ul class="product-list" ng-if="category.productList.length>0">
+        <li class="product" ng-repeat="product in category.productList" ng-if="isProductSelected({product:product})" layout="row">
+            <md-checkbox ng-checked="isProductSelected({product: product})" ng-click="checkProduct({product:product})">
+                {{product.displayName}}
+            </md-checkbox>
+            <md-checkbox ng-model="surrenderMarks[product.name]">
+                支持退款
+            </md-checkbox>
+            <md-checkbox ng-model="bankAccountMarks[product.name]">
+                支持银行账号
+            </md-checkbox>
+            <input flex="15" limit="0-100" placeholder="佣金比例" type="number" step="any" ng-model="rates[product.name]">
+        </li>
+    </ul>
+    <ul class="sub-category-list" ng-if="category.children.length>0">
+        <li class="sub-category" ng-repeat="subCategory in category.children" category="subCategory"
+            is-category-selected="isCategorySelected({category:category})"
+            is-product-selected="isProductSelected({product,product})"
+            check-category="checkCategory({category:category})"
+            check-product="checkProduct({product:product})"
+            ng-if="isCategorySelected({category: subCategory.category})"
+            surrender-marks="surrenderMarks"
+            bank-account-marks="bankAccountMarks"
+            rates="rates"
+            dealer-allocated-product-category></li>
+    </ul>
+</script>

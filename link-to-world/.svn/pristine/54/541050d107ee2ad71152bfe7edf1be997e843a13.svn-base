@@ -1,0 +1,109 @@
+.page-footer {
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    height: 134px;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 39px 0;
+    /* position: absolute; */
+    bottom: 0;
+}
+
+.page-footer.fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.page-footer .main-panel {
+    display: inline-block;
+    margin-left: -15px;
+}
+
+.page-footer .about-panel {
+    display: inline-block;
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.page-footer .copyright-panel {
+    margin-top: 24px;
+    text-align: left;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 12px;
+    opacity: .6;
+}
+
+.about-panel {
+    margin-top: 140px;
+    text-align: center;
+}
+
+.about-panel .about-link {
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    border-left: 1px solid #fff;
+}
+
+.about-panel .about-link:first-child {
+    border-left: 0;
+}
+
+.contact-bar {display: inline-block;font-size: 14px;color: #fff;margin-left: 20px;}
+
+.contact-bar .contact-item {
+    display: inline-block;
+    line-height: 18px;
+    padding: 0 15px;
+}
+
+.contact-bar .contact-item .media-left{
+    vertical-align: middle;
+}
+
+.contact-bar .contact-item .contact-img {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.contact-bar .contact-item  .btn-qq {
+    display: inline-block;
+    background: #03b0fb;
+    color: #fff;
+    height: 16px;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+.page-footer .bar-code-wrap {
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    margin-right: -15px;
+}
+
+.page-footer .bar-code{
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    margin-right: 20px;
+}
+.contact-bar .contact-item .media-body {
+    vertical-align: middle;
+}
+.contact-bar .contact-item .media-heading {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.6;
+}
+.contact-bar .contact-item .text-muted {
+    font-size: 14px;
+}

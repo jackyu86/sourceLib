@@ -1,0 +1,67 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>理赔指引</h2>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="新建理赔指引" ui-sref="console.insurance.claim.create">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-content flex>
+    <md-card>
+        <md-subheader ng-if="claimTable.searching">
+            <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadClaims()">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+                <div flex>
+                    <input ng-model="claimTable.query.title" type="text">
+                </div>
+                <md-button class="md-icon-button" ng-click="cancelSearching()">
+                    <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+                </md-button>
+            </form>
+        </md-subheader>
+
+        <md-subheader ng-if="!claimTable.searching && !claimTable.selected.length">
+            <div layout="row" layout-align="left center">
+                <span>理赔指引列表</span>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="claimTable.searching = !claimTable.searching">
+                    <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+                </md-button>
+            </div>
+        </md-subheader>
+
+        <md-table-container>
+            <table md-table ng-model="claimTable.selected">
+                <thead md-head md-order="claimTable.query.order" md-on-reorder="reloadClaims" class="md-accent">
+                <tr md-row>
+                    <th md-column md-order-by="id"><span>编号</span></th>
+                    <th md-column><span>标题</span></th>
+                    <th md-column><span>创建时间</span></th>
+                    <th md-column><span>操作</span></th>
+                </tr>
+                </thead>
+                <tbody md-body>
+                <tr md-row md-select="claim"
+                    ng-repeat="claim in claimTable.data.items" md-auto-select>
+                    <td md-cell>{{claim.id}}</td>
+                    <td md-cell>{{claim.title}}</td>
+                    <td md-cell>{{claim.createdTime | date:'yyyy/MM/dd'}}</td>
+                    <td md-cell layout="row">
+                        <md-button class="md-icon-button" ng-click="claimTable.edit(claim)">编辑</md-button>
+                        <md-button class="md-icon-button" ng-click="deleteClaim(claim)">删除</md-button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+
+        <md-table-pagination md-limit="claimTable.query.limit" md-page="claimTable.query.page" md-total="{{claimTable.data.total}}"
+                             md-page-select="claimTable.options.pageSelector" md-boundary-links="claimTable.options.boundaryLinks"
+                             md-on-paginate="reloadClaims"></md-table-pagination>
+
+    </md-card>
+</md-content>

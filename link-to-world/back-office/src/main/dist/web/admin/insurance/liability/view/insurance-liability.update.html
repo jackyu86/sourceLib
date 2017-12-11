@@ -1,0 +1,103 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="goBack()" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <span>新增保险责任分组</span>
+        <span flex></span>
+    </div>
+</md-toolbar>
+<md-card flex>
+    <md-content>
+        <form name="liabilityForm" class="md-padding">
+            <md-input-container>
+                保险责任分组：{{group.name}}
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>保险责任名称</label>
+                <input required name="name" ng-model="data.liability.name"/>
+                <div ng-messages="liabilityForm.name.$error">
+                    <div ng-message="required">请输入保险责任名称</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex="100">
+                <label>描述</label>
+                <textarea ng-model="data.liability.description" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>优先级</label>
+                <input required name="priority" type="number" ng-model="data.liability.priority"/>
+                <div ng-messages="liabilityForm.priority.$error">
+                    <div ng-message="required">请输入优先级</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>类型</label>
+                <md-select required ng-model="data.liability.type">
+                    <md-option ng-value="'LIVE_BENEFIT'">生存领取</md-option>
+                    <md-option ng-value="'RISK_PROTECTION'">风险保障</md-option>
+                </md-select>
+            </md-input-container>
+            <div ng-if="data.liability.type=='LIVE_BENEFIT'">
+                <md-input-container class="md-block">
+                    <label>领取方式</label>
+                    <md-select ng-model="data.liability.liveBenefit.receiveType">
+                        <md-option ng-value="'ONE_TIME'">一次性</md-option>
+                        <md-option ng-value="'IRREGULAR'">不定期</md-option>
+                        <md-option ng-value="'INSTALLMENT'">分期</md-option>
+                    </md-select>
+                </md-input-container>
+                <div ng-if="data.liability.liveBenefit.receiveType=='INSTALLMENT'">
+                    <md-input-container ng-if="data.liability.liveBenefit.receiveType=='INSTALLMENT'" class="md-block">
+                        <label>领取次数类型</label>
+                        <md-select ng-model="data.liability.liveBenefit.receiveFrequencyType">
+                            <md-option ng-value="'ABSOLUTE'">绝对次数</md-option>
+                            <md-option ng-value="'LIVE_TIMES'">生存次数</md-option>
+                            <md-option ng-value="'LIFELONG'">终身</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block" ng-if="data.liability.liveBenefit.receiveFrequencyType=='ABSOLUTE'||data.liability.liveBenefit.receiveFrequencyType=='LIVE_TIMES'">
+                        <label>领取次数</label>
+                        <input type="number" ng-model="data.liability.liveBenefit.receiveTimes"/>
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>是否变频</label>
+                        <md-select ng-model="data.liability.liveBenefit.proportionEnabled">
+                            <md-option ng-value="'TRUE'">是</md-option>
+                            <md-option ng-value="'FALSE'">否</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block" ng-if="data.liability.liveBenefit.proportionEnabled">
+                        <label>变频比例</label>
+                        <input type="number" ng-model="data.liability.liveBenefit.proportion"/>
+                    </md-input-container>
+                </div>
+                <md-input-container class="md-block">
+                    <label>领取时间类型</label>
+                    <md-select ng-model="data.liability.liveBenefit.receiveTimeType">
+                        <md-option ng-value="'POLICY'">保单时间</md-option>
+                        <md-option ng-value="'AGE'">年龄</md-option>
+                        <md-option ng-value="'POLICY_AGE'">保单对应年龄</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>领取时间</label>
+                    <md-datepicker ng-model="data.liability.liveBenefit.startTime"></md-datepicker>
+                </md-input-container>
+            </div>
+            <div ng-if="data.liability.type=='RISK_PROTECTION'">
+                <md-input-container>
+                    <label>赔偿类型</label>
+                    <md-select ng-model="data.liability.riskProtection.type">
+                        <md-option ng-value="'ONE_TIME'">一次性</md-option>
+                        <md-option ng-value="'ALLOWANCE'">津贴型</md-option>
+                        <md-option ng-value="'REIMBURSEMENT'">费用报销型</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <div layout="row" class="md-padding">
+                <md-button class="md-button md-raised md-primary" ng-disabled="processing || serialForm.$invalid" ng-click="save()" ng-disabled="processing">保存</md-button>
+            </div>
+        </form>
+    </md-content>
+</md-card>

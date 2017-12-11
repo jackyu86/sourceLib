@@ -1,0 +1,398 @@
+.page {
+}
+
+.banner {
+    height: 100%;
+    background: url(../img/bg_01.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.banner::before {
+    content: "";
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 1);
+    opacity: 0.5;
+}
+
+.banner .container-fluid {
+    position: relative;
+}
+
+.login-panel {
+    margin: 100px auto 135px;
+    width: 880px;
+    padding: 0;
+    border: 0;
+}
+
+.logo {
+    margin: 35px auto 40px;
+    width: 170px;
+    height: 50px;
+}
+
+.panel-default > .panel-heading {
+    background: #fff;
+
+}
+
+.panel-heading .close {
+    float: right;
+    line-height: 80px;
+    height: 80px;
+    font-size: 24px;
+    opacity: 1;
+}
+
+.panel-heading .close .icon_wrong {
+    background: url("/static/img/icon_wrong.png");
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+}
+
+.login-title {
+    font-size: 18px;
+    line-height: 80px;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.login-form {
+    margin: 45px 105px 60px;
+    max-width: 480px;
+}
+
+.login-form.reset-success-form {
+    margin: 45px auto;
+}
+
+.login-form.center {
+    margin: 45px auto 60px;
+}
+
+.login-form .help-block.text-danger {
+    display: none;
+    color: #a94442;
+}
+
+.login-form .btn-primary {
+    display: block;
+    margin: 60px auto 30px;
+}
+
+.login-form .login-button {
+    position: relative;
+    width: 100%;
+    max-width: 290px;
+    margin: 40px auto 20px;
+}
+
+.login-form .login-button::before,
+.login-form .login-button::after {
+    content: "";
+    display: block;
+}
+
+.login-form .login-button::before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    border: 3px solid transparent;
+    border-radius: 50%;
+}
+
+.login-form .login-button::after {
+    position: absolute;
+    margin: -1px;
+    background: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    transition: all 0.4s ease;
+}
+
+.login-form .login-button.loading {
+    outline: none;
+}
+
+.login-form .login-button.loading::before {
+    border: 3px solid #0d9da0;
+    width: 40px;
+    height: 40px;
+    border-left: 3px solid transparent;
+    animation: loading 1s linear infinite;
+}
+
+.login-form .login-button.loading::after {
+    width: auto;
+    height: auto;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    50% {
+        transform: rotate3d(0, 0, 1, 180deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group.no-margin {
+    margin: 0;
+}
+
+.form-group::before,
+.form-group::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.form-group label {
+    text-align: right;
+    font-weight: normal;
+    line-height: 38px;
+}
+
+.form-group label.validation-message {
+    position: absolute;
+    top: 0;
+    display: block;
+    right: -100%;
+    text-align: left;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.link-panel {
+    margin-left: 33.33%;
+    padding: 0 15px;
+    line-height: 14px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.link-panel a {
+    line-height: 38px;
+}
+
+.type-selector {
+    font-size: 16px;
+    line-height: 34px;
+    width: 240px;
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    margin-left: 116px;
+}
+
+.type-selector label {
+    font-weight: normal;
+}
+
+.captcha-wrap input {
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+.captcha-wrap.available input {
+    width: 179px;
+}
+
+.captcha-wrap.available .pin-code {
+    /* width: 170px; */
+}
+
+.captcha-wrap.available .pin-code.login-pin-code {
+    width: 168px;
+}
+
+.captcha-wrap .btn {
+    width: 0;
+    font-size: 14px;
+    line-height: 38px;
+    height: 38px;
+    color: #fff;
+    border: 0;
+    background: #0d9da0;
+    padding: 0;
+    overflow: hidden;
+    vertical-align: top;
+    transition: all 0.4s ease;
+}
+
+#change-captcha {
+    background: none;
+}
+
+.captcha-wrap .btn:focus {
+    background: #0d9da0;
+}
+
+.captcha-wrap.available .btn {
+    width: 110px;
+    border: 0 solid #0d9da0;
+}
+
+.captcha-wrap.available .btn:hover {
+    background: #0d9da0;
+}
+
+.send-captcha {
+    width: 120px;
+    font-size: 14px;
+    line-height: 46px;
+    height: 46px;
+    color: #aaa;
+    border-color: #e4e4e4;
+    padding: 0;
+}
+
+#captcha-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.reset-success {
+    width: 110px;
+    height: 110px;
+    margin: 30px auto;
+    background: url(/static/img/icon_ok.png);
+}
+
+#success-form {
+    display: none;
+    margin: 40px auto;
+}
+
+#success-form .btn-primary {
+    width: 168px;
+    height: 54px;
+    line-height: 54px;
+    padding: 0;
+}
+
+.register-success {
+    width: 110px;
+    height: 110px;
+    margin: 30px auto;
+    background: url(/static/img/icon_ok.png);
+}
+
+.modal-content {
+    border: 0;
+    border-top: 5px solid #0d9da0;
+}
+
+.modal-content input {
+    font-size: 12px;
+}
+
+.modal-header {
+    padding: 15px 50px;
+}
+
+.modal-backdrop.in {
+    opacity: .2;
+}
+
+.dealer-form-group {
+    display: none;
+}
+
+.dealer-city {
+    margin: 0 -5px;
+}
+
+.dealer-city > div {
+    padding: 0 5px;
+}
+
+.dealer-city label.validation-message {
+    padding-left: 20px;
+}
+
+#password-tips {
+    margin-top: 6px;
+}
+
+#password-tips #password-safety {
+    display: inline-block;
+    margin-left: 10px;
+    width: 150px;
+    height: 6px;
+    background: #f4f4f4;
+    border-radius: 3px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+#password-tips #password-safety:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    transition: all .4s ease;
+}
+
+#password-tips #password-safety.low:before {
+    width: 50px;
+    background: #f00;
+}
+
+#password-tips #password-safety.middle:before {
+    width: 100px;
+    background: #ff0;
+}
+
+#password-tips #password-safety.high:before {
+    width: 100%;
+    background: #0f0;
+}
+
+.anonym {
+    padding-left: 5%;
+}
+
+@media (min-width: 992px) {
+    .modal-dialog {
+        width: 800px;
+    }
+}
+
+#term-notice {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    line-height: 38px;
+    padding-left: 10px;
+}

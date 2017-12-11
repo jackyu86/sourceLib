@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:j="" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>设置新密码</title>
+    <link rel="stylesheet" j:css="/static//css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static//css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static//css/common.css">
+    <link rel="stylesheet" j:css="/static//css/header.css">
+    <link rel="stylesheet" j:css="/static//css/footer.css">
+    <link rel="stylesheet" j:css="/static//css/login.css">
+
+</head>
+<body>
+<div class="page">
+    <div class="banner">
+        <div class="container-fluid">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="form-group login-title">
+                        <a href="/" class="close" data-dismiss="modal" aria-label="Close"><i class="icon_wrong"></i></a>
+                        重置密码
+                    </h1>
+                </div>
+                <div class="panel-body">
+                    <form class="login-form center">
+                        <div class="form-group">
+                            <div class="login-form-error text-danger help-block text-warning">重置失败,请确认帐号后重试</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="control-label col-xs-3">手机号/邮箱</label>
+                            <div class="col-xs-8">
+                                <input id="username" name="username" type="text" class="form-control input-lg"
+                                       placeholder="手机号/邮箱" required phoneOrEmail>
+                            </div>
+                        </div>
+
+                        <div class="form-group captcha-wrap available">
+                            <label for="pinCode" class="control-label col-xs-3">图片验证码</label>
+                            <div class="col-xs-8">
+                                <input id="pinCode" name="captchaCode" type="text"
+                                       class="pin-code form-control input-lg pull-left" placeholder="图片验证码" required>
+
+                                <a href="javascript:void(0)" id="change-captcha" class="btn btn-default btn-lg send-captcha">
+                                    <img src="/captcha.jpg" alt="" id="captcha-img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group captcha-wrap available">
+                            <label for="token" class="control-label col-xs-3">验证码</label>
+                            <div class="col-xs-8">
+                                <input id="token" name="pinCode" type="text" class="pin-code form-control input-lg pull-left"
+                                       placeholder="请输入验证码" required>
+                                <a href="javascript:void(0)" id="send-captcha" class="btn btn-default btn-lg send-captcha">发送验证码</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pinCode" class="control-label col-xs-3">新密码</label>
+                            <div class="col-xs-8">
+                                <input id="password" name="newPassword" type="password" class="form-control input-lg"
+                                       placeholder="请输入新的密码" required password>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pinCode" class="control-label col-xs-3">确认密码</label>
+                            <div class="col-xs-8">
+                                <input id="re-password" type="password" class="form-control input-lg" placeholder="请再次输入密码"
+                                       required password equalTo="#password">
+                            </div>
+                        </div>
+
+                        <a href="javascript:void(0)" class="btn btn-lg btn-primary login-button">提交</a>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<j:footer/>
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/user/reset-password.js"></script>
+</body>
+</html>

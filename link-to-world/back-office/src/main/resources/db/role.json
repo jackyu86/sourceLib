@@ -1,0 +1,111 @@
+[
+    {
+        "name": "admin",
+        "displayName": "超级管理员",
+        "description": "超级管理员",
+        "permissions": [],
+        "updateBy": "init"
+    },
+    {
+        "name": "dealerAdmin",
+        "displayName": "分销商管理员",
+        "description": "分销商管理员",
+        "permissions": [],
+        "updateBy": "init"
+    },
+    {
+        "name": "dealerSeller",
+        "displayName": "分销商出单员",
+        "description": "分销商出单员",
+        "permissions": [],
+        "updateBy": "init"
+    },
+    {
+        "name": "fujianProvinceAdmin",
+        "displayName": "管理员",
+        "description": "君龙福建分置机构管理员",
+        "permissions": [
+            "admin.GET",
+            "user.admin.GET",
+            "message.admin.PUT",
+            "message.admin.POST",
+            "message.admin.DELETE",
+            "web.GET",
+            "file.web.POST",
+            "file.web.GET",
+            "http.GET",
+            "admin.GET",
+            "dealer.admin.GET",
+            "dealer.admin.PUT",
+            "dealer.admin.POST",
+            "dealer.admin.DELETE",
+            "order.admin.GET",
+            "report.admin.GET"
+        ],
+        "requestBy": "init"
+    },
+    {
+        "name": "beijingProvinceAdmin",
+        "displayName": "管理员",
+        "description": "君龙福建分置机构管理员",
+        "permissions": [
+            "admin.GET",
+            "user.admin.GET",
+            "message.admin.PUT",
+            "message.admin.POST",
+            "message.admin.DELETE",
+            "web.GET",
+            "file.web.POST",
+            "file.web.GET",
+            "http.GET",
+            "admin.GET",
+            "dealer.admin.GET",
+            "dealer.admin.PUT",
+            "dealer.admin.POST",
+            "dealer.admin.DELETE",
+            "order.admin.GET",
+            "report.admin.GET"
+        ],
+        "requestBy": "init"
+    },
+    {
+        "name": "5789a68b28708a938f9b901cVendorAdmin",
+        "displayName": "君龙人寿供应商管理员",
+        "description": "君龙人寿供应商管理员",
+        "permissions": [
+            "admin.GET",
+            "user.admin.GET",
+            "message.admin.PUT",
+            "message.admin.POST",
+            "message.admin.DELETE",
+            "web.GET",
+            "file.web.POST",
+            "file.web.GET",
+            "http.GET",
+            "admin.GET",
+            "order.admin.GET",
+            "report.admin.GET"
+        ],
+        "updateBy": "init"
+    },
+    {
+        "name": "5789a68b28708a938f9b901bVendorAdmin",
+        "displayName": "泰康人寿供应商管理员",
+        "description": "泰康人寿供应商管理员",
+        "permissions": [
+            "admin.GET",
+            "user.admin.GET",
+            "message.admin.PUT",
+            "message.admin.POST",
+            "message.admin.DELETE",
+            "web.GET",
+            "file.web.POST",
+            "file.web.GET",
+            "http.GET",
+            "admin.GET",
+            "order.admin.GET",
+            "report.admin.GET"
+        ],
+        "updateBy": "init"
+    }
+]

@@ -1,0 +1,48 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ui-sref="console.insurance.form-group.list" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <span flex>更新分组</span>
+    </div>
+</md-toolbar>
+
+<md-card>
+    <form name="formGroupForm" class="md-padding">
+        <md-input-container class="md-block">
+            <label>分组名称</label>
+            <input required name="displayName" ng-model="data.formGroup.displayName"/>
+            <div ng-messages="formGroupForm.displayName.$error">
+                <div ng-message="required">请输入分组名称</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block" flex="50">
+            是否必需
+            <md-switch ng-model="data.formGroup.required">
+                <span ng-if="data.formGroup.required">是</span>
+                <span ng-if="!data.formGroup.required">否</span>
+            </md-switch>
+            <div ng-messages="formGroupForm.required.$error">
+                <div ng-message="required">请输入是否必需</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block" flex="50">
+            是否支持多个
+            <md-switch ng-model="data.formGroup.multiple">
+                <span ng-if="data.formGroup.multiple">是</span>
+                <span ng-if="!data.formGroup.multiple">否</span>
+            </md-switch>
+            <div ng-messages="formGroupForm.multiple.$error">
+                <div ng-message="required">请输入是否支持多个</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>描述</label>
+            <input name="description" ng-model="data.formGroup.description"/>
+        </md-input-container>
+        <div layout="row" class="md-padding">
+            <md-button class="md-button md-raised md-primary" ng-disabled="processing || formGroupForm.$invalid" ng-click="save()" ng-disabled="processing">保存</md-button>
+            <md-button class="md-button" ng-click="cancel()">取消</md-button>
+        </div>
+    </form>
+</md-card>

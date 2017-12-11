@@ -1,0 +1,78 @@
+site:
+  name: 君龙保险
+  host: localhost
+  locale: zh-CN
+
+web:
+  baseURL: http://120.26.65.79
+
+log:
+  level: INFO
+
+cache:
+  redis:
+    host: localhost
+    port: 6379
+
+kdlins.api:
+  esbServiceURL: http://localhost:8080
+  payServiceURL: http://uat-pay.kdlins.com.cn/eco
+
+kdlins.web:
+  pay:
+    payUserId: 16fc499864dc11e69495005056862fc8
+    payKey: 847cd47664df11e6b10d0050568633ad
+    returnUrl: /checkout/pay-finish
+    notifyUrl: /order/pay/notify
+    timeout: 1800
+  underwriting:
+    underwritingWsdl: http://117.25.161.139/Exchange.ws?wsdl
+    agentCode: 2dab7698c81211e6a851005056862fc8
+  esb:
+    esbWsdl: http://uat-pay.kdlins.com.cn/esb/ws?wsdl
+    encrypt: 0
+    reqSysCode: U12
+    reqType: 1
+    appKey: dd6b3b9c-09bb-4681-8bd0-758eda15f883
+    serviceCode: U01_S_SMS_00001
+    channelCode: MALL
+    sendType: 1
+
+user.api:
+  url: http://10.175.193.212:8080
+
+customer.api:
+  url: http://10.175.193.212:8080
+
+file.api:
+  url: http://10.175.193.212:8080
+
+email.api:
+  url: http://10.175.193.212:8080
+
+message:
+  url: http://10.175.193.212:8080
+
+product.api:
+  url: http://10.175.193.212:8080
+
+insurance.api:
+  url: http://10.175.193.212:8080
+
+cart.api:
+  url: http://10.175.193.212:8080
+
+order.api:
+  url: http://10.175.193.212:8080
+
+esb.api:
+  url: http://10.175.193.212:8080
+
+dealer.api:
+  url: http://10.175.193.212:8080
+
+underwriting.api:
+  url: http://10.175.193.212:8080
+
+ticket.api:
+  url: http://10.175.193.212:8080

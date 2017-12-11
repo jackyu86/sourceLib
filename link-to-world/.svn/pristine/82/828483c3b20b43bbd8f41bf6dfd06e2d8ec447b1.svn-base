@@ -1,0 +1,1 @@
+ssh -i website.pem ubuntu@120.26.65.79

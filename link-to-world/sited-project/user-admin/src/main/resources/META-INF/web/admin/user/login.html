@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="shortcut icon" href="/admin/static/favicon.ico" type="image/x-icon"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/admin/static/css/angular-material.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/admin/static/css/font-awesome.min.css"/>
+    <style type="text/css">
+        html, body {
+            height: 100%;;
+        }
+
+        .login-page {
+            max-width: 400px;
+            width: 400px;;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body md-theme="default" layout="column" layout-align="center center">
+<div class="loading">
+    <div class="spinner">Loading...</div>
+</div>
+
+<md-card class="login-page" ng-controller="LoginController as vm">
+    <md-toolbar class="md-primary">
+        <div class="md-toolbar-tools">
+            <md-icon class="fa-user" md-font-icon="fa"></md-icon>
+            <span flex="" j:text="site.name()">Site Name</span>
+        </div>
+    </md-toolbar>
+
+    <form name="loginForm" class="layout-padding">
+        <md-input-container class="md-block">
+            <label j:msg="user.username">Username</label>
+            <input name="username" ng-model="vm.user.username" type="text" required invalid>
+
+            <div ng-messages="loginForm.username.$error">
+                <div ng-message="required">Username is required.</div>
+                <div ng-message="invalid">Invalid username or password</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label j:msg="user.password">Password</label>
+            <input name="password" ng-model="vm.user.password" type="password" required>
+            <div ng-messages="loginForm.password.$dirty && loginForm.password.$error">
+                <div ng-message="required">Password is required.</div>
+            </div>
+        </md-input-container>
+
+        <div>
+            <md-button class="md-raised md-primary md-block" ng-click="vm.login()" j:msg="user.login">Login</md-button>
+        </div>
+    </form>
+</md-card>
+
+<script type="text/javascript" src="/admin/static/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/admin/static/js/angular.min.js"></script>
+<script type="text/javascript" src="/admin/static/js/angular-cookies.min.js"></script>
+<script type="text/javascript" src="/admin/static/js/angular-messages.min.js"></script>
+<script type="text/javascript" src="/admin/static/js/angular-aria.min.js"></script>
+<script type="text/javascript" src="/admin/static/js/angular-animate.min.js"></script>
+<script type="text/javascript" src="/admin/static/js/angular-material.min.js"></script>
+
+<script type="text/javascript">
+    var module = angular.module("app", [
+        'ngCookies',
+        'ngAria',
+        'ngMaterial',
+        'ngMessages'
+    ]);
+
+    module.config(function ($mdThemingProvider) {
+        $mdThemingProvider.definePalette('console', {
+            '50': '2c343f',
+            '100': '2c343f',
+            '200': '2c343f',
+            '300': '2c343f',
+            '400': '2c343f',
+            '500': '2c343f',
+            '600': '2c343f',
+            '700': '2c343f',
+            '800': '2c343f',
+            '900': '2c343f',
+            'A100': '000000',
+            'A200': '000000',
+            'A400': '000000',
+            'A700': '000000',
+
+            'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
+                                                // on this palette should be dark or light
+            'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
+                '200', '300', '400', 'A100'],
+            'contrastLightColors': undefined    // could also specify this if default was 'dark'
+        });
+        $mdThemingProvider.theme('default')
+            .primaryPalette('console');
+    });
+
+    module.controller("LoginController", ['$scope', '$http', '$location', '$window', function ($scope, $http, $location, $window) {
+        var vm = this;
+        vm.user = {};
+        vm.invalid = false;
+
+        vm.login = function () {
+            if ($scope.loginForm.$valid) {
+                $http.post('/admin/ajax/user/login', vm.user).then(function () {
+                    if ($location.search().fromURL) {
+                        $window.location.href = $location.search().fromURL;
+                    } else {
+                        var index = $window.location.href.indexOf('#');
+                        if (index > 0) {
+                            $window.location.href = '/admin/' + $window.location.href.substring(index);
+                        } else {
+                            $window.location.href = '/admin/';
+                        }
+                    }
+                }, function () {
+                    $scope.loginForm.username.$setValidity('invalid', false);
+                });
+            }
+        };
+
+        return vm;
+    }]);
+
+    module.directive('invalid', function () {
+        return {
+            restrict: 'A',
+            require: 'ngModel',
+            link: function (scope, elem, attr, ctrl) {
+                var $elem = $(elem);
+                var name = $elem.attr('name');
+                var formName = $elem.parents('form').attr('name');
+                scope.$watch(attr.ngModel, function () {
+                    if (scope[formName][name].$dirty) {
+                        ctrl.$setValidity('invalid', true);
+                    }
+                });
+            }
+        }
+    });
+
+    angular.element().ready(function () {
+        angular.bootstrap(document.body, ['app']);
+        $('.loading').hide();
+    });
+</script>
+</body>
+</html>

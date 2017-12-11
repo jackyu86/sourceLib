@@ -1,0 +1,90 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>业绩汇总统计</h2>
+
+        <span flex></span>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-subheader ng-if="statisticsTable.searching">
+        <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadStatistics()">
+            <div flex>
+                <md-input-container>
+                    <label>分销商</label>
+                    <input ng-model="statisticsTable.query.name" type="text">
+                </md-input-container>
+                <md-input-container>
+                    <label>分销商级别</label>
+                    <md-select ng-model="statisticsTable.query.level">
+                        <md-option ng-value="level.value" ng-repeat="level in statisticsTable.levels">{{level.name}}</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container>
+                    <label>开始日期</label>
+                    <md-datepicker ng-model="statisticsTable.query.startTime"></md-datepicker>
+                </md-input-container>
+                <md-input-container>
+                    <label>结束日期</label>
+                    <md-datepicker ng-model="statisticsTable.query.endTime"></md-datepicker>
+                </md-input-container>
+            </div>
+            <md-button class="md-icon-button" ng-click="reloadStatistics()">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!statisticsTable.searching && !statisticsTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>业绩汇总统计</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="statisticsTable.searching = !statisticsTable.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table ng-model="statisticsTable.selected">
+            <thead md-head class="md-accent">
+            <tr md-row>
+                <th md-column></th>
+                <th md-column colspan="3"><span layout="row" layout-align="center center">承保</span></th>
+                <th md-column colspan="3"><span layout="row" layout-align="center center">退保</span></th>
+                <th md-column colspan="3"><span layout="row" layout-align="center center">拒保</span></th>
+            </tr>
+            <tr md-row>
+                <th md-column><span>分销商</span></th>
+                <th md-column><span>保费</span></th>
+                <th md-column><span>投保单数</span></th>
+                <th md-column><span>被保人数</span></th>
+                <th md-column><span>保费</span></th>
+                <th md-column><span>投保单数</span></th>
+                <th md-column><span>被保人数</span></th>
+                <th md-column><span>保费</span></th>
+                <th md-column><span>投保单数</span></th>
+                <th md-column><span>被保人数</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="statistics"
+                ng-repeat="statistics in statisticsTable.data.items" md-auto-select>
+                <td md-cell>{{statistics.dealerName}}</td>
+                <td md-cell>{{statistics.insuredFee}}</td>
+                <td md-cell>{{statistics.insuredNum}}</td>
+                <td md-cell>{{statistics.insuredInsuredNum}}</td>
+                <td md-cell>{{statistics.surrenderFee}}</td>
+                <td md-cell>{{statistics.surrenderNum}}</td>
+                <td md-cell>{{statistics.surrenderInsuredNum}}</td>
+                <td md-cell>{{statistics.rejectFee}}</td>
+                <td md-cell>{{statistics.rejectNum}}</td>
+                <td md-cell>{{statistics.rejectInsuredNum}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+</md-card>

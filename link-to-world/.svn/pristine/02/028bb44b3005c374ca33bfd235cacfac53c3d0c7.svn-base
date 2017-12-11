@@ -1,0 +1,90 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>供应商</h2>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="新建供应商" ui-sref="console.vendor.create">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-subheader ng-if="vendorTable.searching">
+        <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadVendors()">
+            <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            <div flex>
+                <input ng-model="vendorTable.query.name" type="text">
+            </div>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!vendorTable.searching && !vendorTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>供应商列表</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="vendorTable.searching = !vendorTable.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-subheader ng-if="vendorTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>选中{{vendorTable.selected.length}}条记录</span>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="Delete vendor" ng-click="vendorTable.selected=[]">
+                <md-tooltip md-direction="down">
+                    取消
+                </md-tooltip>
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Delete vendor" ng-click="batchDeleteVendors()">
+                <md-tooltip md-direction="down">
+                    批量删除
+                </md-tooltip>
+                <md-icon class="fa-trash" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table md-row-select multiple ng-model="vendorTable.selected">
+            <thead md-head md-order="vendorTable.query.order" md-on-reorder="reloadVendors" class="md-accent">
+            <tr md-row>
+                <th md-column md-order-by="id"><span>编号</span></th>
+                <th md-column><span>供应商名称</span></th>
+                <th md-column><span>供应商级别</span></th>
+                <th md-column><span>供应商代码</span></th>
+                <th md-column><span>简称</span></th>
+                <th md-column md-order-by="createdTime"><span>创建时间</span></th>
+                <th md-column><span>操作</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="vendor"
+                ng-repeat="vendor in vendorTable.data.items" md-auto-select>
+                <td md-cell>{{vendor.id}}</td>
+                <td md-cell>{{vendor.name}}</td>
+                <td md-cell>{{vendor.level|insuranceVendorLevel}}</td>
+                <td md-cell>{{vendor.vendorCode}}</td>
+                <td md-cell>{{vendor.shortName}}</td>
+                <td md-cell>{{vendor.createdTime | date:'yyyy/MM/dd'}}</td>
+                <td md-cell layout="row">
+                    <md-button class="md-icon-button" ng-click="vendorTable.edit(vendor)">编辑</md-button>
+                    <md-button class="md-icon-button" ng-click="deleteVendor(vendor)">删除</md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+    <md-table-pagination md-limit="vendorTable.query.limit" md-page="vendorTable.query.page" md-total="{{vendorTable.data.total}}"
+                         md-page-select="vendorTable.options.pageSelector" md-boundary-links="vendorTable.options.boundaryLinks"
+                         md-on-paginate="reloadVendors"></md-table-pagination>
+
+</md-card>

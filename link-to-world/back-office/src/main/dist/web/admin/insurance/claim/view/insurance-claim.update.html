@@ -1,0 +1,38 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ui-sref="console.insurance.claim.list" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <span>更新理赔指引</span>
+        <span flex></span>
+    </div>
+</md-toolbar>
+
+<md-content flex>
+    <md-card>
+        <form name="claimForm" class="md-padding">
+            <md-input-container class="md-block">
+                <label>理赔指引标题</label>
+                <input required name="name" ng-model="data.claim.title"/>
+                <div ng-messages="claimForm.title.$error">
+                    <div ng-message="required">请输入理赔指引标题</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>理赔指引名称</label>
+                <input required name="name" ng-model="data.claim.name"/>
+                <div ng-messages="claimForm.name.$error">
+                    <div ng-message="required">请输入理赔指引名称</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>内容</label>
+                <textarea required ng-model="data.claim.content" placeholder="理赔指引内容"></textarea>
+            </md-input-container>
+            <div layout="row" class="md-padding">
+                <md-button class="md-button md-raised md-primary" ng-disabled="processing || claimForm.$invalid" ng-click="save()" ng-disabled="processing">保存</md-button>
+                <md-button class="md-button" ng-click="cancel()">取消</md-button>
+            </div>
+        </form>
+    </md-card>
+</md-content>

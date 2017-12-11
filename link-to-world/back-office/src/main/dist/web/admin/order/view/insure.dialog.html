@@ -1,0 +1,64 @@
+<md-dialog>
+    <div class="md-toolbar-tools">
+        <h2>{{title}}</h2>
+    </div>
+    <form name="insureForm">
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <md-input-container layout="row" flex>
+                    <label>交易流水号</label>
+                    <input ng-model="data.transNo" required/>
+                    <div ng-messages="insureForm.data.transNo.$error.required" ng-hide="insureForm.data.transNo.$valid">
+                        <div ng-message="required">* 不允许为空</div>
+                    </div>
+                </md-input-container>
+                <md-input-container layout="row" flex>
+                    <label>交易日期</label>
+                    <md-datepicker ng-model="data.transDate" required></md-datepicker>
+                    <div ng-messages="insureForm.data.transDate.$error.required" ng-hide="insureForm.data.transDate.$valid">
+                        <div ng-message="required">* 不允许为空</div>
+                    </div>
+                </md-input-container>
+                <md-input-container layout="row" flex>
+                    <label>交易时间</label>
+                    <input type="time" step="1" ng-model="data.transTime" required/>
+                    <div ng-messages="insureForm.data.transTime.$error.required" ng-hide="insureForm.data.transTime.$valid">
+                        <div ng-message="required">* 不允许为空</div>
+                    </div>
+                </md-input-container>
+                <md-input-container layout="row" flex>
+                    <label>投保单号</label>
+                    <input ng-model="data.applyCode" required/>
+                    <div ng-messages="insureForm.data.applyCode.$error.required" ng-hide="insureForm.data.applyCode.$valid">
+                        <div ng-message="required">* 不允许为空</div>
+                    </div>
+                </md-input-container>
+                <md-card ng-repeat="orderItem in orderItems">
+                    <md-subheader>
+                        <div layout="row" layout-align="left center">
+                            <div flex>请录入{{orderItem.id}}的保单信息</div>
+                        </div>
+                    </md-subheader>
+                    <md-input-container layout="row" flex>
+                        <label>保单号</label>
+                        <input ng-model="orderItem.policyCode" required/>
+                        <div ng-messages="insureForm.orderItem.policyCode.$error.required" ng-hide="insureForm.orderItem.policyCode.$valid">
+                            <div ng-message="required">* 不允许为空</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container layout="row" flex>
+                        <label>保单地址</label>
+                        <input ng-model="orderItem.policyAddress"/>
+                </md-card>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="answer()" ng-disabled="insureForm.$invalid">
+                确认
+            </md-button>
+            <md-button ng-click="cancel()">
+                取消
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

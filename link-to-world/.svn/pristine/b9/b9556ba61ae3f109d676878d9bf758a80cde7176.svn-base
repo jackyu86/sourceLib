@@ -1,0 +1,156 @@
+html, body {
+    min-width: 1200px;
+    background-color: #f4f4f4;
+}
+
+.page-header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.page-header .nav.active > li > a {
+    background-color: #0d9da0;
+    color: #fff;
+}
+
+.page-header .nav > li:hover > a,
+.page-header .nav > li > a:hover,
+.page-header .nav > li > a:focus {
+    background-color: #0d9da0;
+    color: #fff;
+}
+
+.page-header .nav > li.account-wrap:hover > a {
+    background-color: inherit;
+    color: inherit;
+}
+
+.page-header .nav > li.account-wrap > a:hover {
+    color: #0d9da0;
+}
+
+.container-fluid {
+    max-width: 1200px;
+}
+
+.header-toolbar {
+    height: 30px;
+    line-height: 30px;
+    color: #999;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header-toolbar a {
+    font-size: 12px;
+    line-height: 12px;
+    color: #999;
+}
+
+.navbar {
+    height: 100px;
+    line-height: 100px;
+    margin-bottom: 0;
+    background-color: #fff;
+    border: 0;
+    border-bottom: 2px solid #0d9da0;
+}
+
+.navbar-brand {
+    padding: 27px 15px;
+    font-size: 24px;
+    line-height: 100px;
+    height: 100px;
+    color: #000;
+}
+
+.nav > li > a {
+    padding: 40px 30px;
+    font-size: 16px;
+}
+
+.page-header .account-wrap {
+    padding: 42px 0;
+    line-height: 16px;
+    font-size: 14px;
+    color: #999;
+    margin-left: 90px;
+}
+
+.page-header .account-wrap a {
+    padding: 0 5px;
+    line-height: 16px;
+    display: inline-block;
+    color: #999;
+    font-size: 14px;
+}
+
+.navbar-nav a {
+    color: #000;
+}
+
+.navbar-nav > .active > a {
+    background: #0d9da0;
+    color: #fff;
+}
+
+.input-lg {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.btn.btn-lg {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.page-header .list-group {
+    display: none;
+    position: absolute;
+    border: 2px solid #0d9da0;
+    border-top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.navbar-nav > li:hover .list-group {
+    display: block;
+}
+
+.page-header .list-group-item {
+    position: relative;
+    border-left: 0;
+    border-right: 0;
+    padding: 16px;
+}
+
+.page-header .list-group-item:first-child {
+    border-top: 0;
+}
+
+.page-header .list-group-item:last-child {
+    border-bottom: 0;
+}
+
+.page-header .list-group-item:hover {
+    background: #f4f4f4;
+}
+
+.page-header .list-group-item > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+}
+
+.page-header .list-group-item.active > a {
+    color: #fff;
+}
+
+.page-header .list-group-item.active:hover {
+    background: #0d9da0;
+}

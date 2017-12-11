@@ -1,0 +1,277 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ui-sref="console.insurance.list" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <span>新增险种</span>
+        <span flex></span>
+    </div>
+</md-toolbar>
+<md-card flex>
+    <md-content>
+        <form name="insuranceForm" class="md-padding">
+            <md-input-container class="md-block">
+                <label>险种名称</label>
+                <input required name="name" ng-model="data.insurance.name"/>
+                <div ng-messages="insuranceForm.name.$error">
+                    <div ng-message="required">请输入险种名称</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                是否主险
+                <md-switch ng-model="data.insurance.master">
+                    <span ng-if="data.insurance.master">是</span>
+                    <span ng-if="!data.insurance.master">否</span>
+                </md-switch>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>最大份数</label>
+                <input required type="number" name="name" ng-model="data.insurance.maxAmount"/>
+                <div ng-messages="insuranceForm.maxAmount.$error">
+                    <div ng-message="required">请输入最大份数</div>
+                </div>
+            </md-input-container>
+            <div layout="row">
+                <md-input-container>
+                    <button class="md-button md-raised md-normal" ng-click="liabilityQuery.name=null">清空责任名</button>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>搜索责任名</label>
+                    <input type="text" ng-model="liabilityQuery.name"/>
+                </md-input-container>
+                <md-input-container class="md-block" flex="100">
+                    <md-select ng-model="liability" ng-change="selectLiability(liability)"
+                               md-on-open="loadLiability()" placeholder="选择保险责任">
+                        <md-option ng-repeat="liability in liabilities" ng-value="liability">
+                            {{liability.name}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container>
+                    <button class="md-button md-raised md-primary" ng-click="addLiability();">添加保险责任</button>
+                </md-input-container>
+            </div>
+            <md-card ng-repeat="ref in data.insurance.liabilities track by $index">
+                <md-subheader>
+                    <div class="search-box" layout="row" layout-align="left center">
+                        <div flex>保险责任：{{ref.liabilityName}}</div>
+                        <md-button class="md-icon-button" ng-click="ref.toggle=!ref.toggle">
+                            <md-icon ng-if="ref.toggle" class="fa-arrow-up" md-font-icon="fa"></md-icon>
+                            <md-icon ng-if="!ref.toggle" class="fa-arrow-down" md-font-icon="fa"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" ng-click="deleteLiability($index)">
+                            <md-icon class="fa-trash" md-font-icon="fa"></md-icon>
+                        </md-button>
+                    </div>
+                </md-subheader>
+                <div ng-if="ref.toggle" class="md-padding">
+                    <md-input-container class="md-block" flex="100">
+                        <label>描述</label>
+                        <textarea ng-model="ref.description" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex="100">
+                        <label>保额类型</label>
+                        <md-select ng-model="ref.amount.type">
+                            <md-option ng-value="'FIXED'">固定值</md-option>
+                            <md-option ng-value="'USER_SELECTION'">客户单选选项</md-option>
+                            <md-option ng-value="'USER_INPUT'">客户填写</md-option>
+                            <md-option ng-value="'UNIT_SELECTION'">总份数选择</md-option>
+                            <md-option ng-value="'FORMULA'">计算公式</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <div ng-if="ref.amount.type=='USER_INPUT'">
+                        <md-input-container class="md-block" flex="100">
+                            <label>客户可输入的最大保额</label>
+                            <input type="number" required name="amountInputMax" ng-model="ref.amount.inputMax"/>
+                            <div ng-messages="insuranceForm.amountInputMax.$error">
+                                <div ng-message="required">请输入最大保额</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <label>客户可输入的最小保额</label>
+                            <input type="number" required name="amountInputMin" ng-model="ref.amount.inputMin"/>
+                            <div ng-messages="insuranceForm.amountInputMin.$error">
+                                <div ng-message="required">请输入最小保额</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <label>输入保额增长单位</label>
+                            <input type="number" required name="amountInputIncrementUnit" ng-model="ref.amount.inputIncrementUnit"/>
+                            <div ng-messages="insuranceForm.amountInputIncrementUnit.$error">
+                                <div ng-message="required">请输入最小单位</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                    <div ng-if="ref.amount.type=='USER_SELECTION'">
+                        <md-input-container class="md-block" flex="100">
+                            <label>输入保额选项(单位：元)</label>
+                            <md-chips ng-model="ref.amount.selections"
+                                      placeholder="+保额(用回车键添加)"
+                                      delete-button-label="删除保额"
+                                      delete-hint="点击删除按钮"
+                                      secondary-placeholder="+保额(用回车键添加)"
+                                      class="md-block">
+                            </md-chips>
+                        </md-input-container>
+                    </div>
+                    <div ng-if="ref.amount.type=='UNIT_SELECTION'">
+                        <md-input-container class="md-block" flex="100">
+                            <label>客户可输入的最大份数</label>
+                            <input type="number" required name="amountMaxUnits" ng-model="ref.amount.maxUnits"/>
+                            <div ng-messages="insuranceForm.amountMaxUnits.$error">
+                                <div ng-message="required">请输入最大份数</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="100">
+                            <label>客户可输入的最小份数</label>
+                            <input type="number" required name="amountMinUnits" ng-model="ref.amount.minUnits"/>
+                            <div ng-messages="insuranceForm.amountMinUnits.$error">
+                                <div ng-message="required">请输入最小份数</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                    <div ng-if="ref.amount.type=='FORMULA'">
+                        <md-input-container class="md-block" flex="100">
+                            <label>保费计算公式名称</label>
+                            <input type="text" required name="amountFormulaName" ng-model="ref.amount.formulaName"/>
+                            <div ng-messages="insuranceForm.amountFormulaName.$error">
+                                <div ng-message="required">请输入保费计算公式名称</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                    <div ng-if="ref.amount.type=='FIXED'">
+                        <md-input-container class="md-block" flex="100">
+                            <label>固定保额</label>
+                            <input type="number" required name="amountFixedValue" ng-model="ref.amount.fixedValue"/>
+                            <div ng-messages="insuranceForm.amountFixedValue.$error">
+                                <div ng-message="required">请输入固定保额</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                </div>
+            </md-card>
+            <md-input-container class="md-block" flex="100">
+                <label>选择计费引擎</label>
+                <md-select ng-model="data.insurance.priceTable.engine">
+                    <md-option ng-value="'FIXED'">固定计费</md-option>
+                    <md-option ng-value="'TABLE'">价格表</md-option>
+                    <md-option ng-value="'BASE_TABLE'">基本保费价格表</md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container ng-if="data.insurance.priceTable.engine=='FIXED'" class="md-block" flex="100">
+                <label>输入固定保费</label>
+                <input type="number" required name="priceTableFixedPrice" ng-model="data.insurance.priceTable.fixedPrice"/>
+                <div ng-messages="insuranceForm.priceTableFixedPrice.$error">
+                    <div ng-message="required">请输入固定保费</div>
+                </div>
+            </md-input-container>
+            <md-input-container ng-if="data.insurance.priceTable.engine=='BASE_TABLE'" class="md-block" flex="100">
+                <label>基本保险金额(单位：元)</label>
+                <input type="number" required name="priceTableBase" ng-model="data.insurance.priceTable.base"/>
+                <div ng-messages="insuranceForm.priceTableBase.$error">
+                    <div ng-message="required">请输入基本保险金额</div>
+                </div>
+            </md-input-container>
+            <div ng-if="data.insurance.priceTable.engine=='BASE_TABLE'" class="md-block" flex="100">
+                <label>选择基本计费因子</label>
+                <div layout="row">
+                    <md-input-container flex="40">
+                        <label>动态表单分组</label>
+                        <md-select ng-model="baseFactorGroup" ng-change="selectBaseFactorGroup(baseFactorGroup)">
+                            <md-option ng-value="baseFactorGroup" ng-repeat="baseFactorGroup in baseFactorGroups">
+                                {{baseFactorGroup.displayName}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container ng-if="baseFactorGroup!=null" flex="40">
+                        <label>动态表单字段</label>
+                        <md-select ng-model="baseFactorField" ng-change="selectBaseFactorField(baseFactorField)">
+                            <md-option ng-value="baseFactorField" ng-repeat="baseFactorField in baseFactorFields">
+                                {{baseFactorField.displayName}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container ng-if="baseFactorField!=null">
+                        <md-button class="md-button md-raised md-primary" ng-click="selectBaseFactor();">
+                            {{data.insurance.priceTable.baseFactor==null?"做为":"更改"}}基本计费因子
+                        </md-button>
+                    </md-input-container>
+                </div>
+                <div layout="row">
+                    当前基本计费因子:{{data.insurance.priceTable.baseFactor==null?"无":data.insurance.priceTable.baseFactor}}
+                </div>
+            </div>
+            <div ng-if="data.insurance.priceTable.engine=='BASE_TABLE'||data.insurance.priceTable.engine=='TABLE'" class="md-block" flex="100">
+                <label>选择X计费因子</label>
+                <div layout="row">
+                    <md-input-container flex="40">
+                        <label>动态表单分组</label>
+                        <md-select ng-model="xFactorGroup" ng-change="selectXFactorGroup(xFactorGroup)">
+                            <md-option ng-value="xFactorGroup" ng-repeat="xFactorGroup in xFactorGroups">
+                                {{xFactorGroup.displayName}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container ng-if="xFactorGroup!=null" flex="40">
+                        <label>动态表单字段</label>
+                        <md-select ng-model="xFactorField" ng-change="selectXFactorField(xFactorField)">
+                            <md-option ng-value="xFactorField" ng-repeat="xFactorField in xFactorFields">
+                                {{xFactorField.displayName}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container ng-if="xFactorField!=null">
+                        <md-button class="md-button md-raised md-primary" ng-click="addXFactor();">
+                            添加X因子
+                        </md-button>
+                    </md-input-container>
+                </div>
+                当前X因子：
+                <div class="md-padding">
+                    <div layout="row" class="md-block" ng-repeat="xFactor in selectedXFactors track by $index">
+                        <div flex="20">{{xFactor}}</div>
+                        <button class="md-button md-raised md-normal" ng-click="deleteXFactor($index)">删除</button>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="data.insurance.priceTable.engine=='BASE_TABLE'||data.insurance.priceTable.engine=='TABLE'" class="md-block" flex="100">
+                <label>选择Y计费因子</label>
+                <div layout="row">
+                    <md-input-container flex="40">
+                        <label>动态表单分组</label>
+                        <md-select ng-model="yFactorGroup" ng-change="selectYFactorGroup(yFactorGroup)">
+                            <md-option ng-value="yFactorGroup" ng-repeat="yFactorGroup in yFactorGroups">
+                                {{yFactorGroup.displayName}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container ng-if="yFactorGroup!=null" flex="40">
+                        <label>动态表单字段</label>
+                        <md-select ng-model="yFactorField" ng-change="selectYFactorField(yFactorField)">
+                            <md-option ng-value="yFactorField" ng-repeat="yFactorField in yFactorFields">
+                                {{yFactorField.displayName}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container ng-if="yFactorField!=null">
+                        <md-button class="md-button md-raised md-primary" ng-click="selectYFactor();">
+                            {{data.insurance.priceTable.yFactor==null?"做为":"更改"}}Y计费因子
+                        </md-button>
+                    </md-input-container>
+                </div>
+                <div layout="row">
+                    当前Y因子:{{data.insurance.priceTable.yFactor==null?"无":data.insurance.priceTable.yFactor}}
+                </div>
+            </div>
+            <div ng-if="data.insurance.priceTable.engine=='BASE_TABLE'||data.insurance.priceTable.engine=='TABLE'">
+                <md-input-container class="md-block" flex="100">
+                    <label>价格表JSON字符串</label>
+                    <textarea required ng-model="data.table" rows="5" md-select-on-focus></textarea>
+                </md-input-container>
+            </div>
+            <div layout="row" class="md-padding">
+                <md-button class="md-button md-raised md-primary" ng-disabled="processing || serialForm.$invalid" ng-click="save()" ng-disabled="processing">保存</md-button>
+            </div>
+        </form>
+    </md-content>
+</md-card>

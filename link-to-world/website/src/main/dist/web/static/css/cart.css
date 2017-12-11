@@ -1,0 +1,103 @@
+.page {
+    min-height: 200px;
+}
+
+form,
+table {
+    width: 100%;
+}
+
+th,
+td {
+    font-weight: normal;
+}
+
+.cart-none {
+    display: none;
+    width: 100%;
+    height: 600px;
+    background: #fff url(/static/img/page_none.png) center no-repeat;
+}
+
+.cart-loading-spinner {
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: block;
+    animation: fa-spin .4s steps(8) infinite;
+}
+
+.cart-list-panel {
+    background: #fff;
+}
+
+.cart-list-panel thead {
+    background: #fff;
+}
+
+.cart-list-panel thead tr {
+    height: 76px;
+    border-top: 0;
+}
+
+.cart-list-panel tr {
+    border-top: 1px solid #e4e3e3;
+    border-bottom: 0;
+    height: 120px;
+}
+
+.check-cell {
+    width: 84px;
+    padding: 0 24px;
+}
+
+.cart-item-delete {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(/static/img/icon_wrong.png);
+}
+
+.cart-submit-panel {
+    background: #fff;
+    margin-top: 20px;
+    line-height: 60px;
+}
+
+.cart-submit-panel:before, .cart-submit-panel:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cart-submit-summary {
+    display: table-cell;
+    width: 1000px;
+    padding: 0 30px;
+}
+
+.cart-submit-button {
+    display: table-cell;
+    width: 200px;
+    height: 60px;
+    padding: 0px 72px;
+    line-height: 60px;
+}
+
+.radio .radio-label,
+.checkbox .checkbox-label {
+    padding-left: 36px;
+}
+
+.main.no-sidenav {
+    float: none;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+}

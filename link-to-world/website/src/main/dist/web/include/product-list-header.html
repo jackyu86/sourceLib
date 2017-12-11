@@ -1,0 +1,55 @@
+<html xmlns:j="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+
+<div class="page-header">
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">
+                        <img src="/static/img/logo_black.png" alt="">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li j:class="selected=='product'?'active':''">
+                            <a href="/search">保险产品 <i class="fa fa-angle-down"></i></a>
+                            <div class="list-group">
+                                <div class="list-group-item" j:for="c1:categories">
+                                    <a j:href="'/search?category=' + c1.id" j:text="c1.name"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/account/order">我的订单</a>
+                        </li>
+                        <li j:class="selected=='cart'?'active':''">
+                            <a href="/account/cart">购物车</a>
+                        </li>
+                        <li>
+                            <a href="/account/info">个人中心</a>
+                        </li>
+                        <li class="account-wrap" j:if="user == null">
+                            <a class="account" href="/account/login">登录</a>
+                            &nbsp;|&nbsp;
+                            <a href="/account/register">注册</a>
+
+                        </li>
+                        <li class="account-wrap" j:if="user != null">
+                            <a href="/account/info">
+                                <span class="text-primary">Hi, </span>
+                                <span class="text-primary" j:text="user.username"></span>
+                            </a>
+                            &nbsp;|&nbsp;
+                            <a href="/account/logout">退出登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+</body>
+</html>

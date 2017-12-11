@@ -1,0 +1,77 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2 md-msg="file.file">File</h2>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-content>
+        <md-subheader>
+            <div layout="row" layout-align="space-between center">
+                <div flex>
+                    <ul class="breadcrumb">
+                        <li ng-repeat="path in tree.path">
+                            <a href="javascript:void(0)" ng-click="enterNode(path)">{{path.directory.displayName}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div layout="row">
+                    <md-button class="md-icon-button" ng-click="createDirectory($event)">
+                        <md-tooltip md-direction="down" md-msg="file.createDirectory">
+                            Create Directory
+                        </md-tooltip>
+                        <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Update file" ngf-select="tree.file.uploadFiles($files)" multiple="multiple">
+                        <md-tooltip md-direction="down" md-msg="file.upload">
+                            Upload
+                        </md-tooltip>
+                        <md-icon class="fa-upload" md-font-icon="fa"></md-icon>
+                    </md-button>
+                    <md-button ng-click="delete($event)" class="md-icon-button" ng-if="tree.selectedNodes.length>0 || tree.file.selected.length>0">
+                        <md-tooltip md-direction="down" md-msg="file.deleteDirectory">
+                            Delete Directory
+                        </md-tooltip>
+                        <md-icon class="fa-trash" md-font-icon="fa"></md-icon>
+                    </md-button>
+                </div>
+            </div>
+        </md-subheader>
+        <md-grid-list
+                md-cols-xs="2" md-cols-sm="3" md-cols-md="6" md-cols-gt-md="8"
+                md-row-height="2:2"
+                md-gutter="12px" md-gutter-gt-sm="8px">
+
+            <md-grid-tile ng-repeat="node in tree.currentNode.children" ng-class="{true: 'selected'}[node.selected]" class="directory"
+                          ng-dblclick="enterNode(node)" ng-click="selectNode(node)">
+                <md-icon class="fa-folder" md-font-icon="fa"></md-icon>
+                <md-grid-tile-footer>
+                    <h3>{{node.directory.displayName}}</h3>
+                </md-grid-tile-footer>
+            </md-grid-tile>
+
+            <md-grid-tile ng-repeat="item in tree.file.data.items" ng-class="{true: 'selected'}[item.selected]" ng-click="tree.file.select(item)">
+                <div class="file-panel">
+                    <div ng-if="isImage(item.path)">
+                        <img ng-src="/image/200x200{{item.path}}" ng-dblclick="tree.file.show(item)">
+                    </div>
+                    <md-icon class="fa-file" md-font-icon="fa" ng-if="!isImage(item.path)"></md-icon>
+                    <md-grid-tile-footer>
+                        <h3>{{item.title}}</h3>
+                    </md-grid-tile-footer>
+
+                    <md-tooltip md-direction="down">
+                        <div class="file-detail" layout="column">
+                            <span flex="25"><span md-msg="file.title">Title</span>: {{item.title}}<br></span>
+                            <span flex="25"><span md-msg="file.tags">Tags</span>: {{item.tags}}<br></span>
+                            <span flex="25"><span md-msg="file.author">Author</span>: {{item.createdBy}}<br></span>
+                            <span flex="25"><span md-msg="file.createdTime">CreatedTime</span>: {{item.createdTime | date:'yyyy/MM/dd HH:mm'}}<br></span>
+                        </div>
+                    </md-tooltip>
+                </div>
+            </md-grid-tile>
+
+        </md-grid-list>
+
+    </md-content>
+</md-card>

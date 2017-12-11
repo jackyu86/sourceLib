@@ -1,0 +1,27 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>职业树管理</h2>
+
+        <span flex></span>
+        <md-button ng-click="create($event)" class="md-icon-button">
+            <md-tooltip md-direction="down">
+                新建一级职业
+            </md-tooltip>
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content layout="row" flex>
+    <md-card class="md-padding" flex>
+        <md-content>
+            <div data-angular-treeview="true"
+                 data-tree-id="tree"
+                 data-tree-model="treeData"
+                 data-node-id="job.id"
+                 data-node-label="job.displayName"
+                 data-node-children="children">
+            </div>
+        </md-content>
+    </md-card>
+    <div flex ui-view layout="column"></div>
+</md-content>

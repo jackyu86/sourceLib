@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>被保人告知单</title>
+    <link rel="stylesheet" j:css="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" j:css="/static/css/template.css">
+    <link rel="stylesheet" j:css="/static/css/header.css">
+    <link rel="stylesheet" j:css="/static/css/footer.css">
+    <link rel="stylesheet" j:css="/static/css/common.css">
+    <link rel="stylesheet" j:css="/static/css/checkout.css">
+</head>
+<body>
+<j:header/>
+
+<div class="page">
+    <j:purchase-steps selected="2"/>
+    <div class="order-main">
+        <input type="hidden" j:value="id" id="product-id">
+        <div class="form-container">
+            <script type="text/json" j:html="form | json"></script>
+        </div>
+    </div>
+</div>
+<j:footer/>
+<j:template/>
+
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datepicker.min.js"></script>
+<script j:js="/static/js/lib/bootstrap-datepicker.zh-CN.min.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/checkout/checkout.js"></script>
+</body>
+</html>

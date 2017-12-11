@@ -1,0 +1,58 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ui-sref="console.vendor.list" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <span>新增供应商</span>
+        <span flex></span>
+    </div>
+</md-toolbar>
+
+<md-card>
+    <md-content>
+        <form name="vendorForm" class="md-padding">
+            <md-input-container class="md-block">
+                <label>供应商名称</label>
+                <input required name="name" ng-model="data.vendor.name"/>
+                <div ng-messages="vendorForm.name.$error">
+                    <div ng-message="required">请输入供应商名称</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>供应商简称</label>
+                <input name="shortName" ng-model="data.vendor.shortName"/>
+                <div ng-messages="vendorForm.shortName.$error">
+                    <div ng-message="required">请输入供应商简称</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>供应商级别</label>
+                <md-select name="level" ng-change="changeLevel()" ng-model="data.vendor.level" required>
+                    <md-option ng-repeat="level in levels" value="{{level}}">
+                        {{level|insuranceVendorLevel}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="vendorForm.level.$error">
+                    <div ng-message="required">请选择供应商级别</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>描述</label>
+                <textarea name="description" ng-model="data.vendor.description"></textarea>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <md-button class="md-button md-raised" ngf-select="uploadImage($file)">选择供应商图片</md-button>
+                <br>
+                <img src="{{data.vendor.imageURL}}" alt="">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <md-button class="md-button md-raised" ngf-select="uploadLicenceImage($file)">选择供应商执照</md-button>
+                <br>
+                <a href="{{data.vendor.licenceImageURL}}">点击查看</a>
+            </md-input-container>
+            <div layout="row" class="md-padding">
+                <md-button class="md-button md-raised md-primary" ng-disabled="processing || vendorForm.$invalid" ng-click="save()" ng-disabled="processing">保存</md-button>
+            </div>
+        </form>
+    </md-content>
+</md-card>

@@ -1,0 +1,5 @@
+db:
+  mongo:
+      url: fongo://localhost:27017/mock
+  jdbc:
+      url: jdbc:hsqldb:mem:.;sql.syntax_mys=true

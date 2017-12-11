@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>购物车管理</title>
+    <link rel="stylesheet" j:css="/static//css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static//css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static//css/header.css">
+    <link rel="stylesheet" j:css="/static//css/footer.css">
+    <link rel="stylesheet" j:css="/static//css/common.css">
+    <link rel="stylesheet" j:css="/static//css/customer.css">
+    <link rel="stylesheet" j:css="/static//css/cart.css">
+
+</head>
+<body>
+<j:header folded="false"/>
+<div class="page">
+    <j:customer-sidenav j:if="user != null" selected="cart"/>
+    <div class="cart-main">
+        <div class="cart-none"></div>
+        <div class="cart-list-panel">
+            <form id="cartForm">
+                <table>
+                    <thead>
+                    <tr>
+                        <th class="check-cell">
+                            <div class="checkbox">
+                                <input type="checkbox" name="selected-all" class="green-square-checkbox">
+                                <label class="checkbox-label"></label>
+                            </div>
+
+                        </th>
+                        <th>产品名称</th>
+                        <th>有效期</th>
+                        <th>原价</th>
+                        <th>现价</th>
+                        <th>管理</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- 每个购物车商品的循环请从这里开始 -->
+                    <tr j:for="cart:carts" j:data-id="cart.item.id">
+                        <td class="check-cell">
+                            <div class="checkbox">
+                                <input type="checkbox" j:value="cart.item.id" name="selected-item" class="green-square-checkbox" value="false" j:data-price="cart.item.price.salePrice" checked>
+                                <label class="checkbox-label"></label>
+                            </div>
+                        </td>
+                        <td j:text="cart.item.productName">中国健康保障计划-中国人寿版</td>
+                        <td>1个月</td>
+                        <td>￥<span j:text="cart.item.price.price">87.00</span>元</td>
+                        <td><span class="text-primary">￥<span j:text="cart.item.price.salePrice">87.00</span>元</span></td>
+                        <td><a j:dealer="status:ACTIVE" href="javascript:void(0)" class="cart-item-delete"></a></td>
+                    </tr>
+                    <!-- 每个购物车商品的循环在这里结束 -->
+
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="cart-submit-panel">
+            <div class="cart-submit-summary">
+                共 <span j:text="carts.size()">3</span> 件产品
+                已选择 <span class="selected-count" j:text="carts.size()">3</span> 件
+                <span class="pull-right">合计 <span class="text-primary">￥<span id="total-price">155</span>元</span></span>
+            </div>
+            <a j:dealer="status:ACTIVE" href="javascript:void(0);" class="btn btn-primary btn-lg cart-submit-button">去投保</a>
+        </div>
+    </div>
+</div>
+<j:footer/>
+<j:utils/>
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/user/customer/cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<html xmlns:j="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+<script id="tpl_plp_form" type="text/x-handlebars-template">
+    <div class="Dynamic_Form_Container "></div>
+</script>
+<script id="tpl_plp_group" type="text/x-handlebars-template">
+    <span class="Dynamic_Group_Container attribute-list"></span>
+</script>
+<script id="tpl_plp_group_liability_factor" type="text/x-handlebars-template">
+    <span class="Dynamic_Group_Container attribute-list"></span>
+</script>
+<script id="tpl_plp_liability" type="text/x-handlebars-template">
+    <div class="liability">
+        <span class="liability-name">{{name}}</span>
+        <span class="liability-value">{{amount.price}}</span>
+    </div>
+</script>
+<script id="tpl_product_attribute_age" type="text/x-handlebars-template">
+    <div class="attribute">
+        <span class="attribute-name">{{displayName}}:</span>
+        <span class="attribute-value">
+            {{#editable}}
+            <input type="number" name="{{name}}" class="form-control input-extend" value="{{#defaultValue}}{{this}}{{else}}20{{/defaultValue}}" min="{{options.min}}" max="{{options.max}}">
+            {{else}}
+            <span>{{#AgeRange options}}{{/AgeRange}}</span>
+            <input type="hidden" name="{{name}}" value="{{#defaultValue}}{{this}}{{else}}20{{/defaultValue}}">
+            {{/editable}}
+        </span>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_product_attribute_number" type="text/x-handlebars-template">
+    <div class="attribute">
+        <span class="attribute-name">{{displayName}}:</span>
+        <span class="attribute-value">
+            {{#editable}}
+            <input type="number" name="{{name}}" class="form-control input-extend" value="{{#defaultValue}}{{this}}{{else}}1{{/defaultValue}}" min="{{options.min}}" max="{{options.max}}">
+            {{else}}
+            <span>{{#Range options}}{{/Range}}</span>
+            <input type="hidden" name="{{name}}" value="{{#defaultValue}}{{this}}{{else}}1{{/defaultValue}}">
+            {{/editable}}
+        </span>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_product_plan_period_fixed" type="text/x-handlebars-template">
+    <div class="attribute">
+        <span class="attribute-name">{{displayName}}：</span>
+        <span class="attribute-value">
+            <span>{{options.fixedValue.displayName}}</span>
+            <input type="hidden" name="{{name}}" value='{{#JSON options.fixedValue}}{{/JSON}}'>
+        </span>
+    </div>
+</script>
+
+<script id="tpl_product_plan_period_selection" type="text/x-handlebars-template">
+    {{#editable}}
+    <div class="attribute">
+        <label class="attribute-name">{{displayName}}：</label>
+        <span class="attribute-value">
+            <select name="{{name}}" class="form-control">
+            {{#each options.selection}}
+            <option value='{{#JSON this}}{{/JSON}}'>{{displayName}}</option>
+            {{/each}}
+            </select>
+        </span>
+    </div>
+    {{else}}
+    <div class="attribute">
+        <label class="attribute-name">{{displayName}}：</label>
+        <span class="attribute-value">{{defaultValue}}</span>
+    </div>
+    {{/editable}}
+</script>
+
+<script j:js="/static/js/product/list.js"></script>
+</body>
+</html>

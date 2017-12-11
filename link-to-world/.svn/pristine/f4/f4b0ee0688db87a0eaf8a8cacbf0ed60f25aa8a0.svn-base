@@ -1,0 +1,156 @@
+.management-panel {
+    display: table;
+    height: 100%;
+}
+
+.management-panel .product-panel {
+    display: table-cell;
+    width: 50%;
+    border: 1px solid #e4e4e4;
+    padding: 20px;
+    position: relative;
+}
+
+.management-panel .category ul {
+    position: relative;
+    padding-left: 30px;
+}
+
+.management-panel .sub-category-list::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    border-left: 1px solid #e4e4e4;
+    top: -20px;
+    left: 11px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.management-panel .category li {
+    position: relative;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.management-panel .category li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 19px;
+    height: 100%;
+    border-left: 1px solid #e4e4e4;
+    top: -50%;
+    left: -19px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.management-panel .category li:first-child:before {
+    height: 24px;
+    top: -4px;
+}
+
+.management-panel .category .sub-category:before {
+    height: 20px;
+    top: 0;
+}
+
+.management-panel .category li:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 50%;
+    border-left: 1px solid #e4e4e4;
+    top: 50%;
+    left: -19px;
+}
+
+.management-panel .product-panel .sub-category:after {
+    top: 0;
+    height: 100%;
+}
+
+.management-panel .category li:last-child:after {
+    display: none;
+}
+
+.management-panel .product-panel .product {
+    display: table;
+    height: 30px;
+}
+
+.management-panel .product-panel .product-name {
+    display: table-cell;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+.management-panel .product-panel .checkbox input[type=checkbox][checked] + .checkbox-label:before {
+    top: 4px;
+}
+
+.management-panel .product-panel.allocated-product-panel .product-name {
+    padding: 0 10px;
+}
+
+.management-panel .product-panel .btn-delete {
+    padding: 0 10px;
+}
+
+.management-panel .product-panel .product-name::before {
+    top: 0;
+}
+
+.management-panel .product-transform {
+    display: table-cell;
+    width: 100px;
+    min-width: 100px;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.management-panel .product-transform .btn-add {
+    position: relative;
+    background: #0d9da0;
+    color: #fff;
+    text-align: center;
+    width: 36px;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.management-panel .product-transform .btn-add:after {
+    position: absolute;
+    content: "";
+    border-left: 24px solid #0d9da0;
+    border-top: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-right: 0;
+    top: -12px;
+    right: -24px;
+}
+
+.main .btn-save {
+    width: 168px;
+    margin: 40px 0;
+}
+
+.product-panel ul li.closed {
+    height: 40px;
+}
+
+.product-panel ul li.closed > * {
+    display: none;
+}
+
+.product-panel .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}

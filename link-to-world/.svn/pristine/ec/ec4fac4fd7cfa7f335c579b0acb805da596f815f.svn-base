@@ -1,0 +1,9 @@
+user.error.usernameExists=Username exists
+user.error.emailExists=Email exists
+user.error.phoneExists=Phone number exists
+user.error.invalidPassword=Invalid password
+user.error.pinCodeLimit=Exceed pin code limitation, try it later
+user.error.usernameNoneExists=User doesn't exist
+user.error.invalidPinCode=Invalid pin code
+user.error.inactive=User status is inactive
+

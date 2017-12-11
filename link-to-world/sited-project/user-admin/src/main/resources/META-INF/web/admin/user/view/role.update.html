@@ -1,0 +1,49 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Go back" ui-sref="console.role.list">
+            <md-icon class="fa-chevron-left" md-font-icon="fa"></md-icon>
+        </md-button>
+
+        <span ng-if="$state.is('site.role.create')" md-msg="user.createRole">Create Role</span>
+        <span ng-if="$state.is('site.role.update')" md-msg="user.updateRole">Update Role<span ng-if="isModified()"
+                                                                                              class="modified">*</span></span>
+
+        <span flex></span>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <form name="roleForm" class="md-padding">
+        <md-input-container class="md-block" flex="80">
+            <label>角色ID</label>
+            <input required name="name" ng-model="role.name" ng-disabled="$state.is('site.role.update')">
+            <div ng-messages="roleForm.name.$error">
+                <div ng-message="required">请输入角色名</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>角色名称</label>
+            <input required name="displayName" ng-model="role.displayName">
+            <div ng-messages="roleForm.displayName.$error">
+                <div ng-message="required">请输入角色名称</div>
+            </div>
+        </md-input-container>
+
+
+        <div ng-repeat="permissionGroup in permissionGroups">
+            <h2>{{permissionGroup.name}}</h2>
+
+            <div ng-repeat="permission in permissionGroup.permissions">
+                <md-checkbox ng-checked="hasPermission(permission)" ng-click="toggle(permission)">
+                    {{ permission }}
+                </md-checkbox>
+            </div>
+        </div>
+
+        <div layout="row" class="md-padding">
+            <md-button class="md-button md-raised md-primary" ng-click="save()" ng-disabled="processing">保存</md-button>
+            <md-button class="md-button" ng-click="cancel()">取消</md-button>
+        </div>
+    </form>
+</md-card>

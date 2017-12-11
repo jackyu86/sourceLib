@@ -1,0 +1,77 @@
+<md-card flex>
+    <md-content>
+        <md-subheader ng-if="fileTable.searching">
+            <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadFiles()">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+                <div flex>
+                    <input ng-model="fileTable.query.title" type="text">
+                </div>
+                <md-button class="md-icon-button" ng-click="cancelSearching()">
+                    <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+                </md-button>
+            </form>
+        </md-subheader>
+        <md-subheader ng-if="!fileTable.searching && !fileTable.selected.length">
+            <div layout="row" layout-align="left center">
+                <span md-msg="file.list">File List</span>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="fileTable.searching = !fileTable.searching">
+                    <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Update file" ngf-select="uploadFiles($files)" multiple="multiple">
+                    <md-tooltip md-direction="down" md-msg="file.upload">
+                        Upload
+                    </md-tooltip>
+                    <md-icon class="fa-upload" md-font-icon="fa"></md-icon>
+                </md-button>
+            </div>
+        </md-subheader>
+        <md-subheader ng-if="fileTable.selected.length">
+            <div layout="row" layout-align="left center">
+                <span>{{fileTable.selected.length}} Selected</span>
+                <span flex></span>
+                <md-button class="md-icon-button" aria-label="Delete file" ng-click="fileTable.selected=[]">
+                    <md-tooltip md-direction="down" md-msg="file.cancel">
+                        Cancel
+                    </md-tooltip>
+                    <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Delete file" ng-click="batchDeleteFiles()">
+                    <md-tooltip md-direction="down" md-msg="file.batchDeleteFile">
+                        Batch Delete
+                    </md-tooltip>
+                    <md-icon class="fa-trash" md-font-icon="fa"></md-icon>
+                </md-button>
+            </div>
+        </md-subheader>
+        <md-table-container>
+            <table md-table md-row-select multiple ng-model="fileTable.selected" class="no-table">
+                <thead md-head md-order="fileTable.query.order" class="md-accent ">
+                <tr md-row>
+                    <td md-cell>全选</td>
+                </tr>
+                </thead>
+                <tbody md-body>
+                <tr md-row md-select="item"
+                    ng-repeat="item in fileTable.data.items" md-auto-select>
+                    <td md-cell>
+                        <div class="file-panel">
+                            <img src="{{item.path}}" ng-click="showModal(item)">
+                            <div class="file-detail" layout="column">
+                                <span flex="25"><span md-msg="file.title">Title</span>: {{item.title}}</span>
+                                <span flex="25"><span md-msg="file.tags">Tags</span>: {{item.tags}}</span>
+                                <span flex="25"><span md-msg="file.author">Author</span>: {{item.createdBy}}</span>
+                                <span flex="25"><span md-msg="file.createdTime">CreatedTime</span>: {{item.createdTime | date:'yyyy/MM/dd HH:mm'}}</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+        <md-table-pagination md-limit="fileTable.query.limit" md-page="fileTable.query.page" md-total="{{fileTable.data.total}}"
+                             md-page-select="fileTable.options.pageSelector" md-boundary-links="fileTable.options.boundaryLinks"
+                             md-on-paginate="reloadFiles"></md-table-pagination>
+
+    </md-content>
+</md-card>

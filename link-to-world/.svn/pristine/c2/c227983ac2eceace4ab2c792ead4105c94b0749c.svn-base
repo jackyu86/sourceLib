@@ -1,0 +1,69 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>审核产品列表</h2>
+
+        <span flex></span>
+
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-subheader ng-if="auditProductTable.searching">
+        <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadAuditProducts()">
+            <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            <div flex>
+
+            </div>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!auditProductTable.searching && !auditProductTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>产品列表</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="auditProductTable.searching = !auditProductTable.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table ng-model="auditProductTable.selected">
+            <thead md-head md-order="auditProductTable.query.order" md-on-reorder="reloadAuditProducts" class="md-accent">
+            <tr md-row>
+                <th md-column><span>编号</span></th>
+                <th md-column><span>产品编号</span></th>
+                <th md-column><span>产品名称</span></th>
+                <th md-column><span>版本号</span></th>
+                <th md-column md-order-by="status"><span>审核状态</span></th>
+                <th md-column><span>创建时间</span></th>
+                <th md-column><span>操作</span></th>
+            </tr>
+
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="auditProduct"
+                ng-repeat="auditProduct in auditProductTable.data.items" md-auto-select>
+                <td md-cell>{{auditProduct.id}}</td>
+                <td md-cell>{{auditProduct.product.name}}</td>
+                <td md-cell>{{auditProduct.productDisplayName}}</td>
+                <td md-cell>{{auditProduct.version}}</td>
+                <td md-cell><span ng-if="auditProduct.status=='PENDING'">待审核</span><span ng-if="auditProduct.status=='SUCCESS'">审核成功</span><span ng-if="auditProduct.status=='FAILED'">审核失败</span></td>
+                <td md-cell>{{auditProduct.createdTime | date:'yyyy/MM/dd HH:mm:ss'}}</td>
+                <td md-cell layout="row">
+                    <md-button class="md-icon-button" ng-if="auditProduct.status=='PENDING'" ng-click="auditProductTable.edit(auditProduct)">审核</md-button>
+                    <md-button class="md-icon-button" ng-click="deleteAuditProduct(auditProduct)">删除</md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+    <md-table-pagination md-limit="auditProductTable.query.limit" md-page="auditProductTable.query.page" md-total="{{auditProductTable.data.total}}"
+                         md-page-select="auditProductTable.options.pageSelector" md-boundary-links="auditProductTable.options.boundaryLinks"
+                         md-on-paginate="reloadAuditProducts"></md-table-pagination>
+
+</md-card>

@@ -1,0 +1,112 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ui-sref="console.insurance.form-group.list" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <span>创建字段</span>
+    </div>
+</md-toolbar>
+
+<md-card>
+    <md-card-content>
+        <form name="formFieldForm" class="md-padding">
+            <md-input-container class="md-block">
+                <label>字段类型</label>
+                <md-select ng-model="formField.type">
+                    <md-option ng-repeat="type in fieldTypes" ng-value="type.name">
+                        {{type.displayName}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="formFieldForm.displayName.$error">
+                    <div ng-message="required">请输入字段类型</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>字段名称</label>
+                <input required name="displayName" ng-model="formField.name"/>
+                <div ng-messages="formFieldForm.name.$error">
+                    <div ng-message="required">请输入字段名称</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>显示名称</label>
+                <input required name="displayName" ng-model="formField.displayName"/>
+                <div ng-messages="formFieldForm.displayName.$error">
+                    <div ng-message="required">请输入字段名称</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>显示顺序</label>
+                <input required name="displayOrder" ng-model="data.formField.displayOrder"/>
+            </md-input-container>
+
+            <md-input-container class="md-block" ng-if="formField.displayAs!=null&&formField.displayAs!=''">
+                <label>显示形式</label>
+                <md-select ng-model="formField.displayAs" ng-change="selectType()">
+                    <md-option ng-repeat="displayAs in displayAsList" ng-value="displayAs.value">{{displayAs.displayName}}</md-option>
+                </md-select>
+            </md-input-container>
+            <h3>约束</h3>
+            <md-input-container class="md-block" ng-repeat="(key,value) in formField.options" ng-if="key!='constants'">
+                <!--label-->
+                <div ng-switch="key">
+                    <div ng-switch-when="minMessage">
+                        <label><span md-msg="form.{{key}}"></span>(使用"{}"可以在页面上显示配置的值)</label>
+                    </div>
+                    <div ng-switch-when="maxMessage">
+                        <label><span md-msg="form.{{key}}"></span>(使用"{}"可以在页面上显示配置的值)</label>
+                    </div>
+                    <div ng-switch-default>
+                        <label><span md-msg="form.{{key}}"></span></label>
+                    </div>
+                </div>
+                <!--value-->
+                <div ng-switch="key">
+                    <div ng-switch-when="notNull">
+                        <md-select ng-model="formField.options[key]">
+                            <md-option value="true">是</md-option>
+                            <md-option value="false">否</md-option>
+                        </md-select>
+                    </div>
+                    <div ng-switch-when="min">
+                        <input type="number" required ng-model="formField.options[key]"/>
+                    </div>
+                    <div ng-switch-when="max">
+                        <input type="number" required ng-model="formField.options[key]"/>
+                    </div>
+                    <div ng-switch-when="minMessage">
+                        <input type="text" required ng-model="formField.options[key]"/>
+                    </div>
+                    <div ng-switch-when="trueOnly">
+                        <md-select ng-model="formField.options[key]">
+                            <md-option value="true">是</md-option>
+                            <md-option value="false">否</md-option>
+                        </md-select>
+                        {{formField.options[key]}}
+                    </div>
+                    <div ng-switch-when="falseOnly">
+                        <md-select ng-model="formField.options[key]">
+                            <md-option value="true">是</md-option>
+                            <md-option value="false">否</md-option>
+                        </md-select>
+                        {{formField.options[key]}}
+                    </div>
+                    <div ng-switch-when="customer">
+                        <md-select ng-model="formField.options[key]">
+                            <md-option value="PH">投保人告知</md-option>
+                            <md-option value="LA1">被保人告知</md-option>
+                        </md-select>
+                        {{formField.options[key]}}
+                    </div>
+                    <div ng-switch-default>
+                        <input type="text" required ng-model="formField.options[key]"/>
+                    </div>
+                </div>
+            </md-input-container>
+            <div layout="row" class="md-padding">
+                <md-button class="md-button md-raised md-primary" ng-disabled="processing || formFieldForm.$invalid" ng-click="save()" ng-disabled="processing">保存</md-button>
+                <md-button class="md-button" ng-click="cancel()">取消</md-button>
+            </div>
+        </form>
+    </md-card-content>
+</md-card>

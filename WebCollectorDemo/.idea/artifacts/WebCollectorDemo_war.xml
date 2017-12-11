@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WebCollectorDemo:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="WebCollectorDemo-1.0.war">
+      <element id="artifact" artifact-name="WebCollectorDemo:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,2 @@
+job.error.duplicateCode=职业代码重复
+jobTree.error.childrenExist=此职业树中存在关联职业

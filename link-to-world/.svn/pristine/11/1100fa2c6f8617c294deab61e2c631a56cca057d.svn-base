@@ -1,0 +1,129 @@
+[
+    {
+        "id": "a15beac859cc23fc65f3ee84",
+        "name": "民生银行",
+        "value": "cmbc",
+        "displayOrder": 1
+    },
+    {
+        "id": "a15beac859ce33fabee656ca",
+        "name": "北京银行",
+        "value": "bob",
+        "displayOrder": 2
+    },
+    {
+        "id": "a15beac859ce43feda53a370",
+        "name": "邮储银行",
+        "value": "psbc",
+        "displayOrder": 3
+    },
+    {
+        "id": "a15beac859ce53fcee1caee4",
+        "name": "中国农业银行",
+        "value": "abc",
+        "displayOrder": 4
+    },
+    {
+        "id": "a15beac859ce63fe086eafc8",
+        "name": "华夏银行",
+        "value": "hxb",
+        "displayOrder": 5
+    },
+    {
+        "id": "a15beac859ce73fba0d6b167",
+        "name": "上海浦东发展银行",
+        "value": "spdb",
+        "displayOrder": 6
+    },
+    {
+        "id": "a15beac859ce83fe2f9a3035",
+        "name": "平安银行",
+        "value": "pab",
+        "displayOrder": 7
+    },
+    {
+        "id": "a15beac859ce93fe86054889",
+        "name": "广东发展银行",
+        "value": "gdb",
+        "displayOrder": 8
+    },
+    {
+        "id": "a15beac859cea3fe54ea459b",
+        "name": "中信银行",
+        "value": "citic",
+        "displayOrder": 9
+    },
+    {
+        "id": "a15beac859ceb3fe1b56b5ae",
+        "name": "恒丰银行",
+        "value": "egb",
+        "displayOrder": 10
+    },
+    {
+        "id": "a15beac859cfc3fd36a13a34",
+        "name": "浙商银行",
+        "value": "czb",
+        "displayOrder": 11
+    },
+    {
+        "id": "a15beac859cfd3fc5bc04e18",
+        "name": "渤海银行",
+        "value": "cbhb",
+        "displayOrder": 12
+    },
+    {
+        "id": "a15beac859cfe3fe6205b3cd",
+        "name": "上海银行",
+        "value": "shb",
+        "displayOrder": 13
+    },
+    {
+        "id": "a15beac859cff3fd227a05bd",
+        "name": "兴业银行",
+        "value": "cib",
+        "displayOrder": 14
+    },
+    {
+        "id": "a15beac859cf103feeeabc3d",
+        "name": "广州银行",
+        "value": "gzb",
+        "displayOrder": 15
+    },
+    {
+        "id": "a15beac859cf113fe54e7419",
+        "name": "工商银行",
+        "value": "icbc",
+        "displayOrder": 16
+    },
+    {
+        "id": "a15beac859cf123fd890f970",
+        "name": "交通银行",
+        "value": "bcm",
+        "displayOrder": 17
+    },
+    {
+        "id": "a15beac859cf133fee67a5f3",
+        "name": "中国银行",
+        "value": "boc",
+        "displayOrder": 18
+    },
+    {
+        "id": "a15beac859cf143f9517290d",
+        "name": "建设银行",
+        "value": "ccb",
+        "displayOrder": 19
+    },
+    {
+        "id": "a15beac859cf153fe79b0cdf",
+        "name": "招商银行",
+        "value": "cmb",
+        "displayOrder": 20
+    },
+    {
+        "id": "a15beac859d0163feb9b21d0",
+        "name": "光大银行",
+        "value": "ceb",
+        "displayOrder": 21
+    }
+    
+]

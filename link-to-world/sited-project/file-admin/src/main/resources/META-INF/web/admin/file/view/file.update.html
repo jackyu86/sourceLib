@@ -1,0 +1,46 @@
+<md-card>
+    <md-subheader md-theme="white" class="top">
+        <div layout="row" layout-align="left center">
+            <md-button class="md-icon-button" aria-label="Go back" ui-sref="console.file.list">
+                <md-icon class="fa-chevron-left" md-font-icon="fa"></md-icon>
+            </md-button>
+
+            <div ng-if="$state.is('console.file.create')" md-msg="file.create">Create</div>
+            <div ng-if="$state.is('console.file.update')">
+                <span md-msg="file.update">Update</span>
+                <span ng-if="file.isChanged()">*</span>
+            </div>
+        </div>
+    </md-subheader>
+
+    <form name="fileForm" class="md-padding">
+        <md-input-container class="md-block" flex="80">
+            <label md-msg="file.path">Path</label>
+            <input required name="path" ng-model="file.form.path" disabled>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label md-msg="file.title">Title</label>
+            <input name="title" ng-model="file.form.title">
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label md-msg="file.description">Description</label>
+            <input name="description" ng-model="file.form.description">
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label md-msg="file.tags">Tags</label>
+            <md-chips
+                    ng-model="file.form.tags"
+                    delete-button-label="Remove Tag"
+                    delete-hint="Add tag"
+                    secondary-placeholder="+Tag"></md-chips>
+        </md-input-container>
+
+        <div layout="row" class="md-padding">
+            <md-button class="md-button md-raised md-primary" ng-click="saveFile()" ng-disabled="processing">保存</md-button>
+            <md-button class="md-button" ng-click="cancel()">取消</md-button>
+        </div>
+    </form>
+</md-card>

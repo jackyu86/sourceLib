@@ -1,0 +1,1 @@
+ssh -i api.pem ubuntu@120.55.67.19

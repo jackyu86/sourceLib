@@ -1,0 +1,1822 @@
+{
+    "groups": [
+        {
+            "name": "plan",
+            "displayName": "保障计划",
+            "optional": false,
+            "multiple": false,
+            "fields": [
+                {
+                    "name": "startTime",
+                    "groupName": "plan",
+                    "type": "PlanStartTime",
+                    "displayName": "起保时间",
+                    "options": {
+                        "type": "USER_INPUT",
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": null
+                },
+                {
+                    "name": "period",
+                    "groupName": "plan",
+                    "type": "PlanPeriod",
+                    "displayName": "保险期限",
+                    "options": {
+                        "type": "USER_SELECTION",
+                        "selection": [
+                            {
+                                "displayName": "1天",
+                                "value": 1,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "2天",
+                                "value": 2,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "3天",
+                                "value": 3,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "4天",
+                                "value": 4,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "5天",
+                                "value": 5,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "6天",
+                                "value": 6,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "7天",
+                                "value": 7,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "8天",
+                                "value": 8,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "9天",
+                                "value": 9,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "10天",
+                                "value": 10,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "11天",
+                                "value": 11,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "12天",
+                                "value": 12,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "13天",
+                                "value": 13,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "14天",
+                                "value": 14,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "15天",
+                                "value": 15,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "16天",
+                                "value": 16,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "17天",
+                                "value": 17,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "18天",
+                                "value": 18,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "19天",
+                                "value": 19,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "20天",
+                                "value": 20,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "21天",
+                                "value": 21,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "22天",
+                                "value": 22,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "23天",
+                                "value": 23,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "24天",
+                                "value": 24,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "25天",
+                                "value": 25,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "26天",
+                                "value": 26,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "27天",
+                                "value": 27,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "28天",
+                                "value": 28,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "29天",
+                                "value": 29,
+                                "unit": "DAY"
+                            },
+                            {
+                                "displayName": "30天",
+                                "value": 30,
+                                "unit": "DAY"
+                            }
+                        ],
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": {
+                        "displayName": "1天",
+                        "value": 1,
+                        "unit": "DAY"
+                    },
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": ""
+                }
+            ]
+        },
+        {
+            "name": "policy-holder",
+            "displayName": "投保人",
+            "optional": false,
+            "multiple": false,
+            "fields": [
+                {
+                    "name": "name",
+                    "groupName": "policy-holder",
+                    "type": "String",
+                    "displayName": "姓名",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": null
+                },
+                {
+                    "name": "id",
+                    "groupName": "policy-holder",
+                    "type": "Id",
+                    "displayName": "证件号码",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空",
+                        "constants": [
+                            {
+                                "displayName": "身份证",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "护照",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "军人证",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "台胞证",
+                                "value": "14"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "9"
+                            }
+                        ]
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": null
+                },
+                {
+                    "name": "birthDate",
+                    "groupName": "policy-holder",
+                    "type": "BirthDate",
+                    "displayName": "出生日期",
+                    "options": {},
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": ""
+                },
+                {
+                    "name": "gender",
+                    "groupName": "policy-holder",
+                    "type": "Gender",
+                    "displayName": "性别",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空",
+                        "constants": [
+                            {
+                                "displayName": "男",
+                                "value": "M"
+                            },
+                            {
+                                "displayName": "女",
+                                "value": "F"
+                            }
+                        ]
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": "radio"
+                },
+                {
+                    "name": "phone",
+                    "groupName": "policy-holder",
+                    "type": "Phone",
+                    "displayName": "手机号",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": ""
+                },
+                {
+                    "name": "email",
+                    "groupName": "policy-holder",
+                    "type": "Email",
+                    "displayName": "电子邮箱",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": ""
+                },
+                {
+                    "name": "age",
+                    "groupName": "policy-holder",
+                    "type": "Age",
+                    "displayName": "投保人年龄",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空",
+                        "min": 18
+                    },
+                    "defaultValue": null,
+                    "editable": false,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": null
+                }
+            ]
+        },
+        {
+            "name": "insured",
+            "displayName": "被投保人",
+            "optional": false,
+            "multiple": false,
+            "fields": [
+                {
+                    "name": "relation",
+                    "groupName": "insured",
+                    "type": "Relation",
+                    "displayName": "与投保人关系",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空",
+                        "constants": [
+                            {
+                                "displayName": "本人",
+                                "value": "5"
+                            },
+                            {
+                                "displayName": "父母",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "子女",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "配偶",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "6"
+                            }
+                        ]
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "name",
+                    "groupName": "insured",
+                    "type": "String",
+                    "displayName": "被保险人姓名",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": ""
+                },
+                {
+                    "name": "id",
+                    "groupName": "insured",
+                    "type": "Id",
+                    "displayName": "证件号码",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空",
+                        "constants": [
+                            {
+                                "displayName": "身份证",
+                                "value": "1"
+                            },
+                            {
+                                "displayName": "护照",
+                                "value": "3"
+                            },
+                            {
+                                "displayName": "军人证",
+                                "value": "2"
+                            },
+                            {
+                                "displayName": "台胞证",
+                                "value": "14"
+                            },
+                            {
+                                "displayName": "其他",
+                                "value": "9"
+                            }
+                        ]
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "age",
+                    "groupName": "insured",
+                    "type": "Age",
+                    "displayName": "承保年龄",
+                    "options": {
+                        "min": 0,
+                        "notNull": true,
+                        "max": 80,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": false,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": null
+                },
+                {
+                    "name": "birthDate",
+                    "groupName": "insured",
+                    "type": "BirthDate",
+                    "displayName": "出生日期",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": ""
+                },
+                {
+                    "name": "gender",
+                    "groupName": "insured",
+                    "type": "Gender",
+                    "displayName": "性别",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空",
+                        "constants": [
+                            {
+                                "displayName": "男",
+                                "value": "M"
+                            },
+                            {
+                                "displayName": "女",
+                                "value": "F"
+                            }
+                        ]
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": "radio"
+                }
+            ]
+        },
+        {
+            "name": "beneficiary",
+            "displayName": "受益人",
+            "optional": false,
+            "multiple": false,
+            "fields": [
+                {
+                    "name": "type",
+                    "groupName": "beneficiary",
+                    "type": "BenefitType",
+                    "displayName": "受益人类型",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空",
+                        "constants": [
+                            {
+                                "displayName": "身故受益人",
+                                "value": "2"
+                            }
+                        ]
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "legalBeneficiary",
+                    "groupName": "beneficiary",
+                    "type": "LegalBeneficiary",
+                    "displayName": "法定受益人",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空",
+                        "constants": [
+                            {
+                                "displayName": "是",
+                                "value": "Y"
+                            }
+                        ]
+                    },
+                    "defaultValue": "Y",
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": "radio"
+                }
+            ]
+        },
+        {
+            "name": "policy",
+            "displayName": "投保信息",
+            "optional": false,
+            "multiple": false,
+            "fields": [
+                {
+                    "name": "deliverType",
+                    "groupName": "policy",
+                    "type": "DeliverType",
+                    "displayName": "保单递送方式",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空",
+                        "constants": [
+                            {
+                                "displayName": "电子保单",
+                                "value": 5
+                            }
+                        ]
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "travelDest",
+                    "groupName": "policy",
+                    "type": "TravelDest",
+                    "displayName": "旅行目的地",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空",
+                        "constants": [
+                            {
+                                "displayName": "其他",
+                                "value": "OTHERS"
+                            },
+                            {
+                                "displayName": "阿富汗",
+                                "value": "AFG"
+                            },
+                            {
+                                "displayName": "阿尔巴尼亚",
+                                "value": "ALB"
+                            },
+                            {
+                                "displayName": "南极洲",
+                                "value": "ATA"
+                            },
+                            {
+                                "displayName": "阿尔及利亚",
+                                "value": "DZA"
+                            },
+                            {
+                                "displayName": "文莱",
+                                "value": "BN"
+                            },
+                            {
+                                "displayName": "美属萨摩亚",
+                                "value": "ASM"
+                            },
+                            {
+                                "displayName": "安道尔",
+                                "value": "AND"
+                            },
+                            {
+                                "displayName": "安哥拉",
+                                "value": "AGO"
+                            },
+                            {
+                                "displayName": "安提瓜和巴布达",
+                                "value": "ATG"
+                            },
+                            {
+                                "displayName": "阿塞拜疆",
+                                "value": "AZE"
+                            },
+                            {
+                                "displayName": "阿根廷",
+                                "value": "ARG"
+                            },
+                            {
+                                "displayName": "澳大利亚",
+                                "value": "AUS"
+                            },
+                            {
+                                "displayName": "奥地利",
+                                "value": "AUT"
+                            },
+                            {
+                                "displayName": "巴哈马",
+                                "value": "BHS"
+                            },
+                            {
+                                "displayName": "巴林",
+                                "value": "BHR"
+                            },
+                            {
+                                "displayName": "孟加拉国",
+                                "value": "BGD"
+                            },
+                            {
+                                "displayName": "亚美尼亚",
+                                "value": "ARM"
+                            },
+                            {
+                                "displayName": "巴巴多斯",
+                                "value": "BRB"
+                            },
+                            {
+                                "displayName": "比利时",
+                                "value": "BEL"
+                            },
+                            {
+                                "displayName": "百慕大",
+                                "value": "BMU"
+                            },
+                            {
+                                "displayName": "不丹",
+                                "value": "BTN"
+                            },
+                            {
+                                "displayName": "玻利维亚",
+                                "value": "BOL"
+                            },
+                            {
+                                "displayName": "波斯尼亚和黑塞哥维那",
+                                "value": "BIH"
+                            },
+                            {
+                                "displayName": "博茨瓦纳",
+                                "value": "BWA"
+                            },
+                            {
+                                "displayName": "布维岛",
+                                "value": "BVT"
+                            },
+                            {
+                                "displayName": "巴西",
+                                "value": "BRA"
+                            },
+                            {
+                                "displayName": "伯利兹",
+                                "value": "BLZ"
+                            },
+                            {
+                                "displayName": "英属印度洋领土",
+                                "value": "IOT"
+                            },
+                            {
+                                "displayName": "所罗门群岛",
+                                "value": "SLB"
+                            },
+                            {
+                                "displayName": "英属维尔京群岛",
+                                "value": "VGB"
+                            },
+                            {
+                                "displayName": "文莱",
+                                "value": "BRN"
+                            },
+                            {
+                                "displayName": "保加利亚",
+                                "value": "BGR"
+                            },
+                            {
+                                "displayName": "缅甸",
+                                "value": "MMR"
+                            },
+                            {
+                                "displayName": "布隆迪",
+                                "value": "BDI"
+                            },
+                            {
+                                "displayName": "白俄罗斯",
+                                "value": "BLR"
+                            },
+                            {
+                                "displayName": "柬埔寨",
+                                "value": "KHM"
+                            },
+                            {
+                                "displayName": "喀麦隆",
+                                "value": "CMR"
+                            },
+                            {
+                                "displayName": "加拿大",
+                                "value": "CAN"
+                            },
+                            {
+                                "displayName": "佛得角",
+                                "value": "CPV"
+                            },
+                            {
+                                "displayName": "开曼群岛",
+                                "value": "CYM"
+                            },
+                            {
+                                "displayName": "中非",
+                                "value": "CAF"
+                            },
+                            {
+                                "displayName": "斯里兰卡",
+                                "value": "LKA"
+                            },
+                            {
+                                "displayName": "乍得",
+                                "value": "TCD"
+                            },
+                            {
+                                "displayName": "智利",
+                                "value": "CHL"
+                            },
+                            {
+                                "displayName": "中国",
+                                "value": "CHN"
+                            },
+                            {
+                                "displayName": "中国台湾",
+                                "value": "CTN"
+                            },
+                            {
+                                "displayName": "圣诞岛",
+                                "value": "CSR"
+                            },
+                            {
+                                "displayName": "科科斯(基林)群岛",
+                                "value": "CCK"
+                            },
+                            {
+                                "displayName": "哥伦比亚",
+                                "value": "COL"
+                            },
+                            {
+                                "displayName": "科摩罗",
+                                "value": "COM"
+                            },
+                            {
+                                "displayName": "马约特",
+                                "value": "MYT"
+                            },
+                            {
+                                "displayName": "刚果",
+                                "value": "COG"
+                            },
+                            {
+                                "displayName": "扎伊尔",
+                                "value": "ZAR"
+                            },
+                            {
+                                "displayName": "库克群岛",
+                                "value": "COK"
+                            },
+                            {
+                                "displayName": "哥斯达黎加",
+                                "value": "CR"
+                            },
+                            {
+                                "displayName": "克罗地亚",
+                                "value": "HRV"
+                            },
+                            {
+                                "displayName": "古巴",
+                                "value": "CUB"
+                            },
+                            {
+                                "displayName": "塞浦路斯",
+                                "value": "CYP"
+                            },
+                            {
+                                "displayName": "捷克",
+                                "value": "CZE"
+                            },
+                            {
+                                "displayName": "贝宁",
+                                "value": "BEN"
+                            },
+                            {
+                                "displayName": "丹麦",
+                                "value": "DNK"
+                            },
+                            {
+                                "displayName": "多米尼克",
+                                "value": "DMA"
+                            },
+                            {
+                                "displayName": "多米尼加共和国",
+                                "value": "DOM"
+                            },
+                            {
+                                "displayName": "厄瓜多尔",
+                                "value": "ECU"
+                            },
+                            {
+                                "displayName": "萨尔瓦多",
+                                "value": "SLV"
+                            },
+                            {
+                                "displayName": "赤道几内亚",
+                                "value": "GNQ"
+                            },
+                            {
+                                "displayName": "埃塞俄比亚",
+                                "value": "ETH"
+                            },
+                            {
+                                "displayName": "厄立特里亚",
+                                "value": "ERI"
+                            },
+                            {
+                                "displayName": "爱沙尼亚",
+                                "value": "EST"
+                            },
+                            {
+                                "displayName": "法罗群岛",
+                                "value": "FRO"
+                            },
+                            {
+                                "displayName": "马尔维纳斯群岛(福克兰群岛)",
+                                "value": "FLK"
+                            },
+                            {
+                                "displayName": "南乔治亚岛和南桑德韦奇岛",
+                                "value": "SGS"
+                            },
+                            {
+                                "displayName": "斐济",
+                                "value": "FJI"
+                            },
+                            {
+                                "displayName": "芬兰",
+                                "value": "FIN"
+                            },
+                            {
+                                "displayName": "法国",
+                                "value": "FRA"
+                            },
+                            {
+                                "displayName": "法属圭亚那",
+                                "value": "GUF"
+                            },
+                            {
+                                "displayName": "法属波利尼西亚",
+                                "value": "PYF"
+                            },
+                            {
+                                "displayName": "法属南部领土",
+                                "value": "ATF"
+                            },
+                            {
+                                "displayName": "吉布提",
+                                "value": "DJI"
+                            },
+                            {
+                                "displayName": "加蓬",
+                                "value": "GAB"
+                            },
+                            {
+                                "displayName": "格鲁吉亚",
+                                "value": "GEO"
+                            },
+                            {
+                                "displayName": "冈比亚",
+                                "value": "GMB"
+                            },
+                            {
+                                "displayName": "德国",
+                                "value": "DEU"
+                            },
+                            {
+                                "displayName": "加纳",
+                                "value": "GHA"
+                            },
+                            {
+                                "displayName": "直布罗陀",
+                                "value": "GIB"
+                            },
+                            {
+                                "displayName": "基里巴斯",
+                                "value": "KIR"
+                            },
+                            {
+                                "displayName": "希腊",
+                                "value": "GRC"
+                            },
+                            {
+                                "displayName": "格陵兰",
+                                "value": "GRL"
+                            },
+                            {
+                                "displayName": "格林纳达",
+                                "value": "GRD"
+                            },
+                            {
+                                "displayName": "瓜德罗普",
+                                "value": "GLP"
+                            },
+                            {
+                                "displayName": "关岛",
+                                "value": "GUM"
+                            },
+                            {
+                                "displayName": "危地马拉",
+                                "value": "GTM"
+                            },
+                            {
+                                "displayName": "几内亚",
+                                "value": "GIN"
+                            },
+                            {
+                                "displayName": "圭亚那",
+                                "value": "GUY"
+                            },
+                            {
+                                "displayName": "海地",
+                                "value": "HTI"
+                            },
+                            {
+                                "displayName": "赫德岛和麦克唐纳岛",
+                                "value": "HMD"
+                            },
+                            {
+                                "displayName": "梵蒂冈",
+                                "value": "VAT"
+                            },
+                            {
+                                "displayName": "洪都拉斯",
+                                "value": "HND"
+                            },
+                            {
+                                "displayName": "香港",
+                                "value": "HKG"
+                            },
+                            {
+                                "displayName": "匈牙利",
+                                "value": "HUN"
+                            },
+                            {
+                                "displayName": "冰岛",
+                                "value": "ISL"
+                            },
+                            {
+                                "displayName": "印度",
+                                "value": "IND"
+                            },
+                            {
+                                "displayName": "印度尼西亚",
+                                "value": "IDN"
+                            },
+                            {
+                                "displayName": "伊朗",
+                                "value": "IRN"
+                            },
+                            {
+                                "displayName": "伊拉克",
+                                "value": "IRQ"
+                            },
+                            {
+                                "displayName": "爱尔兰",
+                                "value": "IRL"
+                            },
+                            {
+                                "displayName": "巴勒斯坦",
+                                "value": "PST"
+                            },
+                            {
+                                "displayName": "以色列",
+                                "value": "ISR"
+                            },
+                            {
+                                "displayName": "意大利",
+                                "value": "ITA"
+                            },
+                            {
+                                "displayName": "科特迪瓦",
+                                "value": "CIV"
+                            },
+                            {
+                                "displayName": "牙买加",
+                                "value": "JAM"
+                            },
+                            {
+                                "displayName": "日本",
+                                "value": "JPN"
+                            },
+                            {
+                                "displayName": "哈萨克斯坦",
+                                "value": "KAZ"
+                            },
+                            {
+                                "displayName": "约旦",
+                                "value": "JOR"
+                            },
+                            {
+                                "displayName": "肯尼亚",
+                                "value": "KEN"
+                            },
+                            {
+                                "displayName": "朝鲜",
+                                "value": "PRK"
+                            },
+                            {
+                                "displayName": "韩国",
+                                "value": "KOR"
+                            },
+                            {
+                                "displayName": "科威特",
+                                "value": "KWT"
+                            },
+                            {
+                                "displayName": "吉尔吉斯斯坦",
+                                "value": "KGZ"
+                            },
+                            {
+                                "displayName": "老挝",
+                                "value": "LAO"
+                            },
+                            {
+                                "displayName": "黎巴嫩",
+                                "value": "LBN"
+                            },
+                            {
+                                "displayName": "莱索托",
+                                "value": "LSO"
+                            },
+                            {
+                                "displayName": "拉脱维亚",
+                                "value": "LVA"
+                            },
+                            {
+                                "displayName": "利比里亚",
+                                "value": "LBR"
+                            },
+                            {
+                                "displayName": "利比亚",
+                                "value": "LBY"
+                            },
+                            {
+                                "displayName": "列支敦士登",
+                                "value": "LIE"
+                            },
+                            {
+                                "displayName": "立陶宛",
+                                "value": "LTU"
+                            },
+                            {
+                                "displayName": "卢森堡",
+                                "value": "LUX"
+                            },
+                            {
+                                "displayName": "澳门",
+                                "value": "MAC"
+                            },
+                            {
+                                "displayName": "马达加斯加",
+                                "value": "MDG"
+                            },
+                            {
+                                "displayName": "马拉维",
+                                "value": "MWI"
+                            },
+                            {
+                                "displayName": "马来西亚",
+                                "value": "MYS"
+                            },
+                            {
+                                "displayName": "马尔代夫",
+                                "value": "MDV"
+                            },
+                            {
+                                "displayName": "马里",
+                                "value": "MLI"
+                            },
+                            {
+                                "displayName": "马耳他",
+                                "value": "MLT"
+                            },
+                            {
+                                "displayName": "马提尼克",
+                                "value": "MTQ"
+                            },
+                            {
+                                "displayName": "毛里塔尼亚",
+                                "value": "MRT"
+                            },
+                            {
+                                "displayName": "毛里求斯",
+                                "value": "MUS"
+                            },
+                            {
+                                "displayName": "墨西哥",
+                                "value": "MEX"
+                            },
+                            {
+                                "displayName": "摩纳哥",
+                                "value": "MCO"
+                            },
+                            {
+                                "displayName": "蒙古",
+                                "value": "MNG"
+                            },
+                            {
+                                "displayName": "摩尔多瓦",
+                                "value": "MDA"
+                            },
+                            {
+                                "displayName": "蒙特塞拉特",
+                                "value": "MSR"
+                            },
+                            {
+                                "displayName": "摩洛哥",
+                                "value": "MAR"
+                            },
+                            {
+                                "displayName": "莫桑比克",
+                                "value": "MOZ"
+                            },
+                            {
+                                "displayName": "阿曼",
+                                "value": "OMN"
+                            },
+                            {
+                                "displayName": "纳米比亚",
+                                "value": "NAM"
+                            },
+                            {
+                                "displayName": "瑙鲁",
+                                "value": "NRU"
+                            },
+                            {
+                                "displayName": "尼泊尔",
+                                "value": "NPL"
+                            },
+                            {
+                                "displayName": "荷兰",
+                                "value": "NLD"
+                            },
+                            {
+                                "displayName": "荷属安的列斯",
+                                "value": "ANT"
+                            },
+                            {
+                                "displayName": "阿鲁巴",
+                                "value": "ABW"
+                            },
+                            {
+                                "displayName": "新喀里多尼亚",
+                                "value": "NCL"
+                            },
+                            {
+                                "displayName": "瓦努阿图",
+                                "value": "VUT"
+                            },
+                            {
+                                "displayName": "新西兰",
+                                "value": "NZL"
+                            },
+                            {
+                                "displayName": "尼加拉瓜",
+                                "value": "NIC"
+                            },
+                            {
+                                "displayName": "尼日尔",
+                                "value": "NER"
+                            },
+                            {
+                                "displayName": "尼日利亚",
+                                "value": "NGA"
+                            },
+                            {
+                                "displayName": "纽埃",
+                                "value": "NIU"
+                            },
+                            {
+                                "displayName": "诺福克岛",
+                                "value": "NFK"
+                            },
+                            {
+                                "displayName": "挪威",
+                                "value": "NOR"
+                            },
+                            {
+                                "displayName": "北马里亚纳",
+                                "value": "MNP"
+                            },
+                            {
+                                "displayName": "美属太平洋各群岛(包括:中途岛、约翰斯顿岛、豪兰岛、贝克岛和威克岛等)",
+                                "value": "UMI"
+                            },
+                            {
+                                "displayName": "密克罗尼西亚",
+                                "value": "FSM"
+                            },
+                            {
+                                "displayName": "马绍尔群岛",
+                                "value": "MHL"
+                            },
+                            {
+                                "displayName": "贝劳",
+                                "value": "PLW"
+                            },
+                            {
+                                "displayName": "巴基斯坦",
+                                "value": "PAK"
+                            },
+                            {
+                                "displayName": "巴拿马",
+                                "value": "PAN"
+                            },
+                            {
+                                "displayName": "巴布亚新几内亚",
+                                "value": "PNG"
+                            },
+                            {
+                                "displayName": "巴拉圭",
+                                "value": "PRY"
+                            },
+                            {
+                                "displayName": "秘鲁",
+                                "value": "PER"
+                            },
+                            {
+                                "displayName": "菲律宾",
+                                "value": "PHL"
+                            },
+                            {
+                                "displayName": "皮特凯恩群岛",
+                                "value": "PCN"
+                            },
+                            {
+                                "displayName": "波兰",
+                                "value": "POL"
+                            },
+                            {
+                                "displayName": "葡萄牙",
+                                "value": "PRT"
+                            },
+                            {
+                                "displayName": "几内亚比绍",
+                                "value": "GNB"
+                            },
+                            {
+                                "displayName": "东帝汶",
+                                "value": "TMP"
+                            },
+                            {
+                                "displayName": "波多黎各",
+                                "value": "PRI"
+                            },
+                            {
+                                "displayName": "卡塔尔",
+                                "value": "QAT"
+                            },
+                            {
+                                "displayName": "留尼汪",
+                                "value": "REU"
+                            },
+                            {
+                                "displayName": "罗马尼亚",
+                                "value": "ROM"
+                            },
+                            {
+                                "displayName": "俄罗斯",
+                                "value": "RUS"
+                            },
+                            {
+                                "displayName": "卢旺达",
+                                "value": "RWA"
+                            },
+                            {
+                                "displayName": "圣赫勒拿",
+                                "value": "SHN"
+                            },
+                            {
+                                "displayName": "圣基茨和尼维斯",
+                                "value": "KNA"
+                            },
+                            {
+                                "displayName": "安圭拉",
+                                "value": "AIA"
+                            },
+                            {
+                                "displayName": "圣卢西亚",
+                                "value": "LCA"
+                            },
+                            {
+                                "displayName": "圣皮埃尔和密克隆",
+                                "value": "SPM"
+                            },
+                            {
+                                "displayName": "圣文森特和格林纳丁斯",
+                                "value": "VCT"
+                            },
+                            {
+                                "displayName": "圣马力诺",
+                                "value": "SMR"
+                            },
+                            {
+                                "displayName": "圣多美和普林西比",
+                                "value": "STp"
+                            },
+                            {
+                                "displayName": "沙竺阿拉伯",
+                                "value": "SAU"
+                            },
+                            {
+                                "displayName": "塞内加尔",
+                                "value": "SEN"
+                            },
+                            {
+                                "displayName": "塞舌尔",
+                                "value": "SYC"
+                            },
+                            {
+                                "displayName": "塞拉利昂",
+                                "value": "SLE"
+                            },
+                            {
+                                "displayName": "新加坡",
+                                "value": "SGP"
+                            },
+                            {
+                                "displayName": "斯洛伐克",
+                                "value": "SVK"
+                            },
+                            {
+                                "displayName": "越南",
+                                "value": "VNM"
+                            },
+                            {
+                                "displayName": "斯洛文尼亚",
+                                "value": "SVN"
+                            },
+                            {
+                                "displayName": "索马里",
+                                "value": "SOM"
+                            },
+                            {
+                                "displayName": "南非",
+                                "value": "ZAF"
+                            },
+                            {
+                                "displayName": "津巴布韦",
+                                "value": "ZWE"
+                            },
+                            {
+                                "displayName": "西班牙",
+                                "value": "ESP"
+                            },
+                            {
+                                "displayName": "西撒哈拉",
+                                "value": "ESH"
+                            },
+                            {
+                                "displayName": "苏丹",
+                                "value": "SDN"
+                            },
+                            {
+                                "displayName": "苏里南",
+                                "value": "SUR"
+                            },
+                            {
+                                "displayName": "斯瓦尔巴群岛",
+                                "value": "SJM"
+                            },
+                            {
+                                "displayName": "斯威士兰",
+                                "value": "SWZ"
+                            },
+                            {
+                                "displayName": "瑞典",
+                                "value": "SWE"
+                            },
+                            {
+                                "displayName": "瑞士",
+                                "value": "CHE"
+                            },
+                            {
+                                "displayName": "叙利亚",
+                                "value": "SYR"
+                            },
+                            {
+                                "displayName": "塔吉克斯坦",
+                                "value": "TJK"
+                            },
+                            {
+                                "displayName": "泰国",
+                                "value": "THA"
+                            },
+                            {
+                                "displayName": "多哥",
+                                "value": "TGO"
+                            },
+                            {
+                                "displayName": "托克劳",
+                                "value": "TKL"
+                            },
+                            {
+                                "displayName": "汤加",
+                                "value": "TON"
+                            },
+                            {
+                                "displayName": "特立尼达和多巴哥",
+                                "value": "TTO"
+                            },
+                            {
+                                "displayName": "阿闻酋",
+                                "value": "ARE"
+                            },
+                            {
+                                "displayName": "突尼斯",
+                                "value": "TUN"
+                            },
+                            {
+                                "displayName": "土耳其",
+                                "value": "TUR"
+                            },
+                            {
+                                "displayName": "土库曼斯坦",
+                                "value": "TKM"
+                            },
+                            {
+                                "displayName": "特克斯科斯群岛",
+                                "value": "TCA"
+                            },
+                            {
+                                "displayName": "图瓦卢",
+                                "value": "TUV"
+                            },
+                            {
+                                "displayName": "乌干达",
+                                "value": "UGA"
+                            },
+                            {
+                                "displayName": "乌克兰",
+                                "value": "UKR"
+                            },
+                            {
+                                "displayName": "马斯顿",
+                                "value": "MKD"
+                            },
+                            {
+                                "displayName": "埃及",
+                                "value": "EGY"
+                            },
+                            {
+                                "displayName": "英国",
+                                "value": "GBR"
+                            },
+                            {
+                                "displayName": "坦桑尼亚",
+                                "value": "TZA"
+                            },
+                            {
+                                "displayName": "美国",
+                                "value": "USA"
+                            },
+                            {
+                                "displayName": "美属维尔京群岛",
+                                "value": "VIR"
+                            },
+                            {
+                                "displayName": "布基纳法索",
+                                "value": "BFA"
+                            },
+                            {
+                                "displayName": "乌拉圭",
+                                "value": "URY"
+                            },
+                            {
+                                "displayName": "乌兹别克斯坦",
+                                "value": "UZB"
+                            },
+                            {
+                                "displayName": "委内瑞拉",
+                                "value": "VEN"
+                            },
+                            {
+                                "displayName": "瓦利斯和富图纳群岛",
+                                "value": "WLF"
+                            },
+                            {
+                                "displayName": "西萨摩亚",
+                                "value": "WSM"
+                            },
+                            {
+                                "displayName": "也门",
+                                "value": "YEM"
+                            },
+                            {
+                                "displayName": "南斯拉夫",
+                                "value": "YUG"
+                            },
+                            {
+                                "displayName": "赞比亚",
+                                "value": "ZMB"
+                            }
+                        ]
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": null
+                }
+            ]
+        },
+        {
+            "name": "others",
+            "displayName": "单证信息",
+            "optional": true,
+            "multiple": false,
+            "fields": [
+                {
+                    "name": "invoiceName",
+                    "groupName": "others",
+                    "type": "String",
+                    "displayName": "发票抬头",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": ""
+                },
+                {
+                    "name": "invoiceDate",
+                    "groupName": "others",
+                    "type": "LocalDate",
+                    "displayName": "开票日期",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": ""
+                },
+                {
+                    "name": "invoiceDeliverType",
+                    "groupName": "others",
+                    "type": "InvoiceDeliverType",
+                    "displayName": "发票递送方式",
+                    "options": {
+                        "constants": [
+                            {
+                                "displayName": "挂号信",
+                                "value": "0"
+                            },
+                            {
+                                "displayName": "快递",
+                                "value": "1"
+                            }
+                        ]
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": "selection"
+                },
+                {
+                    "name": "firstName",
+                    "groupName": "others",
+                    "type": "String",
+                    "displayName": "姓名",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": ""
+                },
+                {
+                    "name": "mobile",
+                    "groupName": "others",
+                    "type": "String",
+                    "displayName": "移动电话",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": ""
+                },
+                {
+                    "name": "address",
+                    "groupName": "others",
+                    "type": "Address",
+                    "displayName": "地址",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": ""
+                },
+                {
+                    "name": "postalCode",
+                    "groupName": "others",
+                    "type": "String",
+                    "displayName": "邮编",
+                    "options": {
+                        "notNull": true,
+                        "notNullMessage": "不能为空"
+                    },
+                    "defaultValue": null,
+                    "editable": true,
+                    "multiple": null,
+                    "hidden": false,
+                    "displayAs": ""
+                }
+            ]
+        },
+        {
+            "name": "liability",
+            "displayName": "保险责任",
+            "optional": null,
+            "multiple": null,
+            "fields": [
+                {
+                    "name": "57c24ce40879226abbb35fb8",
+                    "groupName": "liability",
+                    "type": "Liability",
+                    "displayName": "身故保险金",
+                    "options": {
+                        "fixValue": "50000",
+                        "type": "FIXED",
+                        "required": true
+                    },
+                    "defaultValue": "50000",
+                    "editable": false,
+                    "multiple": false,
+                    "hidden": false,
+                    "displayAs": null
+                },
+                {
+                    "name": "57c24ce40879226abbb35fd6",
+                    "groupName": "liability",
+                    "type": "Liability",
+                    "displayName": "急性病身故保险金",
+                    "options": {
+                        "fixValue": "50000",
+                        "type": "FIXED",
+                        "required": true
+                    },
+                    "defaultValue": "50000",
+                    "editable": false,
+                    "multiple": false,
+                    "hidden": false,
+                    "displayAs": null
+                },
+                {
+                    "name": "58364dba99a6bc1744d17711",
+                    "groupName": "liability",
+                    "type": "Liability",
+                    "displayName": "急性病医疗费用",
+                    "options": {
+                        "fixValue": "20000",
+                        "type": "FIXED",
+                        "required": true
+                    },
+                    "defaultValue": "20000",
+                    "editable": false,
+                    "multiple": false,
+                    "hidden": false,
+                    "displayAs": null
+                },
+                {
+                    "name": "58364ef499a6bc29d4ec74f9",
+                    "groupName": "liability",
+                    "type": "Liability",
+                    "displayName": "亲属处理后事",
+                    "options": {
+                        "fixValue": "8000",
+                        "type": "FIXED",
+                        "required": true
+                    },
+                    "defaultValue": "8000",
+                    "editable": false,
+                    "multiple": false,
+                    "hidden": false,
+                    "displayAs": null
+                }
+            ]
+        },
+        {
+            "name": "product",
+            "displayName": null,
+            "optional": false,
+            "multiple": null,
+            "fields": [
+                {
+                    "name": "unit",
+                    "groupName": "product",
+                    "type": "Unit",
+                    "displayName": "购买份数",
+                    "options": {},
+                    "defaultValue": 1,
+                    "editable": false,
+                    "multiple": false,
+                    "hidden": false,
+                    "displayAs": null
+                }
+            ]
+        }
+    ],
+    "value": {
+        "product": {
+            "unit": 1
+        },
+        "insured": {
+            "gender": null,
+            "name": null,
+            "id": null,
+            "birthDate": null,
+            "age": null,
+            "relation": null
+        },
+        "beneficiary": {
+            "legalBeneficiary": "Y",
+            "type": null
+        },
+        "liability": {
+            "57c24ce40879226abbb35fb8": 50000,
+            "57c24ce40879226abbb35fd6": 50000,
+            "58364dba99a6bc1744d17711": 20000,
+            "58364ef499a6bc29d4ec74f9": 8000
+        },
+        "plan": {
+            "period": {
+                "displayName": "1天",
+                "value": 1,
+                "unit": "DAY"
+            }
+        },
+        "others": {
+            "firstName": null,
+            "invoiceName": null,
+            "address": null,
+            "invoiceDeliverType": null,
+            "postalCode": null,
+            "mobile": null,
+            "invoiceDate": null
+        },
+        "policy-holder": {
+            "gender": null,
+            "phone": null,
+            "name": null,
+            "id": null,
+            "birthDate": null,
+            "email": null,
+            "age": null
+        },
+        "policy": {
+            "travelDest": null,
+            "deliverType": null
+        }
+    }
+}

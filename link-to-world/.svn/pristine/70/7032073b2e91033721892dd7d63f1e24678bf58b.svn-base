@@ -1,0 +1,31 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ui-sref="console.insurance.liability-group.list" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <span>新增保险责任分组</span>
+        <span flex></span>
+    </div>
+</md-toolbar>
+
+<md-card>
+    <form name="groupForm" class="md-padding">
+        <md-input-container class="md-block">
+            <label>保险责任分组名称</label>
+            <input required name="name" ng-model="data.group.name"/>
+            <div ng-messages="groupForm.name.$error">
+                <div ng-message="required">请输入保险责任分组名称</div>
+            </div>
+        </md-input-container>
+        <md-input-container>
+            <label>优先级</label>
+            <input required name="priority" type="number" ng-model="data.group.priority"/>
+            <div ng-messages="groupForm.priority.$error">
+                <div ng-message="required">请输入优先级</div>
+            </div>
+        </md-input-container>
+        <div layout="row" class="md-padding">
+            <md-button class="md-button md-raised md-primary" ng-disabled="processing || serialForm.$invalid" ng-click="save()" ng-disabled="processing">保存</md-button>
+        </div>
+    </form>
+</md-card>

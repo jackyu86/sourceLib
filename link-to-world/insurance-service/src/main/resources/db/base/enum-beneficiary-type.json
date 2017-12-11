@@ -1,0 +1,20 @@
+[
+    {
+        "id": "584279bb223fe90c488cf276",
+        "name": "生存受益人",
+        "value": "1",
+        "displayOrder": 1
+    },
+    {
+        "id": "584279bb223fe90c488cf277",
+        "name": "身故受益人",
+        "value": "2",
+        "displayOrder": 2
+    },
+    {
+        "id": "584279bb223fe90c488cf278",
+        "name": "投保受益人",
+        "value": "3",
+        "displayOrder": 3
+    }
+]

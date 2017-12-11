@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>分销商列表</title>
+    <link rel="stylesheet" j:css="/static//css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static//css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static//css/common.css">
+    <link rel="stylesheet" j:css="/static//css/header.css">
+    <link rel="stylesheet" j:css="/static//css/footer.css">
+    <link rel="stylesheet" j:css="/static//css/customer.css">
+</head>
+<body>
+<j:header folded="false"/>
+<div class="page">
+    <j:customer-sidenav selected="list" category="dealer"/>
+    <div class="main">
+        <div class="page-title">分销商列表
+            <span j:dealer="status:ACTIVE">
+                <a j:if="canCreate" href="/account/dealer/create" class="pull-right">+添加子分销商</a>
+            </span>
+        </div>
+
+        <form class="filter-bar">
+            <div class="form-group">
+                <label for="name">企业名称</label>
+                <input type="text" class="form-control input-lg" id="name" name="name" placeholder="企业名称">
+            </div>
+            <div class="form-group">
+                <label for="contactName">联系人姓名</label>
+                <input type="email" class="form-control input-lg" id="contactName" name="contactName" placeholder="联系人姓名">
+            </div>
+            <div class="form-group">
+                <label for="city">地区</label>
+                <input type="email" class="form-control input-lg" id="city" name="city" placeholder="地区">
+            </div>
+            <div class="form-group" j:if="currentLevel != 'LEVEL4'">
+                <label for="city">分销商级别</label>
+                <select name="level" class="form-control selector">
+                    <option value="">全部</option>
+                    <option j:value="level" j:text="level.display" j:for="level : currentLevel.child()"></option>
+                </select>
+            </div>
+
+            <a href="javascript:void(0)" class="search-button btn btn-lg btn-default">搜索</a>
+        </form>
+        <div class="table-wrap">
+            <table class="dealer-table">
+                <thead>
+                <tr>
+                    <th>用户名</th>
+                    <th>企业名称</th>
+                    <th>联系人姓名</th>
+                    <th>手机号码</th>
+                    <th>电子邮箱</th>
+                    <th>所在地区</th>
+                    <th>分销商级别</th>
+                    <th>注册时间</th>
+                    <th>账户状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="pagination-wrap">
+        </div>
+
+    </div>
+</div>
+<j:footer/>
+<j:utils/>
+
+<script id="tpl-pagination" type="text/x-handlebars-template">
+    <div class="pagination-list">
+        {{#unequal page 1}}
+        <a href="javascript:void(0)" class="pagination-prev pagination-item">上一页</a>
+        {{/unequal}}
+        {{#each pages}}
+        <a href="javascript:void(0)" class="pagination-item {{active}}">{{no}}</a>
+        {{/each}}
+        {{#unequal page totalPages}}
+        <a href="javascript:void(0)" class="pagination-next pagination-item">下一页</a>
+        {{/unequal}}
+    </div>
+    <span>共{{totalPages}}页</span>
+    <span>到第</span>
+    <input type="number" id="jump-page-number" min="1" value="1">
+    <span>页</span>
+    <a href="javascript:void(0)" class="btn btn-jump">确定</a>
+</script>
+<script id="tpl-dealer-item" type="text/x-handlebars-template">
+    <tr>
+        <td>{{username}}</td>
+        <td>{{name}}</td>
+        <td>{{contactName}}</td>
+        <td>{{phone}}</td>
+        <td>{{email}}</td>
+        <td>{{city}}</td>
+        <td>{{#translateLevel level}}{{/translateLevel}}</td>
+        <td>{{#DateFormat createDate "yyyy.MM.dd"}}{{/DateFormat}}</td>
+        <td>{{#translateStatus status}}{{/translateStatus}}</td>
+        <td>
+            {{#equal status "ACTIVE"}}
+            <a href="/account/dealer/{{id}}" class="btn-block text-primary btn-dealer-edit">查看</a>
+            {{/equal}}
+
+            {{#if canEdit}}
+            {{#equal status "INACTIVE"}}
+            <a href="javascript:void(0)" data-id="{{id}}" class="btn-block text-primary btn-dealer-active">解冻</a>
+            {{/equal}}
+            {{#equal status "ACTIVE"}}
+            <a href="javascript:void(0)" data-id="{{id}}" class="btn-block text-primary btn-dealer-block">冻结</a>
+            {{/equal}}
+            {{#equal status "AUDITING"}}
+            <a href="/account/dealer/{{id}}" class="btn-block text-primary btn-dealer-edit">修改</a>
+            <a href="javascript:void(0)" data-id="{{id}}" class="btn-block text-primary btn-dealer-pass">通过</a>
+            <a href="javascript:void(0)" data-id="{{id}}" class="btn-block text-primary btn-dealer-refuse">拒绝</a>
+            {{/equal}}
+            <a href="/account/dealer/{{id}}/product" class="btn-block text-primary btn-dealer-product">产品管理</a>
+            {{/if}}
+        </td>
+    </tr>
+</script>
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/handlebars-v4.0.5.js"></script>
+<script j:js="/static/js/handlebars-helper.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/user/dealer/dealer-list.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>test</title>
+  <style>
+    .attribute-message {
+      display: none;
+    }
+    .attribute-message.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<div class="container"></div>
+<button class="btn-submit">submit</button>
+<script id="tpl_attribute_form" type="text/x-handlebars-template">
+    <form id="{{id}}" class="attribute-form"></form>
+</script>
+<script id="tpl_attribute_group" type="text/x-handlebars-template">
+    <div class="attribute-group" id="{{id}}"></div>
+</script>
+
+<script id="tpl_attribute_string" type="text/x-handlebars-template">
+    <div class="attribute-node">
+        <input class="attribute-input" type="{{attribute_type}}" name="{{name}}" id="{{id}}">
+        <div class="attribute-message">{{message}}</div>
+    </div>
+
+</script>
+<script j:js="/static/js/Form-v2.js"></script>
+<script src="test.js"></script>
+</body>
+</html>

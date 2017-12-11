@@ -1,0 +1,87 @@
+<html lang="en" xmlns:j="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+<div class="side-nav-wrap">
+    <div class="side-nav">
+        <input type="hidden" id="pdp-product-id" j:value="product.id">
+        <input type="hidden" id="pdp-product-name" j:value="product.name">
+
+        <div class="header">
+            <img j:src="vendor.imageURL" alt="">
+            <h4 j:text="product.displayName">保险名称</h4>
+        </div>
+        <div class="content">
+            <div class="attribute-list">
+            </div>
+        </div>
+        <a href="#" data-toggle="modal" data-target="#modal-popup" class="side-popup">查看详情</a>
+        <div class="summary attribute-list">
+            <div class="attribute form-group">
+                <span class="attribute-name">价格</span>:
+                <span class="attribute-value">
+                            <span class="sale-price"><span class="amount">360</span>元</span>
+                </span>
+                <div class="text-block text-danger attribute-message"></div>
+            </div>
+            <div class="attribute form-group">
+                <span class="attribute-name">人数</span>:
+                <span class="attribute-value customer">
+                            <span class="amount">1</span>人
+                        </span>
+                <div class="text-block text-danger attribute-message"></div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="price">
+                <span>合计：</span>
+                <span class="total-sale-price">￥<span class="amount">360</span>元</span>
+            </div>
+            <a href="javascript:void(0)" class="btn btn-lg btn-info btn-submit">确认购买</a>
+        </div>
+    </div>
+    <div id="modal-popup" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="close" data-dismiss="modal" aria-label="Close"><i class="icon_wrong"></i></a>
+                    <div class="image-wrap"><img j:src="vendor.imageURL" alt=""></div>
+                    <div class="header-content">
+                        <h4 j:text="product.displayName">保险名称</h4>
+                        <p>
+                            <span j:text="product.highlightContent">10万意外+1万意外医疗+50元每日津贴，仅需58元！</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="popup">
+                        <div class="popup-panel">
+                            <div class="popup-panel-content">
+                            </div>
+                            <div class="summary">
+                                <span class="info">原价<span class="text-danger total-price text-deprecate">￥<span class="amount">360</span></span></span>
+                                <span class="info">价格<span class="text-danger total-sale-price">￥<span class="amount">360</span></span></span>
+                            </div>
+                            <div class="footer">
+                                <a href="#" data-dismiss="modal" class="btn btn-lg btn-info">确定</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script id="tpl_sidenav_form" type="text/x-handlebars-template">
+    <div class="Dynamic_Form_Container attribute-list"></div>
+</script>
+<script id="tpl_sidenav_group" type="text/x-handlebars-template">
+    <span class="Dynamic_Group_Container">
+    </span>
+</script>
+</body>
+</html>

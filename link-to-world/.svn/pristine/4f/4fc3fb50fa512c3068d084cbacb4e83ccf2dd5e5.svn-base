@@ -1,0 +1,71 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>保险条款</h2>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="新建保险条款" ui-sref="console.insurance.clause.create">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-content flex>
+    <md-card>
+        <md-subheader ng-if="clauseTable.searching">
+            <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadClauses()">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+                <div flex>
+                    <input ng-model="clauseTable.query.name" type="text">
+                </div>
+                <md-button class="md-icon-button" ng-click="cancelSearching()">
+                    <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+                </md-button>
+            </form>
+        </md-subheader>
+
+        <md-subheader ng-if="!clauseTable.searching && !clauseTable.selected.length">
+            <div layout="row" layout-align="left center">
+                <span>保险条款列表</span>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="clauseTable.searching = !clauseTable.searching">
+                    <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+                </md-button>
+            </div>
+        </md-subheader>
+
+        <md-table-container>
+            <table md-table ng-model="clauseTable.selected">
+                <thead md-head md-order="clauseTable.query.order" md-on-reorder="reloadClauses" class="md-accent">
+                <tr md-row>
+                    <th md-column md-order-by="id"><span>编号</span></th>
+                    <th md-column><span>条款名称</span></th>
+                    <th md-column><span>条款序列号</span></th>
+                    <th md-column><span>条款类型</span></th>
+                    <th md-column><span>创建时间</span></th>
+                    <th md-column><span>操作</span></th>
+                </tr>
+                </thead>
+                <tbody md-body>
+                <tr md-row md-select="clause"
+                    ng-repeat="clause in clauseTable.data.items" md-auto-select>
+                    <td md-cell>{{clause.id}}</td>
+                    <td md-cell>{{clause.name}}</td>
+                    <td md-cell>{{clause.serialNumber}}</td>
+                    <td md-cell>{{clause.type|clauseType}}</td>
+                    <td md-cell>{{clause.createdTime | date:'yyyy/MM/dd'}}</td>
+                    <td md-cell layout="row">
+                        <md-button class="md-icon-button" ng-click="clauseTable.edit(clause)">编辑</md-button>
+                        <md-button class="md-icon-button" ng-click="deleteClause(clause)">删除</md-button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+
+        <md-table-pagination md-limit="clauseTable.query.limit" md-page="clauseTable.query.page" md-total="{{clauseTable.data.total}}"
+                             md-page-select="clauseTable.options.pageSelector" md-boundary-links="clauseTable.options.boundaryLinks"
+                             md-on-paginate="reloadClauses"></md-table-pagination>
+
+    </md-card>
+</md-content>

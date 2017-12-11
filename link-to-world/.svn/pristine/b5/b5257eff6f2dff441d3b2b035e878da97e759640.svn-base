@@ -1,0 +1,49 @@
+import org.apache.tools.ant.filters.ExpandProperties
+
+// use gradlew -Penv=${env} to pass
+def environment = hasProperty('env') ? env : null
+
+apply plugin: 'application'
+mainClassName = 'Main'
+applicationDefaultJvmArgs = ["-Djava.ext.dirs=../lib","-Xms512m", "-Xmx1024m","-Dfile.encoding=UTF-8"]
+
+afterEvaluate {
+    distTar {
+        archiveName "${baseName}.${extension}"
+    }
+
+    distZip {
+        archiveName "${baseName}.${extension}"
+    }
+
+    startScripts {
+        doLast {
+            windowsScript.text = windowsScript.text.replaceFirst('set DEFAULT_JVM_OPTS=', "set DEFAULT_JVM_OPTS=\"-Dsite.conf=%~dp0../site.yml\" ")
+            unixScript.text = unixScript.text.replaceFirst('DEFAULT_JVM_OPTS=""', "DEFAULT_JVM_OPTS='-Dsite.conf=\\\$APP_HOME/site.yml'")
+        }
+    }
+}
+
+processResources {
+    // ant.properties requires baseDir of project
+    projectDir.mkdirs()
+
+    project.ext.properties.each { key, value ->
+        ant.properties[key] = value
+    }
+
+    filesMatching('**/*.properties') {
+        filter ExpandProperties, project: project.ant.project
+    }
+}
+
+distributions {
+    main {
+        if (environment != null) {
+            def envProperties = "conf/${environment}/resources"
+            if (project.file(envProperties).exists()) {
+                sourceSets.main.resources.srcDirs envProperties
+            }
+        }
+    }
+}

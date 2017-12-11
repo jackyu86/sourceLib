@@ -1,0 +1,55 @@
+<md-card>
+    <md-subheader>
+        <div layout="row" layout-align="space-between center">
+            <span>编辑分类</span>
+            <div layout="row">
+                <md-button ng-click="createChild($event)" class="md-icon-button">
+                    <md-tooltip md-direction="down">
+                        新建子分类
+                    </md-tooltip>
+                    <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+                </md-button>
+                <md-button ng-click="deleteCategory($event)" class="md-icon-button" ng-if="deletable()">
+                    <md-tooltip md-direction="down">
+                        删除分类
+                    </md-tooltip>
+                    <md-icon class="fa-trash" md-font-icon="fa"></md-icon>
+                </md-button>
+            </div>
+        </div>
+    </md-subheader>
+    <form name="categoryForm" class="md-padding">
+        <md-input-container class="md-block">
+            <label>分类名称</label>
+            <input required name="name" ng-model="categoryNode.category.name"/>
+            <div ng-messages="categoryForm.name.$error">
+                <div ng-message="required">请输入分类名称</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>排序</label>
+            <input required name="displayOrder" ng-model="categoryNode.category.displayOrder"/>
+            <div ng-messages="categoryForm.displayOrder.$error">
+                <div ng-message="required">请输入排序</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            是否推荐
+            <md-switch ng-model="categoryNode.category.recommended">
+                <span ng-if="categoryNode.category.recommended">是</span>
+                <span ng-if="!categoryNode.category.recommended">否</span>
+            </md-switch>
+            <div ng-messages="categoryForm.recommended.$error">
+                <div ng-message="required">请输入是否推荐</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>描述</label>
+            <input name="description" ng-model="categoryNode.category.description"/>
+            <div ng-messages="categoryForm.description.$error">
+                <div ng-message="required">请输入描述</div>
+            </div>
+        </md-input-container>
+        <md-button class="md-button md-raised md-primary" ng-disabled="processing || categoryForm.$invalid" ng-click="save()">保存</md-button>
+    </form>
+</md-card>

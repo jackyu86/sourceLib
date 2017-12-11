@@ -1,0 +1,99 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>分销商列表</h2>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="Create dealer" ui-sref="console.dealer.create">
+            <md-icon class="fa-plus" md-font-icon="fa"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-subheader ng-if="dealerTable.searching">
+        <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadDealer()">
+            <div flex>
+                <md-input-container>
+                    <label>分销商</label>
+                    <input ng-model="dealerTable.query.name" type="text">
+                </md-input-container>
+                <md-input-container>
+                    <label>分销商级别</label>
+                    <md-select ng-model="dealerTable.query.level">
+                        <md-option ng-value="level.value" ng-repeat="level in dealerTable.levels">{{level.name}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <md-button class="md-icon-button" ng-click="reloadDealer()">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!dealerTable.searching && !dealerTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>分销商列表</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="dealerTable.searching = !dealerTable.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-subheader ng-if="dealerTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>{{dealerTable.selected.length}} Selected</span>
+            <span flex></span>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table md-row-select multiple ng-model="dealerTable.selected">
+            <thead md-head md-on-reorder="reloadDealers" class="md-accent">
+            <tr md-row>
+                <th md-column><span>序号</span></th>
+                <th md-column><span>企业名称</span></th>
+                <th md-column><span>联系人姓名</span></th>
+                <th md-column><span>手机号码</span></th>
+                <th md-column><span>电子邮箱</span></th>
+                <th md-column><span>所在地区</span></th>
+                <th md-column md-order-by="createdTime"><span>注册时间</span></th>
+                <th md-column><span>账户状态</span></th>
+                <th md-column><span>操作</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="dealer"
+                ng-repeat="dealer in dealerTable.data.items" md-auto-select>
+                <td md-cell>{{dealer.id}}</td>
+                <td md-cell>{{dealer.name}}</td>
+                <td md-cell>{{dealer.contactName}}</td>
+                <td md-cell>{{dealer.cellphone}}</td>
+                <td md-cell>{{dealer.email}}</td>
+                <td md-cell>{{dealer.city}}</td>
+                <td md-cell>{{dealer.createdTime | date:'yyyy/MM/dd'}}</td>
+                <td md-cell ng-model="dealer.status" translate-status></td>
+                <td md-cell layout="column">
+                    <div ng-show="dealer.level == 'LEVEL1'">
+                        <div layout="row" flex>
+                            <md-button class="md-icon-button" ng-click="dealerTable.edit(dealer)">编辑</md-button>
+                            <md-button class="md-icon-button" ng-if="dealer.status == 'INACTIVE'" ng-click="dealerTable.unblock(dealer.id)">解冻</md-button>
+                            <md-button class="md-icon-button" ng-if="dealer.status == 'ACTIVE'" ng-click="dealerTable.block(dealer.id)">冻结</md-button>
+                            <md-button class="md-icon-button" ng-if="dealer.status == 'AUDITING'" ng-click="dealerTable.unblock(dealer.id)">通过</md-button>
+                        </div>
+                        <div layout="row" flex>
+                            <md-button class="md-icon-button" ng-if="dealer.status == 'AUDITING'" ng-click="dealerTable.delete(dealer.id)">拒绝</md-button>
+                            <md-button class="md-icon-button" ng-if="dealer.status != 'AUDITING'" ng-click="dealerTable.delete(dealer.id)">删除</md-button>
+                            <md-button class="md-icon-button" ng-if="dealer.parentDealerId == null" ng-click="productManager(dealer)">产品</md-button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+</md-card>

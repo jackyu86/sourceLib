@@ -1,0 +1,20 @@
+[
+    {
+        "id": "58429f6e223fe921b402a768",
+        "name": "是",
+        "value": "Y",
+        "displayOrder": 1
+    },
+    {
+        "id": "58429f6e223fe921b402a769",
+        "name": "否",
+        "value": "N",
+        "displayOrder": 2
+    },
+    {
+        "id": "58429f6e223fe921b402a76a",
+        "name": "与该项无关",
+        "value": "W",
+        "displayOrder": 3
+    }
+]

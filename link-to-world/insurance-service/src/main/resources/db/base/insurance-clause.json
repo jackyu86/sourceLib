@@ -1,0 +1,63 @@
+[
+    {
+        "id": "578b57967214b52d84eb4f56",
+        "type": "MAIN",
+        "serialNumber": "(泰康在线)(备-普通意外保险)【2016】(主) 025号",
+        "contentURL": "http://www.00.com.cn/p/clause/clauseDetail.aspx?id=1096",
+        "exclusionsUrl": "http://www.00.com.cn/p/clause/clauseExtDetail.aspx?id=1096",
+        "name": "泰康在线财产保险股份有限公司 人身意外伤害保险条款",
+        "wordURL": "http://baodan.zhongmin.cn/clause2016/health/CP_health_81_11115601674.pdf",
+        "pdfURL": "http://baodan.zhongmin.cn/clause2016/health/CP_health_81_11115601674.pdf",
+        "description": "",
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z",
+        "updatedBy": "init",
+        "createdBy": "init"
+    },
+    {
+        "id": "57c24ce40879226abbb36087",
+        "type": "ADDITIONAL",
+        "serialNumber": "(泰康在线)(备-医疗保险)【2016】(附) 260号",
+        "contentUrl": "http://www.00.com.cn/p/clause/clauseDetail.aspx?id=1098",
+        "exclusionsUrl": "http://www.00.com.cn/p/clause/clauseExtDetail.aspx?id=1098",
+        "name": "泰康在线财产保险股份有限公司 附加意外伤害医疗保险条款",
+        "wordURL": "http://baodan.zhongmin.cn/clause2016/health/CP_health_81_11115601674.pdf",
+        "pdfURL": "http://baodan.zhongmin.cn/clause2016/health/CP_health_81_11115601674.pdf",
+        "description": "",
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z",
+        "updatedBy": "init",
+        "createdBy": "init"
+    },
+    {
+        "id": "57c24ce40879226abbb36088",
+        "type": "ADDITIONAL",
+        "serialNumber": "(泰康在线)(备-医疗保险)【2016】(附) 260号",
+        "contentUrl": "http://www.00.com.cn/p/clause/clauseDetail.aspx?id=1098",
+        "exclusionsUrl": "http://www.00.com.cn/p/clause/clauseExtDetail.aspx?id=1098",
+        "name": "泰康在线财产保险股份有限公司 附加意外伤害医疗保险条款",
+        "wordURL": "http://baodan.zhongmin.cn/clause2016/health/CP_health_81_11115601674.pdf",
+        "pdfURL": "http://baodan.zhongmin.cn/clause2016/health/CP_health_81_11115601674.pdf",
+        "description": "",
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z",
+        "updatedBy": "init",
+        "createdBy": "init"
+    },
+    
+    {
+        "id": "a15bead3a34ce3fec2423bd0",
+        "type": "MAIN",
+        "serialNumber": "(泰康养老高额交通)【2016】(附) 260号",
+        "contentUrl": "http://localhost:8082/file/upload/2017-05-08/b0fce81f-05da-4876-96d4-701f769a9d20.pdf",
+        "exclusionsUrl": "",
+        "name": "高额交通意外保险条款",
+        "wordURL": "http://localhost:8082/file/upload/2017-05-08/b1448319-1444-4847-a6e2-a158b9bb25ed.pdf",
+        "pdfURL": "http://localhost:8082/file/upload/2017-05-08/b1448319-1444-4847-a6e2-a158b9bb25ed.pdf",
+        "description": "",
+        "createdTime": "2017-05-08T03:27:55Z",
+        "updatedTime": "2017-05-08T03:27:55Z",
+        "updatedBy": "init",
+        "createdBy": "init"
+    }
+]

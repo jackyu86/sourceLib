@@ -1,0 +1,64 @@
+<html>
+<head>
+</head>
+<body>
+
+<script id="tpl_product_liability_fixed" type="text/x-handlebars-template">
+    <div class="liability" data-name="{{name}}">
+        <span class="liability-name {{#liabilityFont displayName}}{{/liabilityFont}}" data-name="{{name}}">{{#liabilityName displayName}}{{/liabilityName}}</span>
+        <span class="liability-value form-control-static">
+            <span class="static-value">{{options.fixValue}}</span>元
+        </span>
+        <input type="hidden" name="{{name}}" value="{{options.fixValue}}">
+    </div>
+</script>
+
+<script id="tpl_product_liability_user_input" type="text/x-handlebars-template">
+    <div class="liability" data-name="{{name}}">
+        <span class="liability-name attribute-name" data-name="{{name}}">{{displayName}}</span>
+        <div class="liability-value attribute-value">
+            <input type="number" name="{{name}}" class="form-control">元
+        </div>
+    </div>
+</script>
+
+<script id="tpl_product_liability_user_selection" type="text/x-handlebars-template">
+    {{#editable}}
+    <div class="liability" data-name="{{name}}">
+        <span class="liability-name attribute-name" data-name="{{name}}">{{displayName}}</span>
+        <div class="liability-value attribute-value">
+            <select name="{{name}}" class="form-control">
+                {{#each options.selections}}
+                <option value="{{this}}">{{#Number this}}{{/Number}}</option>
+                {{/each}}
+            </select>
+            元
+        </div>
+    </div>
+    {{else}}
+    <div class="liability" data-name="{{name}}">
+        <span class="liability-name attribute-name" data-name="{{name}}">{{displayName}}</span>
+        <span class="liability-value attribute-value">
+            <span class="static-value">{{defaultValue}}</span>元
+        </span>
+    </div>
+    {{/editable}}
+</script>
+<script id="tpl_product_liability_user_selection_option" type="text/x-handlebars-template">
+    <option value="{{value}}">{{#Number name}}{{/Number}}</option>
+</script>
+<script id="tpl_product_payment_select" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <select class="form-control input-lg input-extend" name="{{name}}">
+            {{#each options.periods}}
+            <option value='{{#JSON this}}{{/JSON}}'>{{this.displayName}}</option>
+            {{/each}}
+        </select>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+
+<script j:js="/static/js/product/product-fields.js"></script>
+</body>
+</html>

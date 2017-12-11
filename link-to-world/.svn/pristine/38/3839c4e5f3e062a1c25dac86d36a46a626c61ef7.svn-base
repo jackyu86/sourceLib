@@ -1,0 +1,94 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2>结算明细查询</h2>
+
+        <span flex></span>
+    </div>
+</md-toolbar>
+
+<md-card flex>
+    <md-subheader ng-if="settlementTable.searching">
+        <form class="search-box" layout="row" layout-align="left center" ng-submit="reloadSettlement()">
+            <div flex>
+                <md-input-container>
+                    <label>分销商</label>
+                    <input ng-model="settlementTable.query.name" type="text">
+                </md-input-container>
+                <md-input-container>
+                    <label>产品名称</label>
+                    <input ng-model="settlementTable.query.productName" type="text">
+                </md-input-container>
+                <md-input-container>
+                    <label>订单状态</label>
+                    <md-select ng-model="settlementTable.query.status">
+                        <md-option ng-value="status.value" ng-repeat="status in settlementTable.statuses">{{status.name}}</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container>
+                    <label>分销商级别</label>
+                    <md-select ng-model="settlementTable.query.level">
+                        <md-option ng-value="level.value" ng-repeat="level in settlementTable.levels">{{level.name}}</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container>
+                    <label>开始日期</label>
+                    <md-datepicker ng-model="settlementTable.query.startTime"></md-datepicker>
+                </md-input-container>
+                <md-input-container>
+                    <label>结束日期</label>
+                    <md-datepicker ng-model="settlementTable.query.endTime"></md-datepicker>
+                </md-input-container>
+            </div>
+            <md-button class="md-icon-button" ng-click="reloadSettlement()">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" ng-click="cancelSearching()">
+                <md-icon class="fa-close" md-font-icon="fa"></md-icon>
+            </md-button>
+        </form>
+    </md-subheader>
+
+    <md-subheader ng-if="!settlementTable.searching && !settlementTable.selected.length">
+        <div layout="row" layout-align="left center">
+            <span>结算明细查询</span>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="settlementTable.searching = !settlementTable.searching">
+                <md-icon class="fa-search" md-font-icon="fa"></md-icon>
+            </md-button>
+        </div>
+    </md-subheader>
+
+    <md-table-container>
+        <table md-table ng-model="settlementTable.selected">
+            <thead md-head class="md-accent">
+            <tr md-row>
+                <th md-column><span>分销商</span></th>
+                <th md-column><span>产品名称</span></th>
+                <th md-column><span>订单号</span></th>
+                <th md-column><span>保单号</span></th>
+                <th md-column><span>投保人姓名</span></th>
+                <th md-column><span>被保人姓名</span></th>
+                <th md-column><span>被保人证件号</span></th>
+                <th md-column><span>保单状态</span></th>
+                <th md-column><span>交易时间</span></th>
+                <th md-column><span>佣金比例</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="settlement"
+                ng-repeat="settlement in settlementTable.data.items" md-auto-select>
+                <td md-cell>{{settlement.dealerName}}</td>
+                <td md-cell>{{settlement.productName}}</td>
+                <td md-cell>{{settlement.orderId}}</td>
+                <td md-cell>{{settlement.policyCode}}</td>
+                <td md-cell>{{settlement.policyHolderName}}</td>
+                <td md-cell>{{settlement.insuredName}}</td>
+                <td md-cell>{{settlement.insuredIdNumber}}</td>
+                <td md-cell ng-model="settlement.status" order-status></td>
+                <td md-cell>{{settlement.orderDate | date:'yyyy/MM/dd hh:mm:ss'}}</td>
+                <td md-cell ng-model="settlement.commissionRate" percent-format></td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+</md-card>

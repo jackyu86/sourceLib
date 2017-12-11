@@ -1,0 +1,668 @@
+<html>
+<head>
+</head>
+<body>
+
+<script id="tpl_attribute_form" type="text/x-handlebars-template">
+    <form class="form-wrap form-horizontal">
+        <div class="Dynamic_Form_Container"></div>
+        <div class="section">
+            <div class="main-button-wrap text-center">
+                <a href="javascript:void(0)" class="btn btn-lg btn-info btn-submit">提交</a>
+            </div>
+        </div>
+    </form>
+</script>
+<script id="tpl_attribute_group" type="text/x-handlebars-template">
+    <div class="section {{#if optional}}optional{{/if}}">
+        <div class="header">
+            <div class="header-content">
+                <h4>
+                    {{displayName}}
+                    {{#if optional}}
+                    （可选）
+                    <div class="checkbox">
+                        <input type="checkbox" name="group_optional">
+                        <label class="checkbox-label">
+                        </label>
+                    </div>
+                    {{/if}}
+                </h4>
+            </div>
+        </div>
+        <div class="field-list Dynamic_Group_Container">
+
+        </div>
+    </div>
+</script>
+<script id="tpl_attribute_group_liability" type="text/x-handlebars-template">
+    <div class="liability-list Dynamic_Group_Container">
+    </div>
+</script>
+
+<script id="tpl_attribute_liability_fixed" type="text/x-handlebars-template">
+    <div class="liability attribute form-group" data-name="{{name}}">
+        <label class="liability-name attribute-name" data-name="{{name}}">{{displayName}}</label>
+        <div class="pull-left ">
+            <span class="form-control form-control-static  input-lg input-extend">
+                <span class="static-value">{{options.fixValue}}</span>元
+                <input type="hidden" name="{{name}}" value="{{options.fixValue}}">
+            </span>
+        </div>
+
+    </div>
+</script>
+
+<script id="tpl_attribute_liability_user_selection" type="text/x-handlebars-template">
+    {{#editable}}
+    <div class="liability attribute form-group" data-name="{{name}}">
+        <label class="liability-name attribute-name" data-name="{{name}}">{{displayName}}</label>
+        <div class="liability-value attribute-value">
+            <select name="{{name}}" class="form-control input-lg extended">
+                {{#each options.selections}}
+                <option value="{{this}}">{{#Number this}}{{/Number}}</option>
+                {{/each}}
+            </select>
+            元
+            <div class="text-block text-danger attribute-message">{{message}}</div>
+
+        </div>
+    </div>
+    {{else}}
+    <div class="liability attribute form-group" data-name="{{name}}">
+        <label class="liability-name attribute-name" data-name="{{name}}">{{displayName}}</label>
+        <div class="pull-left ">
+            <span class="form-control form-control-static input-lg input-extend">
+                <span class="static-value">{{defaultValue}}</span>元
+            </span>
+            <div class="text-block text-danger attribute-message">{{message}}</div>
+
+        </div>
+    </div>
+    {{/editable}}
+</script>
+
+<script id="tpl_attribute_liability_user_selection_option" type="text/x-handlebars-template">
+    <option value="{{value}}">{{#Number name}}{{/Number}}</option>
+</script>
+<script id="tpl_attribute_liability_user_input" type="text/x-handlebars-template">
+    <div class="form-group" data-name="{{name}}">
+        <label data-name="{{name}}">{{displayName}}</label>
+        <div class="pull-left">
+            <input type="number" name="{{name}}" class="form-control input-lg input-extend" data-date-language="zh-CN">元
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+
+    </div>
+</script>
+
+<script id="tpl_attribute_plan_period_fixed" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <div class="pull-left">
+            <span class="form-control form-control-static static-value input-lg input-extend">{{options.fixedValue.displayName}}</span>
+            <input type="hidden" name="{{name}}" value='{{#JSON options.fixedValue}}{{/JSON}}'>
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+
+    </div>
+</script>
+
+<script id="tpl_attribute_plan_period_selection" type="text/x-handlebars-template">
+    {{#editable}}
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <span class="pull-left">
+            <select name="{{name}}" class="form-control input-lg input-extend">
+            {{#each options.selection}}
+            <option value='{{#JSON this}}{{/JSON}}'>{{displayName}}</option>
+            {{/each}}
+            </select>
+        </span>
+    </div>
+    {{else}}
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <div class="pull-left">
+            <span class="form-control form-control-static static-value input-lg input-extend">{{defaultValue}}</span>
+        </div>
+
+    </div>
+    {{/editable}}
+</script>
+
+<script id="tpl_attribute_string" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        {{#multiple}}
+        <div class="pull-left string_input_group_wrap">
+            <div class="string-input-group">
+                <input type="text" class="form-control input-lg input-extend">
+                <div class="string-input-operation">
+                    <a href="javascript:void(0)" class="btn btn-link fa fa-plus"></a>
+                </div>
+                <div class="text-block text-danger attribute-message">{{message}}</div>
+            </div>
+        </div>
+        {{else}}
+
+        <div class="pull-left">
+            {{#editable}}
+            <input type="text" name="{{name}}" class="form-control input-lg input-extend">
+            {{else}}
+            <span class="form-control form-control-static static-value input-lg input-extend"></span>
+            <input type="hidden" name="{{name}}">
+            {{/editable}}
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+        {{/multiple}}
+    </div>
+</script>
+<script id="tpl_attribute_liability_effective_insurance" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+
+        测试
+    </div>
+</script>
+<script id="tpl_attribute_string_additional" type="text/x-handlebars-template">
+    <div class="string-input-group">
+        <input type="text" class="form-control input-lg input-extend">
+        <div class="string-input-operation">
+            <a href="javascript:void(0)" class="btn btn-link fa fa-minus text-danger"></a>
+            <a href="javascript:void(0)" class="btn btn-link fa fa-plus"></a>
+        </div>
+    </div>
+</script>
+<script id="tpl_attribute_integer" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        {{#multiple}}
+        <div class="pull-left string_input_group_wrap">
+            <div class="string-input-group">
+                <input type="number" class="form-control input-lg input-extend">
+                <div class="string-input-operation">
+                    <a href="javascript:void(0)" class="btn btn-link fa fa-plus"></a>
+                </div>
+                <div class="text-block text-danger attribute-message">{{message}}</div>
+            </div>
+        </div>
+        {{else}}
+
+        <div class="pull-left">
+            {{#editable}}
+            <input type="number" name="{{name}}" class="form-control input-lg input-extend">
+            {{else}}
+            <span class="form-control form-control-static static-value input-lg input-extend"></span>
+            <input type="hidden" name="{{name}}">
+            {{/editable}}
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+        {{/multiple}}
+    </div>
+</script>
+<script id="tpl_attribute_integer_height" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <div class="pull-left">
+            {{#editable}}
+            <input type="number" name="{{name}}" class="form-control input-lg input-extend"><span class="input-unit"> CM</span>
+            {{else}}
+            <span class="form-control form-control-static static-value input-lg input-extend"></span> CM
+            <input type="hidden" name="{{name}}">
+            {{/editable}}
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_attribute_integer_additional" type="text/x-handlebars-template">
+    <div class="string-input-group">
+        <input type="number" class="form-control input-lg input-extend">
+        <div class="string-input-operation">
+            <a href="javascript:void(0)" class="btn btn-link fa fa-minus text-danger"></a>
+            <a href="javascript:void(0)" class="btn btn-link fa fa-plus"></a>
+        </div>
+    </div>
+</script>
+
+<script id="tpl_attribute_float" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <div class="pull-left">
+            <input type="number" name="{{name}}" class="form-control input-lg input-extend">
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_attribute_float_readonly" type="text/x-handlebars-template">
+    <div class="attribute">
+        <span class="attribute-name">{{displayName}}</span>
+        <span>
+        {{#each constraints}}
+            {{#equal validator 'Range'}}
+                {{#Range options}}{{/Range}}
+            {{/equal}}
+        {{/each}}
+        </span>
+    </div>
+</script>
+<script id="tpl_attribute_date" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        {{#multiple}}
+        <div class="pull-left">
+            <input type="text" name="{{name}}" data-provide="datepicker" data-date-format="yyyy-mm-dd" class="form-control input-lg input-calendar" data-date-language="zh-CN">
+        </div>
+        <div class="pull-left">
+            <div class="form-control-static input-lg">到</div>
+        </div>
+        <div class="pull-left">
+            <input type="text" name="{{name}}" data-provide="datepicker" data-date-format="yyyy-mm-dd" class="form-control input-lg input-calendar" data-date-language="zh-CN">
+        </div>
+        {{else}}
+        <div class="pull-left">
+            {{#editable}}
+            <input type="text" name="{{name}}" data-provide="datepicker" data-date-format="yyyy-mm-dd" class="form-control input-lg input-calendar input-extend" data-date-language="zh-CN">
+            {{else}}
+            <span class="form-control form-control-static static-value input-lg "></span>
+            <input type="hidden" name="{{name}}">
+            {{/editable}}
+        </div>
+        {{/multiple}}
+
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_attribute_date_input" type="text/x-handlebars-template">
+    <input type="text" name="{{name}}" data-provide="datepicker" data-date-start-date="{{startLimit}}" data-date-end-date="{{endLimit}}" data-date-format="yyyy-mm-dd" class="form-control input-lg input-calendar input-extend" data-date-language="zh-CN">
+</script>
+<script id="tpl_attribute_date_time" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        {{#multiple}}
+        <div class="pull-left">
+            <input type="text" name="{{name}}" data-provide="datetimepicker" data-date-format="yyyy-mm-ddThh:ii:ss" data-font-awesome="true" class="form-control input-lg input-calendar"
+                   data-date-language="zh-CN">
+        </div>
+        <div class="pull-left">
+            <div class="form-control-static input-lg">到</div>
+        </div>
+        <div class="pull-left">
+            <input type="text" name="{{name}}" data-provide="datetimepicker" data-date-format="yyyy-mm-ddThh:ii:ss" data-font-awesome="true" class="form-control input-lg input-calendar"
+                   data-date-language="zh-CN">
+        </div>
+        {{else}}
+        <div class="pull-left">
+            {{#editable}}
+            <input type="text" name="{{name}}" data-provide="datetimepicker" data-date-format="yyyy-mm-ddThh:ii:ss" data-font-awesome="true" class="form-control input-lg input-calendar input-extend"
+                   data-date-language="zh-CN">
+            {{else}}
+            <span class="form-control form-control-static static-value input-lg "></span>
+            <input type="hidden" name="{{name}}">
+            {{/editable}}
+        </div>
+        {{/multiple}}
+
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_attribute_plan_start_time_input" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        {{#editable}}
+        <div class="pull-left">
+            <input type="text" name="{{name}}" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-start-date="{{currentStartDate}}" class="form-control input-lg input-calendar" data-date-language="zh-CN">
+        </div>
+        {{else}}
+        <div class="pull-left">
+            <span class="form-control form-control-static static-value input-lg "></span>
+            <input type="hidden" name="{{name}}">
+        </div>
+        {{/editable}}
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_attribute_plan_start_time_default" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <div class="pull-left">
+            <span class="form-control form-control-static static-value input-lg "></span>
+            <input type="hidden" name="{{name}}">
+        </div>
+    </div>
+</script>
+<script id="tpl_attribute_duration_multiple" type="text/x-handlebars-template">
+    <div class="form-group">
+        {{#editable}}
+        <label>{{displayName}}</label>
+        <div class="pull-left">
+            <input type="text" name="{{name}}" data-provide="datepicker" data-date-format="yyyy-mm-dd" class="form-control input-lg input-calendar" data-date-language="zh-CN">
+        </div>
+        <div class="pull-left">
+            <div class="form-control-static input-lg">到</div>
+        </div>
+        <div class="pull-left">
+            <input type="text" name="{{name}}" data-provide="datepicker" data-date-format="yyyy-mm-dd" class="form-control input-lg input-calendar" data-date-language="zh-CN">
+        </div>
+
+        {{else}}
+        {{#each value}}
+        {{this}}
+        <input type="hidden" name="{{name}}" value="{{#defaultValue}}{{this}}{{else}}1{{/defaultValue}}">
+        {{/each}}
+        {{/editable}}
+    </div>
+</script>
+<script id="tpl_attribute_duration" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <div class="pull-left">
+            {{#editable}}
+            <input type="text" name="{{name}}" data-provide="datepicker" data-date-format="yyyy-mm-dd" class="form-control input-lg input-calendar" value="{{#defaultValue}}{{this}}{{/defaultValue}}" data-date-language="zh-CN">
+            {{else}}
+            <span class="form-control form-control-static static-value input-lg">{{value}}</span>
+            <input type="hidden" name="{{name}}" value="{{#defaultValue}}{{this}}{{/defaultValue}}">
+            {{/editable}}
+        </div>
+
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_attribute_job" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        {{#editable}}
+        <select class="form-control input-lg extended occupation-trunk">
+            <option value="" class="">-- 请选择 --</option>
+        </select>
+        <select class="form-control input-lg extended occupation-branch">
+            <option value="" class="">-- 请选择 --</option>
+        </select>
+        <select class="form-control input-lg extended occupation-leaf" name="{{name}}">
+            <option value="" class="">-- 请选择 --</option>
+        </select>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+        {{else}}
+        <div class="pull-left">
+            <span class="form-control form-control-static static-value input-lg"></span>
+        </div>
+        {{/editable}}
+    </div>
+</script>
+<script id="tpl_attribute_address" type="text/x-handlebars-template">
+    <div class="form-group address-group">
+        <label>{{displayName}}</label>
+        {{#editable}}
+        <div class="pull-left">
+            <select class="form-control extended occupation-trunk input-lg" name="{{name}}">
+                <option value="" class="">-- 请选择 --</option>
+            </select>
+            <select class="form-control extended occupation-branch input-lg" name="{{name}}">
+                <option value="" class="">-- 请选择 --</option>
+            </select>
+            <select class="form-control extended occupation-leaf input-lg" name="{{name}}">
+                <option value="" class="">-- 请选择 --</option>
+            </select>
+        </div>
+        <br>
+        <div class="pull-left">
+            <p> </p>
+            <input type="text" class="form-control input-lg input-extend" value="" placeholder="地址1" name="{{name}}">
+            <p> </p>
+            <input type="text" class="form-control input-lg input-extend" value="" placeholder="地址2（选填）" name="{{name}}">
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+        {{else}}
+        <div class="pull-left">
+            <span class="form-control form-control-static static-value input-lg"></span>
+        </div>
+        {{/editable}}
+    </div>
+</script>
+<script id="tpl_attribute_city" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <select class="form-control extended occupation-trunk">
+            <option value="" class="">-- 请选择 --</option>
+        </select>
+        <select class="form-control extended occupation-branch">
+            <option value="" class="">-- 请选择 --</option>
+        </select>
+        <!--<select class="form-control extended occupation-leaf">-->
+        <!--<option value="" class="">&#45;&#45; 请选择 &#45;&#45;</option>-->
+        <!--</select>-->
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_attribute_occupation_readonly" type="text/x-handlebars-template">
+    <div class="attribute">
+        <span class="attribute-name">{{displayName}}</span>
+        <span>不限职业</span>
+    </div>
+</script>
+<script id="tpl_attribute_age" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <div class="pull-left">
+            {{#editable}}
+            <input type="number" name="{{name}}" class="form-control input-lg input-extend" value="{{#if defaultValue}}{{defaultValue}}{{else}}20{{/if}}">
+            {{else}}
+            <span class="form-control form-control-static static-value input-lg input-extend">{{#AgeRange options}}{{/AgeRange}}</span>
+            <input type="hidden" name="{{name}}" value="{{#defaultValue}}{{this}}{{else}}20{{/defaultValue}}">
+            {{/editable}}
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_attribute_unit" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <div class="pull-left">
+            {{#editable}}
+            <input type="number" name="{{name}}" class="form-control input-lg input-extend"
+                   value="{{#defaultValue}}{{this}}{{else}}1{{/defaultValue}}"
+                   min="{{#options.min}}{{this}}{{else}}1{{/options.min}}" max="{{options.max}}">
+            {{else}}
+            <span class="form-control form-control-static static-value input-lg input-extend">{{#Range options}}{{/Range}}</span>
+            <input type="hidden" name="{{name}}" value="{{#defaultValue}}{{this}}{{else}}1{{/defaultValue}}">
+            {{/editable}}
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_attribute_enum_select" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <select class="form-control input-lg input-extend" name="{{name}}">
+            {{#each options.constants}}
+            <option value="{{this.value}}">{{this.displayName}}</option>
+            {{/each}}
+        </select>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+
+    </div>
+</script>
+<script id="tpl_attribute_enum_radio" type="text/x-handlebars-template">
+    <div class="form-group radio-group">
+        <label>{{displayName}}</label>
+        {{#editable}}
+        {{#each options.constants}}
+        <div class="radio pull-left">
+            <input type="radio" name="{{../name}}" value="{{this.value}}" id="{{../groupName}}_{{../globalIndex}}_{{this.value}}">
+            <label class="radio-label" for="{{../groupName}}_{{../globalIndex}}_{{this.value}}">
+                {{this.displayName}}
+            </label>
+        </div>
+        {{/each}}
+        {{else}}
+        <div class="pull-left">
+            <span class="form-control form-control-static static-value input-lg input-extend"></span>
+        </div>
+        {{/editable}}
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+
+    </div>
+</script>
+
+<script id="tpl_attribute_travel_destination_select" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        {{#multiple}}
+        <div class="pull-left string_input_group_wrap">
+            <div class="string-input-group">
+                <select class="form-control input-lg input-extend" name="{{name}}">
+                    {{#each options.constants}}
+                    <option value="{{this.value}}">{{this.displayName}}</option>
+                    {{/each}}
+                </select>
+                <div class="string-input-operation">
+                    <a href="javascript:void(0)" class="btn btn-link fa fa-plus"></a>
+                </div>
+                <div class="text-block text-danger attribute-message">{{message}}</div>
+            </div>
+        </div>
+        {{else}}
+
+        <div class="pull-left">
+            {{#editable}}
+            <select class="form-control input-lg input-extend" name="{{name}}">
+                {{#each options.constants}}
+                <option value="{{this.value}}">{{this.displayName}}</option>
+                {{/each}}
+            </select>
+            {{else}}
+            <span class="form-control form-control-static static-value input-lg input-extend"></span>
+            <input type="hidden" name="{{name}}">
+            {{/editable}}
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+        {{/multiple}}
+    </div>
+
+</script>
+
+<script id="tpl_attribute_travel_destination_select_additional" type="text/x-handlebars-template">
+    <div class="string-input-group">
+        <select class="form-control input-lg input-extend" name="{{name}}">
+            {{#each options.constants}}
+            <option value="{{this.value}}">{{this.displayName}}</option>
+            {{/each}}
+        </select>
+        <div class="string-input-operation">
+            <a href="javascript:void(0)" class="btn btn-link fa fa-minus text-danger"></a>
+            <a href="javascript:void(0)" class="btn btn-link fa fa-plus"></a>
+        </div>
+    </div>
+</script>
+
+<script id="tpl_attribute_id" type="text/x-handlebars-template">
+    <div class="form-group">
+        <label>{{displayName}}</label>
+        <select name="idType" class="form-control input-lg">
+            {{#each options.constants}}
+            <option value="{{this.value}}">{{this.displayName}}</option>
+            {{/each}}
+        </select>
+        <div class="pull-left">
+            <input type="text" name="{{name}}" class="form-control input-lg input-extend">
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+
+<script id="tpl_attribute_serial" type="text/x-handlebars-template">
+    <div class="attribute form-group">
+        <label class="attribute-name">{{displayName}}</label>
+        {{#if editable}}
+        <div class="pull-left attribute-value-list">
+            {{#each options.products}}
+            <label class="attribute-value control-label ">
+                <input type="radio" class="serial-product-id" name="{{../name}}" value="{{productName}}">{{displayName}}
+            </label>
+            {{/each}}
+        </div>
+        {{else}}
+        <div class="pull-left">
+            <span class="form-control form-control-static static-value input-extend"></span>
+        </div>
+        {{/if}}
+    </div>
+</script>
+<script id="tpl_attribute_agree" type="text/x-handlebars-template">
+    <div class="attribute form-group">
+        <label class="attribute-name">{{displayName}}</label>
+        <div class="pull-left link-wrap">
+            {{#each options.constants}}
+            <a href="{{this.value}}" target="_blank" class="btn btn-link btn-primary">{{this.displayName}}</a>
+            {{/each}}
+            <div class="checkbox">
+                <input type="checkbox" name="{{name}}">
+                <label class="checkbox-label">
+                </label>
+            </div>
+        </div>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+<script id="tpl_attribute_payment_select" type="tlext/x-handlebars-template">
+    <div class="form-group">
+        <label class="attribute-name">{{displayName}}</label>
+        <span class="attribute-value">
+        <select class="form-control input-lg input-extend" name="{{name}}">
+            {{#each options.periods}}
+            <option value='{{#JSON this}}{{/JSON}}'>{{this.displayName}}</option>
+            {{/each}}
+        </select>
+        </span>
+        <div class="text-block text-danger attribute-message">{{message}}</div>
+    </div>
+</script>
+
+<script id="tpl_attribute_payment_select_option" type="tlext/x-handlebars-template">
+    <option value='{{#JSON value}}{{/JSON}}'>{{this.value.displayName}}</option>
+</script>
+
+<script j:js="/static/js/lib/handlebars-v4.0.5.js"></script>
+<script j:js="/static/js/handlebars-helper.js"></script>
+<script j:js="/static/js/Form-v2.js"></script>
+<script j:js="/static/js/field/AddressField.js"></script>
+<script j:js="/static/js/field/AgeField.js"></script>
+<script j:js="/static/js/field/AgreeField.js"></script>
+<script j:js="/static/js/field/BenefitTypeField.js"></script>
+<script j:js="/static/js/field/BooleanField.js"></script>
+<script j:js="/static/js/field/CityField.js"></script>
+<script j:js="/static/js/field/DoubleField.js"></script>
+<script j:js="/static/js/field/EnumField.js"></script>
+<script j:js="/static/js/field/EmailField.js"></script>
+<script j:js="/static/js/field/PhoneOrEmailField.js"></script>
+<script j:js="/static/js/field/LiabilityField.js"></script>
+<script j:js="/static/js/field/GenderField.js"></script>
+<script j:js="/static/js/field/HeightField.js"></script>
+<script j:js="/static/js/field/IdField.js"></script>
+<script j:js="/static/js/field/IntegerField.js"></script>
+<script j:js="/static/js/field/JobField.js"></script>
+<script j:js="/static/js/field/LocalDateField.js"></script>
+<script j:js="/static/js/field/LocalDateTimeField.js"></script>
+<script j:js="/static/js/field/NumberField.js"></script>
+<script j:js="/static/js/field/PeriodField.js"></script>
+<script j:js="/static/js/field/PhoneField.js"></script>
+<script j:js="/static/js/field/PlanPaymentField.js"></script>
+<script j:js="/static/js/field/PlanPeriodField.js"></script>
+<script j:js="/static/js/field/PlanStartTimeField.js"></script>
+<script j:js="/static/js/field/PolicyTypeField.js"></script>
+<script j:js="/static/js/field/PostalCodeField.js"></script>
+<script j:js="/static/js/field/RelationField.js"></script>
+<script j:js="/static/js/field/SerialField.js"></script>
+<script j:js="/static/js/field/StringField.js"></script>
+<script j:js="/static/js/field/TravelDestField.js"></script>
+<script j:js="/static/js/field/UnitField.js"></script>
+<script j:js="/static/js/builder/OccupationBuilder.js"></script>
+<script j:js="/static/js/field/DeliverTypeField.js"></script>
+<script j:js="/static/js/field/LegalBeneficiaryField.js"></script>
+<script j:js="/static/js/field/MarriageTypeField.js"></script>
+<script j:js="/static/js/field/InvoiceDeliverType.js"></script>
+<script j:js="/static/js/field/BirthDateField.js"></script>
+
+</body>
+</html>
+

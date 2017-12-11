@@ -1,0 +1,65 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <h2 md-msg="message.message">Message</h2>
+
+        <span flex></span>
+    </div>
+</md-toolbar>
+
+<md-card flex layout="column">
+    <md-toolbar class="md-table-toolbar md-default" ng-hide="selected.length" aria-hidden="false" style="">
+        <div class="md-toolbar-tools">
+            <h2 class="md-title" md-msg="message.list">Message List</h2>
+            <div flex="" class="flex"></div>
+        </div>
+    </md-toolbar>
+    <md-toolbar class="md-table-toolbar md-default" ng-hide="!selected.length" aria-hidden="false" style="">
+        <div class="md-toolbar-tools">
+            <h2 class="md-title"><span md-msg="message.selected">Selected </span>{{selected.length}}</h2>
+            <div flex="" class="flex"></div>
+
+            <md-button class="md-button" aria-label="Read" ng-click="batchRead(selected)">
+                <span md-msg="message.read">Read</span>
+            </md-button>
+            <md-button class="md-button" aria-label="Delete" ng-click="batchDelete(selected)">
+                <span md-msg="message.delete">Delete</span>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <md-table-container flex>
+        <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
+            <thead md-head md-order="query.order">
+            <tr md-row>
+                <th md-column><span md-msg="message.from">From</span></th>
+                <th md-column><span md-msg="message.content">Content</span></th>
+                <th md-column><span md-msg="message.type">Type</span></th>
+                <th md-column><span md-msg="message.createdTime">Created Time</span></th>
+                <th md-column>
+                    <span md-msg="message.action">Action</span>
+                </th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="message"
+                ng-repeat="message in messages.items">
+                <td md-cell><span class="fa" ng-if="message.status == 'NEW'">•</span>{{message.from}}</td>
+                <td md-cell>{{message.content}}</td>
+                <td md-cell>{{message.type}}</td>
+                <td md-cell>{{message.createdTime | date:'yyyy/MM/dd HH:mm'}}</td>
+                <td md-cell layout="row">
+                    <md-button class="md-icon-button" ng-click="read(message)" md-msg="message.read" ng-if="message.status == 'NEW'">
+                        Read
+                    </md-button>
+                    <md-button class="md-icon-button" ng-click="delete(message)" md-msg="message.delete">
+                        Delete
+                    </md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+    <md-table-pagination md-limit="query.limit" md-page="options.index()" md-total="{{options.total()}}"
+                         md-page-select="options.pageSelector" md-boundary-links="options.boundaryLinks"
+                         md-on-paginate="logPagination"></md-table-pagination>
+</md-card>

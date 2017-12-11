@@ -1,0 +1,32 @@
+<md-toolbar md-theme="white" class="top">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ui-sref="console.insurance.job-tree.list" aria-label="返回">
+            <md-icon md-font-icon="fa" class="fa-chevron-left"></md-icon>
+        </md-button>
+        <span>更新职业树</span>
+        <span flex></span>
+    </div>
+</md-toolbar>
+
+<md-card>
+    <form name="jobTreeForm" class="md-padding">
+        <md-input-container class="md-block">
+            <label>职业树名称</label>
+            <input required name="name" ng-model="data.jobTree.name"/>
+            <div ng-messages="jobTreeForm.name.$error">
+                <div ng-message="required">请输入职业树名称</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>描述</label>
+            <input required name="description" ng-model="data.jobTree.description"/>
+            <div ng-messages="jobTreeForm.description.$error">
+                <div ng-message="required">请输入描述</div>
+            </div>
+        </md-input-container>
+        <div layout="row" class="md-padding">
+            <md-button class="md-button md-raised md-primary" ng-disabled="processing || jobTreeForm.$invalid" ng-click="save()" ng-disabled="processing">保存</md-button>
+            <md-button class="md-button" ng-click="cancel()">取消</md-button>
+        </div>
+    </form>
+</md-card>

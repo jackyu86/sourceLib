@@ -1,0 +1,56 @@
+include 'website',
+        'back-office',
+        'dealer-service-api',
+        'dealer-service',
+        'insurance-service-api',
+        'insurance-service',
+        'kdlins-api',
+        'doc'
+
+include 'sited'
+project(':sited').projectDir = new File('./sited-project/sited')
+
+include 'sited-admin'
+project(':sited-admin').projectDir = new File('./sited-project/sited-admin')
+
+include 'sited-test'
+project(':sited-test').projectDir = new File('./sited-project/sited-test')
+
+include 'file-service-api'
+project(':file-service-api').projectDir = new File('./sited-project/file-service-api')
+include 'file-service'
+project(':file-service').projectDir = new File('./sited-project/file-service')
+include 'file-web'
+project(':file-web').projectDir = new File('./sited-project/file-web')
+include 'file-admin'
+project(':file-admin').projectDir = new File('./sited-project/file-admin')
+
+include 'user-service-api'
+project(':user-service-api').projectDir = new File('./sited-project/user-service-api')
+include 'user-service'
+project(':user-service').projectDir = new File('./sited-project/user-service')
+include 'user-web'
+project(':user-web').projectDir = new File('./sited-project/user-web')
+include 'user-admin'
+project(':user-admin').projectDir = new File('./sited-project/user-admin')
+
+include 'customer-service-api'
+project(':customer-service-api').projectDir = new File('./sited-project/customer-service-api')
+include 'customer-service'
+project(':customer-service').projectDir = new File('./sited-project/customer-service')
+include 'customer-web'
+project(':customer-web').projectDir = new File('./sited-project/customer-web')
+
+include 'message-service-api'
+project(':message-service-api').projectDir = new File('./sited-project/message-service-api')
+include 'message-service'
+project(':message-service').projectDir = new File('./sited-project/message-service')
+include 'message-web'
+project(':message-web').projectDir = new File('./sited-project/message-web')
+include 'message-admin'
+project(':message-admin').projectDir = new File('./sited-project/message-admin')
+
+include 'email-service-api'
+project(':email-service-api').projectDir = new File('./sited-project/email-service-api')
+include 'email-service'
+project(':email-service').projectDir = new File('./sited-project/email-service')

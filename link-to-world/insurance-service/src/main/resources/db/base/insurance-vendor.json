@@ -1,0 +1,36 @@
+[
+    {
+        "id": "5789a68b28708a938f9b901c",
+        "name": "君龙人寿",
+        "description": "君龙人寿保险有限公司由厦门建发集团有限公司和台湾人寿保险股份有限公司共同出资设立，主营寿险、意外险、健康险等业务。",
+        "imageURL": "http://images.zhongmin.cn/AdminFile/UploadImage/lg20121031163353.gif",
+        "level": "INSURANCE_GROUP",
+        "createdTime": "2016-07-17T09:24:48Z",
+        "updatedTime": "2016-07-17T09:24:48Z",
+        "createdBy": "init",
+        "updatedBy": "init"
+    },
+    {
+        "id": "5789a68b28708a938f9b901b",
+        "name": "泰康人寿保险股份有限公司",
+        "description": "君龙人寿保险有限公司由厦门建发集团有限公司和台湾人寿保险股份有限公司共同出资设立，主营寿险、意外险、健康险等业务。",
+        "imageURL": "http://images.zhongmin.cn/AdminFile/UploadImage/lg20121031163353.gif",
+        "level": "INSURANCE_SUB_COMPANY",
+        "createdTime": "2016-07-17T09:24:48Z",
+        "updatedTime": "2016-07-17T09:24:48Z",
+        "createdBy": "init",
+        "updatedBy": "init"
+    },
+    
+    {
+        "id": "a15bead3a34d173fd715ef8a",
+        "name": "泰康养老保险股份有限公司",
+        "description":"泰康养老保险股份有限公司成立于2007年8月10 日，是由泰康人寿保险股份有限公司和泰康资产管理有限责任公司共同出资成立的全国性、股份制专业养老保险公司。公司注册资本6亿元，总部设在北京。业务范围涵盖团体保险、企业年金、个人养老保险三大领域。目前在全国已成立了23家分公司及9家企业年金中心。",
+        "imageURL": "I:/SJJH/workspace/link-to-world/back-office/src/main/dist/file/upload/2017-05-08/37181071-6f03-4f1d-a00f-43bc5fc44a0b.jpg",
+        "level": "INSURANCE_SUB_COMPANY",
+        "createdTime": "2017-05-08T09:24:48Z",
+        "updatedTime": "2017-05-08T09:24:48Z",
+        "createdBy": "init",
+        "updatedBy": "init"
+    }
+]

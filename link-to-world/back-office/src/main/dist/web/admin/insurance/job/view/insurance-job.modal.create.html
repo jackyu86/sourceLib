@@ -1,0 +1,39 @@
+<md-dialog aria-label="Create Insurance Category" flex="50">
+    <md-subheader>
+        <div layout="row" layout-align="space-between center">
+            <span>新增职业</span>
+            <span>
+            <md-icon md-font-icon="fa-close" class="fa" ng-click="cancel()"></md-icon>
+        </span>
+        </div>
+    </md-subheader>
+
+    <form name="jobForm" class="md-padding">
+        <div>
+            <md-input-container class="md-block">
+                <label>职业名称</label>
+                <input required name="displayName" ng-model="job.displayName"/>
+                <div ng-messages="jobForm.displayName.$error">
+                    <div ng-message="required">请输入职业名称</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>职业代码</label>
+                <input required name="code" ng-model="job.code"/>
+                <div ng-messages="jobForm.code.$error">
+                    <div ng-message="required">请输入职业代码</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>风险等级</label>
+                <input required name="riskLevel" ng-model="job.riskLevel"/>
+                <div ng-messages="jobForm.riskLevel.$error">
+                    <div ng-message="required">请输入风险等级</div>
+                </div>
+            </md-input-container>
+            <div layout="row">
+                <md-button class="md-button md-raised md-primary" ng-disabled="processing || jobForm.$invalid" ng-click="save()" ng-disabled="processing">保存</md-button>
+            </div>
+        </div>
+    </form>
+</md-dialog>

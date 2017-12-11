@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:j="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>分销商列表</title>
+    <link rel="stylesheet" j:css="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" j:css="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" j:css="/static//css/common.css">
+    <link rel="stylesheet" j:css="/static/css/header.css">
+    <link rel="stylesheet" j:css="/static/css/footer.css">
+    <link rel="stylesheet" j:css="/static/css/customer.css">
+</head>
+<body>
+<j:header folded="false"/>
+<div class="page">
+    <j:customer-sidenav selected="invite" category="center"/>
+    <div class="main">
+        <div class="page-title">邀请注册
+        </div>
+
+        <div class="invite-panel">
+            <p>使用以下链接即可邀请朋友注册</p>
+            <span class="invite-link text-primary" id="invite-link" j:text="inviteUrl">http://www.kdlins.com/account/register?source=MyId</span>
+            <a class="btn btn-primary invite-copy hidden" href="javascript:void(0)">复制链接</a>
+        </div>
+
+        <j:invite-list/>
+
+    </div>
+</div>
+<j:footer/>
+<j:utils/>
+<script j:js="/static/js/lib/jquery-1.11.3.min.js"></script>
+<script j:js="/static/js/lib/bootstrap.min.js"></script>
+<script j:js="/static/js/lib/jquery.metadata.min.js"></script>
+<script j:js="/static/js/lib/jquery.validate.min.js"></script>
+<script j:js="/static/js/lib/messages_zh.js"></script>
+<script j:js="/static/js/common.js"></script>
+<script j:js="/static/js/validation.js"></script>
+<script j:js="/static/js/lib/handlebars-v4.0.5.js"></script>
+<script j:js="/static/js/handlebars-helper.js"></script>
+<script j:js="/static/js/user/invite.js"></script>
+
+</body>
+</html>

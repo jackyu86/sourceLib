@@ -1,0 +1,14 @@
+[
+    {
+        "id": "5842967f223fe909e49f07da",
+        "name": "进保单余额帐户",
+        "value": "1",
+        "displayOrder": 1
+    },
+    {
+        "id": "5842967f223fe909e49f07db",
+        "name": "退费",
+        "value": "2",
+        "displayOrder": 2
+    }
+]

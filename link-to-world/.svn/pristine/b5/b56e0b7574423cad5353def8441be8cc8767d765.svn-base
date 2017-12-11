@@ -1,0 +1,1650 @@
+[
+    {
+        "id": "57c24ce40879226abbb35f8c",
+        "name": "plan",
+        "displayName": "投保计划",
+        "displayOrder": 1,
+        "fields": [
+            {
+                "id": "57c24ce40879226abbb36310",
+                "groupId": "57c24ce40879226abbb35f8c",
+                "name": "startTime",
+                "displayName": "起保时间",
+                "type": "PlanStartTime",
+                "displayOrder": 1,
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3630f",
+                "groupId": "57c24ce40879226abbb35f8c",
+                "name": "period",
+                "displayName": "保险期限",
+                "displayOrder": 2,
+                "type": "PlanPeriod",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3608c",
+                "groupId": "57c24ce40879226abbb35f8c",
+                "name": "payment",
+                "displayName": "缴费期间",
+                "displayOrder": 3,
+                "type": "PlanPayment",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            }
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb35f8d",
+        "name": "policy-holder",
+        "displayName": "投保人",
+        "displayOrder": 2,
+        "fields": [
+            {
+                "id": "57c24ce40879226abbb35f90",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "name",
+                "displayName": "姓名",
+                "displayOrder": 1,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "createdTime": "2016-07-16T08:19:06Z",
+                "updatedTime": "2016-07-16T08:19:06Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb35f91",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "id",
+                "displayName": "证件号码",
+                "displayOrder": 2,
+                "type": "Id",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "createdTime": "2016-07-16T08:19:06Z",
+                "updatedTime": "2016-07-16T08:19:06Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3634c",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "englishName",
+                "displayName": "英文名",
+                "displayOrder": 3,
+                "type": "String",
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36349",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "gender",
+                "displayName": "性别",
+                "displayOrder": 4,
+                "type": "Gender",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "radio",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36348",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "birthDate",
+                "displayName": "出生日期",
+                "displayOrder": 5,
+                "type": "BirthDate",
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3608e",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "age",
+                "displayName": "投保人年龄",
+                "displayOrder": 6,
+                "type": "Age",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "createdTime": "2016-07-16T08:19:06Z",
+                "updatedTime": "2016-07-16T08:19:06Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36347",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "job",
+                "displayName": "职业类别",
+                "displayOrder": 7,
+                "type": "Job",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36045",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "address",
+                "displayName": "地址",
+                "displayOrder": 8,
+                "type": "Address",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36044",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "postalCode",
+                "displayName": "邮编",
+                "displayOrder": 9,
+                "type": "PostalCode",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36346",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "height",
+                "displayName": "身高",
+                "displayOrder": 10,
+                "type": "Integer",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空",
+                    "min": 1,
+                    "minMessage": "身高不能小于{}",
+                    "max": 250,
+                    "maxMessage": "身高不能高于{}"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36345",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "weight",
+                "displayName": "体重",
+                "displayOrder": 11,
+                "type": "Integer",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36344",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "income",
+                "displayName": "年收入",
+                "displayOrder": 12,
+                "type": "Double",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36343",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "phone",
+                "displayName": "手机号",
+                "displayOrder": 13,
+                "type": "Phone",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36342",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "tel",
+                "displayName": "固定电话",
+                "displayOrder": 14,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36341",
+                "groupId": "57c24ce40879226abbb35f8d",
+                "name": "email",
+                "displayName": "电子邮箱",
+                "displayOrder": 15,
+                "type": "Email",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            }
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb35f8e",
+        "name": "insured",
+        "displayName": "被保险人",
+        "displayOrder": 3,
+        "fields": [
+            {
+                "id": "57c24ce40879226abbb35f92",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "age",
+                "displayName": "承保年龄",
+                "displayOrder": 1,
+                "type": "Age",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "createdTime": "2016-07-16T08:19:06Z",
+                "updatedTime": "2016-07-16T08:19:06Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3633d",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "relation",
+                "displayName": "与投保人关系",
+                "displayOrder": 2,
+                "type": "Relation",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "selection",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb35fad",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "gender",
+                "displayName": "性别",
+                "displayOrder": 3,
+                "type": "Gender",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "radio",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3633c",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "name",
+                "displayName": "被保险人姓名",
+                "displayOrder": 4,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3633b",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "englishName",
+                "displayName": "英文名",
+                "displayOrder": 5,
+                "type": "String",
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36339",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "nationality",
+                "displayName": "国籍",
+                "displayOrder": 6,
+                "type": "Nationality",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "selection",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36338",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "id",
+                "displayName": "证件号码",
+                "displayOrder": 7,
+                "type": "Id",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "selection",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36336",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "idExpirationDate",
+                "displayName": "证件有效期结束日期",
+                "displayOrder": 8,
+                "type": "IdExpirationDate",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36335",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "birthDate",
+                "displayName": "出生日期",
+                "displayOrder": 9,
+                "type": "BirthDate",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36334",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "job",
+                "displayName": "职业类别",
+                "displayOrder": 10,
+                "type": "Job",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36046",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "address",
+                "displayName": "地址",
+                "displayOrder": 11,
+                "type": "Address",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36047",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "postalCode",
+                "displayName": "邮编",
+                "displayOrder": 12,
+                "type": "PostalCode",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36333",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "height",
+                "displayName": "身高",
+                "displayOrder": 13,
+                "type": "Integer",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空",
+                    "min": 1,
+                    "minMessage": "身高不能小于{}",
+                    "max": 250,
+                    "maxMessage": "身高不能高于{}"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36332",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "weight",
+                "displayName": "体重",
+                "displayOrder": 14,
+                "type": "Integer",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36331",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "income",
+                "displayName": "年收入",
+                "displayOrder": 15,
+                "type": "String",
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36330",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "phone",
+                "displayName": "手机号",
+                "displayOrder": 16,
+                "type": "Phone",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3632f",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "tel",
+                "displayName": "固定电话",
+                "displayOrder": 17,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3632e",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "email",
+                "displayName": "电子邮箱",
+                "displayOrder": 18,
+                "type": "Email",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3632a",
+                "groupId": "57c24ce40879226abbb35f8e",
+                "name": "addressDetail",
+                "displayName": "具体通讯地址",
+                "displayOrder": 22,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            }
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb35f9f",
+        "name": "product",
+        "displayName": "产品",
+        "displayOrder": 4,
+        "fields": [
+            {
+                "id": "57c24ce40879226abbb35fa3",
+                "groupId": "57c24ce40879226abbb35f9f",
+                "name": "unit",
+                "displayName": "限购份数",
+                "displayOrder": 1,
+                "type": "Integer",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空",
+                    "min": 1,
+                    "max": 1
+                },
+                "createdTime": "2016-09-11T18:42:06Z",
+                "updatedTime": "2016-09-11T18:42:06Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            }
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb36352",
+        "name": "beneficiary",
+        "displayName": "受益人",
+        "displayOrder": 5,
+        "fields": [
+            {
+                "id": "57c24ce40879226abbb36329",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "type",
+                "displayName": "受益人类型",
+                "displayOrder": 1,
+                "type": "BenefitType",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "radio",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3604e",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "legalBeneficiary",
+                "displayName": "法定受益人",
+                "displayOrder": 2,
+                "type": "LegalBeneficiary",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "selection",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36328",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "relation",
+                "displayName": "与被保险人关系",
+                "displayOrder": 3,
+                "type": "Relation",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "selection",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36327",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "name",
+                "displayName": "姓名",
+                "displayOrder": 4,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36326",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "englishName",
+                "displayName": "英文名",
+                "displayOrder": 5,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36325",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "id",
+                "displayName": "证件号码",
+                "displayOrder": 6,
+                "type": "Id",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "selection",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36323",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "gender",
+                "displayName": "性别",
+                "displayOrder": 7,
+                "type": "Gender",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "radio",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36322",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "birthDate",
+                "displayName": "出生日期",
+                "displayOrder": 8,
+                "type": "BirthDate",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36321",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "phone",
+                "displayName": "手机号",
+                "displayOrder": 9,
+                "type": "Phone",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36320",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "tel",
+                "displayName": "固定电话",
+                "displayOrder": 10,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3631f",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "email",
+                "displayName": "电子邮箱",
+                "displayOrder": 11,
+                "type": "Email",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3631e",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "address",
+                "displayName": "地址",
+                "displayOrder": 12,
+                "type": "Address",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3631a",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "order",
+                "displayName": "受益顺序",
+                "displayOrder": 13,
+                "type": "BenefitOrder",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "selection",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36319",
+                "groupId": "57c24ce40879226abbb36352",
+                "name": "beneficiaryRate",
+                "displayName": "受益比例",
+                "displayOrder": 14,
+                "type": "Double",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            }
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb36351",
+        "name": "payment",
+        "displayName": "续期缴费信息",
+        "displayOrder": 6,
+        "fields": [
+            {
+                "id": "57c24ce40879226abbb36318",
+                "groupId": "57c24ce40879226abbb36351",
+                "name": "bank",
+                "displayName": "开户银行",
+                "displayOrder": 1,
+                "type": "Bank",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "selection",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36317",
+                "groupId": "57c24ce40879226abbb36351",
+                "name": "accountType",
+                "displayName": "账户类型",
+                "displayOrder": 2,
+                "type": "AccountType",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "selection",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36316",
+                "groupId": "57c24ce40879226abbb36351",
+                "name": "holder",
+                "displayName": "持卡人",
+                "displayOrder": 3,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36315",
+                "groupId": "57c24ce40879226abbb36351",
+                "name": "cardNumber",
+                "displayName": "银行账号",
+                "displayOrder": 4,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36314",
+                "groupId": "57c24ce40879226abbb36351",
+                "name": "city",
+                "displayName": "银行归属地",
+                "displayOrder": 5,
+                "type": "City",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            }
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb3634f",
+        "name": "policy",
+        "displayName": "投保信息",
+        "displayOrder": 7,
+        "fields": [
+            {
+                "id": "57c24ce40879226abbb3630e",
+                "groupId": "57c24ce40879226abbb3634f",
+                "name": "type",
+                "displayName": "保单形式",
+                "displayOrder": 1,
+                "type": "PolicyType",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "selection",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3601c",
+                "groupId": "57c24ce40879226abbb3634f",
+                "name": "deliverType",
+                "displayName": "保单递送方式",
+                "displayOrder": 2,
+                "type": "DeliverType",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "selection",
+                "createdTime": "2016-09-11T18:42:06Z",
+                "updatedTime": "2016-09-11T18:42:06Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3604f",
+                "groupId": "57c24ce40879226abbb3634f",
+                "name": "travelDest",
+                "displayName": "旅行目的地",
+                "displayOrder": 3,
+                "type": "TravelDest",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            }
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb36302",
+        "name": "information",
+        "displayName": "告知单",
+        "displayOrder": 8,
+        "fields": [
+            {
+                "id": "57c24ce40879226abbb3607f",
+                "groupId": "57c24ce40879226abbb36302",
+                "name": "highAccidentInsuranceQuestion5",
+                "displayName": "（5）被保险人目前在生效的或在申请的意外险信息（不含本次申请，保额由高至低）",
+                "displayOrder": 1,
+                "type": "EffectiveInsurance",
+                "options": {
+                    "falseOnly": true,
+                    "falseOnlyMessage": "不符合要求",
+                    "customer": "LA1"
+                }
+            },
+            {
+                "id": "57c24ce40879226abbb36080",
+                "groupId": "57c24ce40879226abbb36302",
+                "name": "highAccidentInsuranceQuestion1",
+                "displayName": "（1）被保险人是否正在或试图参加如潜水、跳伞、滑翔、攀岩、探险、武术比赛、摔跤比赛、特技表演、赛马、赛车、私人性质飞行活动（乘客身份搭乘民航客机除外）等任何带有危险性的活动或有此类嗜好，或正计划前往战乱、政局动荡国家或地区？",
+                "displayOrder": 2,
+                "type": "Boolean",
+                "options": {
+                    "falseOnly": true,
+                    "falseOnlyMessage": "不符合要求",
+                    "constants": [
+                        {
+                            "displayName": "是",
+                            "value": true
+                        },
+                        {
+                            "displayName": "否",
+                            "value": false
+                        }
+                    ],
+                    "customer": "LA1"
+                },
+                "displayAs": ""
+            },
+            {
+                "id": "57c24ce40879226abbb36081",
+                "groupId": "57c24ce40879226abbb36302",
+                "name": "highAccidentInsuranceQuestion2",
+                "displayName": "（2）被保险人是否曾经患有、或目前被告知患有下列疾病之一：恶性肿瘤、冠心病、心肌梗塞、严重高血压病（血压曾达到180/110mmHg）、先天性心脏病、心肌病、心力衰竭；脑梗塞、脑出血、脑栓塞；糖尿病控制不良（空腹血糖大于11mmol/l）、帕金森氏病、阿尔茨海默病、重症肌无力、多发性硬化、呼吸衰竭、肝功能衰竭、肾功能衰竭、血液病、精神疾病、癫痫、艾滋病或艾滋病病毒携带、器官移植术后？",
+                "displayOrder": 3,
+                "type": "Boolean",
+                "options": {
+                    "falseOnly": true,
+                    "falseOnlyMessage": "不符合要求",
+                    "constants": [
+                        {
+                            "displayName": "是",
+                            "value": true
+                        },
+                        {
+                            "displayName": "否",
+                            "value": false
+                        }
+                    ],
+                    "customer": "LA1"
+                },
+                "displayAs": ""
+            },
+            {
+                "id": "57c24ce40879226abbb36082",
+                "groupId": "57c24ce40879226abbb36302",
+                "name": "highAccidentInsuranceQuestion3",
+                "displayName": "（3）被保险人是否曾经或目前符合下列情况之一：慢性酒精中毒、智力障碍、失明、聋哑、跛行、脊柱或胸廓畸形、四肢、手足缺损或畸形，瘫痪；曾经或正在吸毒或食用管制药物？",
+                "displayOrder": 4,
+                "type": "Boolean",
+                "options": {
+                    "falseOnly": true,
+                    "falseOnlyMessage": "不符合要求",
+                    "constants": [
+                        {
+                            "displayName": "是",
+                            "value": true
+                        },
+                        {
+                            "displayName": "否",
+                            "value": false
+                        }
+                    ],
+                    "customer": "LA1"
+                },
+                "displayAs": ""
+            },
+            {
+                "id": "57c24ce40879226abbb36083",
+                "groupId": "57c24ce40879226abbb36302",
+                "name": "highAccidentInsuranceQuestion4",
+                "displayName": "（4）被保险人是否在投保或申请保单复效时被本公司或其他保险公司拒保、延期、加费或任何形式的修改承保？",
+                "displayOrder": 5,
+                "type": "Boolean",
+                "options": {
+                    "falseOnly": true,
+                    "falseOnlyMessage": "不符合要求",
+                    "constants": [
+                        {
+                            "displayName": "是",
+                            "value": true
+                        },
+                        {
+                            "displayName": "否",
+                            "value": false
+                        }
+                    ],
+                    "customer": "LA1"
+                },
+                "displayAs": ""
+            },
+            {
+                "id": "57c24ce40879226abbb36084",
+                "groupId": "57c24ce40879226abbb36302",
+                "name": "highAccidentInsuranceQuestion6",
+                "displayName": "（6）被保险人去年总计年度固定收入为",
+                "displayOrder": 6,
+                "type": "String",
+                "options": {
+                    "customer": "LA1"
+                },
+                "displayAs": ""
+            },
+            {
+                "id": "57c24ce40879226abbb36091",
+                "groupId": "57c24ce40879226abbb36302",
+                "name": "normalAccidentInsuranceQuestion1",
+                "displayName": "被保险人仅限1-3类职业人员，若被保险人从事4类及4类以上职业或拒保职业的工作发生意外事故，不属于保险责任范围。",
+                "displayOrder": 7,
+                "type": "Boolean",
+                "options": {
+                    "trueOnly": true,
+                    "trueOnlyMessage": "不符合要求",
+                    "constants": [
+                        {
+                            "displayName": "是",
+                            "value": true
+                        },
+                        {
+                            "displayName": "否",
+                            "value": false
+                        }
+                    ],
+                    "customer": "LA1"
+                },
+                "displayAs": ""
+            },
+            {
+                "id": "57c24ce40879226abbb36092",
+                "groupId": "57c24ce40879226abbb36302",
+                "name": "normalAccidentInsuranceQuestion2",
+                "displayName": "被保险人不存在以下状况：<br/>（1）正在或试图参加如潜水、跳伞、滑翔、攀岩、探险、武术比赛、摔跤比赛、特技表演、赛马、赛车、私人性质飞行活动（乘客身份搭乘民航客机除外）等任何带有危险性的活动。或有此类嗜好，或正计划前往战乱、政局动荡国家或地区。<br>（2）曾经患有、或目前被告知患有下列疾病之一：恶性肿瘤、冠心病、心肌梗塞、严重高血压病（血压曾达到180/110mmHg）、先天性心脏病、心肌病、心力衰竭；脑梗塞、脑出血、脑栓塞；糖尿病控制不良（空腹血糖大于11mmol/l）、帕金森氏病、阿尔茨海默病、重症肌无力、多发性硬化、呼吸衰竭、肝功能衰竭、肾功能衰竭、血液病、精神疾病、癫痫、艾滋病或艾滋病病毒携带、器官移植术后。<br>（3）曾经或目前符合下列情况之一：慢性酒精中毒、智力障碍、失明、聋哑、跛行、脊柱或胸廓畸形、四肢、手足缺损或畸形，瘫痪；曾经或正在吸毒或食用管制药物。<br>（4）在投保或申请保单复效时被本公司或其他保险公司拒保、延期、加费或任何形式的修改承保。<br>（5）在近期（一年内）已经或正在向三家及以上的其它保险公司投保意外险。<br>（6）目前已投保且仍生效的或正在投保的其它意外险累计保额达到150万元及以上。<br>",
+                "displayOrder": 8,
+                "type": "Boolean",
+                "options": {
+                    "trueOnly": true,
+                    "trueOnlyMessage": "不符合要求",
+                    "constants": [
+                        {
+                            "displayName": "是",
+                            "value": true
+                        },
+                        {
+                            "displayName": "否",
+                            "value": false
+                        }
+                    ],
+                    "customer": "LA1"
+                },
+                "displayAs": ""
+            },
+            {
+                "id": "57c24ce40879226abbb36093",
+                "groupId": "57c24ce40879226abbb36302",
+                "name": "normalAccidentInsuranceQuestion3",
+                "displayName": "本计划不承保高风险运动导致的意外伤害：<br/>高风险运动包括但不限于潜水、跳伞、攀岩、探险、蹦极、驾驶滑翔机、武术比赛、摔跤、特技表演、赛马、赛车等。",
+                "displayOrder": 9,
+                "type": "Boolean",
+                "options": {
+                    "trueOnly": true,
+                    "trueOnlyMessage": "不符合要求",
+                    "constants": [
+                        {
+                            "displayName": "是",
+                            "value": true
+                        },
+                        {
+                            "displayName": "否",
+                            "value": false
+                        }
+                    ],
+                    "customer": "PH"
+                },
+                "displayAs": ""
+            },
+            {
+                "id": "57c24ce40879226abbb36094",
+                "groupId": "57c24ce40879226abbb36302",
+                "name": "normalAccidentInsuranceQuestion4",
+                "displayOrder": 10,
+                "displayName": "医疗相关保障限定为中华人民共和国境内合法经营的二级以上（含二级）公立医院或保险公司认可的其他医疗机构，除了北京平谷区所有医院。请注意：北京平谷区所有医院的就医均不给予理赔，建议您去往其他区域二级以上公立医院就医。本产品医疗费用和住院津贴不承保在台湾、香港、澳门地区或中国境外发生的治疗。",
+                "type": "Boolean",
+                "options": {
+                    "trueOnly": true,
+                    "trueOnlyMessage": "不符合要求",
+                    "constants": [
+                        {
+                            "displayName": "是",
+                            "value": true
+                        },
+                        {
+                            "displayName": "否",
+                            "value": false
+                        }
+                    ],
+                    "customer": "PH"
+                },
+                "displayAs": ""
+            },
+            {
+                "id": "57c24ce40879226abbb36095",
+                "groupId": "57c24ce40879226abbb36302",
+                "name": "normalAccidentInsuranceQuestion5",
+                "displayName": "未成年人死亡给付保险金在各家保险公司的总和不超过国家保险监管机关的规定。",
+                "displayOrder": 11,
+                "type": "Boolean",
+                "options": {
+                    "trueOnly": true,
+                    "trueOnlyMessage": "不符合要求",
+                    "constants": [
+                        {
+                            "displayName": "是",
+                            "value": true
+                        },
+                        {
+                            "displayName": "否",
+                            "value": false
+                        }
+                    ],
+                    "customer": "PH"
+                },
+                "displayAs": ""
+            }
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb35fc0",
+        "name": "liability",
+        "displayName": "保险责任",
+        "displayOrder": 9,
+        "fields": [
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb3603a",
+        "name": "others",
+        "displayName": "单证信息",
+        "displayOrder": 10,
+        "fields": [
+            {
+                "id": "57c24ce40879226abbb3603b",
+                "groupId": "57c24ce40879226abbb3603a",
+                "name": "invoiceName",
+                "displayName": "发票抬头",
+                "displayOrder": 1,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3603c",
+                "groupId": "57c24ce40879226abbb3603a",
+                "name": "invoiceDate",
+                "displayName": "开票日期",
+                "displayOrder": 2,
+                "type": "LocalDate",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3603d",
+                "groupId": "57c24ce40879226abbb3603a",
+                "name": "invoiceDeliverType",
+                "displayName": "发票递送方式",
+                "displayOrder": 3,
+                "type": "InvoiceDeliverType",
+                "displayAs": "radio",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3603e",
+                "groupId": "57c24ce40879226abbb3603a",
+                "name": "firstName",
+                "displayName": "姓名",
+                "displayOrder": 4,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3603f",
+                "groupId": "57c24ce40879226abbb3603a",
+                "name": "mobile",
+                "displayName": "移动电话",
+                "displayOrder": 5,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36041",
+                "groupId": "57c24ce40879226abbb3603a",
+                "name": "address",
+                "displayName": "地址",
+                "displayOrder": 6,
+                "type": "Address",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36042",
+                "groupId": "57c24ce40879226abbb3603a",
+                "name": "postalCode",
+                "displayName": "邮编",
+                "displayOrder": 7,
+                "type": "PostalCode",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb36043",
+                "groupId": "57c24ce40879226abbb3603a",
+                "name": "premium",
+                "displayName": "配送费用",
+                "displayOrder": 8,
+                "type": "Double",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            }
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb36048",
+        "name": "emergency-contact",
+        "displayName": "紧急联系人",
+        "displayOrder": 11,
+        "fields": [
+            {
+                "id": "57c24ce40879226abbb36049",
+                "groupId": "57c24ce40879226abbb36048",
+                "name": "name",
+                "displayName": "姓名",
+                "displayOrder": 1,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3604a",
+                "groupId": "57c24ce40879226abbb36048",
+                "name": "phone",
+                "displayName": "手机号",
+                "displayOrder": 2,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3604b",
+                "groupId": "57c24ce40879226abbb36048",
+                "name": "telephone",
+                "displayName": "固定电话",
+                "displayOrder": 3,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3604c",
+                "groupId": "57c24ce40879226abbb36048",
+                "name": "email",
+                "displayName": "邮箱",
+                "displayOrder": 4,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "displayAs": "",
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            }
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb36050",
+        "name": "insurance-statement",
+        "displayName": "投保声明",
+        "displayOrder": 12,
+        "fields": [
+            {
+                "id": "57c24ce40879226abbb36051",
+                "groupId": "57c24ce40879226abbb36050",
+                "name": "agree",
+                "displayName": "是否同意声明",
+                "displayOrder": 1,
+                "type": "Agree",
+                "options": {
+                    "constants": [
+                        {
+                            "displayName": "是",
+                            "value": true
+                        },
+                        {
+                            "displayName": "否",
+                            "value": false
+                        }
+                    ],
+                    "trueOnly": true,
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            }
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb3606b",
+        "name": "flight",
+        "displayName": "航班信息",
+        "displayOrder": 13,
+        "fields": [
+            {
+                "id": "57c24ce40879226abbb3606c",
+                "groupId": "57c24ce40879226abbb3606b",
+                "name": "flightNo",
+                "displayName": "航班号",
+                "displayOrder": 1,
+                "type": "String",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            },
+            {
+                "id": "57c24ce40879226abbb3606d",
+                "groupId": "57c24ce40879226abbb3606b",
+                "name": "flightTime",
+                "displayName": "起飞时间",
+                "displayOrder": 2,
+                "type": "LocalDateTime",
+                "options": {
+                    "notNull": true,
+                    "notNullMessage": "不能为空"
+                },
+                "createdTime": "2016-10-16T09:56:00Z",
+                "updatedTime": "2016-10-16T09:56:00Z",
+                "updatedBy": "init",
+                "createdBy": "init"
+            }
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    },
+    {
+        "id": "57c24ce40879226abbb36099",
+        "name": "custom",
+        "displayName": "自定义分组",
+        "displayOrder": 13,
+        "fields": [
+        ],
+        "createdTime": "2016-07-16T08:19:06Z",
+        "updatedTime": "2016-07-16T08:19:06Z"
+    }
+]
